@@ -30,7 +30,6 @@ $chroma: add-colors((
   blue:                   #0072b9,
   red:                    #c00,
   green:                  #43a808,
-  green2:                 #24a907,
   yellow:                 #fd0,
 ));
 
@@ -108,8 +107,6 @@ $chroma: add-colors('functional', (
   watermark:              'grey-extra-light',
 
   headings:               'nearblack',
-
-  order-button:           'green2',
 ));
 
 $chroma-active-scheme: 'functional';
