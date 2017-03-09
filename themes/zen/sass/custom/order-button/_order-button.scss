@@ -1,0 +1,30 @@
+// Order button.
+
+.order-button,
+%order-button {
+  @include typeface(headings);
+  @include font-size(l, 1);
+
+  @include respond-to(xxl) {
+    @include font-size(l-2, 1);
+  }
+
+  display: inline-block;
+  background-image: linear-gradient(lighten(color(order-button), 5%), color(order-button));
+  line-height: 1;
+  color: color(text-bg);
+  border: 0;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 2px;
+
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(lighten(color(order-button), 10%), lighten(color(order-button), 5%));
+  }
+
+  &:active {
+    background-image: linear-gradient(color(order-button), lighten(color(order-button), 5%));
+    color: color(text-bg);
+  }
+}
