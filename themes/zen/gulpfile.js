@@ -27,11 +27,6 @@ options.theme = {
   js    : options.rootPath.theme + 'static/js/'
 };
 
-// Set the URL used to access the Hugo website under development. This will
-// allow Browser Sync to serve the website and update CSS changes on the fly.
-options.hugoURL = '';
-// options.hugoURL = 'http://localhost';
-
 // Define the node-sass configuration. The includePaths is critical!
 options.sass = {
   importer: importOnce,
@@ -50,7 +45,7 @@ options.sass = {
 options.autoprefixer = {
   browsers: [
     '> 1%',
-    'ie 9'
+    'ie 10'
   ]
 };
 
@@ -97,11 +92,11 @@ options.gulpWatchOptions = {interval: 600};
 // ################################
 var gulp      = require('gulp'),
   $           = require('gulp-load-plugins')(),
-  browserSync = require('browser-sync').create(),
   del         = require('del'),
   // gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
   sass        = require('gulp-sass'),
-  kss         = require('kss');
+  kss         = require('kss'),
+  cleanCSS    = require('gulp-clean-css');
 
 // The default task.
 gulp.task('default', ['build']);
@@ -130,7 +125,6 @@ gulp.task('styles', ['clean:css'], function() {
     .pipe($.size({showFiles: true}))
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest(options.theme.css))
-    .pipe($.if(browserSync.active, browserSync.stream({match: '**/*.css'})));
 });
 
 gulp.task('styles:production', ['clean:css'], function() {
@@ -138,6 +132,7 @@ gulp.task('styles:production', ['clean:css'], function() {
     .pipe(sass(options.sass).on('error', sass.logError))
     .pipe($.autoprefixer(options.autoprefixer))
     .pipe($.size({showFiles: true}))
+    .pipe(cleanCSS({compatibility: 'ie10'}))
     .pipe(gulp.dest(options.theme.css));
 });
 
@@ -201,17 +196,7 @@ gulp.task('lint:sass-with-fail', function() {
 // ##############################
 // Watch for changes and rebuild.
 // ##############################
-gulp.task('watch', ['browser-sync', 'watch:lint-and-styleguide', 'watch:js']);
-
-gulp.task('browser-sync', ['watch:css'], function() {
-  if (!options.hugoURL) {
-    return Promise.resolve();
-  }
-  return browserSync.init({
-    proxy: options.hugoURL,
-    noOpen: false
-  });
-});
+gulp.task('watch', ['watch:lint-and-styleguide', 'watch:js']);
 
 gulp.task('watch:css', ['styles'], function() {
   return gulp.watch(options.theme.sass + '**/*.scss', options.gulpWatchOptions, ['styles']);
@@ -255,4 +240,3 @@ gulp.task('clean:css', function() {
 // Resources used to create this gulpfile.js:
 // - https://github.com/google/web-starter-kit/blob/master/gulpfile.babel.js
 // - https://github.com/dlmanning/gulp-sass/blob/master/README.md
-// - http://www.browsersync.io/docs/gulp/

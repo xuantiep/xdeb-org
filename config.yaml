@@ -1,6 +1,6 @@
 ---
 title: "xdeb.org"
-baseURL: "http://xdeb.org/"
+baseURL: "http://xdeb-static.dev/"
 theme: "zen"
 languageCode: "en_GB"
 defaultContentLanguage: "en"
