@@ -18,6 +18,7 @@
 .slicknav_menu {
   box-sizing: border-box;
   background-color: color(header-bg);
+  padding: 2px;
 
   &::before,
   &::after {
@@ -102,7 +103,7 @@
 
     &:hover {
       border-radius: 6px;
-      background-color: color(link);
+      background-color: color(nearblack);
       color: color(text-bg);
     }
   }
@@ -115,7 +116,7 @@
 
   &:hover {
     border-radius: 6px;
-    background-color: color(link);
+    background-color: color(nearblack);
     color: color(text-bg);
   }
 }

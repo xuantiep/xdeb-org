@@ -21,10 +21,13 @@
 </div>
 
 <footer class="footer" role="contentinfo">
-<p>{{ with .Site.Params.Copyright }}{{ . | markdownify }}{{ else }}<span>&copy; {{ .Site.Title }}</span>{{ end }}</p>
-{{ with .Site.Params.Footer }}<p>{{ . | markdownify }}</p>{{ end }}
-{{ if .Site.Params.Poweredby }}<p>Powered by <a href="https://gohugo.io/">Hugo</a></p>{{ end }}
+<p>{{ with .Site.Params.copyright }}{{ . | markdownify }}{{ else }}<span>&copy; {{ .Site.Title }}</span>{{ end }}</p>
+{{ with .Site.Params.footer }}<p>{{ . | markdownify }}</p>{{ end }}
+{{ if .Site.Params.poweredby }}<p>Powered by <a href="https://gohugo.io/">Hugo</a></p>{{ end }}
 </footer>
 </div>
+{{ if .Site.Params.jquery }}<script src="/js/jquery.min.js"></script>{{ end }}
+{{ if and .Site.Params.jquery .Site.Params.slicknav }}<script src="/js/jquery.slicknav.min.js"></script>{{ end }}
+{{ if .Site.Params.jquery }}<script src="/js/script.js"></script>{{ end }}
 </body>
 </html>
