@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
 <head>
+<meta charset="utf-8">
 <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-<link rel="stylesheet" href="/css/styles.css?{{ readFile "/themes/zen/static/css/styles.css" | sha1}}">
-{{ partial "meta.html" . }}
+{{ partialCached "meta.html" . }}
 {{ block "meta" . }}{{ end }}
 </head>
 
@@ -14,6 +14,7 @@
 <h1 class="header__site-name">
 <a href="{{ .Site.BaseURL }}" title="Home" class="header__site-link" rel="home"><span>{{ .Site.Title }}</span></a>
 </h1>
+<div class="header__region region region-header">{{ if .Site.Params.search }}{{ partialCached "search.html" . }}{{ end }}</div>
 </header>
 
 <div class="layout-3col layout-swap">
@@ -26,8 +27,6 @@
 {{ if .Site.Params.poweredby }}<p>Powered by <a href="https://gohugo.io/">Hugo</a></p>{{ end }}
 </footer>
 </div>
-{{ if .Site.Params.jquery }}<script src="/js/jquery.min.js"></script>{{ end }}
-{{ if and .Site.Params.jquery .Site.Params.slicknav }}<script src="/js/jquery.slicknav.min.js"></script>{{ end }}
-{{ if .Site.Params.jquery }}<script src="/js/script.js"></script>{{ end }}
+{{ partialCached "scripts.html" . }}
 </body>
 </html>

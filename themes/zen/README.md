@@ -16,6 +16,17 @@ This is a port of that theme for [Hugo :: A fast and modern static website engin
 * Minify css
 * jQuery 2
 * Slicknav mobile menu
+* Search with DuckDuckGo
+
+
+## On the large screen
+
+![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn.png)
+
+
+## On the small screen
+
+![screenshot](https://raw.githubusercontent.com/frjo/hugo-theme-zen/master/images/tn_mobil.png)
 
 
 ## Installation
@@ -30,6 +41,8 @@ $ git clone https://github.com/frjo/hugo-theme-zen.git zen
 
 ## config.yaml example
 
+All the "params" are optional.
+
 ```
 baseurl: "https://example.org/"
 title: "SiteTitle"
@@ -37,12 +50,17 @@ title: "SiteTitle"
 params:
   copyright: "This site is licensed under a 
       [Creative Commons Attribution-ShareAlike 4.0 International License]
-      (https://creativecommons.org/licenses/by-sa/4.0/)."    # Optional
-  contact: "info@example.org"    # Optional
-  footer: "A [example.org](https://example.org/) production."    # Optional
-  poweredby: true    # Optional, show powered by hugo in footer
-  jquery: true    # Optional
-  slicknav: true    # Optional, activates a nice mobile menu.
+      (https://creativecommons.org/licenses/by-sa/4.0/)."
+  contact: "info@example.org"
+  footer: "A [example.org](https://example.org/) production."
+  poweredby: true    # Show powered by hugo in footer
+  jquery: true
+  slicknav: true    # Activates SlickNav, a nice mobile menu.
+  search: true    # Site search with DuckDuckGo.
+  searchSize: 20    # Search field size, default 20.
+  cacheBustCSS: true    # Add a cache busting hash on styles.css
+  cacheBustJS: true    # Add a cache busting hash on script.js
+  supressRSSLink: false    # Do not generate rss links.
 ```
 
 
