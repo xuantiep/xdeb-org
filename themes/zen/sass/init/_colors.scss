@@ -22,6 +22,11 @@ $chroma: add-colors((
   grey-light:             ('black' lighten 80%), // #ccc
   grey-extra-light:       ('black' lighten 93.33%), // #eee
   white:                  #fff,
+
+  brown:                  #706a58,
+  brown-alt:              #4d493d,
+  beige:                  #f2ecd5,
+  off-white:              #fffdf7,
   blue:                   #0072b9,
   red:                    #c00,
   green:                  #43a808,
@@ -32,9 +37,9 @@ $chroma: add-colors((
 $chroma: define-color-scheme('functional', 'Colors used by functional parts of the design.');
 $chroma: add-colors('functional', (
   // Colors used in the main content area.
-  brand:                  'nearblack',
-  brand-alt:              'grey',
-  brand-dark:             'grey-dark',
+  brand:                  'brown',
+  brand-alt:              'beige',
+  brand-dark:             'brown-alt',
   text:                   'black',
   text-bg:                'white',
 
@@ -51,7 +56,7 @@ $chroma: add-colors('functional', (
   autocomplete-select:    'white',
   autocomplete-select-bg: 'blue',
 
-  body-bg:                'white',
+  body-bg:                'off-white',
   header-bg:              'brand',
   backdrop:               'grey-extra-light',
 
@@ -74,7 +79,7 @@ $chroma: add-colors('functional', (
 
   resizable-grippie:      'grey-extra-light',
 
-  row-stripe:             'white',
+  row-stripe:             'beige',
   row-disabled:           'grey-light',
 
   skip-link:              'white',

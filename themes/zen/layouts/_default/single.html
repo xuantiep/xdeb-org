@@ -1,22 +1,21 @@
-{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
-
 {{ define "meta" }}
-{{ partial "single_meta.html" . }}
-{{ partial "single_json_ld.html" . }}
+{{ partial "single_meta.html" . -}}
 {{ end }}
 
-{{ define "main" }}
-<main class="layout-3col__left-content" role="main">
-<h1>{{ .Title }}</h1>
+{{ define "main" -}}
+<main class="{{ if $.Param "sidebar" | default true }}layout-3col__left-content{{ else }}layout-3col__full{{ end }}" role="main">
+<h1 class="title {{ if $.Param "submitted" | default false }}title-submitted{{ end }}">{{ .Title }}</h1>
 <article class="{{ with .Section }}section-{{ . | urlize }}{{ end }} single-view">
 <header>
+{{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . -}}{{ end }}
+{{ if .Params.tags }}{{ partial "tags.html" . -}}{{ end }}
 </header>
-<div>
+<div class="content">
 {{ .Content }}
 </div>
 </article>
 </main>
 
-{{ partial "menu.html" . }}
-{{ partial "sidebar.html" . }}
+{{ partial "menu.html" . -}}
+{{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . -}}{{ end }}
 {{ end }}

@@ -1,0 +1,173 @@
+/**
+ * @file
+ * Site custom styles
+ */
+
+.header,
+.footer {
+  @include zen-grid-container($context: flow);
+  @include zen-apply-gutter-padding();
+
+  @include zen-respond-to(m) {
+    // Since we are using zen-respond-to(), the values in $zen-layouts will
+    // override the global value for $zen-gutters.
+    @include zen-grid-container($context: flow);
+    @include zen-apply-gutter-padding();
+  }
+
+}
+
+.header {
+  background-color: color(header-bg);
+
+  @include respond-to(s) {
+    min-height: 88px;
+    background: color(header-bg) url('../site/topbg.png') repeat-x 60px -81px;
+  }
+
+  &__site-name {
+    float: none;
+    text-align: center;
+
+    @include respond-to(s) {
+      float: left;
+      text-align: left;
+    }
+  }
+
+  &__site-link {
+    &:link,
+    &:visited {
+      color: color(text-bg);
+    }
+  }
+
+  &__region {
+    @include padding(.5 0);
+    text-align: center;
+
+    @include respond-to(s) {
+      text-align: left;
+    }
+  }
+}
+
+.search-form {
+  padding-top: 0;
+}
+
+.layout-swap__top {
+  @include respond-to(xxl) {
+    @include padding-top(.5);
+    height: auto;
+    border-bottom: 4px solid color(brand);
+  }
+}
+
+.main-menu {
+  @include respond-to(xxl) {
+    margin: 0;
+  }
+
+  li {
+    @include respond-to(xxl) {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    @include respond-to(xxl) {
+      border-bottom: 6px solid color(brand-alt);
+    }
+
+    &:active,
+    &.active {
+      @include respond-to(xxl) {
+        border-bottom-color: color(brand);
+      }
+    }
+  }
+}
+
+article {
+  & > header {
+    color: color('grey');
+
+    h1 {
+      @include padding-bottom(.2);
+      margin-bottom: 0;
+      border-bottom: 2px solid color(border-dark);
+    }
+
+    h2 {
+      @include padding-bottom(.4);
+      margin-bottom: 0;
+      border-bottom: 1px solid color(border-dark);
+    }
+
+    :link,
+    :visited {
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.front {
+  article {
+    margin-bottom: 2rem;
+
+    @include respond-to(s) {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.blog-archive {
+  h2 {
+    @include padding-bottom(.4);
+    border-bottom: 2px solid color(border-dark);
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    @extend %ul-straight-left;
+  }
+
+  ol {
+    @extend %ol-straight-left;
+  }
+
+  time {
+    @include typeface(headings);
+    @include type-layout(xs, 1);
+    color: color('grey');
+
+    @include respond-to(xxl) {
+      @include type-layout(xs-2, 1);
+    }
+  }
+
+}
+
+.footer {
+  background: color(header-bg);
+  color: color(text-bg);
+  text-align: center;
+
+  :link,
+  :visited {
+    color: color(text-bg);
+  }
+}
