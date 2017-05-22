@@ -1,19 +1,59 @@
 ---
 title: "xdeb.org"
-baseURL: "http://xdeb-hugo.dev/"
+baseURL: "https://xdeb.org/"
 theme: "zen"
 languageCode: "en_GB"
 defaultContentLanguage: "en"
 metaDataFormat: "yaml"
+pluralizelisttitles: false
+removePathAccents: true
+paginate: 10
+paginatePath: "page"
+rssLimit: 20
+author:
+  name: "Fredrik Jonsson"
+  url: "https://xdeb.org/fredrik"
+  avatar: "site/fredrik.jpg"
+
+permalinks:
+  post: "/post/:year/:month/:day/:slug"
+
+outputs:
+  home: ["HTML","RSS", "JSON"]
+  section: ["HTML","RSS", "JSON"]
 
 params:
-  copyright: "<!--Creative Commons License-->This site is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).<!--/Creative Commons License-->"
-  contact: "info@xdeb.org"
-  footer: "Powered by [Hugo](https://gohugo.io/). A [xdeb.net](https://xdeb.net/) production."
-  poweredby: false
-  jquery: true
-  slicknav: true
-  search: true
-  searchSize: 20
   cacheBustCSS: true
   cacheBustJS: false
+  contact: "info@xdeb.org"
+  copyright: "<!--Creative Commons License-->This site is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).<!--/Creative Commons License-->"
+  dateformat: "2 January, 2006"
+  favicon: "icon-64.png"
+  feedlinks: true
+  footer: "Powered by [Hugo](https://gohugo.io/). A [xdeb.net](https://xdeb.net/) production."
+  frontposts: 3
+  icon: "apple-touch-icon-180.png"
+  imageMaxWidth: 400
+  jquery: true
+  logo: false
+  poweredby: false
+  search: true
+  searchSize: 20
+  sidebar: false
+  slicknav: true
+  submitted: true
+
+menu:
+  main:
+      - Name: "Home"
+        weight: -10
+        URL: "/"
+      - Name: "Posts"
+        weight: -9
+        URL: "/post/"
+      - Name: "About"
+        weight: 9
+        URL: "/fredrik/"
+      - Name: "Ragnvald"
+        weight: 10
+        URL: "/ragnvald/"

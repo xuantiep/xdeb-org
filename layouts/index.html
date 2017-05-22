@@ -1,0 +1,26 @@
+{{ define "title" }}{{ .Site.Title }}{{ end }}
+
+{{ define "meta" }}
+{{ partial "section_meta.html" . -}}
+{{ end }}
+
+{{ define "main" -}}
+<main class="front {{ if $.Param "sidebar" | default true }}layout-3col__left-content{{ else }}layout-3col__full{{ end }}" role="main">
+{{ range first .Site.Params.frontposts (where .Data.Pages "Type" "post") -}}
+{{ .Render "full" }}
+{{ end -}}
+
+<section class="blog-archive">
+<h2>Blog archive</h2>
+<ul>
+{{ range after .Site.Params.frontposts (where .Data.Pages "Type" "post") -}}
+{{ .Render "li" }}
+{{ end -}}
+<ul>
+</section>
+
+</main>
+
+{{ partial "menu.html" . -}}
+{{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . -}}{{ end }}
+{{ end }}
