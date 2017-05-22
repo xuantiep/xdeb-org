@@ -1,0 +1,51 @@
+#
+# Apache settings:
+#
+
+# Use SetEnvIfNoCase if possible over mod_rewrite to spare the CPU
+
+# Prevent remote image linking but allow some good sites
+SetEnvIfNoCase Referer "^$" img_link
+SetEnvIfNoCase Referer "^https://([a-z]+\.)?xdeb\.org.*$" img_link
+SetEnvIfNoCase Referer "^https://([a-z]+\.)?xdeb\.net.*$" img_link
+SetEnvIfNoCase Referer "^https://([a-z]+\.)?combonet\.se.*$" img_link
+SetEnvIfNoCase Referer "^http://www\.google\..*$" img_link
+SetEnvIfNoCase Referer "^http://([a-z0-9]+\.)?archive\.org.*$" img_link
+SetEnvIfNoCase Referer "^http://translate\.google\..*$" img_link
+
+<FilesMatch "\.(mp4|swf|mp3|MP3|gif|GIF|jpe?g|JPE?G|png|PNG)$">
+  <IfModule mod_authz_core.c>
+    Require env img_link
+  </IfModule>
+</FilesMatch>
+
+# Various rewrite rules.
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  # Remove www
+  RewriteCond %{HTTP_HOST} ^www\.xdeb\.org$ [NC]
+  RewriteRule ^(.*)$ https://xdeb.org/$1 [R=permanent,L]
+
+  # Rewrite old URLs
+
+  RewriteCond %{HTTP_HOST} ^xdeb\.org$ [NC]
+  RewriteCond %{REQUEST_URI} ^/blog/frjo [NC]
+  RewriteRule ^.*$ https://xdeb.org/ [R=permanent,L]
+
+  RewriteCond %{HTTP_HOST} ^xdeb\.org$ [NC]
+  RewriteCond %{REQUEST_URI} ^/blog [NC]
+  RewriteRule ^.*$ https://xdeb.org/post/ [R=permanent,L]
+
+  RewriteCond %{HTTP_HOST} ^xdeb\.org$ [NC]
+  RewriteCond %{REQUEST_URI} ^/wiki/fredrik [NC]
+  RewriteRule ^.*$ https://xdeb.org/fredrik [R=permanent,L]
+
+  RewriteCond %{HTTP_HOST} ^xdeb\.org$ [NC]
+  RewriteCond %{REQUEST_URI} ^/wiki/ragnvald/grunsjoberattelser [NC]
+  RewriteRule ^.*$ https://xdeb.org/ragnvald/bilder-berattelser-grundsjo [R=permanent,L]
+
+  RewriteCond %{HTTP_HOST} ^xdeb\.org$ [NC]
+  RewriteCond %{REQUEST_URI} ^/wiki/ragnvald [NC]
+  RewriteRule ^.*$ https://xdeb.org/ragnvald [R=permanent,L]
+</IfModule>
