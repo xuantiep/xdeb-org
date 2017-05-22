@@ -13,7 +13,7 @@ aliases: ["node/1314"]
 {{< figure src="/images/idea_netsetter_macosx_2.png" width="400" class="right" alt="Mac OS X Network settings for Idea NetSetter 2" >}}
 {{< figure src="/images/idea_netsetter_macosx_3.png" width="400" class="right" alt="Mac OS X Network settings for Idea NetSetter 3" >}}
 
-The AirTel GPRS (EDGE) service on my iPhone that I [wrote about earlier](http://xdeb.org/node/1288) is working well but a little slow. Something like 60 Kbit/s down and 40 Kbit/s up at best. For Twitter and some e-mail on the iPhone it's ok but when connecting a MacBook via tethering it's to slow.
+The AirTel GPRS (EDGE) service on my iPhone that I [wrote about earlier](/node/1288) is working well but a little slow. Something like 60 Kbit/s down and 40 Kbit/s up at best. For Twitter and some e-mail on the iPhone it's ok but when connecting a MacBook via tethering it's to slow.
 
 I checked out some of the 3G offers like Reliance NetConnect and Tata Photon+ and they are about the same price as similar services in Europe. People tell me they work great, when you have coverage. Here in Kerala, only Trivandrum and Cochin has the service at all from what I can tell and even there the coverage is not stellar.
 

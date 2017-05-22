@@ -34,7 +34,7 @@ Could not agree more! Newly released music is increasingly anti Hi-Fi. Instead o
 
 I had a similar experience with Duffys album "Rockaferry". Nice music, crappy sound.
 
-This is not a new trend but it just seems to get worse. I [wrote about it](http://xdeb.org/node/180) back in 2003 referencing the Prorec article [Over the Limit](http://www.prorec.com/Articles/tabid/109/EntryId/247/Over-the-Limit.aspx) from 2002.
+This is not a new trend but it just seems to get worse. I [wrote about it](/node/180) back in 2003 referencing the Prorec article [Over the Limit](http://www.prorec.com/Articles/tabid/109/EntryId/247/Over-the-Limit.aspx) from 2002.
 
 Check out the YouTube video [The Loudness War](http://www.youtube.com/watch?v=3Gmex_4hreQ) and then read the [Loudness war](http://en.wikipedia.org/wiki/Loudness_war) article on Wikipedia.
 

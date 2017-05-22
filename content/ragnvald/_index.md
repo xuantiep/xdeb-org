@@ -8,7 +8,7 @@ title: "Ragnvald Jonsson"
 {{< figure src="/site/ragnvald.jpg" width="200" height="296" class="right" alt="Författare Ragnvald Jonsson" >}}
 {{< figure src="/site/bilder_berattelser_grundsjo_omslag_1.jpg" width="200" height="210" class="right" alt="Omslagsbild Bilder och berättelser från Grundsjö" >}}
 
-**Se också:** [Släktforskning](http://xdeb.org/fj_items/reunion/) (Be Ragnvald om lösenord ifall ni vill titta på släktforskningen.)
+**Se också:** [Släktforskning](/reunion/) (Be Ragnvald om lösenord ifall ni vill titta på släktforskningen.)
 
 ## Bilder och berättelser från Grundsjö - en by i nordligaste Ångermanland
 

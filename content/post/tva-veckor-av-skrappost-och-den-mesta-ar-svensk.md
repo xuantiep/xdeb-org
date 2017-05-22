@@ -5,6 +5,7 @@ lastmod: 2016-03-07T07:20:23+01:00
 author: "Fredrik Jonsson"
 tags: ["spam","email","teknologi"]
 aliases: ["node/1611"]
+language: sv
 
 ---
 

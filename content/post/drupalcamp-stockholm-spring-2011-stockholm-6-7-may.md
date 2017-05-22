@@ -12,7 +12,7 @@ aliases: ["node/1497"]
 
 Anthother [DrupalCamp in Stockholm](http://spring2011.drupalcamp.se/). Come and meet the Swedish Drupal community and listen to how CNN and Al Jazeera use Drupal.
 
-[xdeb.net](http://xdeb.net/) is happy to sponsor the event and I will give a talk "[Drush 4, more awesome than ever](http://spring2011.drupalcamp.se/schedule/drush-4-more-awesome-ever)".
+[xdeb.net](https://xdeb.net/) is happy to sponsor the event and I will give a talk "[Drush 4, more awesome than ever](http://spring2011.drupalcamp.se/schedule/drush-4-more-awesome-ever)".
 
 Not using Drush yet? Only using it for installing and updating modules? Come then and see what you can do with Drush 4.
 

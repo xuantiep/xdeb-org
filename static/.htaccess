@@ -47,4 +47,8 @@ SetEnvIfNoCase Referer "^http://translate\.google\..*$" img_link
   RewriteCond %{HTTP_HOST} ^xdeb\.org$ [NC]
   RewriteCond %{REQUEST_URI} ^/wiki/ragnvald [NC]
   RewriteRule ^.*$ https://xdeb.org/ragnvald [R=permanent,L]
+
+  RewriteCond %{HTTP_HOST} ^xdeb\.org$ [NC]
+  RewriteCond %{REQUEST_URI} ^/fj_items/reunion/(.*) [NC]
+  RewriteRule ^.*$ https://xdeb.org/reunion/%1 [R=permanent,L]
 </IfModule>

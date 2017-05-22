@@ -14,9 +14,9 @@ submitted: false
 
 *A mind is like a parachute. It doesn't work if it's not open.*
 
-Welcome to my corner of the net. I work as a web developer and Linux sysadmin, more about that on [xdeb.net/services](http://xdeb.net/services).
+Welcome to my corner of the net. I work as a web developer and Linux sysadmin, more about that on [xdeb.net/services](https://xdeb.net/services).
 
-I have a degree in political science but my interest in technology turned my career towards IT. I maintain a keen interest in politics. A family man that read a lot of books, watch BBC and sci-fi TV series and keep up with the scientific discoveries of our time. Like things that makes the world a better place. All humans have equal value.
+I have a degree in political science but my interest in technology turned my career towards IT. I maintain a keen interest in politics. A family man that read a lot of books, watch SVT, BBC and sci-fi TV series and keep up with the scientific discoveries of our time. Like things that makes the world a better place. All humans have equal value.
 
 **E-mail**: [Contact form](https://xdeb.net/contact), fredrik at combonet dot se or frjo at xdeb dot org
 
@@ -25,10 +25,10 @@ I have a degree in political science but my interest in technology turned my car
 ### Me on the Internet
 
 * [My blog](/) here on xdeb.org.
-* [xdeb.net services](http://xdeb.net/) with my hosting, development and consulting services.
-* [Drupal showcases](http://xdeb.net/case) web sites I have developed with Drupal.
-* [Combonetwork development](http://combonet.se/) the service company I work via.
 * [GitHub](https://github.com/frjo)
+* [Combonetwork development](http://combonet.se/) the service company I work via.
+* [xdeb.net services](https://xdeb.net/) with my hosting, development and consulting services.
+* [Drupal showcases](https://xdeb.net/case) web sites I have developed with Drupal.
 * [Account page at drupal.org](https://www.drupal.org/user/5546)
 * [Marketplace at drupal.org](https://www.drupal.org/marketplace/fredrik-jonsson)
 
