@@ -6,9 +6,8 @@
 
 # Prevent remote image linking but allow some good sites
 SetEnvIfNoCase Referer "^$" img_link
-SetEnvIfNoCase Referer "^https://([a-z]+\.)?xdeb\.org.*$" img_link
-SetEnvIfNoCase Referer "^https://([a-z]+\.)?xdeb\.net.*$" img_link
-SetEnvIfNoCase Referer "^https://([a-z]+\.)?combonet\.se.*$" img_link
+SetEnvIfNoCase Referer "^https?://([a-z]+\.)?xdeb\.org.*$" img_link
+SetEnvIfNoCase Referer "^https?://([a-z]+\.)?xdeb\.net.*$" img_link
 SetEnvIfNoCase Referer "^http://www\.google\..*$" img_link
 SetEnvIfNoCase Referer "^http://([a-z0-9]+\.)?archive\.org.*$" img_link
 SetEnvIfNoCase Referer "^http://translate\.google\..*$" img_link
