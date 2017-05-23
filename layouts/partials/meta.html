@@ -1,0 +1,10 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+{{ .Hugo.Generator }}
+{{ with $.Param "contact" }}<meta name="contact" content="{{ . }}">{{ end }}
+<link rel="stylesheet" href="/css/styles.css{{ if $.Param "cacheBustCSS" }}?{{ readFile "/public/css/styles.css" | sha1 }}{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="manifest" href="/manifest.json">
