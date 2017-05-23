@@ -8,7 +8,7 @@ submitted: false
 ---
 
 
-{{< figure src="/site/fredrik.jpg" width="175" height="242" class="right" alt="Fredrik Jonsson" title="aaa" caption="Lorem ipsum dolor sit amet" attr="Link" attrlink="/" link="/">}}
+{{< figure src="/site/fredrik.jpg" width="175" height="242" class="right" alt="Fredrik Jonsson" title="Fredrik Jonsson" caption="Web developer & Linux sysadmin">}}
 {{< figure src="/site/introfj.jpeg" width="419" height="123" class="" alt="Hi and welcome to my homepage." >}}
 
 
