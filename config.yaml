@@ -37,7 +37,7 @@ params:
   jquery: true
   logo: false
   poweredby: false
-  search: true
+  search: false
   searchSize: 20
   sidebar: false
   slicknav: true

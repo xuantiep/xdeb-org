@@ -26,10 +26,14 @@
   }
 
   &__site-name {
+    position: absolute;
+    top: 0.2rem;
     float: none;
     text-align: center;
 
     @include respond-to(s) {
+      position: static;
+      top: auto;
       float: left;
       text-align: left;
     }
@@ -43,10 +47,11 @@
   }
 
   &__region {
-    @include padding(.5 0);
+    @include padding(0 0 .5 0);
     text-align: center;
 
     @include respond-to(s) {
+      @include padding(.5 0);
       text-align: left;
     }
   }
@@ -170,4 +175,11 @@ article {
   :visited {
     color: color(text-bg);
   }
+}
+
+.slicknav_nav,
+.slicknav_btn,
+.slicknav_menutxt {
+  @include typeface(headings);
+  font-weight: normal;
 }
