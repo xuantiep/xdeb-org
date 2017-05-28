@@ -23,6 +23,7 @@ outputFormats:
     mediaType: "application/json"
     baseName: "searchindex"
     isPlainText: true
+    notAlternative: true
 
 outputs:
   home: ["HTML","RSS", "JSON", "SearchIndex"]
