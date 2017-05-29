@@ -8,7 +8,7 @@ aliases: ["node/1164"]
 
 ---
 
-{{< figure src="/images/launchbar.png" width="400" class="right" alt="launchbar" >}}
+{{< figure src="/images/launchbar.png" width="128" class="right" alt="launchbar" >}}
 {{< figure src="/images/keyboard_maestro.png" width="128" class="right" alt="keyboard maestro" >}}
 {{< figure src="/images/typinator.png" width="128" class="right" alt="typinator" >}}
 

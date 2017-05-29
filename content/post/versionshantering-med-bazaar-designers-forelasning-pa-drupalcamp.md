@@ -18,4 +18,4 @@ Video från föreläsningen: [Versionshantering med Bazaar för designers (Fredr
 
 
 
-[/files/Versionshantering_med_Bazaar_for_designers.pdf](Versionshantering_med_Bazaar_for_designers.pdf) (5.75 MB)
+[Versionshantering_med_Bazaar_for_designers.pdf](/files/Versionshantering_med_Bazaar_for_designers.pdf) (5.75 MB)

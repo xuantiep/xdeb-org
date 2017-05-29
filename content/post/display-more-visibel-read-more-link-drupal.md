@@ -14,7 +14,7 @@ Drupals "Read more" link is by default displayed together with other links like 
 
 Luckily Drupals [hook_nodeapi](http://api.drupal.org/api/function/hook_nodeapi/5) makes its easy to add content to the node display. Here is the function I have just added to this site to display "Read the rest of this posting." right after the teaser content.
 
-<?php
+~~~~
 /**
  * Implementation of hook_nodeapi().
  */
@@ -32,7 +32,7 @@ function xdeb_addons_nodeapi(&$node, $op, $teaser = NULL, $page = NULL) {
       break;
   }
 }
-?>
+~~~~
 
 Uncomment the line "$node->readmore = FALSE" if you don't want the default "Read more" link to display.
 

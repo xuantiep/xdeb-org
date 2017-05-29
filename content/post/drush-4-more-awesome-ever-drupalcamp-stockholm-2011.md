@@ -22,4 +22,4 @@ This session will briefly mention the basic Drush commands and some of the new f
 
 The picture is "stolen" from [NodeOne](http://nodeone.se/blogg/drupalcamp-stockholm-open-for-registrations) blog. NodeOne organised this DrupalCamp.
 
-[/files/Drush_4_more_awesome_than_ever.pdf](Drush_4_more_awesome_than_ever.pdf) (11.51 MB)
+[Drush_4_more_awesome_than_ever.pdf](/files/Drush_4_more_awesome_than_ever.pdf) (11.51 MB)

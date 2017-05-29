@@ -68,5 +68,5 @@ Demo video of the news ticker/scroller:
 </video>
 
 
-[/files/jquery_news_ticker.mp4](jquery_news_ticker.mp4) (413.51 KB)
-[/files/jquery_news_ticker.ogv](jquery_news_ticker.ogv) (189.92 KB)
+[jquery_news_ticker.mp4](/files/jquery_news_ticker.mp4) (413.51 KB)
+[jquery_news_ticker.ogv](/files/jquery_news_ticker.ogv) (189.92 KB)

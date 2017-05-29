@@ -87,5 +87,5 @@ The only thing missing are some CSS styles to make it look nice. I was using a p
 }
 ~~~~
 
-[/files/Building_complex_web_sites_the_Drupal_way.pdf](Building_complex_web_sites_the_Drupal_way.pdf) (5.27 MB)
-[/files/blog_system.zip](blog_system.zip) (6.37 KB)
+[Building_complex_web_sites_the_Drupal_way.pdf](/files/Building_complex_web_sites_the_Drupal_way.pdf) (5.27 MB)
+[blog_system.zip](/files/blog_system.zip) (6.37 KB)

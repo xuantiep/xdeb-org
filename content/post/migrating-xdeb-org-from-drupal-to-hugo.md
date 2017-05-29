@@ -1,7 +1,7 @@
 ---
 title: "Migrating xdeb.org from Drupal to Hugo"
 date: 2017-05-22T08:59:19+02:00
-lastmod: 2017-05-22T08:59:19+02:00
+lastmod: 2017-05-28T10:15:16+02:00
 author: "Fredrik Jonsson"
 tags: ["hugo","drupal","web","development"]
 
@@ -89,7 +89,7 @@ foreach ($types as $type) {
             $dest = $base_path . "/hugo/$author/$type/$status/files/" . $medianame;
             $alt = !empty($file['description']) ? $file['description'] : $medianame;
             $size = format_size($file['filesize']);
-            $file_array[] = "[/files/$medianame]($alt) ($size)";
+            $file_array[] = "[$alt](/files/$medianame) ($size)";
           }
           copy($source, $dest);
         }
@@ -130,7 +130,7 @@ Here is the Hugo config.yml for xdeb.org.
 title: "xdeb.org"
 baseURL: "https://xdeb.org/"
 theme: "zen"
-languageCode: "en_GB"
+languageCode: "en-GB"
 defaultContentLanguage: "en"
 metaDataFormat: "yaml"
 pluralizelisttitles: false
@@ -165,7 +165,7 @@ params:
   jquery: true
   logo: false
   poweredby: false
-  search: true
+  search: false
   searchSize: 20
   sidebar: false
   slicknav: true

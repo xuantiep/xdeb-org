@@ -12,4 +12,4 @@ aliases: ["node/1586"]
 
 Slides from my presentation [Branch branch branch then rebase - a git workflow](http://spring2013.drupalcamp.se/sessions/branch-branch-branch-then-rebase-git-workflow) at [DrupalCamp Stockholm, March 8 2013](http://spring2013.drupalcamp.se/).
 
-[/files/branch_branch_branch.pdf](Branch branch branch and then rebase a Git workflow) (35.47 MB)
+[Branch branch branch and then rebase a Git workflow](/files/branch_branch_branch.pdf) (35.47 MB)
