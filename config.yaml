@@ -64,3 +64,6 @@ menu:
       - Name: "Ragnvald"
         weight: 10
         URL: "/ragnvald/"
+      - Name: "Services"
+        weight: 15
+        URL: "https://xdeb.net/"

@@ -7,14 +7,12 @@ submitted: false
 
 ---
 
-
 {{< figure src="/site/fredrik.jpg" width="175" height="242" class="right" alt="Fredrik Jonsson" title="Fredrik Jonsson" caption="Web developer & Linux sysadmin">}}
-{{< figure src="/site/introfj.jpeg" width="419" height="123" class="" alt="Hi and welcome to my homepage." >}}
-
+{{< figure src="/site/introfj.jpeg" width="419" height="123" alt="Hi and welcome to my homepage." >}}
 
 *A mind is like a parachute. It doesn't work if it's not open.*
 
-Welcome to my corner of the net. I work as a web developer and Linux sysadmin, more about that on [xdeb.net/services](https://xdeb.net/services).
+Welcome to my corner of the net. I work as a web developer and Linux sysadmin, more about that on [xdeb.net](https://xdeb.net/).
 
 I have a degree in political science but my interest in technology turned my career towards IT. I maintain a keen interest in politics. A family man that read a lot of books, watch SVT, BBC and sci-fi TV series and keep up with the scientific discoveries of our time. Like things that makes the world a better place. All humans have equal value.
 
