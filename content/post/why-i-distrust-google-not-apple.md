@@ -8,8 +8,6 @@ aliases: ["node/1515"]
 
 ---
 
-
-
 Today Daringfireball.net linked to an [article by Mike Elgan](http://itmanagement.earthweb.com/columns/executive_tech/article.php/3801006/Googles-Business-Model-YOU-Are-the-Product.htm) about Google with this quote.
 
 > Google makes billions of dollars in revenue each fiscal quarter. That money comes about by the same process that all companies use: They sell a product to their customers. Their customers pay money for that product.
@@ -27,6 +25,3 @@ I like Apples products a lot! I like some of Googles services as well, search, G
 I don't use Facebook for the same reason. I do use Twitter, and enjoy using it, but I'm hesitant. I much rather be using some distributed Twitter-like protocol.
 
 Trust is important.
-
-
-

@@ -10,9 +10,8 @@ aliases: ["node/699"]
 
 {{< figure src="/images/apple_iphone.jpg" width="400" class="right" alt="apple iphone" >}}
 
-[Apple - iPhone](http://www.apple.com/iphone/), vill ha! Kommer till Europa i slutet av året så man får lov att bärga sig.
+[Apple - iPhone](https://www.apple.com/iphone/), vill ha! Kommer till Europa i slutet av året så man får lov att bärga sig.
 
-Kolla in när Steve Jobs [presenterar iPhone](http://www.apple.com/iphone/keynote/) så kommer ni att vilja ha en själva också :-).
+Kolla in när Steve Jobs [presenterar iPhone](https://www.youtube.com/watch?v=9hUIxyE2Ns8) så kommer ni att vilja ha en själva också :-).
 
 Mobiltelefon + iPod + Internet pryl i en förpackning. Operativsystemet är Mac OS X, i en något bantad version får man anta. Inget tangentbord utan allt görs via pek-skärmen.
-

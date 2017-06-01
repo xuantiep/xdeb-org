@@ -8,14 +8,10 @@ aliases: ["node/1273"]
 
 ---
 
-
-
 På [DrupalCamp Stockholm 09](http://fall2009.drupalcamp.se/) 11–12 november höll jag en föreläsning om "Versionshantering med Bazaar för designers". Här nedan kan ni ladda hem presentationen som PDF-fil.
 
 Föreläsningen inleddes med en presentation om vad versionshantering är, vad man kan göra med det och hur ett arbetsflöde kan se ut. Andra delen var en praktisk demonstration ur en designers perspektiv.
 
 Video från föreläsningen: [Versionshantering med Bazaar för designers (Fredrik Jonsson) on Vimeo](http://vimeo.com/8554385)
-
-
 
 [Versionshantering_med_Bazaar_for_designers.pdf](/files/Versionshantering_med_Bazaar_for_designers.pdf) (5.75 MB)
