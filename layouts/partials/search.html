@@ -1,4 +1,3 @@
-{{ $domain := .Site.BaseURL | replaceRE "^https?://(www\\.)?([^/]+)/?" "$2" }}
 <input type="search" class="search-text" placeholder="Search" title="Enter the terms you wish to search for." size="{{ $.Param "searchSize" | default "20" }}" maxlength="128">
 <section class="search-results-wrapper hidden">
 <h4>Search result</h4>
