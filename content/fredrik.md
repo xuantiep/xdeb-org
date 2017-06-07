@@ -4,6 +4,11 @@ date: 2017-05-12T01:46:33+02:00
 author: "Fredrik Jonsson"
 aliases: ["about"]
 submitted: false
+menu:
+    main:
+        Name: "About"
+        weight: 9
+        URL: "/fredrik/"
 
 ---
 

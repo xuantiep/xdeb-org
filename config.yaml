@@ -52,18 +52,15 @@ params:
 
 menu:
   main:
-      - Name: "Home"
-        weight: -10
-        URL: "/"
-      - Name: "Posts"
-        weight: -9
-        URL: "/post/"
-      - Name: "About"
-        weight: 9
-        URL: "/fredrik/"
-      - Name: "Ragnvald"
-        weight: 10
-        URL: "/ragnvald/"
-      - Name: "Services"
-        weight: 15
-        URL: "https://xdeb.net/"
+    - Name: "Home"
+      weight: -10
+      URL: "/"
+    - Name: "Posts"
+      weight: -9
+      URL: "/post/"
+    - Name: "Ragnvald"
+      weight: 10
+      URL: "/ragnvald/"
+    - Name: "Services"
+      weight: 15
+      URL: "https://xdeb.net/"
