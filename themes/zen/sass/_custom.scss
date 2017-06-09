@@ -138,6 +138,8 @@
 
     &:active,
     &.active {
+      text-decoration: none;
+
       @include respond-to(xxl) {
         border-bottom-color: color(brand);
       }
