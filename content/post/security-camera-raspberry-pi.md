@@ -3,7 +3,7 @@ title: "Security camera with Raspberry Pi"
 date: 2017-05-28T10:33:14+02:00
 lastmod: 2017-05-28T10:33:14+02:00
 author: "Fredrik Jonsson"
-tags: ["raspberrypi", "security", "ansible"]
+tags: ["raspberrypi", "security", "ansible", "technology"]
 
 ---
 
