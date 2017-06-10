@@ -11,7 +11,7 @@
 {{ end -}}
 
 <section class="blog-archive">
-<h2>Blog archive</h2>
+<h1>Blog archive</h1>
 <ul>
 {{ range after .Site.Params.frontposts (where .Data.Pages "Type" "post") -}}
 {{ .Render "li" }}
