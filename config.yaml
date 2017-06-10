@@ -6,7 +6,7 @@ languageCode: "en-GB"
 defaultContentLanguage: "en"
 metaDataFormat: "yaml"
 pluralizelisttitles: false
-removePathAccents: true
+removePathAccents: false
 paginate: 10
 paginatePath: "page"
 rssLimit: 20
