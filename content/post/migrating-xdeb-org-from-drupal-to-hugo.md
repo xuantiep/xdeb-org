@@ -4,6 +4,7 @@ date: 2017-05-22T08:59:19+02:00
 lastmod: 2017-05-28T10:15:16+02:00
 author: "Fredrik Jonsson"
 tags: ["hugo","drupal","web","development"]
+slug: "migrating-xdeb-org-from-drupal-to-hugo"
 
 ---
 

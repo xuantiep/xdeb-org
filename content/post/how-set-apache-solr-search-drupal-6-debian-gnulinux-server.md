@@ -5,6 +5,7 @@ lastmod: 2010-06-04T13:29:39+02:00
 author: "Fredrik Jonsson"
 tags: ["apache","debian","drupal","drupalcampstockholm2009","planetdrupal","search","solr","tomcat","development"]
 aliases: ["node/1213"]
+slug: "how-to-set-up-apache-solr-search-for-drupal-6-on-a-debian-gnu-linux-server"
 
 ---
 

@@ -5,6 +5,7 @@ lastmod: 2016-07-12T06:43:08+02:00
 author: "Fredrik Jonsson"
 tags: ["apache","php","planetdrupal","server","drupal","performance","debian","development"]
 aliases: ["node/1613"]
+slug: "running-drupal-on-debian-8-with-apache-2-4-event-mpm-and-php-fpm-via-socks-and-proxy"
 
 ---
 

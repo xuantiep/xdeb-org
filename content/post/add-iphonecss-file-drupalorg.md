@@ -5,6 +5,7 @@ lastmod: 2011-04-06T19:10:40+02:00
 author: "Fredrik Jonsson"
 tags: ["css","drupal","iphone","planetdrupal","themes","development"]
 aliases: ["node/1492"]
+slug: "add-a-iphone-css-file-to-drupal-org"
 
 ---
 
