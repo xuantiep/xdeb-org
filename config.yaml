@@ -16,7 +16,7 @@ author:
   avatar: "site/fredrik.jpg"
 
 permalinks:
-  post: "/post/:year/:month/:day/:filename"
+  post: "/post/:year/:month/:day/:slug"
 
 outputFormats:
   SearchIndex:
