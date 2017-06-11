@@ -31,8 +31,9 @@ I have a degree in political science but my interest in technology turned my car
 * [GitHub](https://github.com/frjo)
 * [Combonetwork development](http://combonet.se/) the service company I work via.
 * [xdeb.net services](https://xdeb.net/) with my hosting, development and consulting services.
-* [Drupal showcases](https://xdeb.net/case) web sites I have developed with Drupal.
+* [xdeb.net showcases](https://xdeb.net/case) web sites I have developed with Drupal.
 * [Account page at drupal.org](https://www.drupal.org/user/5546)
 * [Marketplace at drupal.org](https://www.drupal.org/marketplace/fredrik-jonsson)
+* [Fredrik Jonsson (frjo) | Keybase](https://keybase.io/frjo)
 
 (The "parachute" quote and the Himalaya image I have had on my homepage since a long time. Keeping them here for nostalgic reasons and to guide old returning visitors.)
