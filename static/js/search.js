@@ -76,7 +76,6 @@
       // Only show the x first results
       results.slice(0, 50).forEach(function (result) {
         var store = lunrIndex.documentStore.getDoc(result.ref);
-
         var $result = $('<li>');
         $result.append($('<a>', {
           href: store.uri,

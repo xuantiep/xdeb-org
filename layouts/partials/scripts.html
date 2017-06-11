@@ -3,7 +3,7 @@
 <script src="/js/jquery.slicknav.min.js"></script>
 {{ end -}}
 {{ if and ($.Param "jquery") ($.Param "search") -}}
-<script src="/js/elasticlunr.min.js"></script>
-<script src="/js/search.js"></script>
+<script src="/js/lunr.min.js"></script>
+<script src="/js/search2.js"></script>
 {{ end -}}
 {{ if $.Param "jquery" }}<script src="/js/script.js{{ if $.Param "cacheBustJS" }}?{{ readFile "/public/js/script.js" | sha1 }}{{ end }}"></script>{{ end }}
