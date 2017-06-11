@@ -192,7 +192,7 @@ blockquote {
 }
 
 .blog-archive {
-  h2 {
+  h1 {
     @include padding-bottom(.4);
     border-bottom: 2px solid color(border-dark);
   }
