@@ -23,7 +23,11 @@
   @include respond-to(s) {
     position: relative;
     min-height: 88px;
-    background: color(header-bg) url('../site/topbg.png') repeat-x 60px -81px;
+    background-color: color(header-bg);
+    background-image: url('../site/topbg.png');
+    background-repeat: no-repeat;
+    background-position: 50px -70px;
+    background-size: 800px;
   }
 
   &__site-name {
