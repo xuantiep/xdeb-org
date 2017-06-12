@@ -16,7 +16,7 @@ First a search index that can be used with various search solutions. Second a [J
 
 Specify a new output format named "SearchIndex" and set options for it. The "notAlternative" option is very useful since it excludes this format from ".AlternativeOutputFormats".
 
-File: config.yaml
+File: `config.yaml`
 
 ~~~~
 outputFormats:
@@ -34,7 +34,7 @@ Add "SearchIndex" to "outputs/home" to make it active.
 
 A template is then needed to specify how the search index should look and what should be included. Here is one example that I'm testing for this site.
 
-File: layouts/_default/list.searchindex.json
+File: `layouts/_default/list.searchindex.json`
 
 ~~~~
 {{- $.Scratch.Add "searchindex" slice -}}
@@ -52,7 +52,7 @@ I'm experimenting with using this search index and JavaScript search engine [Lun
 
 Hugo has one built in JSON output format and here I use that for the JSON Feed. If needed this could also be a custom output format.
 
-File: config.yaml
+File: `config.yaml`
 
 ~~~~
 outputs:
@@ -64,7 +64,7 @@ This will generate JSON (and HTML plus RSS) for home as well as for each section
 
 Then a template to generate the feed according to the [JSON Feed specifications](https://jsonfeed.org/version/1).
 
-File: layouts/_default/list.json.json
+File: `layouts/_default/list.json.json`
 
 ~~~~
 {{ $list := .Data.Pages -}}
