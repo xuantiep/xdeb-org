@@ -43,6 +43,8 @@ params:
   imageMaxWidth: 400
   jquery: true
   logo: false
+  piwikSiteId: 1
+  piwikTrackerUrl: "admin.combonet.se/piwik"
   poweredby: false
   search: false
   searchSize: 20
