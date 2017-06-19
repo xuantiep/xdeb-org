@@ -60,9 +60,11 @@ menu:
     - Name: "Posts"
       weight: -9
       URL: "/post/"
+      identifier: "post"
     - Name: "Ragnvald"
       weight: 10
       URL: "/ragnvald/"
+      identifier: "ragnvald"
     - Name: "Services"
       weight: 15
       URL: "https://xdeb.net/"

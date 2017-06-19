@@ -4,7 +4,7 @@
 <h2 class="visually-hidden">Main menu</h2>
 <ul class="navbar clearfix">
 {{ range .Site.Menus.main -}}
-<li><a class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a></li>
+<li><a class="{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a></li>
 {{ end -}}
 </ul>
 </nav>
