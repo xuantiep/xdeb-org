@@ -22,11 +22,12 @@ Skriv till Ragnvald Jonsson på adressen ragnvald @ mac . com (utan mellanslag).
 
 (alla priser är inklusive moms)
 
-[Komplett text från boken](/ragnvald/bilder-berattelser-grundsjo)
+* [Komplett text från boken](/ragnvald/bilder-berattelser-grundsjo)
+* [Ladda hem boken i PDF-format](/files/bilder-och-berattelser-fran-grundsjo.pdf) (62 MB)
 
 **Recensioner:**
 
-* [Ett guldkorn i Jämtlandshyllan](http://www.op.se/parser.php?level1=4&level2=12&id=704835) Östersunds-Posten 2006-09-22
+* [Ett guldkorn i Jämtlandshyllan](/files/ostersunds-posten-ett-guldkorn-i-jamtlandshyllan.pdf) Östersunds-Posten 2006-09-22 (PDF)
 * [Minnen från en liten by](http://allehanda.se/avdelning/kultur/7927) Allehanda.se 2007-05-31
 
 **Text baksida:**
