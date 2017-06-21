@@ -19,23 +19,26 @@
   }
 
   // Add button to pre > code to copy the code to the clipboard.
-  if (document.queryCommandSupported && document.queryCommandSupported('copy')) {
-    $('.content').find('pre').each(function (i) {
-      var codeitem = 'js-code-item-' + i;
-      var $button = $('<button data-codeitem="' + codeitem + '"/>').text('Copy code').addClass('js-clipboard-button');
-      $(this).addClass(codeitem).after($button);
-    });
+  if (window.matchMedia && document.queryCommandSupported && document.queryCommandSupported('copy')) {
+    var mq = window.matchMedia('(min-device-width: 1111px)');
+    if (mq.matches) {
+      $('.content').find('pre').each(function (i) {
+        var codeitem = 'js-code-item-' + i;
+        var $button = $('<button data-codeitem="' + codeitem + '"/>').text('Copy code').addClass('js-clipboard-button');
+        $(this).addClass(codeitem).after($button);
+      });
 
-    $('.js-clipboard-button').on('click touchstart MSPointerDown', function (e) {
-      e.preventDefault();
-      var codeitem = '.' + $(this).data('codeitem');
-      var codesnippet = $(codeitem).find('code').html();
-      var $textarea = $('<textarea>').html(codesnippet).addClass('visually-hidden');
-      $('body').append($textarea);
-      $textarea.select();
-      document.execCommand('copy');
-      $textarea.remove();
-    });
+      $('.js-clipboard-button').on('click touchstart MSPointerDown', function (e) {
+        e.preventDefault();
+        var codeitem = '.' + $(this).data('codeitem');
+        var codesnippet = $(codeitem).find('code').html();
+        var $textarea = $('<textarea>').html(codesnippet).addClass('visually-hidden');
+        $textarea.appendTo('body');
+        $textarea.select();
+        document.execCommand('copy');
+        $textarea.remove();
+      });
+    }
   }
 
 })(jQuery);
