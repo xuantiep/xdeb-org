@@ -201,7 +201,7 @@ First there are also some settings to deny access to version control folders and
 
 ## MariaDB instead of MySQL
 
-I have completely switched from MySQL to MariaDB for all new deployments. Version 10.0.x of MariaDB is a noticeable performance improvement and has better defaults values for various settings. MariaDB is run be the people who originally created MySQL, before is was bought by Sun and then swallowed up by Oracle.
+I have completely switched from MySQL to MariaDB for all new deployments. Version 10.0.x of MariaDB is a noticeable performance improvement and has better defaults values for various settings. MariaDB is run by the people who originally created MySQL, before is was bought by Sun and then swallowed up by Oracle.
 
 Below are what I put in /etc/mysql/conf.d/local.cnf. You will need to adjust at least the innodb_buffer_pool_size depending upon how much memory the server have and the size of InnoDB data and indexes. This answer on stack exchange has a lot of interesting information about this [How large should be mysql innodb_buffer_pool_size?](http://dba.stackexchange.com/questions/27328/how-large-should-be-mysql-innodb-buffer-pool-size#answer-27341).
 
