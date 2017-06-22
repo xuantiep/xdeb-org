@@ -22,7 +22,7 @@ En wysiwyg-editor är vad många kräver då de tycker allt annat verkar för kr
 ## Mina argument för märkspråk
 
 * Skärskådar man vilken formatering som verkligen behövs är det normalt mycket basal behov som finns. Ju mer seriöst en text ska läsas ju mindre formateras den normalt. Jämför t ex en flyer för något party med en skönlitterär bok.
-* Ren text och text som skrivit med t ex. Markdown-taggar är lätt att konvertera mellan system och till andra filformat. Det är en framtidssäker lösning. Text som har ett sammelsurium av HTML-taggar, som ofta blir resultat av en wysiwyg-editor, kräver mycket mer jobb vid flyttning och konvertering.
+* Ren text och text som skrivits med t ex. Markdown-taggar är lätt att konvertera mellan system och till andra filformat. Det är en framtidssäker lösning. Text som har ett sammelsurium av HTML-taggar, som ofta blir resultat av en wysiwyg-editor, kräver mycket mer jobb vid flyttning och konvertering.
 * Det går att göra det enkelt för användaren utan wysiwyg-editor. Verktygsrader med knappar för vanliga märk-taggar, block med hjälpinformation som dyker upp när man behöver dem etc.
 
 ## Exempel på olika formateringar
