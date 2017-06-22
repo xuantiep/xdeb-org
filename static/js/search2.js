@@ -13,7 +13,6 @@
   var $results = $('.search-results');
   var searchData;
   var lunrIndex;
-  var searchStore = [];
 
   // Initialise the search when search field get focus, this avoids loading index on every page.
   $('.search-text').one('focus', function () {
@@ -32,7 +31,15 @@
       return;
     }
 
-    var results = lunrIndex.search(query + '*');
+    var results = lunrIndex.search(query, {
+      fields: {
+        title: {boost: 2},
+        tags: {boost: 3},
+        section: {boost: 2},
+        content: {boost: 1},
+        year: {boost: 1}
+      }
+    });
 
     renderResults(results);
     $resultsWrapper.show();
@@ -48,18 +55,17 @@
     searchData = $.getJSON('/searchindex.json');
 
     searchData.done(function () {
-      lunrIndex = lunr(function () {
-        this.ref('uri');
-        this.field('title');
-        this.field('tags');
-        this.field('section');
-        this.field('content');
-        this.field('year');
+      lunrIndex = elasticlunr(function () {
+        this.setRef('uri');
+        this.addField('title');
+        this.addField('tags');
+        this.addField('section');
+        this.addField('content');
+        this.addField('year');
+      });
 
-        searchData.responseJSON.forEach(function (item) {
-          this.add(item);
-          searchStore[item.uri] = item.title;
-        }, this);
+      searchData.responseJSON.forEach(function (item) {
+        lunrIndex.addDoc(item);
       });
     });
   }
@@ -69,10 +75,11 @@
     if (results.length > 0) {
       // Only show the x first results
       results.slice(0, 50).forEach(function (result) {
+        var store = lunrIndex.documentStore.getDoc(result.ref);
         var $result = $('<li>');
         $result.append($('<a>', {
-          href: result.ref,
-          text: searchStore[result.ref]
+          href: store.uri,
+          text: store.title
         }));
         $results.append($result);
       });
