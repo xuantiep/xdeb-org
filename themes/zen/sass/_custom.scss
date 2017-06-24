@@ -14,7 +14,6 @@
     @include zen-grid-container($context: flow);
     @include zen-apply-gutter-padding();
   }
-
 }
 
 .header {
@@ -182,6 +181,16 @@ article {
     a:focus {
       text-decoration: underline;
     }
+  }
+}
+
+figure {
+  margin-left: -($zen-gutters / 2);
+  margin-right: -($zen-gutters / 2);
+
+  @include respond-to(s) {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
