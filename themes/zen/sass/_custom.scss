@@ -116,6 +116,12 @@
   }
 }
 
+.layout-center {
+  @include respond-to(xxl) {
+    box-shadow: 2px 0 10px #aaa, -2px 0 10px #aaa;
+  }
+}
+
 .layout-swap__top {
   @include respond-to(xxl) {
     @include padding-top(.5);
