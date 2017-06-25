@@ -28,7 +28,7 @@ Skriv till Ragnvald Jonsson på adressen ragnvald @ mac . com (utan mellanslag).
 **Recensioner:**
 
 * [Ett guldkorn i Jämtlandshyllan](/files/ostersunds-posten-ett-guldkorn-i-jamtlandshyllan.pdf) Östersunds-Posten 2006-09-22 (PDF)
-* [Minnen från en liten by](http://allehanda.se/avdelning/kultur/7927) Allehanda.se 2007-05-31
+* [Minnen från en liten by](/files/allehanda-minnen-fran-en-liten-by.pdf) Allehanda.se 2007-05-31 (PDF)
 
 **Text baksida:**
 
