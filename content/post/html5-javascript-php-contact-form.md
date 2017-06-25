@@ -8,13 +8,13 @@ draft: true
 
 ---
 
-Setting out to create a simple contact form turned out to involve more work than I anticipated. I need this for one of my new static sites. The examples I found was to old, lacking spam protection and/or relied on multiple/large libraries.
+Setting out to create a simple contact form turned out to involve more work than I anticipated. I need it for one of my new static sites. The examples I found was to old, lacking spam protection and/or relied on multiple/large libraries.
 
-A modern option would be to use one of the many cloud services for forms of different kinds but I prefer to run things on my own server. I even run my own mail-server since well over a decade.
+A modern option would be to use one of the many cloud services for forms of different kinds but I prefer to run things on my own server. I run my own mail-server since well over a decade.
 
 These are the features I wanted for my contact form:
 
-* Local and small in code size.
+* Local and lite weight.
 * HTML5 form with placeholders, required field indicators and validation.
 * Some decent spam protection, but no captcha.
 * Status messages informing the user of success as well as error on sending the messages.
