@@ -8,14 +8,13 @@ aliases: ["node/802"]
 
 ---
 
-
-
 I recently put up a related content block on this site and here is how I did it.
 
-There are a number of modules, at least four, for this but a simple block PHP snippet  suited me best.
+There are a number of Drupal modules, at least four, for this but a simple block PHP snippet  suited me best.
 
 This PHP snippet makes sure we are viewing a node. Gets the terms for that node. Search for other nodes with the same terms and displays the five latest it can find as a node title list.
 
+~~~~
 <?php
 if (arg(0) == 'node' && is_numeric(arg(1)) && is_null(arg(2))) {
   $nid = (int)arg(1);
@@ -34,7 +33,6 @@ if (arg(0) == 'node' && is_numeric(arg(1)) && is_null(arg(2))) {
     }
   }
 }
-?>
+~~~~
 
 This is for Drupal 5.
-
