@@ -10,6 +10,7 @@ removePathAccents: true
 paginate: 10
 paginatePath: "page"
 rssLimit: 20
+newContentEditor: "/usr/local/bin/bbedit"
 author:
   name: "Fredrik Jonsson"
   url: "https://xdeb.org/fredrik"
@@ -68,3 +69,4 @@ menu:
     - Name: "Services"
       weight: 15
       URL: "https://xdeb.net/"
+
