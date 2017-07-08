@@ -3,7 +3,7 @@ title: "MailMate replaces GyazMail after four years"
 date: 2014-05-16T09:15:05+02:00
 lastmod: 2016-05-18T09:15:11+02:00
 author: "Fredrik Jonsson"
-tags: ["email","mailmate","mac os x","software","technology"]
+tags: ["email","mailmate","macOS","software","technology"]
 aliases: ["node/1608"]
 
 ---

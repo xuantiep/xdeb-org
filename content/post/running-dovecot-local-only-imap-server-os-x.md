@@ -3,7 +3,7 @@ title: "Running dovecot as a local only IMAP server on OS X"
 date: 2014-03-07T10:30:22+01:00
 lastmod: 2017-03-14T18:50:01+01:00
 author: "Fredrik Jonsson"
-tags: ["email","dovecot","mac os x","technology"]
+tags: ["email","dovecot","macOS","technology"]
 aliases: ["node/1607"]
 
 ---

@@ -3,7 +3,7 @@ title: "Two weeks with GyazMail"
 date: 2010-03-28T19:57:05+02:00
 lastmod: 2010-04-12T17:51:08+02:00
 author: "Fredrik Jonsson"
-tags: ["email","gyazmail","mac os x","software","technology"]
+tags: ["email","gyazmail","macOS","software","technology"]
 aliases: ["node/1343"]
 
 ---

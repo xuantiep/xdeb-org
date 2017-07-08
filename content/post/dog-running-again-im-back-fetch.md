@@ -3,7 +3,7 @@ title: "The dog is running again - I\'m back with Fetch"
 date: 2007-06-22T01:02:23+02:00
 lastmod: 2012-07-22T13:28:38+02:00
 author: "Fredrik Jonsson"
-tags: ["mac os x","sftp","technology"]
+tags: ["macOS","sftp","technology"]
 aliases: ["node/776"]
 
 ---

@@ -3,7 +3,7 @@ title: "MailMate - The email client for the rest of us"
 date: 2015-01-30T11:19:53+01:00
 lastmod: 2016-03-07T07:26:17+01:00
 author: "Fredrik Jonsson"
-tags: ["email","mailmate","mac os x","software","technology"]
+tags: ["email","mailmate","macOS","software","technology"]
 aliases: ["node/1609"]
 
 ---

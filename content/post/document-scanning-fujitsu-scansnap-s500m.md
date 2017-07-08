@@ -3,7 +3,7 @@ title: "Document scanning with Fujitsu ScanSnap S500M"
 date: 2007-03-15T16:48:50+01:00
 lastmod: 2007-03-19T09:39:38+01:00
 author: "Fredrik Jonsson"
-tags: ["automator","document","mac os x","scanner","technology"]
+tags: ["automator","document","macOS","scanner","technology"]
 aliases: ["node/728"]
 
 ---
