@@ -4,7 +4,6 @@ date: 2017-06-24T07:55:21+02:00
 lastmod: 2017-06-24T07:55:21+02:00
 author: "Fredrik Jonsson"
 tags: ["php", "jquery", "javascript", "development"]
-draft: true
 
 ---
 
@@ -28,12 +27,14 @@ For spam protection I looked at the Drupal modules [Honeypot](https://www.drupal
 
 The JavaScript also takes care of displaying the status messages as well as hiding the "You must have Javascript…" message that is shown if the browser has it turned off. It also adds a "js-submitted" class to the form on submit.
 
-A few lines of CSS makes the HTML5 form show when fields are valid or invalid after the user has started typing in a field or has tried to submit the form with invalid fields.
+A few lines of CSS makes the HTML5 form display when fields are valid or invalid after the user has started typing in a field or has tried to submit the form with invalid fields.
 
 <p data-height="500" data-theme-id="0" data-slug-hash="pwWoEd" data-default-tab="result" data-user="frjo" data-embed-version="2" data-pen-title="Contact form" class="codepen">See the Pen <a href="https://codepen.io/frjo/pen/pwWoEd/">Contact form</a> by Fredrik Jonsson (<a href="https://codepen.io/frjo">@frjo</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 In the Codepen above you find the HTML/JS/CSS code and below is the PHP script that sends the messages.
+
+In production the "name" input field has an "autofocus" attribute set but that was a bit annoying to have in the example above.
 
 You need to replace "info@example.com" with a real address but otherwise it should work on most Unix based servers. I run it on Debian GNU/Linux.
 
