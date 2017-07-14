@@ -25,7 +25,7 @@
   $('.search-text').on('keyup', function () {
     $results.empty();
 
-    // Only trigger a search when 2 chars. at least have been provided
+    // Only trigger a search when 2 chars at least have been provided.
     var query = $(this).val();
     if (query.length < 2) {
       $resultsWrapper.hide();
@@ -67,7 +67,7 @@
   // Render the search result.
   function renderResults(results) {
     if (results.length > 0) {
-      // Only show the x first results
+      // Only show the x first results.
       results.slice(0, 50).forEach(function (result) {
         var $result = $('<li>');
         $result.append($('<a>', {
