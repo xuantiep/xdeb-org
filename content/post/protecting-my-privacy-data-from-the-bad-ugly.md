@@ -1,5 +1,5 @@
 ---
-title: "Keeping my privacy and data from the bad and the ugly"
+title: "Protecting my privacy and data from the bad and the ugly"
 date: 2017-07-08T22:23:52+02:00
 lastmod: 2017-07-08T22:23:52+02:00
 author: "Fredrik Jonsson"
@@ -38,7 +38,7 @@ If you need something more advanced than Keychain there are a multitude of servi
 
 * [I have switched to pwSafe password manager and liking it so far – xdeb.org](/post/2016/01/20/i-have-switched-to-pwsafe-password-manager-and-liking-it-so-far/)
 
-## Set good passwords on routers and web cameras
+## Set good passwords and update firmware on routers and web cameras
 
 This goes for everything connected to the Internet.
 
@@ -48,7 +48,7 @@ I now use Apple Airports but they seem unfortunately to have stopped developing 
 
 * [AmpliFi Wi-Fi](https://www.amplifi.com/) (Ubiquiti for home users)
 
-## Not using social media sites
+## Not using social media
 
 I do not like social media, nor do I think it's good for anyone in the long run. At best it's a waste of time and attention, at the worst it's private monopolies manipulating people and society for shortsighted profit.
 
