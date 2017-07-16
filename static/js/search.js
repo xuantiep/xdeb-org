@@ -28,19 +28,19 @@
     // Only trigger a search when 2 chars at least have been provided.
     var query = $(this).val();
     if (query.length < 2) {
-      $resultsWrapper.hide();
+      $resultsWrapper.addClass('hidden');
       return;
     }
 
     var results = lunrIndex.search(query + '*');
 
     renderResults(results);
-    $resultsWrapper.show();
+    $resultsWrapper.removeClass('hidden');
   });
 
   // Clear when clicking the x in HTML5 search fields.
   $('.search-text').one('search', function () {
-    $resultsWrapper.hide();
+    $resultsWrapper.addClass('hidden');
   });
 
   // Initialise and build the search index.
