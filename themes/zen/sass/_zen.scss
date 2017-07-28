@@ -11,6 +11,35 @@ pre {
   @include margin(.75 0);
 }
 
+/* Page */
+
+body {
+  background-color: color(backdrop);
+}
+
+.page {
+  background-color: color(body-bg);
+}
+
+.header {
+  padding-top: $zen-gutters / 2;
+
+  @include respond-to(s) {
+    padding-top: $zen-gutters;
+  }
+}
+
+.footer {
+  @include margin-top(1.5);
+  @include padding(.5 0);
+  text-align: center;
+  border-top: 2px solid color(brand);
+
+  p {
+    margin: 0;
+  }
+}
+
 /* Apply smaller text to blocks, footer etc. */
 
 th,
@@ -172,43 +201,6 @@ figcaption {
   }
 }
 
-/* Page */
-
-body {
-  background-color: color(backdrop);
-}
-
-.layout-center {
-  background-color: color(body-bg);
-}
-
-.header {
-  padding-top: $zen-gutters / 2;
-
-  @include respond-to(m) {
-    padding-top: $zen-gutters;
-  }
-
-  &__logo {
-    @include respond-to(s) {
-      float: left;
-    }
-  }
-
-  &__site-name {
-    @include respond-to(s) {
-      float: left;
-    }
-  }
-
-  &__region {
-    @include respond-to(s) {
-      float: right;
-      clear: none;
-    }
-  }
-}
-
 /* Navigation */
 
 .main-menu {
@@ -244,17 +236,6 @@ body {
 
 .menu a.active {
   text-decoration: none;
-}
-
-.footer {
-  @include margin-top(1.5);
-  @include padding(.5 0);
-  text-align: center;
-  border-top: 2px solid color(brand);
-
-  p {
-    margin: 0;
-  }
 }
 
 /* Messages */
@@ -335,40 +316,106 @@ body {
   }
 }
 
-/* Print. */
+/* Mobile menu */
 
-aside,
-nav,
-footer {
-  @extend %print-none;
+.mobile-nav-wrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
 }
 
-@media print {
-  body,
-  .layout-center {
-    background-color: color(white);
+.mobile-nav-cover {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(color('black'), .2);
+  opacity: 0;
+
+  .js-nav-open & {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.mobile-nav-toggle {
+  @include typeface(headings);
+  display: block;
+  position: absolute;
+  top: $zen-gutters / 2;
+  right: $zen-gutters / 2;
+  padding: 3px ($zen-gutters + $zen-gutters / 4 + 4px) 2px 4px;
+  z-index: 12;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  border: 1px solid color(border);
+  border-radius: 3px;
+  pointer-events: auto;
+
+  .js-nav-open & {
+    color: color(text-bg);
   }
 
-  .layout-swap {
-    padding-top: 0;
-  }
-
-  [role='main'] {
-    width: 100%;
-  }
-
-  .layout-swap__top {
-    border-bottom: 0;
-  }
-
-  /* Zen overrides */
-  :link,
-  :visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
+  &::after {
+    position: absolute;
     content: '';
+    margin-left: $zen-gutters / 4;
+    width: $zen-gutters;
+    height: 4px;
+    border-top: 12px double color(text);
+    border-bottom: 4px solid color(text);
   }
 
+  .js-nav-open &::after {
+    border-color: color(text-bg);
+  }
+}
+
+.mobile-nav-sheet {
+  position: relative;
+  background-color: color(header-bg);
+  width: 90vw;
+  height: 100vh;
+  padding: 2rem;
+  transform: translateX(100vw);
+  z-index: 11;
+
+  .js-nav-open & {
+    pointer-events: auto;
+    box-shadow: -10px 0 10px -10px color(nearblack);
+    transform: translateX(10vw);
+  }
+
+  .js-navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style-type: none;
+      margin: .4rem 0;
+
+      a {
+        color: color(white);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.mobile-nav-cover,
+.mobile-nav-toggle,
+.mobile-nav-toggle::after,
+.mobile-nav-sheet {
+  transition: all 130ms ease-in;
+
+  .js-nav-open & {
+    transition: all 330ms ease-out;
+  }
 }

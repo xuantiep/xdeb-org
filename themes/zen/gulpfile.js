@@ -16,7 +16,6 @@ var options = {};
 // accordingly.
 options.rootPath = {
   project     : __dirname + '/',
-  styleGuide  : __dirname + '/styleguide/',
   theme       : __dirname + '/'
 };
 
@@ -34,43 +33,9 @@ options.sass = {
     options.theme.sass,
     options.rootPath.project + 'node_modules/breakpoint-sass/stylesheets',
     options.rootPath.project + 'node_modules/chroma-sass/sass',
-    options.rootPath.project + 'node_modules/support-for/sass',
-    options.rootPath.project + 'node_modules/typey/stylesheets',
-    options.rootPath.project + 'node_modules/zen-grids/sass'
+    options.rootPath.project + 'node_modules/typey/stylesheets'
   ],
   outputStyle: 'expanded'
-};
-
-// Define which browsers to add vendor prefixes for.
-options.autoprefixer = {
-  browsers: [
-    '> 1%',
-    'ie 11'
-  ]
-};
-
-// Define the style guide paths and options.
-options.styleGuide = {
-  source: [
-    options.theme.sass,
-    options.theme.css + 'style-guide/'
-  ],
-  destination: options.rootPath.styleGuide,
-
-  builder: 'builder/twig',
-
-  // The css and js paths are URLs, like '/misc/jquery.js'.
-  // The following paths are relative to the generated style guide.
-  css: [
-    path.relative(options.rootPath.styleGuide, options.theme.css + 'styles.css'),
-    path.relative(options.rootPath.styleGuide, options.theme.css + 'style-guide/chroma-kss-styles.css'),
-    path.relative(options.rootPath.styleGuide, options.theme.css + 'style-guide/kss-only.css')
-  ],
-  js: [
-  ],
-
-  homepage: 'homepage.md',
-  title: 'Hugo Zen Style Guide'
 };
 
 // Define the paths to the JS files to lint.
@@ -104,7 +69,7 @@ gulp.task('default', ['build']);
 // #################
 // Build everything.
 // #################
-gulp.task('build', ['styles:production', 'styleguide', 'lint']);
+gulp.task('build', ['styles:production', 'lint']);
 
 // ##########
 // Build CSS.
@@ -112,16 +77,13 @@ gulp.task('build', ['styles:production', 'styleguide', 'lint']);
 var sassFiles = [
   options.theme.sass + '**/*.scss',
   // Do not open Sass partials as they will be included as needed.
-  '!' + options.theme.sass + '**/_*.scss',
-  // Chroma markup has its own gulp task.
-  '!' + options.theme.sass + 'style-guide/kss-example-chroma.scss'
+  '!' + options.theme.sass + '**/_*.scss'
 ];
 
 gulp.task('styles', ['clean:css'], function() {
   return gulp.src(sassFiles)
     .pipe($.sourcemaps.init())
     .pipe(sass(options.sass).on('error', sass.logError))
-    .pipe($.autoprefixer(options.autoprefixer))
     .pipe($.size({showFiles: true}))
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest(options.theme.css))
@@ -130,32 +92,9 @@ gulp.task('styles', ['clean:css'], function() {
 gulp.task('styles:production', ['clean:css'], function() {
   return gulp.src(sassFiles)
     .pipe(sass(options.sass).on('error', sass.logError))
-    .pipe($.autoprefixer(options.autoprefixer))
     .pipe($.size({showFiles: true}))
     .pipe(cleanCSS({compatibility: 'ie10'}))
     .pipe(gulp.dest(options.theme.css));
-});
-
-// ##################
-// Build style guide.
-// ##################
-gulp.task('styleguide', ['clean:styleguide', 'styleguide:kss-example-chroma'], function() {
-  return kss(options.styleGuide);
-});
-
-gulp.task('styleguide:kss-example-chroma', function() {
-  return gulp.src(options.theme.sass + 'style-guide/kss-example-chroma.scss')
-    .pipe(sass(options.sass).on('error', sass.logError))
-    .pipe($.replace(/(\/\*|\*\/)\n/g, ''))
-    .pipe($.rename('kss-example-chroma.twig'))
-    .pipe($.size({showFiles: true}))
-    .pipe(gulp.dest(options.theme.css + 'style-guide'));
-});
-
-// Debug the generation of the style guide with the --verbose flag.
-gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:kss-example-chroma'], function() {
-  options.styleGuide.verbose = true;
-  return kss(options.styleGuide);
 });
 
 // #########################
@@ -196,17 +135,14 @@ gulp.task('lint:sass-with-fail', function() {
 // ##############################
 // Watch for changes and rebuild.
 // ##############################
-gulp.task('watch', ['watch:lint-and-styleguide', 'watch:js']);
+gulp.task('watch', ['watch:lint', 'watch:js']);
 
 gulp.task('watch:css', ['styles'], function() {
   return gulp.watch(options.theme.sass + '**/*.scss', options.gulpWatchOptions, ['styles']);
 });
 
-gulp.task('watch:lint-and-styleguide', ['styleguide', 'lint:sass'], function() {
-  return gulp.watch([
-      options.theme.sass + '**/*.scss',
-      options.theme.sass + '**/*.twig'
-    ], options.gulpWatchOptions, ['styleguide', 'lint:sass']);
+gulp.task('watch:lint', ['lint:sass'], function() {
+  return gulp.watch(options.theme.sass + '**/*.scss', options.gulpWatchOptions, ['lint:sass']);
 });
 
 gulp.task('watch:js', ['lint:js'], function() {
@@ -216,17 +152,7 @@ gulp.task('watch:js', ['lint:js'], function() {
 // ######################
 // Clean all directories.
 // ######################
-gulp.task('clean', ['clean:css', 'clean:styleguide']);
-
-// Clean style guide files.
-gulp.task('clean:styleguide', function() {
-  // You can use multiple globbing patterns as you would with `gulp.src`
-  return del([
-      options.styleGuide.destination + '*.html',
-      options.styleGuide.destination + 'public',
-      options.theme.css + '**/*.twig'
-    ], {force: true});
-});
+gulp.task('clean', ['clean:css']);
 
 // Clean CSS files.
 gulp.task('clean:css', function() {

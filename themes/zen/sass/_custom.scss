@@ -3,44 +3,23 @@
  * Site custom styles
  */
 
-.header,
-.footer {
-  @include zen-grid-container($context: flow);
-  @include zen-apply-gutter-padding();
-
-  @include zen-respond-to(m) {
-    // Since we are using zen-respond-to(), the values in $zen-layouts will
-    // override the global value for $zen-gutters.
-    @include zen-grid-container($context: flow);
-    @include zen-apply-gutter-padding();
+.page {
+  @include respond-to(xxl) {
+    box-shadow: 2px 0 10px #aaa, -2px 0 10px #aaa;
   }
 }
 
 .header {
   background-color: color(header-bg);
+  min-height: 3rem;
 
   @include respond-to(s) {
-    position: relative;
-    min-height: 88px;
+    min-height: 5rem;
     background-color: color(header-bg);
     background-image: url('../site/topbg.png');
     background-repeat: no-repeat;
     background-position: 50px -70px;
     background-size: 800px;
-  }
-
-  &__site-name {
-    position: absolute;
-    top: .2rem;
-    float: none;
-    text-align: center;
-
-    @include respond-to(s) {
-      position: static;
-      top: auto;
-      float: left;
-      text-align: left;
-    }
   }
 
   &__site-link {
@@ -49,14 +28,38 @@
       color: color(text-bg);
     }
   }
+}
 
-  &__region {
-    @include padding(0 0 .5 0);
-    text-align: center;
+.layout__navigation {
+  @include respond-to(xxl) {
+    @include padding-top(.5);
+    border-bottom: 4px solid color(brand);
+  }
+}
 
-    @include respond-to(s) {
-      @include padding(.5 0);
-      text-align: left;
+.main-menu {
+  @include respond-to(xxl) {
+    margin: 0;
+  }
+
+  li {
+    @include respond-to(xxl) {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    @include respond-to(xxl) {
+      border-bottom: 6px solid color(brand-alt);
+    }
+
+    &:active,
+    &.active {
+      text-decoration: none;
+
+      @include respond-to(xxl) {
+        border-bottom-color: color(brand);
+      }
     }
   }
 }
@@ -112,47 +115,6 @@
   a:hover,
   a:focus {
     text-decoration: underline;
-  }
-}
-
-.layout-center {
-  @include respond-to(xxl) {
-    box-shadow: 2px 0 10px #aaa, -2px 0 10px #aaa;
-  }
-}
-
-.layout-swap__top {
-  @include respond-to(xxl) {
-    @include padding-top(.5);
-    height: auto;
-    border-bottom: 4px solid color(brand);
-  }
-}
-
-.main-menu {
-  @include respond-to(xxl) {
-    margin: 0;
-  }
-
-  li {
-    @include respond-to(xxl) {
-      margin-bottom: 0;
-    }
-  }
-
-  a {
-    @include respond-to(xxl) {
-      border-bottom: 6px solid color(brand-alt);
-    }
-
-    &:active,
-    &.active {
-      text-decoration: none;
-
-      @include respond-to(xxl) {
-        border-bottom-color: color(brand);
-      }
-    }
   }
 }
 
@@ -257,11 +219,15 @@ blockquote {
   }
 }
 
-.slicknav_nav,
-.slicknav_btn,
-.slicknav_menutxt {
-  @include typeface(headings);
-  font-weight: normal;
+.mobile-nav-toggle {
+  &:link,
+  &:visited {
+    color: color(text-bg);
+  }
+
+  &::after {
+    border-color: color(text-bg);
+  }
 }
 
 .js-clipboard-button {

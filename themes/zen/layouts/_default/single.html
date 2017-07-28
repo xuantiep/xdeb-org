@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" -}}
-<main class="{{ if $.Param "sidebar" | default true }}layout-3col__left-content{{ else }}layout-3col__full{{ end }}" role="main">
+<main class="layout__content" role="main">
 <h1 class="title {{ if $.Param "submitted" | default false }}title-submitted{{ end }}">{{ .Title }}</h1>
 <article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
 <header>
@@ -15,7 +15,4 @@
 </div>
 </article>
 </main>
-
-{{ partial "menu.html" . -}}
-{{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . -}}{{ end }}
 {{ end }}

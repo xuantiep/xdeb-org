@@ -1,0 +1,48 @@
+// @file
+// The print stylesheet for this theme.
+
+// Colors and Sass
+//
+// Documentation for colors and Sass mixins and variables.
+//
+// Weight: -1
+
+@import 'init';
+
+// Components
+//
+// Weight: 1
+
+@import 'components/print-none/print-none';
+
+.skip-link,
+%skip-link,
+.breadcrumb,
+%breadcrumb,
+.pager,
+%pager,
+aside,
+nav,
+footer {
+  @extend %print-none;
+}
+
+@media print {
+  html {
+    font-size: $print-font-size;
+  }
+
+  body,
+  .page {
+    background-color: color(white);
+  }
+
+  [role='main'] {
+    width: 100%;
+  }
+
+  :link,
+  :visited {
+    text-decoration: underline;
+  }
+}

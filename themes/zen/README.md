@@ -15,7 +15,7 @@ This is a port of that theme for [Hugo :: A fast and modern static website engin
 * Gulp.js
 * Minify css
 * jQuery 2
-* Slicknav mobile menu
+* A mobile menu
 * Search with DuckDuckGo
 * Analytics with Piwik
 
@@ -37,7 +37,7 @@ $ cd themes
 $ git clone https://github.com/frjo/hugo-theme-zen.git zen
 ```
 
-[Hugo - Installing Hugo](http://gohugo.io/overview/installing/)
+[Hugo - Installing Hugo](https://gohugo.io/overview/installing/)
 
 
 ## config.yaml example
@@ -61,6 +61,7 @@ params:
   footer: "A [example.org](https://example.org/) production."
   icon: ""              # Relative path to icon in json feed, no leading slash.
   jquery: true          # Add jQuery
+  languageDir: ""       # Set ltr or rtl, defaults to ltr.
   logo: false           # Turn off the logo.
   piwikSiteId:          # Piwik site id
   piwikTrackerUrl: ""   # Piwik url, schemaless and no slash on end (example.com/piwik).
@@ -68,7 +69,6 @@ params:
   search: true          # Site search with DuckDuckGo.
   searchSize: 20        # Search field size, default 20.
   sidebar: true         # Show a sidebar to the right
-  slicknav: true        # Activates SlickNav, a nice mobile menu.
   submitted: true       # Show author and date information for a post.
 ```
 
