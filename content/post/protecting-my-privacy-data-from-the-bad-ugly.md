@@ -56,7 +56,7 @@ Since I will not convince anyone anyway I leave it at that.
 
 ## Block ads and trackers
 
-There is noting wrong with advertising as a principal. Today however it has become a quagmire of privacy invasive trackers that makes the web insecure, slow and ugly.
+There is as a principal noting wrong with advertising. Today it has however become a quagmire of privacy invasive trackers that makes the web insecure, slow and ugly.
 
 Blockers like Firefox Focus and Ghostery makes the web usable again.
 
@@ -69,7 +69,7 @@ Among the large tech companies Apple is without a doubt the one most committed t
 
 In our family we use iMessage, FaceTime and Photo streams almost exclusively to communicate. It's secure, private, built in and it just works.
 
-## Use Signal with non Apple users and customers
+## Use Signal with non Apple users
 
 Most likely the most secure way to communicate today. May look a bit plain but it's easy to use for anyone and works really well for text, voice and video.
 
@@ -85,11 +85,11 @@ DuckDuckGo is good and don't track you. When you need Google it's only a "!g" aw
 
 ## Run your own mail server
 
-I run my own mail server since many years and if you know how it's a good and cheep option. My family and people in our company have accounts here so mail between us stays on the server (TLS only). The server host mailing lists for the company, family, friends and neighbours. I know mailing lists are out of fashion but that doesn't stop them from being useful.
+I run my own mail server and if you know how it's a good and cheep option. My family and people in our company have accounts here so mail between us stays on the server (TLS only). The server also host mailing lists for the company, family, friends and neighbours. I know mailing lists are out of fashion but that doesn't stop them from being useful.
 
 For most people a e-mail service like Runbox, FastMail or ProtoMail, to name a few, is most likely a better option.
 
-Free options like Gmail and Outlook are not horrible but I prefer to pay with money for my services. They tend also not to be standard compliant.
+Free options like Gmail and Outlook are not horrible but I prefer to pay with money for my services. They tend not to be very standard compliant, especially Gmail.
 
 I have been using e-mail for 20+ years and it's still my preferred way of communication.
 
