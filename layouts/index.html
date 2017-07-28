@@ -5,7 +5,7 @@
 {{ end }}
 
 {{ define "main" -}}
-<main class="front {{ if $.Param "sidebar" | default true }}layout-3col__left-content{{ else }}layout-3col__full{{ end }}" role="main">
+<main class="layout__content" role="main">
 {{ range first .Site.Params.frontposts (where .Data.Pages "Type" "post") -}}
 {{ .Render "full" }}
 {{ end -}}
@@ -20,7 +20,4 @@
 </section>
 
 </main>
-
-{{ partial "menu.html" . -}}
-{{ if $.Param "sidebar" | default true }}{{ partial "sidebar.html" . -}}{{ end }}
 {{ end }}

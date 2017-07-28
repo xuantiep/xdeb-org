@@ -50,7 +50,6 @@ params:
   search: false
   searchSize: 20
   sidebar: false
-  slicknav: true
   submitted: true
 
 menu:
