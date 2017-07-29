@@ -14,7 +14,11 @@ pre {
 /* Page */
 
 body {
-  background-color: color(backdrop);
+  background-color: color(header-bg);
+
+  @include respond-to(s) {
+    background-color: color(backdrop);
+  }
 }
 
 .page {
