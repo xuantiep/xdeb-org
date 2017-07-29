@@ -4,6 +4,7 @@ date: 2017-07-28T11:16:03+02:00
 lastmod: 2017-07-28T11:16:03+02:00
 author: "Fredrik Jonsson"
 tags: ["css","web","development"]
+draft: true
 
 ---
 

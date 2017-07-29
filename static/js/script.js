@@ -24,7 +24,7 @@
       // Toggle the mobile nav sheet.
       $('.mobile-nav-cover, .mobile-nav-toggle').on('click toushstart', function (e) {
         e.preventDefault();
-        $('.mobile-nav-wrapper').toggleClass('js-nav-open');
+        $('body').scrollTop(0).toggleClass('js-nav-open');
       });
 
     }

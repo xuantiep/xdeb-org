@@ -1,7 +1,12 @@
 .layout {
-    &__page {
-      max-width: $max-content-width;
+  &__page {
+    max-width: $max-content-width;
+
+    @include respond-to(s) {
+      margin: 0 auto;
+      min-height: 100vh;
     }
+  }
 
   &__header,
   &__footer,
@@ -22,13 +27,6 @@
     margin: $zen-gutters/2;
     padding: $zen-gutters/2;
     border: 2px dashed color('red');
-  }
-
-  @include respond-to(s) {
-    &__page {
-      margin: 0 auto;
-      min-height: 100vh;
-    }
   }
 }
 
