@@ -3,6 +3,14 @@
  * Site custom styles
  */
 
+body {
+  background-color: color(header-bg);
+
+  @include respond-to(s) {
+    background-color: color(backdrop);
+  }
+}
+
 .page {
   @include respond-to(xxl) {
     box-shadow: 2px 0 10px #aaa, -2px 0 10px #aaa;
