@@ -135,8 +135,12 @@ article {
   }
 
   code {
-    @include type-layout(s, 1);
+    @include type-layout(xs, 1);
     word-wrap: break-word;
+
+    @include respond-to(xxl) {
+      @include type-layout(xs-2, 1);
+    }
   }
 
   pre {
@@ -327,6 +331,7 @@ figcaption {
 /* Mobile menu */
 
 .mobile-nav-wrapper {
+  @include typeface(headings);
   position: absolute;
   right: 0;
   top: 0;
@@ -355,7 +360,6 @@ figcaption {
 }
 
 .mobile-nav-toggle {
-  @include typeface(headings);
   display: block;
   position: absolute;
   top: $zen-gutters / 2;
@@ -417,6 +421,10 @@ figcaption {
         text-decoration: none;
       }
     }
+  }
+
+  .js-region {
+    @include padding(.5 0);
   }
 }
 
