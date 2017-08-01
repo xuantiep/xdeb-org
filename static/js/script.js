@@ -8,7 +8,7 @@
   'use strict';
 
   // Add a js class to the html-tag when JavsScript is active.
-  $('html').addClass('js');
+  $('html').removeClass('nojs').addClass('js');
 
   // Activate the mobil menu for small screens.
   if (window.matchMedia) {
@@ -18,8 +18,8 @@
       $('.mobile-nav-wrapper').removeClass('hidden');
 
       // Populate the mobile nav sheet.
+      $('.header__region').removeClass('header__region region hidden').addClass('js-region').appendTo('.mobile-nav-sheet');
       $('.main-menu').addClass('hidden').clone().removeClass('main-menu layout__navigation layout__full hidden hidden').addClass('js-main-menu').appendTo('.mobile-nav-sheet').find('.navbar').removeClass('navbar').addClass('js-navbar');
-      $('.header__region').addClass('hidden').clone().removeClass('header__region region hidden').addClass('js-region').appendTo('.mobile-nav-sheet');
 
       // Toggle the mobile nav sheet.
       $('.mobile-nav-cover, .mobile-nav-toggle').on('click toushstart', function (e) {
