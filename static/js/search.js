@@ -18,7 +18,7 @@
   // Initialise the search when search field get focus, this avoids loading index on every page.
   $('.search-text').one('focus', function () {
     // Delay a tiny bit to make the input field feel more responsive.
-    setTimeout(buildIndex, 50);
+    setTimeout(initIndex, 50);
   });
 
   // Do the search on keyup in the search field.
@@ -43,24 +43,11 @@
     $resultsWrapper.addClass('hidden');
   });
 
-  // Initialise and build the search index.
-  function buildIndex() {
-    searchData = $.getJSON('/searchindex.json');
-
+  // Initialise the search index.
+  function initIndex() {
+    searchData = $.getJSON('/lunrsearchindex.json');
     searchData.done(function () {
-      lunrIndex = lunr(function () {
-        this.ref('uri');
-        this.field('title');
-        this.field('tags');
-        this.field('section');
-        this.field('content');
-        this.field('year');
-
-        searchData.responseJSON.forEach(function (item) {
-          this.add(item);
-          searchStore[item.uri] = item.title;
-        }, this);
-      });
+      lunrIndex = lunr.Index.load(searchData.responseJSON)
     });
   }
 
@@ -69,10 +56,11 @@
     if (results.length > 0) {
       // Only show the x first results.
       results.slice(0, 50).forEach(function (result) {
+        var reference = result.ref.split('@@');
         var $result = $('<li>');
         $result.append($('<a>', {
-          href: result.ref,
-          text: searchStore[result.ref]
+          href: reference[0],
+          text: reference[1]
         }));
         $results.append($result);
       });

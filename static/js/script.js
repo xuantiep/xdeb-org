@@ -18,7 +18,7 @@
       $('.mobile-nav-wrapper').removeClass('hidden');
 
       // Populate the mobile nav sheet.
-      $('.header__region').removeClass('header__region region hidden').addClass('js-region').appendTo('.mobile-nav-sheet');
+      $('.header__region').filter(':not(:empty)').removeClass('header__region region hidden').addClass('js-region').appendTo('.mobile-nav-sheet');
       $('.main-menu').addClass('hidden').clone().removeClass('main-menu layout__navigation layout__full hidden hidden').addClass('js-main-menu').appendTo('.mobile-nav-sheet').find('.navbar').removeClass('navbar').addClass('js-navbar');
 
       // Toggle the mobile nav sheet.
@@ -31,9 +31,9 @@
   }
 
   // Display CSS grid layout warning to old browsers.
-  if (!window.CSS || !window.CSS.supports || !window.CSS.supports('display', 'grid')) {
-    $('.header').after('<div class="layout__grid-notice" role="complementary">Your browsers does not support modern grid layout so this page will not look or behave as it should. Resent versions of Chrome, Firefox and Safari all works so please update. Support is coming in Microsoft Edge as well, until then use another browser. <a href="https://www.whatbrowser.org/">What Browser?</a></div>');
-  }
+  // if (!window.CSS || !window.CSS.supports || !window.CSS.supports('display', 'grid')) {
+  //   $('.header').after('<div class="layout__grid-notice" role="complementary">Your browsers does not support modern grid layout so this page will not look or behave as it should. Resent versions of Chrome, Firefox and Safari all works so please update. Support is coming in Microsoft Edge as well, until then use another browser. <a href="https://www.whatbrowser.org/">What Browser?</a></div>');
+  // }
 
   // Add button to pre > code to copy the code to the clipboard.
   if (window.matchMedia && document.queryCommandSupported && document.queryCommandSupported('copy')) {
