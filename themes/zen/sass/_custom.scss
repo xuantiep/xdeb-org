@@ -72,8 +72,8 @@ body {
   }
 }
 
-.search-form {
-  padding-top: 0;
+.search-text {
+  @include margin(.5 0);
 }
 
 .search-results-wrapper {
@@ -95,6 +95,13 @@ body {
   max-height: 70vh;
   overflow-y: auto;
   box-shadow: 0 10px 10px -10px color('nearblack');
+
+  @include respond-to(m) {
+    margin-top: 2rem;
+    max-width: $max-content-width;
+    left: 50%;
+    margin-left: -($max-content-width / 2);
+  }
 
   h4 {
     margin: 0;
