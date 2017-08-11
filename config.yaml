@@ -47,7 +47,7 @@ params:
   piwikSiteId: 1
   piwikTrackerUrl: "admin.combonet.se/piwik"
   poweredby: false
-  search: true
+  search: false
   searchSize: 20
   sidebar: false
   submitted: true

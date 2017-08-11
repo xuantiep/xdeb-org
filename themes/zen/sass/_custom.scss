@@ -97,7 +97,6 @@ body {
   box-shadow: 0 10px 10px -10px color('nearblack');
 
   @include respond-to(m) {
-    margin-top: 2rem;
     max-width: $max-content-width;
     left: 50%;
     margin-left: -($max-content-width / 2);
