@@ -63,6 +63,7 @@ params:
   jquery: true          # Add jQuery
   languageDir: ""       # Set ltr or rtl, defaults to ltr.
   logo: false           # Turn off the logo.
+  mobileMenu: true      # Turn on a mobile menu on small screens.
   piwikSiteId:          # Piwik site id
   piwikTrackerUrl: ""   # Piwik url, schemaless and no slash on end (example.com/piwik).
   poweredby: true       # Show powered by hugo in footer
