@@ -44,6 +44,7 @@ params:
   imageMaxWidth: 400
   jquery: true
   logo: false
+  mobileMenu: true
   piwikSiteId: 1
   piwikTrackerUrl: "admin.combonet.se/piwik"
   poweredby: false
