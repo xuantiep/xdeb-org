@@ -21,7 +21,7 @@ brew install dovecot
 Homebrew will give you instruction for the LaunchDaemons script needed to start and stop dovecot. Next step is to copy over some default configuration files.
 
 ~~~~
-cp -pr /usr/local/Cellar/dovecot/2.2.28/share/doc/dovecot/example-config /usr/local/etc/dovecot
+cp -pr /usr/local/Cellar/dovecot/2.2.31/share/doc/dovecot/example-config /usr/local/etc/dovecot
 ~~~~
 
 I opted for adding a "local.conf" file with all my own settings, "dovecot.conf" will include that file if it exist.
