@@ -1,7 +1,7 @@
 ---
 title: "Running dovecot as a local only IMAP server on OS X"
 date: 2014-03-07T10:30:22+01:00
-lastmod: 2017-03-14T18:50:01+01:00
+lastmod: 2017-08-25T12:56:03+02:00
 author: "Fredrik Jonsson"
 tags: ["email","dovecot","macOS","technology"]
 aliases: ["node/1607"]
@@ -10,9 +10,9 @@ aliases: ["node/1607"]
 
 
 
-I prefer to store (archive) my mail locally. After moving my mail between mail clients a couple of time to many I decided to set up a local IMAP server. This will give me an mail client independent local storage that is in a standard format and future proof.
+I prefer to store (archive) my mail locally. After moving my mail between mail clients a couple of time to many I decided to set up a local IMAP server. This will give me a mail client independent local storage that is in a standard format and future proof.
 
-I run dovecot on my mail sever so that's what I want to run locally as well. Easiest way to install dovecot is via Homebrew.
+I run dovecot on my mail server so that's what I want to run locally as well. Easiest way to install dovecot is via Homebrew.
 
 ~~~~
 brew install dovecot
