@@ -16,6 +16,9 @@ author:
   url: "https://xdeb.org/fredrik"
   avatar: "site/fredrik.jpg"
 
+blackfriday:
+  fractions: false
+
 permalinks:
   post: "/post/:year/:month/:day/:slug"
 
