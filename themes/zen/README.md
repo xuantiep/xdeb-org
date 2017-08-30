@@ -74,6 +74,13 @@ params:
 ```
 
 
+## Dates
+
+If "lastmod" is set in the frontmatter on a post that value will be used in the "submitted" section. If not "date" is used.
+
+With "lastmod" set a date section will also appear at the bottom of post telling the reader the created and modification dates.
+
+
 ## Shortcodes
 
 ### Clear
