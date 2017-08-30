@@ -5,7 +5,7 @@
 {{ end }}
 
 {{ define "main" -}}
-<main class="layout__content" role="main">
+<main class="content layout__content" role="main">
 {{ range first .Site.Params.frontposts (where .Data.Pages "Type" "post") -}}
 {{ .Render "full" }}
 {{ end -}}

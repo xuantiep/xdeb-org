@@ -38,16 +38,11 @@ body {
   }
 }
 
-.layout__navigation {
-  @include respond-to(xxl) {
-    @include padding-top(.5);
-    border-bottom: 4px solid color(brand);
-  }
-}
-
 .main-menu {
   @include respond-to(xxl) {
+    @include padding-top(.5);
     margin: 0;
+    border-bottom: 4px solid color(brand);
   }
 
   li {
