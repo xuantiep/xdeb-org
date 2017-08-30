@@ -57,7 +57,7 @@ This is the basic html structure I'm using for this site. A single div wrapper f
     <div class="page layout__page layout__sidebar-second">
       <header class="header layout__header" role="banner"></header>
       <nav class="main-menu layout__navigation" role="navigation"></nav>
-      <main class="content layout__content" role="main"></main>
+      <main class="main layout__main" role="main"></main>
       <aside class="sidebar layout__second-sidebar" role="complementary"></aside>
       <footer class="footer layout__footer" role="contentinfo"></footer>
     </div>
@@ -106,7 +106,7 @@ With css grid you can read the styles and quickly understand how the page work. 
 
   &__header,
   &__footer,
-  &__content,
+  &__main,
   &__navigation,
   &__first-sidebar,
   &__second-sidebar,
@@ -202,7 +202,7 @@ With css grid you can read the styles and quickly understand how the page work. 
       grid-area: top;
     }
 
-    &__content {
+    &__main {
       grid-area: main;
     }
 
