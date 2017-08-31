@@ -170,7 +170,7 @@ figure {
 blockquote {
   @include margin(1 $indent-amount/2);
   @include padding(0 $indent-amount/2);
-  border-left: 2px solid color(border);
+  border-left: 2px solid color(brand);
 }
 
 .front {
