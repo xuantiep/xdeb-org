@@ -48,12 +48,12 @@ Restart Apache and add "`Protocols h2 http/1.1`" to your Apache conf. Best to ad
 
 ## Apache and PHP-FPM configurations
 
-Debian by default sets up php-fpm to listen on a unix socket and since that should perform a bit better than a TCP socket I will use that. The most important setting is "max_children". With Drupal each php process will use something like 20-40 MB typically, can be a lot more for some sites so you simply need to test.
+Debian by default sets up php-fpm to listen on a unix socket and since that should perform a bit better than a TCP socket I will use that. The most important setting is "max_children". With Drupal each php process will typically use something like 20-40 MB. It can be a lot more for some sites so you simply need to test.
 
 If your Drupal site use 30 MB per process setting "max_children" to 10 means that php will use up to about 10 * 30 MB = 300 MB of memory. A good resource for figuring out what is the best settings is this blog post [Adjusting child processes for PHP-FPM (Nginx) · MYSHELL.CO.UK](http://myshell.co.uk/blog/2012/07/adjusting-child-processes-for-php-fpm-nginx/)
 
 ~~~~
-listen = /var/run/php-fpm.sock
+listen = /run/php/php-fpm.sock
 pm = dynamic
 pm.max_children = 10
 pm.start_servers = 4
