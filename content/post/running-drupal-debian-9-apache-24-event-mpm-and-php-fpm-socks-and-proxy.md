@@ -140,6 +140,37 @@ This is how I set up a vhost for serving Drupal.
 
 Notice that I include the .htaccess file. I have set "AllowOverride None" to prevent Apache from looking for and automatically include any .htaccess files it finds. This improves performance a bit but one needs to remember to reload Apache when changes are made to the .htaccess file.
 
+## Apache security configurations
+
+Here follow the security related settings I use for Apache. See the included links for more information.
+
+~~~~
+# Security settings
+# https://securityheaders.io/ and https://httpoxy.org/
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "sameorigin"
+  Header always set X-Xss-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  RequestHeader unset Proxy early
+</IfModule>
+
+# SSL settings, see https://mozilla.github.io/server-side-tls/ssl-config-generator/?server=apache-2.4.10&openssl=1.0.1t&hsts=yes&profile=modern
+<IfModule mod_ssl.c>
+  SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1
+  SSLCipherSuite ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256
+  SSLHonorCipherOrder on
+  SSLCompression off
+  SSLUseStapling on
+  SSLStaplingResponderTimeout 5
+  SSLStaplingReturnResponderErrors off
+  SSLStaplingCache shmcb:${APACHE_RUN_DIR}/ocsp_scache(128000)
+  SSLSessionCache shmcb:${APACHE_RUN_DIR}/ssl_scache(512000)
+  SSLSessionCacheTimeout 300
+</IfModule>
+~~~~
+
+
 ## Extra security configurations in Apache for Drupal
 
 Drupal put .htaccess in the files folder and  some other places for security reasons. The following is an example how to add the same security configurations directly in an  Apache conf file. The DirectoryMatch regex most likely needs adjustment for your directory structure.
