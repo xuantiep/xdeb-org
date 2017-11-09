@@ -7,7 +7,7 @@ tags: ["hugo","css","web","development"]
 
 ---
 
-I have released the css grid version of my [Zen theme for Hugo](https://github.com/frjo/hugo-theme-zen). This site have been using it for a couple of month, [Layout with CSS grid and flex, it's really nice](/post/2017/08/29/layout-with-css-grid-and-flex-its-really-nice/).
+I have released the css grid version of my [Zen theme for Hugo](https://github.com/frjo/hugo-theme-zen). This site have been using it for a couple of month. Read more at [Layout with CSS grid and flex, it's really nice](/post/2017/08/29/layout-with-css-grid-and-flex-its-really-nice/).
 
 With the resent release of [Microsoft Edge 16](https://blogs.windows.com/msedgedev/2017/10/17/edgehtml-16-fall-creators-update/) there is support for css grid in all the major browsers.
 
