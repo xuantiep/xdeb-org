@@ -155,7 +155,7 @@ Here follow the security related settings I use for Apache. See the included lin
   RequestHeader unset Proxy early
 </IfModule>
 
-# SSL settings, see https://mozilla.github.io/server-side-tls/ssl-config-generator/?server=apache-2.4.10&openssl=1.0.1t&hsts=yes&profile=modern
+# SSL settings, see https://mozilla.github.io/server-side-tls/ssl-config-generator/?server=apache-2.4.25&openssl=1.1.0f&hsts=yes&profile=modern
 <IfModule mod_ssl.c>
   SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1
   SSLCipherSuite ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256
