@@ -22,9 +22,12 @@ Time Machine runs every hour as long as I'm connected to my home network. Arq ru
 
 Two of the backups, Time Machine and Arq, are set up and forget. This is vital I believe, backups are done automatically or not at all in my experience.
 
+Another online backup option that people I know use and like is Backblaze.
+
 * [Apple Time Machine](https://support.apple.com/en-us/HT201250)
 * [Arq Backup](https://www.arqbackup.com/)
 * [Carbon Copy Cloner](https://bombich.com/)
+* [Backblaze](https://www.backblaze.com/)
 
 ## Keep all software updated
 
@@ -62,6 +65,7 @@ Blockers like Firefox Focus and Ghostery makes the web usable again.
 
 * [Firefox Focus](https://support.mozilla.org/en-US/kb/focus) (iOS)
 * [Ghostery](https://www.ghostery.com/) (macOS)
+* [uBlock Origin](https://github.com/gorhill/uBlock) (multi plattform)
 
 ## Use Apples devices and services
 

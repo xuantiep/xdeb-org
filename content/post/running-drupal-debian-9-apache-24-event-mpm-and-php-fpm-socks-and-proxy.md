@@ -1,45 +1,16 @@
 ---
-title: "Running Drupal on Debian 9 with Apache 2.4, event MPM and PHP-FPM (via socks and proxy)"
-date: 2017-08-25T07:27:47+02:00
-lastmod: 2017-08-25T07:27:51+02:00
+title: "Running Drupal on Debian 9 with Apache 2.4, HTTP/2, event MPM and PHP-FPM (via socks and proxy)"
+date: 2017-11-09T11:51:16+01:00
+lastmod: 2017-11-09T11:51:20+01:00
 author: "Fredrik Jonsson"
-tags: ["apache","php","planetdrupal","server","drupal","performance","debian","development"]
-slug: "running-drupal-on-debian-9-with-apache-2-4-event-mpm-and-php-fpm-via-socks-and-proxy"
-draft: true
+tags: ["apache","php","server","drupal","performance","debian","development"]
+slug: "running-drupal-on-debian-9-with-apache-2-4-http2-event-mpm-and-php-fpm-via-socks-and-proxy"
 
 ---
 
+My post [Debian 8 with Apache 2.4, event MPM and PHP-FPM (via socks and proxy)](/post/2016/01/21/running-drupal-on-debian-8-with-apache-2-4-event-mpm-and-php-fpm-via-socks-and-proxy/) is one of the most read on xdeb.org. Here is the updated version for Debian 9.
 
-
-I'm building a new Ansible playbook for setting up web servers with Debian 8. I have always used mod_php before and it has been very stable but have some well known drawbacks. Since Debian 8 comes with Apache 2.4 and PHP 5.6 I wanted to implement php-fpm that seems very promising.
-
-With mod_php every Apache process will need to load php and therefor use a lot more memory than needed, even for just serving static content like images and css. I have been running [Lighttpd as a static file server](/node/1259) to mitigate this problem.
-
-With event mpm + php-fpm a plain Apache processes will deal with all static content and hand of php request to separate php-fpm processes. This will allow a server to handle more visitors with the same amount of memory and I can skip Lighttpd.
-
-I found surprisingly little information on how to get this working well for serving things like Drupal. So here are what I have found out from manuals, post on the Internet as well as my own testing.
-
-This setup has not been tested in production yet! When it has I will try to remember to update this article. In local testing on a VirtualBox image with Debian 8 and 512 MB RAM it seems to work fine. I also run the same setup locally on OS X with good results.
-
-**Update 2016-03-31**: This is now running in production, this blog e.g., and it seems to work really well. Page load time has improved and memory usage is lower.
-
-Here are some performance test done with ab. These doesn't say much more than that it seems to work and most likely can handle some load.
-
-~~~~
-ab -k -l -n 1000 -c 10 -H "Accept-Encoding: gzip,deflate" http://xdeb.dev/
-
-Requests per second:    526.01 [#/sec] (mean)
-~~~~
-
-This was the front page of a local version of xdeb.org running Drupal 7, with page cache of course. I also tested with plain Drupal 8 and got around 300 request/sec, more or less what one would expect.
-
-A plain html page looks like this.
-
-~~~~
-ab -k -l -n 1000 -c 10 -H "Accept-Encoding: gzip,deflate" http://localhost/
-
-Requests per second:    2466.39 [#/sec] (mean)
-~~~~
+There are only small changes needed to make this setup work for Debian 9 but I have also added information about HTTP/2 and the example vhost is TLS only. With free certs from Letsencrypt there is no reason not to use TLS, and many reasons to use it. Read my post [Let's Encrypt my servers with acme tiny](/post/2016/02/09/lets-encrypt-my-servers-with-acme-tiny/) for more.
 
 ## Installation
 
@@ -62,6 +33,16 @@ a2enmod proxy_fcgi
 ~~~~
 
 This will automatically activate the proxy module as well since it is a dependency. I also activate auth_digest, expires, headers, rewrite and ssl on my servers. Rewrite is needed for Drupal to get clean URLs.
+
+## Apache and HTTP/2 configuration
+
+The Apache version that ships with Debian 9 suports [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) so lets activate it.
+
+~~~~
+a2enmod http2
+~~~~
+
+Restart Apache and add "`Protocols h2 http/1.1`" to your Apache conf. Best to add it per vhost as I have done in the example below.
 
 ## Apache and PHP-FPM configurations
 
@@ -112,6 +93,26 @@ This is how I set up a vhost for serving Drupal.
 
 ~~~~
 <VirtualHost *:80>
+  ServerName example.com
+  ServerAlias www.example.com
+  Redirect permanent / https://www.example.com/
+</VirtualHost>
+
+<VirtualHost *:443>
+  <IfModule mod_http2.c>
+    Protocols h2 http/1.1
+  </IfModule>
+
+  <IfModule mod_ssl.c>
+    SSLEngine on
+    SSLCertificateFile /path/to/signed.crt
+    SSLCertificateKeyFile /path/to/domain.key
+    SSLCertificateChainFile /path/to/chain.pem
+    <IfModule mod_headers.c>
+      Header always set Strict-Transport-Security: "max-age=15768000"
+    </IfModule>
+  </IfModule>
+
   DocumentRoot /var/www/customers/example/web
   ServerName example.com
   ServerAlias www.example.com
@@ -124,7 +125,7 @@ This is how I set up a vhost for serving Drupal.
     <IfModule mod_proxy_fcgi.c>
       # Run php-fpm via proxy_fcgi
       <FilesMatch \.php$>
-        SetHandler "proxy:unix:/var/run/php-fpm.sock|fcgi://localhost"
+        SetHandler "proxy:unix:/run/php/php-fpm.sock|fcgi://localhost"
       </FilesMatch>
     </IfModule>
     # Only allow access to cron.php etc. from localhost
@@ -221,12 +222,6 @@ table_open_cache = 2000
 table_definition_cache =  2000
 thread_handling = pool-of-threads
 
-# Query Cache Configuration
-query_cache_limit = 2M
-query_cache_size = 64M
-query_cache_type = 1
-query_cache_min_res_unit = 2K
-
 # Slow Log Configuration
 slow_query_log = 1
 slow_query_log_file = /var/log/mysql/mysql_slow_query.log
@@ -234,7 +229,6 @@ long_query_time = 5
 #log_queries_not_using_indexes = 1
 
 # InnoDB Configuration
-#default_storage_engine = innodb
 innodb_buffer_pool_size = 256M
 innodb_flush_method = O_DIRECT
 innodb_file_per_table = 1
