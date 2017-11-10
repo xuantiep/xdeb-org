@@ -1,13 +1,15 @@
 ---
 title: "Running Drupal on Debian 8 with Apache 2.4, event MPM and PHP-FPM (via socks and proxy)"
 date: 2016-01-21T02:02:48+01:00
-lastmod: 2016-07-12T06:43:08+02:00
+lastmod: 2017-11-10T10:10:57+01:00
 author: "Fredrik Jonsson"
 tags: ["apache","php","planetdrupal","server","drupal","performance","debian","development"]
 aliases: ["node/1613"]
 slug: "running-drupal-on-debian-8-with-apache-2-4-event-mpm-and-php-fpm-via-socks-and-proxy"
 
 ---
+
+Updated version of this article: [Running Drupal on Debian 9 with Apache 2.4, HTTP/2, event MPM and PHP-FPM (via socks and proxy)](/post/2017/11/09/running-drupal-on-debian-9-with-apache-2-4-http2-event-mpm-and-php-fpm-via-socks-and-proxy/)
 
 I'm building a new Ansible playbook for setting up web servers with Debian 8. I have always used mod_php before and it has been very stable but have some well known drawbacks. Since Debian 8 comes with Apache 2.4 and PHP 5.6 I wanted to implement php-fpm that seems very promising.
 
