@@ -22,7 +22,6 @@ $chroma: add-colors((
   grey-light:             ('black' lighten 80%), // #ccc
   grey-extra-light:       ('black' lighten 93.33%), // #eee
   white:                  #fff,
-
   brown:                  #706a58,
   brown-alt:              #4d493d,
   beige:                  #f2ecd5,
@@ -89,6 +88,8 @@ $chroma: add-colors('functional', (
   watermark:              'grey-extra-light',
 
   headings:               'nearblack',
+
+  code:                   'nearblack',
 ));
 
 $chroma-active-scheme: 'functional';
