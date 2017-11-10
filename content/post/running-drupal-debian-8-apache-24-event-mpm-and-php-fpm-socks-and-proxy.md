@@ -9,8 +9,6 @@ slug: "running-drupal-on-debian-8-with-apache-2-4-event-mpm-and-php-fpm-via-sock
 
 ---
 
-
-
 I'm building a new Ansible playbook for setting up web servers with Debian 8. I have always used mod_php before and it has been very stable but have some well known drawbacks. Since Debian 8 comes with Apache 2.4 and PHP 5.6 I wanted to implement php-fpm that seems very promising.
 
 With mod_php every Apache process will need to load php and therefor use a lot more memory than needed, even for just serving static content like images and css. I have been running [Lighttpd as a static file server](/node/1259) to mitigate this problem.
@@ -55,7 +53,7 @@ You most likely want some more php extensions as well, here are the ones I norma
 apt-get install php5-cli php5-apcu php5-curl php5-dev php5-gd php5-imagick php5-json php5-mysql php5-mcrypt php5-twig php-pear graphicsmagick graphicsmagick-imagemagick-compat
 ~~~~
 
-As suggested in <http://wiki.apache.org/httpd/PHP-FPM> I will run php-fpm via mod\_proxy\_fcgi so lets activate that module.
+As suggested in [PHP-FPM - Httpd Wiki](https://wiki.apache.org/httpd/PHP-FPM) I will run php-fpm via mod\_proxy\_fcgi so lets activate that module.
 
 ~~~~
 a2enmod proxy_fcgi

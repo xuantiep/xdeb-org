@@ -28,7 +28,7 @@ You most likely want some more php extensions as well, here are the ones I norma
 apt-get install php-cli php-apcu php-curl php-dev php-gd php-imagick php-json php-mysql php-mcrypt php-twig php-pear graphicsmagick graphicsmagick-imagemagick-compat
 ~~~~
 
-As suggested in <http://wiki.apache.org/httpd/PHP-FPM> I will run php-fpm via mod\_proxy\_fcgi so lets activate that module.
+As suggested in [PHP-FPM - Httpd Wiki](https://wiki.apache.org/httpd/PHP-FPM) I will run php-fpm via mod\_proxy\_fcgi so lets activate that module.
 
 ~~~~
 a2enmod proxy_fcgi
@@ -38,13 +38,15 @@ This will automatically activate the proxy module as well since it is a dependen
 
 ## Apache and HTTP/2 configuration
 
-The Apache version that ships with Debian 9 suports [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) so lets activate it.
+The Apache version that ships with Debian 9 supports [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) so lets activate it.
 
 ~~~~
 a2enmod http2
 ~~~~
 
 Restart Apache and add "`Protocols h2 http/1.1`" to your Apache conf. Best to add it per vhost as I have done in the example below.
+
+That’s it, you are now serving pages over HTTP/2. There are interesting features like push to look in to but this is a good start.
 
 ## Apache and PHP-FPM configurations
 
