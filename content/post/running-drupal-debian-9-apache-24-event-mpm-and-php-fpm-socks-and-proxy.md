@@ -8,11 +8,11 @@ slug: "running-drupal-on-debian-9-with-apache-2-4-http2-event-mpm-and-php-fpm-vi
 
 ---
 
-My post [Debian 8 with Apache 2.4, event MPM and PHP-FPM (via socks and proxy)](/post/2016/01/21/running-drupal-on-debian-8-with-apache-2-4-event-mpm-and-php-fpm-via-socks-and-proxy/) is one of the most read on xdeb.org. Here is the updated version for Debian 9.
+My article [Debian 8 with Apache 2.4, event MPM and PHP-FPM (via socks and proxy)](/post/2016/01/21/running-drupal-on-debian-8-with-apache-2-4-event-mpm-and-php-fpm-via-socks-and-proxy/) is one of the most read on xdeb.org. Here is the updated version for Debian 9.
 
 Debian 9 comes with Apache 2.4.25, PHP 7 and MariaDB 10.1 so together with HTTP/2 the server should perform even better. Especially PHP 7 is a significant improvement for all PHP based apps.
 
-There are only small changes needed to make this setup work for Debian 9 but I have also added information about HTTP/2 and the example vhost is TLS only. With free certs from Letsencrypt there is no reason not to use TLS, and many reasons to use it. Read my post [Let's Encrypt my servers with acme tiny](/post/2016/02/09/lets-encrypt-my-servers-with-acme-tiny/) for more.
+There are only small changes needed to make this setup work for Debian 9 but I have also added information about HTTP/2 and the example vhost is TLS only. With free certs from Letsencrypt there is no reason not to use TLS, and many reasons to use it. Read my article [Let's Encrypt my servers with acme tiny](/post/2016/02/09/lets-encrypt-my-servers-with-acme-tiny/) for more.
 
 ## Installation
 
