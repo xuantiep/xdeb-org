@@ -20,9 +20,15 @@ Sverige är å ena sidan. Å andra sidan.
 Sverige är massor av språk och mängder med dialekter.  
 Sverige är landsbygd och by. Tätort och förort. Och en och annan storstad.  
 Sverige är åker och äng, skog, mera skog, sjö, himmel och hav och allt däremellan.  
-…
+Sverige är dyslektiker, elektriker och skeptiker.  
+Sverige är minoriteter och mexitegel, bandybollar och studiecirklar.  
+Sverige är kyrktuppar och moskéer, lösgodis och fredagsmys.  
+Sverige är tulpaner och turbaner, folkdräkt och spritt språngande naket.  
+Sverige är lika och olika. Och lika olika.  
+Sverige är och ska vara omtanke och kunskap, respekt och empati.  
+Sverige är och ska vara åsiktsfrihet, jämställdhet och demokrati.  
+Framför allt är och ska Sverige vara frihet för alla. Här ska alla ha samma rätt att existera och utvecklas. Här ska det finnas acceptans för olikheter.  
+Ingen annan bestämmer vem du är. Det gör du själv!  
+Så typiskt svenskt! Så typiskt bra!
 
 Läs mer på [Alla är lika värda – typisktsvenskt.se](http://typisktsvenskt.se/)
-
-
-
