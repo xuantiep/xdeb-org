@@ -1,7 +1,7 @@
 ---
 title: "Let\'s Encrypt my servers with acme tiny"
 date: 2016-02-09T07:52:04+01:00
-lastmod: 2017-05-07T08:08:09+02:00
+lastmod: 2017-11-15T07:57:24+01:00
 author: "Fredrik Jonsson"
 tags: ["apache","security","ssl","letsencrypt","ansible","technology"]
 aliases: ["node/1614"]
@@ -79,14 +79,16 @@ General SSL configurations, see [Generate Mozilla Security Recommended Web Serve
 
 ~~~~
 <IfModule mod_ssl.c>
-  SSLProtocol all -SSLv3 -TLSv1
-  SSLCipherSuite ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!3DES:!MD5:!PSK
+  SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1
+  SSLCipherSuite ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256
   SSLHonorCipherOrder on
   SSLCompression off
   SSLUseStapling on
   SSLStaplingResponderTimeout 5
   SSLStaplingReturnResponderErrors off
   SSLStaplingCache shmcb:${APACHE_RUN_DIR}/ocsp_scache(128000)
+  SSLSessionCache shmcb:${APACHE_RUN_DIR}/ssl_scache(512000)
+  SSLSessionCacheTimeout 300
 </IfModule>
 ~~~~
 
@@ -138,7 +140,8 @@ PORT80=$(lsof -ti :80 | wc -l)
 if [ $PORT80 = 0 ]; then
   cd /var/www/challenges
   nohup python -m SimpleHTTPServer 80 > /dev/null 2>&1 &
-  iptables -A INPUT -i eth0 -p tcp --dport 80 -m conntrack --ctstate NEW -j ACCEPT
+  iptables -A INPUT -i venet0 -p tcp --dport 80 -m conntrack --ctstate NEW -j ACCEPT
+  ip6tables -A INPUT -i venet0 -p tcp --dport 80 -m conntrack --ctstate NEW -j ACCEPT
 fi
 
 # Get a updated certificate.
@@ -157,24 +160,29 @@ while true; do
       mv -f /etc/ssl/letsencrypt/chain_new.pem /etc/ssl/letsencrypt/chain.pem
       mv -f /etc/ssl/letsencrypt/example.com/signed_new.crt /etc/ssl/letsencrypt/example.com/signed.crt
       cat /etc/ssl/letsencrypt/example.com/signed.crt /etc/ssl/letsencrypt/chain.pem > /etc/ssl/letsencrypt/example.com/fullchain.pem
-      echo "Acme tiny successfully renewed certificate."
+      echo ""
+      echo "[Success] Acme tiny successfully renewed certificate."
+      echo ""
 
       systemctl restart apache2
+      systemctl restart dovecot
+      systemctl restart postfix
 
     else
-      echo "Acme tiny have problems."
+      echo "[Error] Acme tiny have problems."
     fi
     break
   else
     # Sleep for max 9999 seconds, then try again.
     sleep `tr -cd 0-9 < /dev/urandom | head -c 4`
-    echo "Acme tiny retry triggered."
+    echo "[Notice] Acme tiny retry triggered."
   fi
 done
 
 # Stop temp web server and close port 80 if needed.
 if [ $PORT80 = 0 ]; then
-  iptables -D INPUT -i eth0 -p tcp --dport 80 -m conntrack --ctstate NEW -j ACCEPT
+  iptables -D INPUT -i venet0 -p tcp --dport 80 -m conntrack --ctstate NEW -j ACCEPT
+  ip6tables -D INPUT -i venet0 -p tcp --dport 80 -m conntrack --ctstate NEW -j ACCEPT
   pkill -f SimpleHTTPServer
 fi
 ~~~~
@@ -193,6 +201,7 @@ if [ $PORT80 = 0 ]; then
   cd {{ acme_challenge_dir }}
   nohup python -m SimpleHTTPServer 80 > /dev/null 2>&1 &
   iptables -A INPUT -i {{ ansible_default_ipv4.interface }} -p tcp --dport 80 -m conntrack --ctstate NEW -j ACCEPT
+  ip6tables -A INPUT -i {{ ansible_default_ipv6.interface }} -p tcp --dport 80 -m conntrack --ctstate NEW -j ACCEPT
 fi
 
 # Get a updated certificate.
@@ -211,26 +220,29 @@ while true; do
       mv -f {{ acme_certs_dir }}/chain_new.pem {{ acme_certs_dir }}/chain.pem
       mv -f {{ acme_certs_dir }}/{{ acme_domains[0] }}/signed_new.crt {{ acme_certs_dir }}/{{ acme_domains[0] }}/signed.crt
       cat {{ acme_certs_dir }}/{{ acme_domains[0] }}/signed.crt {{ acme_certs_dir }}/chain.pem > {{ acme_certs_dir }}/{{ acme_domains[0] }}/fullchain.pem
-      echo "Acme tiny successfully renewed certificate."
+      echo ""
+      echo "[Success] Acme tiny successfully renewed certificate."
+      echo ""
 
 {% for acme_service in acme_services %}
       systemctl restart {{ acme_service }}
 {% endfor %}
 
     else
-      echo "Acme tiny have problems."
+      echo "[Error] Acme tiny have problems."
     fi
     break
   else
     # Sleep for max 9999 seconds, then try again.
     sleep `tr -cd 0-9 < /dev/urandom | head -c 4`
-    echo "Acme tiny retry triggered."
+    echo "[Notice] Acme tiny retry triggered."
   fi
 done
 
 # Stop temp web server and close port 80 if needed.
 if [ $PORT80 = 0 ]; then
   iptables -D INPUT -i {{ ansible_default_ipv4.interface }} -p tcp --dport 80 -m conntrack --ctstate NEW -j ACCEPT
+  ip6tables -D INPUT -i {{ ansible_default_ipv6.interface }} -p tcp --dport 80 -m conntrack --ctstate NEW -j ACCEPT
   pkill -f SimpleHTTPServer
 fi
 ~~~~
