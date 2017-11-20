@@ -107,7 +107,7 @@ body {
   & > li {
     &::before {
       @include type-layout(xs, 1);
-      color: color('grey');
+      color: color('text-meta');
 
       @include respond-to(xxl) {
         @include type-layout(xs-2, 1);
@@ -128,7 +128,6 @@ body {
 
 article {
   & > header {
-    color: color('grey');
 
     h1 {
       @include padding-bottom(.2);
@@ -207,7 +206,7 @@ blockquote {
   time {
     @include typeface(headings);
     @include type-layout(xs, 1);
-    color: color('grey');
+    color: color('text-meta');
 
     @include respond-to(xxl) {
       @include type-layout(xs-2, 1);
