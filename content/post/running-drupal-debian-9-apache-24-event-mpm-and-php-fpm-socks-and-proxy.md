@@ -8,7 +8,9 @@ slug: "running-drupal-on-debian-9-with-apache-2-4-http2-event-mpm-and-php-fpm-vi
 
 ---
 
-My article [Debian 8 with Apache 2.4, event MPM and PHP-FPM (via socks and proxy)](/post/2016/01/21/running-drupal-on-debian-8-with-apache-2-4-event-mpm-and-php-fpm-via-socks-and-proxy/) is one of the most read on xdeb.org. Here is the updated version for Debian 9.
+My article [Running Drupal on Debian 8 with Apache 2.4, event MPM and PHP-FPM (via socks and proxy)](/post/2016/01/21/running-drupal-on-debian-8-with-apache-2-4-event-mpm-and-php-fpm-via-socks-and-proxy/) is one of the most read on xdeb.org. Here is the updated version for Debian 9.
+
+I mention Drupal in the title but this setup should work well for most PHP based systems like Wordpress and Joomla etc.
 
 Debian 9 comes with Apache 2.4.25, PHP 7 and MariaDB 10.1 so together with HTTP/2 the server should perform even better. Especially PHP 7 is a significant improvement for all PHP based apps.
 
