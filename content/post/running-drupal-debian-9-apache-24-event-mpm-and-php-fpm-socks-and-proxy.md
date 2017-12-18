@@ -97,6 +97,8 @@ Here we then come to the part that caused me the biggest problem. How to get php
 
 I found the solution in a post from Mattias Geniar [Apache 2.4: ProxyPass (For PHP) Taking Precedence Over Files/FilesMatch In Htaccess](https://ma.ttias.be/apache-2-4-proxypass-for-php-taking-precedence-over-filesfilesmatch-in-htaccess/). His suggestion to use a SetHandle in a FileMatch directive seems to work very well.
 
+Now with Debian 9 I see that this is the standard solution in `/etc/apache2/conf-available/php7.0-fpm.conf` that can be optionally activated. I prefer to do it for each vhost instead of globally. This also makes it easy to set different FPM pools for vhosts.
+
 This is how I set up a vhost for serving Drupal.
 
 ~~~~
