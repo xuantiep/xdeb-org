@@ -1,7 +1,7 @@
 ---
 title: "Let\'s Encrypt my servers with acme tiny"
 date: 2016-02-09T07:52:04+01:00
-lastmod: 2017-11-15T07:57:24+01:00
+lastmod: 2018-01-07T09:06:29+01:00
 author: "Fredrik Jonsson"
 tags: ["apache","security","ssl","letsencrypt","ansible","technology"]
 aliases: ["node/1614"]
@@ -71,6 +71,12 @@ Download Let's Encrypt intermediate cert and create a fullchain file with it and
 ~~~~
 wget -O - https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem > /etc/ssl/letsencrypt/chain.pem
 cat /etc/ssl/letsencrypt/example.com/signed.crt /etc/ssl/letsencrypt/chain.pem > fullchain.pem
+~~~~
+
+Just to make sure you can verify the cert with this command.
+
+~~~~
+openssl verify -CAfile /etc/ssl/letsencrypt/chain.pem /etc/ssl/letsencrypt/example.com/signed.crt
 ~~~~
 
 ## Set up Apache
