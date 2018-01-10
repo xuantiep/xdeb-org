@@ -1,27 +1,38 @@
 <?php
 
-$query = [];
-
-if (isset($_SERVER['QUERY_STRING'])) {
-  parse_str($_SERVER['QUERY_STRING'], $query);
+// Only allow GET requests with a query.
+if ($_SERVER['REQUEST_METHOD'] != 'GET' || !isset($_SERVER['QUERY_STRING'])) {
+  exit('Not allowed.');
 }
 
 // Check token and other query variables.
+$query = [];
+parse_str($_SERVER['QUERY_STRING'], $query);
 $token = 'b600b229d30a4512fe48f9ae1d4f46cef38541b898ec89f792b1aad26030a421';
 if (empty($query) || $query['token'] !=  $token || !isset($query['type']) || !isset($query['button'])) {
   exit('Not allowed.');
 }
 
-$type = $query['type'];
-$button = $query['button'];
+$button = 'Okänd';
+switch ($query['button']) {
+  case 'white':
+    $button = 'Sängen';
+    break;
 
-//$to = 'fredrik@xdeb.org, karina@combonet.se, annika@combonet.se';
-$to = 'fredrik@xdeb.org, fredrik@combonet.se';
+  case 'green':
+    $button = 'Hallen';
+    break;
+
+  case 'blue':
+    $button = 'Vardagsrum';
+    break;
+}
+
+$to = 'fredrik@xdeb.org, karjo@mac.com, annikasfamilj@me.com';
 $from = $sender = 'ragnvald@xdeb.org';
-$name = 'Ragnvald Jonsson'
+$name = 'Ragnvald Jonsson';
 
-
-switch ($type) {
+switch ($query['type']) {
   case 'notice':
     $subject = "[Pappa - $button] Allt är väl";
     $message = "Pappa har tryckt på knappen $button för att tala om att allt är väl.";
@@ -36,10 +47,9 @@ switch ($type) {
     exit('Not valid.');
 }
 
-
 // Construct the mail with headers.
 $headers = [
-  'From'                      => "$name <$email>",
+  'From'                      => "$name <$from>",
   'Sender'                    => $sender,
   'Return-Path'               => $sender,
   'MIME-Version'              => '1.0',
@@ -48,8 +58,8 @@ $headers = [
   'X-Mailer'                  => 'PHP7',
 ];
 $mime_headers = [];
-foreach ($headers as $name => $value) {
-  $mime_headers[] = "$name: $value";
+foreach ($headers as $key => $value) {
+  $mime_headers[] = "$key: $value";
 }
 $mail_headers = join("\n", $mime_headers);
 
