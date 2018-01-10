@@ -35,12 +35,12 @@ $name = 'Ragnvald Jonsson';
 switch ($query['type']) {
   case 'notice':
     $subject = "[Pappa - $button] Allt är väl";
-    $message = "Pappa har tryckt på knappen $button för att tala om att allt är väl.";
+    $message = "Pappa har tryckt på knappen i $button för att tala om att allt är väl.";
     break;
 
   case 'alarm':
     $subject = "[Pappa - $button] !!!Behöver hjälp!!!";
-    $message = "Pappa har tryckt på knappen $button och behöver hjälp.";
+    $message = "Pappa har tryckt på knappen i $button och behöver hjälp.";
     break;
 
   default:
