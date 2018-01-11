@@ -13,7 +13,7 @@ if (empty($query) || $query['token'] !=  $token || !isset($query['type']) || !is
   exit('Not allowed.');
 }
 
-$button = 'Okänd';
+// What button was pressed.
 switch ($query['button']) {
   case 'white':
     $button = 'Sängen';
@@ -26,6 +26,9 @@ switch ($query['button']) {
   case 'blue':
     $button = 'Vardagsrum';
     break;
+
+  default:
+    $button = 'Okänd';
 }
 
 $to = 'frjo@mac.com, karjo@mac.com, annikasfamilj@me.com';
@@ -34,12 +37,12 @@ $name = 'Ragnvald Jonsson';
 
 switch ($query['type']) {
   case 'notice':
-    $subject = "[Pappa - $button] Allt är väl";
-    $message = "Pappa har tryckt på knappen i $button för att tala om att allt är väl.";
+    $subject = "[Pappa] Allt bra";
+    $message = "Pappa har tryckt på knappen i $button för att tala om att allt är bra.";
     break;
 
   case 'alarm':
-    $subject = "[Pappa - $button] !!!Behöver hjälp!!!";
+    $subject = "[Pappa] !!!Alarm!!!";
     $message = "Pappa har tryckt på knappen i $button och behöver hjälp.";
     break;
 
