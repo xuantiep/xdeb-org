@@ -1,4 +1,4 @@
-// sass-lint:disable indentation, no-color-keywords
+// sass-lint:disable indentation, no-color-keywords, no-color-hex
 
 // Colors
 //
@@ -61,6 +61,7 @@ $chroma: add-colors('functional', (
   backdrop:               'grey-extra-light',
 
   mobile-menu:            'header-bg',
+  mobile-menu-cover:      ('black' rgba .2),
 
   button:                 'nearblack',
   button-disabled:        'grey',
