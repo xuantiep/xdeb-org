@@ -1,9 +1,16 @@
 {
     "manifest_version": 2,
     "default_locale": "en",
+    "lang": "en",
     "name": "xdeb.org",
     "short_name": "xdeb.org",
+    "description": "xdeb.org by Fredrik Jonsson.",
     "icons": [
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
         {
             "src": "/android-chrome-192x192.png",
             "sizes": "192x192",
@@ -13,10 +20,17 @@
             "src": "/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
+        },
+        {
+            "src": "/mstile-150x150.png",
+            "sizes": "150x150",
+            "type": "image/png"
         }
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "start_url": "/",
-    "display": "standalone"
+    "start_url": "/index.html",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "any"
 }
