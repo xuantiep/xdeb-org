@@ -1,0 +1,178 @@
+---
+title: "Run your own mail server with postfix and dovecot"
+date: 2018-01-29T17:25:20+01:00
+lastmod: 2018-01-29T17:25:20+01:00
+author: "Fredrik Jonsson"
+tags: ["mail","ansible","server","spam"]
+draft: true
+
+---
+
+A guide with a Ansible playbook for setting up your own mail server with postfix and dovecot.
+
+This could be considered a part two of [Mail relay, MX backup and spam filtering with Postfix](/post/2017/12/20/mail-relay-mx-backup-and-spam-filtering-with-postfix/). Many postfix configurations are identical with this setup.
+
+Anyone can set up there own mail server and start sending and receiving e-mail from every Internet user in the world. This is quite amazing I think.
+
+So many things on the Internet today is controlled by a handful of tech giants. E-mail is something you can and should control yourself. It's a bit complex to setup but done right it's stable and low maintenance.
+
+I have run my own mail servers for well over a decade. The setup I describe below has with minor changes been running in production since 2013. I recently upgraded them to Debian 9 Stretch and in early 2016 I started using Letsencrypt certs.
+
+I host domains for my company and my family so mail between us are reasonably secure since all traffic uses TLS. E-mail is not a secure way to communicate but with your own server your mail is at least not used to target you for ads and what not.
+
+
+## Start here
+
+Don't be [a cargo cult sysadmin](http://blog.lastinfirstout.net/2009/11/cargo-cult-system-administration.html), read the documentation.
+
+* [Postfix Configuration Parameters](http://www.postfix.org/postconf.5.html)
+* [Dovecot Wiki](https://wiki2.dovecot.org/)
+* [Postfixadmin install](https://github.com/postfixadmin/postfixadmin/blob/master/INSTALL.TXT)
+* [Postfixadmin 3 manual](https://blog.cboltz.de/uploads/postfixadmin-30-english.pdf) (PDF)
+* [SPF: Project Overview](http://www.openspf.org/)
+
+## What you will get
+
+* Mail server with (almost) only standard Debian 9 packages so easy to keep updated via apt.
+* Postfix with opportunistic TLS, SPF and Postscreen configured.
+* Dovecot with required TLS.
+* Virtual domains, mailboxes and aliases stored in [MariaDB](https://mariadb.com/) (MySQL but better).
+* [PostfixAdmin - web based administration interface for Postfix mail servers](https://github.com/postfixadmin/postfixadmin). (the only non Debian package)
+* Spam filtering with DNSBL [Spamhaus ZEN](https://www.spamhaus.org/zen/) and [BarracudaCentral](http://barracudacentral.org/rbl).
+* Support for address extensions, user+whatever@example.com addresses.
+
+
+## What you will not get
+
+* Webmail, see no use for that now that most people have a smartphone with a e-mail client built in.
+* Bayesian filtering or other text filtering systems. I believe this belongs on the client side.
+* DKIM/DMARK, I find them cumbersome and of no benefit.
+
+
+## Ansible mailserver role
+
+Complete configurations can be found in my mailserver role at [frjo/ansible-roles](https://github.com/frjo/ansible-roles) on Github. This is what I use to set up my own servers. 
+
+The common role that set up a firewall and other essentials on all my servers, the letsencrypt role for free certs and the dbserver role are also on GitHub. At the moment you will need to setup a web server with PHP support yourself, or take a look at [Running Drupal on Debian 9 with Apache 2.4, HTTP/2, event MPM and PHP-FPM (via socks and proxy)](/post/2017/11/09/running-drupal-on-debian-9-with-apache-2-4-http2-event-mpm-and-php-fpm-via-socks-and-proxy/).
+
+
+## DNS - get this right and good things will follow
+
+Make sure the servers IP address [is not blacklisted](https://mxtoolbox.com/blacklists.aspx). It need to be a static address in good standing.
+
+The DNS record should look something like this. Please do not forget to set a valid PTF (pointer) record. In best case it should be the reverse of the A record but in must exist and be a valid address.
+
+~~~~
+mail.example.com.	3600	IN	A	123.4.5.6
+6.5.4.123.in-addr.arpa.	3600	IN	PTR	mail.example.com.
+~~~~
+
+With the MX record you tell all other mail servers what server handle your mail.
+
+~~~~
+example.com.		3600	IN	MX	10 mail.example.com.
+~~~~
+
+If you set up some mail relay servers as I have done you MX record might look like this.
+
+~~~~
+example.com.		3600	IN	MX	10 mx1.example.com.
+example.com.		3600	IN	MX	20 mx2.example.com.
+~~~~
+
+The SPF record tells other mail servers what servers are allowed to send mail for your domain.
+
+The following is what I often use. This says that servers with a A or MX record for the domain is valid but none other. If you are using other external services to send e.g. news letters you need to add them as well.
+
+~~~~
+example.com.		3600	IN	TXT	"v=spf1 mx a -all"
+~~~~
+
+
+## PostfixAdmin
+
+This is a web interface written in PHP. It's simple but works well for administering mailboxes and aliases for multiple domains.
+
+The playbook is not using the latest version since I had trouble getting that to work. Since the older version works without issues I have not put a lot of time investigating the problem.
+
+To be on the safe side I put it behind an Apache basic auth protection.
+
+## Dovecot
+
+[Dovecot](https://www.dovecot.org/) is the most [standard compliant](https://imapwiki.org/ImapTest/ServerStatus) IMAP server. I used Courier for the first few years but never looked back after switching to Dovecot, it just works.
+
+Postfix handles the sending and receiving of mail. Dovecot is what users, or rather their mail client of choice, connect to when they want to read the mail.
+
+Dovecot configuration consist mostly of making it talk with postfix and the db for user authentication. Postfix will handle all authentication via Dovecot.
+
+
+## Postfix
+
+A lot of the postfix configuration is identical to the Mail Relay setup, see article link above.
+
+Below is an quick overview of postfix configurations specific for the mail server.
+
+
+### Authenticate via Dovecot
+
+This will make Postfix authenticate users via Dovecot. Users mail clients will connect directly to postfix for sending mail and we need them to authenticate.
+
+~~~~
+# SASL settings
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = private/auth
+smtpd_sasl_authenticated_header = yes
+~~~~
+
+
+### Virtual domains, mailboxes and aliases stored in MariaDB
+
+This makes it possible to host multiple domains on one single mail server. Postfix will look up mailboxes and aliases in the database and deliver valid mail to dovecot or sent onward if an alias point to an external address.
+
+All local mail will be stored in the `/var/spool/vmail` directory belonging to the vmail user.
+
+~~~~
+virtual_minimum_uid = 5000
+virtual_gid_maps = static:5000
+virtual_uid_maps = static:5000
+virtual_mailbox_base = /var/spool/vmail
+virtual_alias_domains =
+virtual_mailbox_domains = proxy:mysql:/etc/postfix/mysql_virtual_domains_maps.cf
+virtual_mailbox_maps = proxy:mysql:/etc/postfix/mysql_virtual_mailbox_maps.cf
+virtual_transport = dovecot
+dovecot_destination_recipient_limit = 1
+default_destination_concurrency_limit = 5
+relay_destination_concurrency_limit = 1
+~~~~
+
+
+
+### Removing headers on outgoing mail for security reasons
+
+With smtp_header_checks you can manipulate the headers of outgoing mail. I use it to remove some headers for security reasons. I remove X-Originating-IP, the IP address of the users computer that is sending the mail, no reason to publicise that. I also remove information about the mail client and the received header.
+
+~~~~
+# /etc/postfix/smtp_header_checks
+#
+# /^HEADER:.*content_to_act_on/ ACTION [MESSAGE]
+
+/^Received:/                 IGNORE
+/^User-Agent:/               IGNORE
+/^X-Mailer:/                 IGNORE
+/^X-Originating-IP:/         IGNORE
+~~~~
+
+## Further reading
+
+Ars Technica has a four part article series "Taking e-mail back" that has a lot of good information.
+
+* [Taking e-mail back - part 1](https://arstechnica.com/information-technology/2014/02/how-to-run-your-own-e-mail-server-with-your-own-domain-part-1/)
+* [Taking e-mail back - part 2](https://arstechnica.com/information-technology/2014/03/taking-e-mail-back-part-2-arming-your-server-with-postfix-dovecot/)
+* [Taking e-mail back - part 3](https://arstechnica.com/information-technology/2014/03/taking-e-mail-back-part-3-fortifying-your-box-against-spammers/)
+* [Taking e-mail back - part 4](https://arstechnica.com/information-technology/2014/04/taking-e-mail-back-part-4-the-finale-with-webmail-everything-after/)
+
+Other good articles:
+
+* [A Mailserver on Ubuntu 12.04: Postfix, Dovecot, MySQL – Ex Ratione](https://www.exratione.com/2012/05/a-mailserver-on-ubuntu-1204-postfix-dovecot-mysql/)
+* [NSA-proof your e-mail in 2 hours | Sealed Abstract](http://sealedabstract.com/code/nsa-proof-your-e-mail-in-2-hours/)
