@@ -21,6 +21,7 @@ blackfriday:
 
 permalinks:
   post: "/post/:year/:month/:day/:slug"
+  micro: "/micro/:year/:month/:day/:slug"
 
 outputFormats:
   SearchIndex:
@@ -65,6 +66,10 @@ menu:
       weight: -9
       URL: "/post/"
       identifier: "post"
+    - Name: "Micro"
+      weight: -8
+      URL: "/micro/"
+      identifier: "micro"
     - Name: "Ragnvald"
       weight: 10
       URL: "/ragnvald/"
