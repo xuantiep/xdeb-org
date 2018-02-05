@@ -16,13 +16,6 @@ abbr[title] {
   // Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
   text-decoration: underline;
   text-decoration: underline dotted;
-
-  @media print {
-    // Add visible title after abbreviations.
-    &::after {
-      content: ' (' attr(title) ')';
-    }
-  }
 }
 
 // Bold
@@ -53,10 +46,6 @@ strong {
 // Cite
 //
 // The `<cite>` element represents a reference to a creative work.
-//
-// Markup: text-cite.twig
-//
-// Style guide: base.text.cite
 
 cite {
   // Add your styles.
