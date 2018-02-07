@@ -1,21 +1,20 @@
 ---
 title: "Run your own mail server with Postfix and Dovecot"
-date: 2018-02-04T07:48:37+01:00
-lastmod: 2018-02-04T07:48:37+01:00
+date: 2018-02-07T14:58:54+01:00
+lastmod: 2018-02-07T14:58:58+01:00
 author: "Fredrik Jonsson"
 tags: ["mail","ansible","server","spam"]
-draft: true
 
 ---
 
-A guide with a Ansible playbook for setting up your own mail server with Postfix and Dovecot.
+Ansible role with commentary for setting up your own mail server with Postfix and Dovecot.
 
 This could be considered a part two of [Mail relay, MX backup and spam filtering with Postfix](/post/2017/12/20/mail-relay-mx-backup-and-spam-filtering-with-postfix/). Many postfix configurations are identical between these setups.
 
 
 ## Why
 
-Anyone can set up there own mail server and start exchanging e-mail with every Internet user in the world. This is quite amazing I think.
+Anyone can set up there own mail server and start exchanging e-mail with every other Internet user in the world. This is quite amazing I think.
 
 So many things on the Internet today is controlled by a handful of tech giants. E-mail is something you can and should control yourself. It's a bit complex to setup but done right it's stable and low maintenance.
 
@@ -38,20 +37,20 @@ Don't be [a cargo cult sysadmin](http://blog.lastinfirstout.net/2009/11/cargo-cu
 
 ## Ansible mailserver role
 
-Complete configurations can be found in my mailserver role at [frjo/ansible-roles](https://github.com/frjo/ansible-roles) on Github. This is what I use to set up my own servers. 
+Complete configurations can be found in my mailserver role at [frjo/ansible-roles](https://github.com/frjo/ansible-roles) on Github. This is what I use to set up my own servers.
 
 The common role that set up a firewall and other essentials on all my servers, the letsencrypt role for free certs and the dbserver role are also on GitHub. At the moment you will need to setup a web server with PHP support yourself, or take a look at [Running Drupal on Debian 9 with Apache 2.4, HTTP/2, event MPM and PHP-FPM (via socks and proxy)](/post/2017/11/09/running-drupal-on-debian-9-with-apache-2-4-http2-event-mpm-and-php-fpm-via-socks-and-proxy/).
 
 ### What you will get
 
 * Mail server with (almost) only standard Debian 9 packages so easy to keep updated via apt.
+* Virtual domains, mailboxes and aliases stored in [MariaDB](https://mariadb.com/) (MySQL but better).
 * Postfix with opportunistic TLS, SPF and Postscreen configured.
 * Dovecot with required TLS.
-* Virtual domains, mailboxes and aliases stored in [MariaDB](https://mariadb.com/) (MySQL but better).
 * [PostfixAdmin - web based administration interface for Postfix mail servers](https://github.com/postfixadmin/postfixadmin). (the only non Debian package)
 * Spam filtering with DNSBL [Spamhaus ZEN](https://www.spamhaus.org/zen/) and [BarracudaCentral](http://barracudacentral.org/rbl).
 * Support for address extensions, user+whatever@example.com addresses.
-
+* Striping of outgoing mail headers that reveal unneeded information like users IP address, mail client etc.
 
 ### What you will not get
 
@@ -62,16 +61,16 @@ The common role that set up a firewall and other essentials on all my servers, t
 
 ## DNS - get this right and good things will follow
 
-Make sure the servers IP address [is not blacklisted](https://mxtoolbox.com/blacklists.aspx). It need to be a static address in good standing.
+Make sure the servers IP address [is not blacklisted](https://mxtoolbox.com/blacklists.aspx). It need to be a static address in good standing or your mail will get marked as junk.
 
-The DNS record should look something like this. Please do not forget to set a valid PTF (pointer) record. In best case it should be the reverse of the A record but in must exist and be a valid address.
+The DNS record should look something like this. Please do not forget to set a valid PTF (pointer) record. In best case it should be the reverse of the A record but in must exist and be a valid address for the server.
 
 ~~~~
 mail.example.com.	3600	IN	A	123.4.5.6
 6.5.4.123.in-addr.arpa.	3600	IN	PTR	mail.example.com.
 ~~~~
 
-With the MX record you tell all other mail servers what server handle your mail.
+With the MX record you tell all other mail servers what server handle the mail for your domain.
 
 ~~~~
 example.com.		3600	IN	MX	10 mail.example.com.
@@ -86,42 +85,45 @@ example.com.		3600	IN	MX	20 mx2.example.com.
 
 The SPF record tells other mail servers what servers are allowed to send mail for your domain.
 
-The following is what I often use. This says that servers with a A or MX record for the domain is valid but none other. If you are using other external services to send e.g. news letters you need to add them as well.
+The following is what I often use. It says that servers with a A or MX record for the domain is valid but none other. If you are using other external services to send e.g. news letters you need to add them as well.
 
 ~~~~
 example.com.		3600	IN	TXT	"v=spf1 mx a -all"
 ~~~~
 
+If you run your web server on a separate host and have the MX records pointed at mail relays you can explicitly add the mail servers A record like this.
 
-## PostfixAdmin
+~~~~
+example.com.		3600	IN	TXT	"v=spf1 a a:mail.example.com mx -all"
+~~~~
 
-This is a web interface written in PHP. It's simple but works well for administering mailboxes and aliases for multiple domains.
+If you like some of my customers use Mailgun (or other services) to send out mail remember to add them to your SPF record. For Mailgun it looks like this.
 
-The playbook is not using the latest version since I had trouble getting that to work. Since the older version works without issues I have not put a lot of time investigating the problem.
+~~~~
+example.com.		3600	IN	TXT	"v=spf1 a mx include:mailgun.org -all"
+~~~~
 
-To be on the safe side I put it behind an Apache basic auth protection.
 
 ## Dovecot
 
-[Dovecot](https://www.dovecot.org/) is the most [standard compliant](https://imapwiki.org/ImapTest/ServerStatus) IMAP server. I used Courier for the first few years but never looked back after switching to Dovecot, it just works.
-
 Postfix handles the sending and receiving of mail. Dovecot is what users, or rather their mail client of choice, connect to when they want to read the mail.
+
+[Dovecot](https://www.dovecot.org/) is the most [standard compliant](https://imapwiki.org/ImapTest/ServerStatus) IMAP server and it just works. I used Courier for the first few years but never looked back after switching to Dovecot.
+
+It supports the IDLE command so mail will arrive almost instantaneously on desktop mail clients that support it. Push support for iOS would be really nice to have and it's [possible to get working](https://github.com/st3fan/dovecot-xaps-daemon) but it's not straight forward.
 
 Dovecot configuration consist mostly of making it talk with Postfix and MariaDB for user authentication. Postfix will handle all authentication via Dovecot.
 
 
 ## Postfix
 
-A lot of the Postfix configuration is identical to the Mail Relay setup, see article link above.
+A lot of the Postfix configuration is identical to the Mail Relay setup, see article link above. What follows is an quick overview of some Postfix configurations specific for the mail server.
 
-Below is an quick overview of some Postfix configurations specific for the mail server.
-
+The Ansible role will set up all this but it's good to understand what it does and why.
 
 ### Let Postfix in chroot jail access MariaDB sock
 
-On Debian Postfix is by default set up to run in a chroot environment. This provides a significant barrier against intrusion.
-
-It also creates a stumbling block since it stops Postfix from accessing files outside the chroot jail.
+On Debian Postfix is by default set up to run in a chroot environment. This provides a significant barrier against intrusion. It also creates a stumbling block since it stops Postfix from accessing files outside the chroot jail.
 
 By mounting `/var/run/mysqld` in `/var/spool/postfix/var/run/mysqld` we allow the postfix processes to access the MariaDB sock and all is well.
 
@@ -161,9 +163,18 @@ relay_destination_concurrency_limit = 1
 ~~~~
 
 
+### Administer with PostfixAdmin
+
+PostfixAdmin is a web interface written in PHP. It's simple but works well for administering mailboxes and aliases for multiple domains.
+
+The playbook is not using the latest version since I had trouble getting that to work. Since the older version works without issues I have not put a lot of time investigating the problem.
+
+To be on the safe side I put it behind an Apache basic auth protection.
+
+
 ### Removing headers on outgoing mail for security reasons
 
-With smtp_header_checks you can manipulate the headers of mail sent from the server by users. I use it to remove some headers for security reasons.
+With smtp_header_checks you can manipulate the headers of mail sent out from the server by users. I use it to remove some headers for security reasons.
 
 I remove X-Originating-IP, information about the mail client and the received header. This way the e-mail will appear to originate from the mail server itself and not reveal unnecessary information about the sending device/user.
 
