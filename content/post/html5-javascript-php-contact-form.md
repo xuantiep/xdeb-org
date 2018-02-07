@@ -1,7 +1,7 @@
 ---
 title: "A HTML5+PHP+JavaScript contact form with spam protection"
 date: 2017-06-24T07:55:21+02:00
-lastmod: 2017-06-24T07:55:21+02:00
+lastmod: 2018-02-07T22:15:20+01:00
 author: "Fredrik Jonsson"
 tags: ["php", "jquery", "javascript", "development"]
 
@@ -160,12 +160,22 @@ Below is the PHP script that sends the messages. You need to replace "info@examp
 ~~~~ php
 <?php
 
-// Set address that submission should be sent to.
-// Also set sender/return path header to this address to avoid SPF errors.
-$to = $sender = "info@example.com";
+// Set the address that submission should be sent to.
+$address = 'info@example.com';
+
+// DO NOT EDIT ANYTHING BELOW UNLESS YOU KNOW WHAT YOU ARE DOING.
 
 $error = false;
 $success = false;
+
+// Check that the submission address is valid.
+if ((bool) filter_var(trim($address), FILTER_VALIDATE_EMAIL)) {
+  // Also set sender/return path header to this address to avoid SPF errors.
+  $to = $sender = trim($address);
+}
+else {
+  $error = true;
+}
 
 // Check that referer is local server.
 if (!isset($_SERVER['HTTP_REFERER']) || (parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) != $_SERVER['SERVER_NAME'])) {
@@ -192,8 +202,8 @@ else {
 
 if (!$error) {
   // Construct the mail with headers.
-  $name = _contact_clean_str($_POST['name'], ENT_QUOTES, true);
-  $subject = _contact_clean_str($_POST['subject'], ENT_NOQUOTES, true);
+  $name = _contact_clean_str($_POST['name'], ENT_QUOTES, true, true);
+  $subject = _contact_clean_str($_POST['subject'], ENT_NOQUOTES, true, true);
   $subject = "[Website feedback] $subject";
   $message = _contact_clean_str($_POST['message'], ENT_NOQUOTES);
   $lines = explode("\n", $message);
@@ -209,8 +219,8 @@ if (!$error) {
     'X-Mailer'                  => 'Hugo - Zen',
   ];
   $mime_headers = [];
-  foreach ($headers as $name => $value) {
-    $mime_headers[] = "$name: $value";
+  foreach ($headers as $key => $value) {
+    $mime_headers[] = "$key: $value";
   }
   $mail_headers = join("\n", $mime_headers);
 
@@ -229,10 +239,17 @@ function _contact_ff_wrap(&$line) {
   $line = wordwrap($line, 72, " \n");
 }
 
-function _contact_clean_str($str, $quotes, $strip = false) {
+function _contact_clean_str($str, $quotes, $strip = false, $encode = false) {
   if ($strip) {
     $str = strip_tags($str);
   }
-  return htmlspecialchars(trim($str), $quotes, 'UTF-8');
+
+  $str = htmlspecialchars(trim($str), $quotes, 'UTF-8');
+
+  if ($encode && preg_match('/[^\x20-\x7E]/', $str)) {
+    $str ='=?UTF-8?B?' . base64_encode($str) . '?=';
+  }
+
+  return $str;
 }
 ~~~~
