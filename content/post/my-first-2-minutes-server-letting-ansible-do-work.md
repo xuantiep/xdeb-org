@@ -1,20 +1,18 @@
 ---
 title: "My first 2 minutes on a server - letting Ansible do the work"
 date: 2016-06-23T08:15:07+02:00
-lastmod: 2017-05-07T07:55:10+02:00
+lastmod: 2018-02-08T11:53:31+01:00
 author: "Fredrik Jonsson"
 tags: ["debian","server","ansible","security","technology"]
 aliases: ["node/1615"]
 
 ---
 
-
-
 After reading articles like [My First 5 Minutes On A Server](https://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers) by Bryan Kennedy and [My First 10 Minutes On a Server](http://www.codelitt.com/blog/my-first-10-minutes-on-a-server-primer-for-securing-ubuntu/) by Cody Littlewood I was inspired to write up how I setup a new server.
 
 There are no special tricks in the way I setup servers to make them secure.
 
-I use stock Debian packages so they will be automatically updated with apt-get. I try to run only a few services per server. Normally opt for the tried and tested (or old and boring) solution instead of something new and fancy.
+I use stock Debian packages so they will be automatically updated with apt. I try to run only a few services per server. Normally opt for the tried and tested (or old and boring) solution instead of something new and fancy.
 
 I use [Ansible](https://www.ansible.com/) to handle all the configurations of my servers and have two separate backups. First my hosting provider run backups of the complete disks, secondly I backup all content (web sites, databases, mail etc.) to Amazon S3 with a write only user (so a intruder on a server can't delete my backups).
 
@@ -22,7 +20,7 @@ I monitor the servers via logcheck, logwatch and debsums. (At some point I will 
 
 The day I do get hacked I believe I have a good chance of noticing it within a day or so. I also will be able to recreate the servers quickly with at most one day of lost content. This is good enough for me.
 
-I do not create that many new servers per year and are using Ansible a lot more for maintaining servers than creating new ones. Last year however saw the release of Debian GNU/Linux 8 Jessie so I had a reason to update my playbooks and recreate my servers.
+I do not create that many new servers per year and are using Ansible a lot more for maintaining servers than creating new ones. Last year however saw the release of Debian GNU/Linux 9 Stretch so I had a reason to update my playbooks and recreate my servers.
 
 It feels a lot longer but I have only used Ansible since 2014. Before that I used Puppet a bit but never to the extent that I now use Ansible. Settings up a server without Ansible today feels a bit like handling code without git. I of course version control my playbooks and roles with git.
 
@@ -33,7 +31,7 @@ I create the server via the control panel of my hosting provider (I have used [G
 
 Now I have a server with a host name and a (very long and good) root password.
 
-Then it is time for Ansible to configure the server. I have only tested my Ansible tasks with Debian 8 Jessie so if you use something else you will need to make the appropriate adjustments.
+Then it is time for Ansible to configure the server. I have only tested my Ansible tasks with Debian 9 Stretch so if you use something else you will need to make the appropriate adjustments.
 
 ## Step 1 - Run first setup
 
@@ -54,7 +52,7 @@ File: `first_setup.yml`
       apt:
         update_cache: yes
         cache_valid_time: 3600
-    - name: upgrade a server with apt-get
+    - name: upgrade a server with apt
       apt:
         upgrade: dist
       register: upgrade
@@ -66,10 +64,25 @@ File: `first_setup.yml`
       with_file:
         - "{{ ssh_key }}"
     - name: set ssh port to 2222
-      replace:
+      lineinfile:
         dest: /etc/ssh/sshd_config
-        regexp: '^Port 22$'
-        replace: 'Port 2222'
+        line: 'Port 2222'
+        insertafter: EOF
+        state: present
+    - name: turn off ssh password authentication
+      lineinfile:
+        dest: /etc/ssh/sshd_config
+        line: 'PasswordAuthentication no'
+        insertafter: EOF
+        state: present
+    - name: set modern host key
+      lineinfile:
+        dest: /etc/ssh/sshd_config
+        line: 'HostKey /etc/ssh/ssh_host_ed25519_key'
+        insertafter: EOF
+        state: present
+    - name: generate missing host keys
+      command: ssh-keygen -A
     - name: restart ssh
       service:
         name: ssh
@@ -79,7 +92,7 @@ File: `first_setup.yml`
 I run this playbook with the following command:
 
 ~~~~
-$ ansible-playbook --ask-pass first_setup.yml --extra-vars "ssh_key=/path/to/ssh-pub-key.pub target=new.example.com"
+$ ansible-playbook first_setup.yml --ask-pass --extra-vars "ssh_key=/path/to/ssh-pub-key.pub target=new.example.com"
 ~~~~
 
 With "ask-pass" Ansible will ask for the ssh password. This is the only time I use the root password for a server.
@@ -97,7 +110,7 @@ Makes sure the sources list points to good mirrors and include the security and 
 
 #### apticron
 
-Runs apt-get update and send a e-mail report when new packages are available.
+Runs apt update and send a e-mail report when new packages are available.
 
 #### debsums
 
@@ -157,7 +170,6 @@ By default everything is dropped. Then some common rules to allow loopback, drop
 -A INPUT -m addrtype --dst-type ANYCAST -j DROP
 -A INPUT -d 224.0.0.0/4 -j DROP
 
-
 # Allow only ESTABLISHED and RELATED incomming
 -A INPUT -i {{ ansible_default_ipv4.interface }} -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 
@@ -191,13 +203,6 @@ Mosh is a drop in replacement for SSH. It's more robust and responsive, especial
 
 Needrestart checks which daemons need to be restarted after library upgrades.
 
-#### ntp
-
-Sets up a Network Time Protocol daemon to make sure the servers time is accurate.
-
-#### ssh
-
-Configure sshd to use port 2222, only allow ssh-key logins, adds a ssh_host_ed25519_key and remove hosts keys for dsa and ecdsa.
 
 ### The letsencrypt role
 
@@ -214,7 +219,7 @@ This is the role I run when apticron reports that there are packages that needs 
 
 ~~~~
 ---
-- name: Run apt-get update/upgrade on all servers
+- name: Run apt update/upgrade on all servers
   gather_facts: no
   hosts: all
   remote_user: root
@@ -224,7 +229,7 @@ This is the role I run when apticron reports that there are packages that needs 
       apt:
         update_cache: yes
         cache_valid_time: 3600
-    - name: upgrade a server with apt-get
+    - name: upgrade a server with apt
       apt:
         upgrade: dist
       register: upgrade
