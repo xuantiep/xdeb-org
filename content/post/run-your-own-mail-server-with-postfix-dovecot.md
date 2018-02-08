@@ -1,7 +1,7 @@
 ---
 title: "Run your own mail server with Postfix and Dovecot"
 date: 2018-02-07T14:58:54+01:00
-lastmod: 2018-02-07T14:58:58+01:00
+lastmod: 2018-02-08T10:39:31+01:00
 author: "Fredrik Jonsson"
 tags: ["mail","ansible","server","spam"]
 
@@ -45,9 +45,9 @@ The common role that set up a firewall and other essentials on all my servers, t
 
 * Mail server with (almost) only standard Debian 9 packages so easy to keep updated via apt.
 * Virtual domains, mailboxes and aliases stored in [MariaDB](https://mariadb.com/) (MySQL but better).
-* Postfix with opportunistic TLS, SPF and Postscreen configured.
-* Dovecot with required TLS.
-* [PostfixAdmin - web based administration interface for Postfix mail servers](https://github.com/postfixadmin/postfixadmin). (the only non Debian package)
+* Postfix for SMTP with opportunistic TLS, SPF and Postscreen configured.
+* Dovecot for IMAP/POP with required TLS.
+* [PostfixAdmin](https://github.com/postfixadmin/postfixadmin) - web based administration interface for Postfix mail servers. (the only non Debian package)
 * Spam filtering with DNSBL [Spamhaus ZEN](https://www.spamhaus.org/zen/) and [BarracudaCentral](http://barracudacentral.org/rbl).
 * Support for address extensions, user+whatever@example.com addresses.
 * Striping of outgoing mail headers that reveal unneeded information like users IP address, mail client etc.
