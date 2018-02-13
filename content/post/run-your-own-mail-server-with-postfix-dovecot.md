@@ -49,7 +49,7 @@ The common role that set up a firewall and other essentials on all my servers, t
 * Dovecot for IMAP/POP with required TLS.
 * [PostfixAdmin](https://github.com/postfixadmin/postfixadmin) - web based administration interface for Postfix mail servers. (the only non Debian package)
 * Spam filtering with DNSBL [Spamhaus ZEN](https://www.spamhaus.org/zen/) and [BarracudaCentral](http://barracudacentral.org/rbl).
-* Support for address extensions, user+whatever@example.com addresses.
+* Support for address extensions, `user+whatever@example.com` addresses.
 * Striping of outgoing mail headers that reveal unneeded information like users IP address, mail client etc.
 
 ### What you will not get

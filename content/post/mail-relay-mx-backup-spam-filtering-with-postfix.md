@@ -127,7 +127,7 @@ mime_header_checks = pcre:/etc/postfix/mime_header_checks
 
 ### Smtpd recipient restrictions
 
-Most of the remaining spam gets discarded here. The two important parts are the [SPF](http://www.openspf.org/) check and "reject_unknown_reverse_client_hostname". Some guides suggest "reject_unknown_client_hostname" but I get to many false positive with that. There are a surprising number of mail operators that miss to set up proper [PTR records](https://en.wikipedia.org/wiki/Reverse_DNS_lookup). Do not make the same mistake for your own servers!
+Most of the remaining spam gets discarded here. The two important parts are the [SPF](http://www.openspf.org/) check and `reject_unknown_reverse_client_hostname`. Some guides suggest `reject_unknown_client_hostname` but I get to many false positive with that. There are a surprising number of mail operators that miss to set up proper [PTR records](https://en.wikipedia.org/wiki/Reverse_DNS_lookup). Do not make the same mistake for your own servers!
 
 ~~~~
 # Requirement for the recipient address.
