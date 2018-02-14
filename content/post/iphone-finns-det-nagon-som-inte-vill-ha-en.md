@@ -1,5 +1,5 @@
 ---
-title: "iPhone, finns det någon som inte vill ha en :-)"
+title: "iPhone, finns det någon som inte vill ha en!"
 date: 2007-01-10T10:46:47+01:00
 lastmod: 2008-08-01T18:02:59+02:00
 author: "Fredrik Jonsson"
