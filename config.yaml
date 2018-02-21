@@ -66,10 +66,6 @@ menu:
       weight: -9
       URL: "/post/"
       identifier: "post"
-    - Name: "Micro"
-      weight: -8
-      URL: "/micro/"
-      identifier: "micro"
     - Name: "Ragnvald"
       weight: 10
       URL: "/ragnvald/"
@@ -77,4 +73,8 @@ menu:
     - Name: "Services"
       weight: 15
       URL: "https://xdeb.net/"
+#     - Name: "Micro"
+#       weight: -8
+#       URL: "/micro/"
+#       identifier: "micro"
 

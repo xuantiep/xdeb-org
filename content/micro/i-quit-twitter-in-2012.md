@@ -2,6 +2,7 @@
 title: "I quit twitter in 2012"
 date: 2018-02-04T15:19:20+01:00
 author: "Fredrik Jonsson"
+draft: true
 
 ---
 

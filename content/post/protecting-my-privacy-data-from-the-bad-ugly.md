@@ -1,7 +1,7 @@
 ---
 title: "Protecting my privacy and data from the bad and the ugly"
-date: 2017-07-08T22:23:52+02:00
-lastmod: 2017-07-08T22:23:52+02:00
+date: 2018-02-20T10:37:32+01:00
+lastmod: 2018-02-20T10:37:36+01:00
 author: "Fredrik Jonsson"
 tags: ["technology","security", "macOS", "iphone"]
 draft: true
@@ -12,9 +12,9 @@ In order of importance, in my personal opinion.
 
 ## Backups and encrypted disks
 
-The importance of good backups can not be overstated. You need more than one and you need to test that retrieving data from them really works. All your disks, main disk as well as all backups need to be encrypted.
+The importance of good backups can not be overstated. You need more than one and you need to test that retrieving data from them really works. All your disks, main disk as well as all backups should to be encrypted.
 
-When you set a password for your iOS device they get encrypted, and Apple strongly urge you to do this when you set up a new device. Apple strongly suggest macOS users to use FileVault to encrypt disk on a Mac. FileVault can easily be activated for extra disk, just right click and select the encryption command.
+When you set a password for your iOS device they get encrypted, and Apple strongly urge you to do this when you set up a new device. Apple also strongly suggest that macOS users activate FileVault to encrypt disk on a Mac. FileVault can easily be activated for extra disk, just right click and select the encryption command.
 
 I do three different backups. First one backup with the built in Time Machine to a local disk on the network, second a online backup to Amazon S3 with the excellent Arq program and third a clone (rotating disks) with Carbon Copy Cloner (CCC).
 
@@ -32,6 +32,8 @@ Another online backup option that people I know use and like is Backblaze.
 ## Keep all software updated
 
 Updated systems has far less security problems. When Apple or Microsoft suggest an update just do it.
+
+Bigger upgrades like from macOS 10.13 to 10.14 one does not need to rush into. I normally wait for the 10.x.1 release.
 
 ## Unique and long passwords for each site/service
 
@@ -87,41 +89,3 @@ DuckDuckGo is good and don't track you. When you need Google it's only a "!g" aw
 
 * [DuckDuckGo](https://duckduckgo.com/)
 
-## Run your own mail server
-
-I run my own mail server and if you know how it's a good and cheep option. My family and people in our company have accounts here so mail between us stays on the server (TLS only). The server also host mailing lists for the company, family, friends and neighbours. I know mailing lists are out of fashion but that doesn't stop them from being useful.
-
-For most people a e-mail service like Runbox, FastMail or ProtoMail, to name a few, is most likely a better option.
-
-Free options like Gmail and Outlook are not horrible but I prefer to pay with money for my services. They tend not to be very standard compliant, especially Gmail.
-
-I have been using e-mail for 20+ years and it's still my preferred way of communication.
-
-#### If you run your own server
-
-* [My first 2 minutes on a server - letting Ansible do the work – xdeb.org](/post/2016/06/23/my-first-2-minutes-on-a-server---letting-ansible-do-the-work/)
-* [Dovecot](https://dovecot.org/), this is the imap server to use.
-* [The Spamhaus Project - ZEN](https://www.spamhaus.org/zen/), plug this in to postfix and most spam is gone.
-* [Email Protection - Spam and Virus Filtering Services](https://www.mailroute.net/)
-* [Mail relay, MX backup och skräppostfilter | xdeb.net](https://xdeb.net/mailrelay) (this is my own service, build your own with the Ansible roles below)
-* [frjo/ansible-roles](https://github.com/frjo/ansible-roles)
-
-#### Mail providers
-
-* [Runbox](https://runbox.com/) (Norway)
-* [ProtonMail](https://protonmail.com/) (Switzerland)
-* [FastMail](https://www.fastmail.com/) (USA)
-
-#### Mail clients
-
-Most people use a web client and/or whatever client comes with their device.
-
-If you want something more and use macOS then MailMate is for you.
-
-* [MailMate](https://freron.com/)
-* [MailMate replaces GyazMail after four years – xdeb.org](/post/2014/05/16/mailmate-replaces-gyazmail-after-four-years/)
-* [MailMate - The email client for the rest of us – xdeb.org](/post/2015/01/30/mailmate---the-email-client-for-the-rest-of-us/)
-
-#### PGP
-
-PGP does not make mail secure, only the content inside the mail. It's difficult and cumbersome to set up and use. Been using PGP since 1996 so I know.
