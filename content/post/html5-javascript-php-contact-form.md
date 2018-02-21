@@ -247,7 +247,7 @@ function _contact_clean_str($str, $quotes, $strip = false, $encode = false) {
   $str = htmlspecialchars(trim($str), $quotes, 'UTF-8');
 
   if ($encode && preg_match('/[^\x20-\x7E]/', $str)) {
-    $str ='=?UTF-8?B?' . base64_encode($str) . '?=';
+    $str = '=?UTF-8?B?' . base64_encode($str) . '?=';
   }
 
   return $str;
