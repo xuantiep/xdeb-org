@@ -8,11 +8,9 @@ aliases: ["node/1607"]
 
 ---
 
-
-
 I prefer to store (archive) my mail locally. After moving my mail between mail clients a couple of time to many I decided to set up a local IMAP server. This will give me a mail client independent local storage that is in a standard format and future proof.
 
-I run dovecot on my mail server so that's what I want to run locally as well. Easiest way to install dovecot is via Homebrew.
+I run dovecot on my mail server so that's what I want to run locally as well. Easiest way to install dovecot is via Homebrew. ([Homebrew is a package manager for macOS](https://brew.sh/).)
 
 ~~~~
 brew install dovecot
