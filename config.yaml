@@ -39,15 +39,18 @@ params:
   cacheBustJS: false
   contact: "info@xdeb.org"
   copyright: "<!--Creative Commons License-->This site is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).<!--/Creative Commons License-->"
+  description: "The blog of Fredrik Jonsson, web developer and Linux sysadmin."
   dateformat: "2 January, 2006"
   favicon: "icon-64.png"
   feedlinks: true
   footer: "Powered by [Hugo](https://gohugo.io/) and the [Zen theme](https://github.com/frjo/hugo-theme-zen). A [xdeb.net](https://xdeb.net/) production."
   frontposts: 3
   icon: "apple-touch-icon-180.png"
+  image: "xdeb-org.jpg"
   imageMaxWidth: 400
   jquery: true
   logo: false
+  microUsername: "frjo"
   mobileMenu: true
   piwikSiteId: 1
   piwikTrackerUrl: "admin.combonet.se/piwik"

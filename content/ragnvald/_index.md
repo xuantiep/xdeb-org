@@ -2,6 +2,7 @@
 author: "Fredrik Jonsson"
 date: 2006-07-06T13:00:00+02:00
 title: "Ragnvald Jonsson"
+description: "Ragnvald Jonssons böcker och släktforskning."
 
 ---
 
