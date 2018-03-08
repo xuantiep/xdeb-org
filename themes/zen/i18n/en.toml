@@ -78,3 +78,6 @@ other = "Send message"
 
 [contact_honypot]
 other = "Skip if you are a human"
+
+[lang_select_title]
+other = "Language selector"
