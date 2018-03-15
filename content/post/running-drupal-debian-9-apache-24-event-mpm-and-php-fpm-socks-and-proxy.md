@@ -1,7 +1,7 @@
 ---
 title: "Running Drupal on Debian 9 with Apache 2.4, HTTP/2, event MPM and PHP-FPM (via socks and proxy)"
 date: 2017-11-09T11:51:16+01:00
-lastmod: 2017-11-29T14:22:02+01:00
+lastmod: 2018-03-15T09:17:46+01:00
 author: "Fredrik Jonsson"
 tags: ["apache","php","server","drupal","performance","debian","development"]
 slug: "running-drupal-on-debian-9-with-apache-2-4-http2-event-mpm-and-php-fpm-via-socks-and-proxy"
@@ -38,7 +38,7 @@ As suggested in [PHP-FPM - Httpd Wiki](https://wiki.apache.org/httpd/PHP-FPM) I 
 a2enmod proxy_fcgi
 ~~~~
 
-This will automatically activate the proxy module as well since it is a dependency. I also activate auth_digest, expires, headers, rewrite and ssl on my servers. Rewrite is needed for Drupal to get clean URLs.
+This will automatically activate the proxy module as well since it is a dependency. I also activate expires, headers, rewrite and ssl on my servers. Rewrite is needed for Drupal to get clean URLs.
 
 ## Apache and HTTP/2 configuration
 
@@ -183,7 +183,7 @@ Here follow the security related settings I use for Apache. See the included lin
 
 Drupal put .htaccess in the files folder and  some other places for security reasons. The following is an example how to add the same security configurations directly in an  Apache conf file. The DirectoryMatch regex most likely needs adjustment for your directory structure.
 
-First there are also some settings to deny access to version control folders and some Drupal core text files.
+At the top there are some settings to deny access to version control folders and some Drupal core text files.
 
 ~~~~
 # Prevent access to .bzr and .git directories and files.
