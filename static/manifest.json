@@ -4,7 +4,7 @@
     "lang": "en",
     "name": "xdeb.org",
     "short_name": "xdeb.org",
-    "description": "xdeb.org by Fredrik Jonsson.",
+    "description": "The blog of Fredrik Jonsson, web developer and Linux sysadmin.",
     "icons": [
         {
             "src": "/apple-touch-icon.png",
