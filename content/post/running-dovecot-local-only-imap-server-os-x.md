@@ -1,7 +1,7 @@
 ---
 title: "Running dovecot as a local only IMAP server on OS X"
 date: 2014-03-07T10:30:22+01:00
-lastmod: 2017-09-25T03:28:24+02:00
+lastmod: 2018-03-29T13:58:23+02:00
 author: "Fredrik Jonsson"
 tags: ["email","dovecot","macOS","technology"]
 aliases: ["node/1607"]
@@ -9,6 +9,8 @@ aliases: ["node/1607"]
 ---
 
 I prefer to store (archive) my mail locally. After moving my mail between mail clients a couple of time to many I decided to set up a local IMAP server. This will give me a mail client independent local storage that is in a standard format and future proof.
+
+(*Update 2018-03-29*: When you updating a existing setup to Dovecot 2.3.1 it will break with the error message "Fatal: service(stats) Group doesn't exist: dovecot …". On macOS the primary group for the "dovecot" user is "mail" so you need to set "default_internal_group = mail" in your "local.conf" file.)
 
 I run dovecot on my mail server so that's what I want to run locally as well. Easiest way to install dovecot is via Homebrew. ([Homebrew is a package manager for macOS](https://brew.sh/).)
 
@@ -19,7 +21,7 @@ brew install dovecot
 Homebrew will give you instruction for the LaunchDaemons script needed to start and stop dovecot. Next step is to copy over some default configuration files.
 
 ~~~~
-cp -pr /usr/local/Cellar/dovecot/2.2.33.2/share/doc/dovecot/example-config /usr/local/etc/dovecot
+cp -pr /usr/local/Cellar/dovecot/2.3.1/share/doc/dovecot/example-config /usr/local/etc/dovecot
 ~~~~
 
 I opted for adding a "local.conf" file with all my own settings, "dovecot.conf" will include that file if it exist.
@@ -94,6 +96,8 @@ default_login_user = _dovenull
 # Internal user is used by unprivileged processes. It should be separate from
 # login user, so that login processes can't disturb other processes.
 default_internal_user = _dovecot
+# Internal group is expected to be the primary group of the default_internal_user.
+default_internal_group = mail
 
 # Setting limits.
 default_process_limit = 10
