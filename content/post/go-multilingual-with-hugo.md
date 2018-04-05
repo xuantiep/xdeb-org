@@ -1,5 +1,5 @@
 ---
-title: "Go multilingual with hugo"
+title: "Go multilingual with Hugo"
 date: 2018-04-05T11:31:23+02:00
 lastmod: 2018-04-05T11:31:23+02:00
 author: "Fredrik Jonsson"
