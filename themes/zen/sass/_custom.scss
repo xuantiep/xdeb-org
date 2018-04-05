@@ -170,8 +170,8 @@ blockquote {
   border-left: 2px solid color(brand);
 }
 
-.front {
-  article {
+.section-post {
+  &.full-view {
     margin-bottom: 2rem;
 
     @include respond-to(s) {
