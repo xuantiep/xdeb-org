@@ -14,7 +14,7 @@ This could be considered a part two of [Mail relay, MX backup and spam filtering
 
 ## Why
 
-Anyone can set up there own mail server and start exchanging e-mail with every other Internet user in the world. This is quite amazing I think.
+Anyone can set up their own mail server and start exchanging e-mail with every other Internet user in the world. This is quite amazing I think.
 
 So many things on the Internet today is controlled by a handful of tech giants. E-mail is something you can and should control yourself. It's a bit complex to setup but done right it's stable and low maintenance.
 
@@ -117,7 +117,7 @@ Dovecot configuration consist mostly of making it talk with Postfix and MariaDB 
 
 ## Postfix
 
-A lot of the Postfix configuration is identical to the Mail Relay setup, see article link above. What follows is an quick overview of some Postfix configurations specific for the mail server.
+A lot of the Postfix configuration is identical to the Mail Relay setup, see article link above. What follows is a quick overview of some Postfix configurations specific for the mail server.
 
 The Ansible role will set up all this but it's good to understand what it does and why.
 
