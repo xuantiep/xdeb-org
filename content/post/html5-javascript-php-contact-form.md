@@ -102,53 +102,53 @@ The JavaScript (jQuery):
 ~~~~ js
 (function ($) {
 
-    'use strict';
+  'use strict';
 
-    // Contact form.
-    $('.contact-form').each(function() {
-      var $contact_form = $(this);
-      var $contact_button = $contact_form.find('.form-submit');
-      var contact_action = '/php/contact.php';
+  // Contact form.
+  $('.contact-form').each(function () {
+    var $contact_form = $(this);
+    var $contact_button = $contact_form.find('.form-submit');
+    var contact_action = '/php/contact.php';
 
-      // Display the hidden form.
-      $contact_form.removeClass('hidden');
-      // Remove the "no javascript" messages
-      $('.contact-no-js').detach();
+    // Display the hidden form.
+    $contact_form.removeClass('hidden');
+    // Remove the "no javascript" messages
+    $('.contact-no-js').detach();
 
-      // Wait for a mouse to move, indicating they are human.
-      $('body').mousemove(function() {
+    // Wait for a mouse to move, indicating they are human.
+    $('body').mousemove(function () {
+      // Unlock the form.
+      $contact_form.attr('action', contact_action);
+      $contact_button.attr('disabled', false);
+    });
+
+    // A tab or enter key pressed can also indicate they are human.
+    $('body').keydown(function (e) {
+      if ((e.keyCode === 9) || (e.keyCode === 13)) {
         // Unlock the form.
         $contact_form.attr('action', contact_action);
         $contact_button.attr('disabled', false);
-      });
-
-      // A tab or enter key pressed can also indicate they are human.
-      $('body').keydown(function(e) {
-        if ((e.keyCode == 9) || (e.keyCode == 13)) {
-          // Unlock the form.
-          $contact_form.attr('action', contact_action);
-          $contact_button.attr('disabled', false);
-        }
-      });
-
-      // Mark the form as submitted.
-      $contact_button.on('click touchstart MSPointerDown', function() {
-        $contact_form.addClass('js-submitted');
-      });
-
-      // Display messages.
-      if (location.search.substring(1) != '') {
-        switch (location.search.substring(1)) {
-          case 'submitted':
-            $('.contact-submitted').removeClass('hidden');
-            break;
-
-          case 'error':
-            $('.contact-error').removeClass('hidden');
-            break;
-        }
       }
     });
+
+    // Mark the form as submitted.
+    $contact_button.on('click touchstart MSPointerDown', function () {
+      $contact_form.addClass('js-submitted');
+    });
+
+    // Display messages.
+    if (location.search.substring(1) !== '') {
+      switch (location.search.substring(1)) {
+        case 'submitted':
+          $('.contact-submitted').removeClass('hidden');
+          break;
+
+        case 'error':
+          $('.contact-error').removeClass('hidden');
+          break;
+      }
+    }
+  });
 
 })(jQuery);
 ~~~~
@@ -160,8 +160,11 @@ Below is the PHP script that sends the messages. You need to replace "info@examp
 ~~~~ php
 <?php
 
-// Set the address that submission should be sent to.
+// Set the e-mail address that submission should be sent to.
 $address = 'info@example.com';
+
+// Set the e-mail subject prefix.
+$prefix = 'Website feedback';
 
 // DO NOT EDIT ANYTHING BELOW UNLESS YOU KNOW WHAT YOU ARE DOING.
 
@@ -203,8 +206,9 @@ else {
 if (!$error) {
   // Construct the mail with headers.
   $name = _contact_clean_str($_POST['name'], ENT_QUOTES, true, true);
+  $prefix = _contact_clean_str($prefix, ENT_NOQUOTES, true, true);
   $subject = _contact_clean_str($_POST['subject'], ENT_NOQUOTES, true, true);
-  $subject = "[Website feedback] $subject";
+  $subject = "[$prefix] $subject";
   $message = _contact_clean_str($_POST['message'], ENT_NOQUOTES);
   $lines = explode("\n", $message);
   array_walk($lines, '_contact_ff_wrap');
