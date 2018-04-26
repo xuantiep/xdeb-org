@@ -177,13 +177,41 @@ blockquote {
     @include respond-to(s) {
       margin-bottom: 4rem;
     }
+
+    @include respond-to(xxl) {
+      header {
+        position: relative;
+      }
+
+      .title {
+        &::before {
+          content: '\21E8';
+          color: color(brand);
+          position: absolute;
+          left: -4rem;
+        }
+      }
+    }
   }
 }
 
 .blog-archive {
+  @include respond-to(xxl) {
+    position: relative;
+  }
+
   h1 {
     @include padding-bottom(.4);
     border-bottom: 2px solid color(border-dark);
+
+    @include respond-to(xxl) {
+      &::before {
+        content: '\21E8';
+        color: color(brand);
+        position: absolute;
+        left: -4rem;
+      }
+    }
   }
 
   a {
