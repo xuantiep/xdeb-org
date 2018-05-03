@@ -69,6 +69,10 @@ menu:
       weight: -9
       URL: "/post/"
       identifier: "post"
+    - Name: "Archive"
+      weight: -8
+      URL: "/#blog-archive"
+      identifier: "archive"
     - Name: "Ragnvald"
       weight: 10
       URL: "/ragnvald/"
