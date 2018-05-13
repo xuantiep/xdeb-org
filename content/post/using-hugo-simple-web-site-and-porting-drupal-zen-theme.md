@@ -12,7 +12,7 @@ aliases: ["node/1616"]
 
 A couple of years ago static web site generators was the next big thing. I have been meaning to try one out and last week I had the opportunity.
 
-I went to [Top Open-Source Static Site Generators - StaticGen](https://www.staticgen.com/) to see what the options where nowadays. After testing a few, mainly Pythons based, I picked [Hugo :: A fast and modern static website engine](https://gohugo.io/) written in Go.
+I went to [Top Open-Source Static Site Generators - StaticGen](https://www.staticgen.com/) to see what the options where nowadays. After testing a few, mainly Python based, I picked [Hugo :: A fast and modern static website engine](https://gohugo.io/) written in Go.
 
 Things that appealed to me initially was:
 

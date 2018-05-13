@@ -1,7 +1,7 @@
 ---
 title: "Protecting my privacy and data from the bad and the ugly"
-date: 2018-02-20T10:37:32+01:00
-lastmod: 2018-02-20T10:37:36+01:00
+date: 2018-05-03T14:44:53+02:00
+lastmod: 2018-05-03T14:44:56+02:00
 author: "Fredrik Jonsson"
 tags: ["technology","security", "macOS", "iphone"]
 draft: true
@@ -61,7 +61,7 @@ Since I will not convince anyone anyway I leave it at that.
 
 ## Block ads and trackers
 
-There is as a principal noting wrong with advertising. Today it has however become a quagmire of privacy invasive trackers that makes the web insecure, slow and ugly.
+There is as a principal nothing wrong with advertising. Today it has however become a quagmire of privacy invasive trackers that makes the web insecure, slow and ugly.
 
 Blockers like Firefox Focus and Ghostery makes the web usable again.
 

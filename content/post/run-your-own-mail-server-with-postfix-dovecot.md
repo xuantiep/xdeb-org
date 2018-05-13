@@ -20,7 +20,7 @@ So many things on the Internet today is controlled by a handful of tech giants. 
 
 I have run my own mail servers for well over a decade. The setup I describe below has with minor changes been running in production since 2013. I recently upgraded them to Debian 9 Stretch and in early 2016 I started using Letsencrypt certs.
 
-I host domains for my company and my family so mail between us are reasonably secure since all traffic uses TLS. E-mail is not a secure way to communicate but with your own server your mail is at least not used to target you for ads and what not.
+I host domains for my company and my family so mail between us are reasonably privat since all traffic uses TLS. E-mail is not a secure way to communicate but with your own server your mail is at least not used to target you for ads and what not.
 
 
 ## To get started
