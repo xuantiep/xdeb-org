@@ -63,7 +63,7 @@ The common role that set up a firewall and other essentials on all my servers, t
 
 Make sure the servers IP address [is not blacklisted](https://mxtoolbox.com/blacklists.aspx). It need to be a static address in good standing or your mail will get marked as junk.
 
-The DNS record should look something like this. Please do not forget to set a valid PTF (pointer) record. In best case it should be the reverse of the A record but in must exist and be a valid address for the server.
+The DNS record should look something like this. Please do not forget to set a valid PTF (pointer) record. In best case it should be the reverse of the A record but it must exist and be a valid address for the server.
 
 ~~~~
 mail.example.com.	3600	IN	A	123.4.5.6
