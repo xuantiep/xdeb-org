@@ -43,6 +43,8 @@ Complete configurations can be found in my [Ansible](https://www.ansible.com/) m
 
 The common role that set up a firewall and other essentials on all my servers, the letsencrypt role for free certs and the dbserver role are also on GitHub. At the moment you will need to setup a web server with PHP support yourself, or take a look at [Running Drupal on Debian 9 with Apache 2.4, HTTP/2, event MPM and PHP-FPM (via socks and proxy)](/post/2017/11/09/running-drupal-on-debian-9-with-apache-2-4-http2-event-mpm-and-php-fpm-via-socks-and-proxy/).
 
+More on how I use Ansible can be found in my post [My first 2 minutes on a server - letting Ansible do the work](/post/2016/06/23/my-first-2-minutes-on-a-server---letting-ansible-do-the-work/).
+
 ### What you will get
 
 * Mail server with (almost) only standard Debian 9 packages so easy to keep updated via apt.
