@@ -1,7 +1,7 @@
 ---
 title: "Run your own mail server with Postfix and Dovecot"
 date: 2018-02-07T14:58:54+01:00
-lastmod: 2018-02-08T10:39:31+01:00
+lastmod: 2018-05-18T14:46:11+02:00
 author: "Fredrik Jonsson"
 tags: ["email","ansible","server","spam"]
 
@@ -10,6 +10,8 @@ tags: ["email","ansible","server","spam"]
 Ansible role with commentary for setting up your own mail server with Postfix and Dovecot.
 
 This could be considered a part two of [Mail relay, MX backup and spam filtering with Postfix](/post/2017/12/20/mail-relay-mx-backup-and-spam-filtering-with-postfix/). Many postfix configurations are identical between these setups.
+
+**Updated 2018-05-18:** Added more configuration files and instructions how to use the Ansible role.
 
 
 ## Why
@@ -37,7 +39,7 @@ Don't be [a cargo cult sysadmin](http://blog.lastinfirstout.net/2009/11/cargo-cu
 
 ## Ansible mailserver role
 
-Complete configurations can be found in my mailserver role at [frjo/ansible-roles](https://github.com/frjo/ansible-roles) on Github. This is what I use to set up my own servers.
+Complete configurations can be found in my [Ansible](https://www.ansible.com/) mailserver role at [frjo/ansible-roles](https://github.com/frjo/ansible-roles) on Github. This is what I use to set up my own servers.
 
 The common role that set up a firewall and other essentials on all my servers, the letsencrypt role for free certs and the dbserver role are also on GitHub. At the moment you will need to setup a web server with PHP support yourself, or take a look at [Running Drupal on Debian 9 with Apache 2.4, HTTP/2, event MPM and PHP-FPM (via socks and proxy)](/post/2017/11/09/running-drupal-on-debian-9-with-apache-2-4-http2-event-mpm-and-php-fpm-via-socks-and-proxy/).
 
@@ -58,6 +60,85 @@ The common role that set up a firewall and other essentials on all my servers, t
 * Bayesian filtering or other text filtering systems. I believe this belongs on the client side.
 * DKIM/DMARK, I find them cumbersome and of no benefit.
 
+### How to use the Ansible role
+
+If you are not already using Ansible take a look at [Getting Started with Ansible](https://www.ansible.com/resources/get-started).
+
+**Step 1:** Set up the directory structure and files needed.
+
+~~~~
+ansible-playbooks/:
+    mail-server-playbook.yml
+    host_vars/
+        your.host.yml
+    roles/
+        common/
+        dbserver/
+        letsencrypt/
+        mailserver/
+    vars/
+        passwords.yml
+~~~~
+
+**Step 2:** Set up a playbook, above I named it "mail-server-playbook.yml".
+
+~~~~
+---
+- name: Apply configuration to mail server
+  hosts:
+    - your.host
+  remote_user: root
+  port: 2222
+  roles:
+    - common
+    - dbserver
+    - mailserver
+  vars_files:
+    - vars/passwords.yml
+~~~~
+
+**Step 3:** In "host_vars/your.host.yml" you add all the variables needed. The roles have sensible defaults (see "defaults/main.yml" in each role) but some things need to be set for each host.
+
+~~~~
+---
+acme_certs_dir: "/etc/ssl/letsencrypt"
+acme_domains:
+  - your.host
+  - www.your.host
+  - other.your.host
+acme_services:
+  - apache2
+  - dovecot
+  - postfix
+openports_list:
+  - 25
+  - 80
+  - 443
+  - 587
+  - 993
+  - 995
+  - 2222
+openports_udp_list:
+  - "60000:60100"
+~~~~
+
+**Step 4:** The "vars/passwords.yml" file is a good place to keep all the passwords needed. I recommend using the  "ansible-vault" command to have it encrypted.
+
+~~~~
+---
+ssl_key_passwd: a-good-password
+db_root_passwd: a-good-password
+db_backup_passwd: a-good-password
+postfix_db_passwd: a-good-password
+postfix_admin_db_passwd: a-good-password
+acme_account_key_passwd: a-good-password
+~~~~
+
+**Step 5:** Run the playbook.
+
+~~~~
+$ ansible-playbook mail-server-playbook.yml
+~~~~
 
 ## DNS - get this right and good things will follow
 
@@ -113,6 +194,110 @@ Postfix handles the sending and receiving of mail. Dovecot is what users, or rat
 It supports the IDLE command so mail will arrive almost instantaneously on desktop mail clients that support it. Push support for iOS would be really nice to have and it's [possible to get working](https://github.com/st3fan/dovecot-xaps-daemon) but it's not straight forward.
 
 Dovecot configuration consist mostly of making it talk with Postfix and MariaDB for user authentication. Postfix will handle all authentication via Dovecot.
+
+~~~~
+auth_cache_size = 1M
+auth_cache_ttl = 1 hour
+auth_cache_negative_ttl = 1 hour
+
+disable_plaintext_auth = yes
+auth_mechanisms = plain login
+
+mail_uid = vmail
+mail_gid = vmail
+
+mail_location = maildir:/var/spool/vmail/%d/%n
+
+default_process_limit = 150
+
+ssl = required
+
+ssl_protocols = !SSLv3
+
+{% if acme_certs_dir_check.stat.isdir is defined %}
+ssl_cert = <{{ acme_certs_dir }}/{{ acme_domains[0] }}/fullchain.pem
+ssl_key = <{{ acme_certs_dir }}/domain.key
+{% endif %}
+
+protocol imap {
+  mail_max_userip_connections = 30
+}
+
+namespace inbox {
+  separator = .
+  inbox = yes
+
+  mailbox Drafts {
+    special_use = \Drafts
+  }
+  mailbox Junk {
+    special_use = \Junk
+  }
+  mailbox Sent {
+    special_use = \Sent
+  }
+  mailbox "Sent Messages" {
+    special_use = \Sent
+  }
+  mailbox Trash {
+    special_use = \Trash
+  }
+}
+
+passdb {
+  driver = sql
+  args = /etc/dovecot/local-sql.conf
+}
+
+userdb {
+  driver = static
+  args = uid=vmail gid=vmail home=/var/spool/vmail/%d/%n
+}
+
+service imap-login {
+  # Number of processes to always keep waiting for more connections.
+  process_min_avail = 2
+}
+
+service lmtp {
+  unix_listener /var/spool/postfix/private/dovecot-lmtp {
+    mode = 0666
+    group = postfix
+    user = postfix
+  }
+
+  user = vmail
+}
+
+service auth {
+  unix_listener auth-userdb {
+    mode = 0666
+    user = vmail
+    group = vmail
+  }
+
+  # Postfix smtp-auth
+  unix_listener /var/spool/postfix/private/auth {
+    mode = 0666
+    user = postfix
+    group = postfix
+  }
+
+  # Auth process is run as this user.
+  user = $default_internal_user
+}
+
+service auth-worker {
+  user = $default_internal_user
+}
+~~~~
+
+~~~~
+driver = mysql
+connect = host=localhost dbname=postfix user=postfix password={{ postfix_db_passwd }}
+default_pass_scheme = SHA512-CRYPT
+password_query = SELECT username AS user, password FROM mailbox WHERE username = '%u' AND active = '1'
+~~~~
 
 
 ## Postfix
@@ -170,6 +355,49 @@ PostfixAdmin is a web interface written in PHP. It's simple but works well for a
 The playbook is not using the latest version since I had trouble getting that to work. Since the older version works without issues I have not put a lot of time investigating the problem.
 
 To be on the safe side I put it behind an Apache basic auth protection.
+
+~~~~
+<?php
+
+$CONF['configured'] = true;
+$CONF['database_type'] = 'mysqli';
+$CONF['database_host'] = 'localhost';
+$CONF['database_user'] = $_SERVER['DB_USER'];
+$CONF['database_password'] = $_SERVER['DB_PASS'];
+$CONF['database_name'] = 'postfix';
+$CONF['admin_email'] = 'postmaster@{{ ansible_domain }}';
+$CONF['encrypt'] = 'dovecot:SHA512-CRYPT';
+$CONF['dovecotpw'] = "/usr/bin/doveadm pw";
+$CONF['password_validation'] = array(
+#    '/regular expression/' => '$PALANG key (optional: + parameter)',
+    '/.{14}/'               => 'password_too_short 15',     # minimum length 14 characters
+    '/([a-zA-Z].*){4}/'     => 'password_no_characters 4',  # must contain at least 4 characters
+);
+$CONF['generate_password'] = 'YES';
+$CONF['page_size'] = '50';
+$CONF['default_aliases'] = array (
+    'abuse' => 'abuse@{{ ansible_domain }}',
+    'hostmaster' => 'hostmaster@{{ ansible_domain }}',
+    'postmaster' => 'postmaster@{{ ansible_domain }}',
+    'webmaster' => 'webmaster@{{ ansible_domain }}'
+);
+$CONF['domain_path'] = 'YES';
+$CONF['domain_in_mailbox'] = 'NO';
+$CONF['aliases'] = '100';
+$CONF['mailboxes'] = '100';
+$CONF['maxquota'] = '1024';
+$CONF['domain_quota_default'] = '10240';
+$CONF['alias_domain'] = 'NO';
+$CONF['fetchmail'] = 'NO';
+$CONF['show_footer_text'] = 'NO';
+$CONF['show_undeliverable']='NO';
+$CONF['show_status']='NO';
+$CONF['welcome_text'] = <<<EOM
+Hi,
+
+Welcome to your new account at {{ ansible_domain }}.
+EOM;
+~~~~
 
 
 ### Removing headers on outgoing mail for security reasons
