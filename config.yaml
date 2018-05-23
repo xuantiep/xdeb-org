@@ -53,7 +53,7 @@ params:
   microUsername: "frjo"
   mobileMenu: true
   piwikSiteId: 1
-  piwikTrackerUrl: "admin.combonet.se/piwik"
+  piwikTrackerUrl: "admin.combonet.se/matomo"
   poweredby: false
   search: false
   searchSize: 20
