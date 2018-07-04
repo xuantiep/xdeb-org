@@ -10,6 +10,7 @@ removePathAccents: true
 paginate: 10
 paginatePath: "page"
 rssLimit: 20
+summaryLength: 40
 newContentEditor: "/usr/local/bin/bbedit"
 author:
   name: "Fredrik Jonsson"
