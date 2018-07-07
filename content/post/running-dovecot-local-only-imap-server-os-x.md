@@ -10,7 +10,7 @@ aliases: ["node/1607"]
 
 I prefer to store (archive) my mail locally. After moving my mail between mail clients a couple of time to many I decided to set up a local IMAP server. This will give me a mail client independent local storage that is in a standard format and future proof.
 
-(*Update 2018-03-29*: When you updating a existing setup to Dovecot 2.3.1 or later it will break with the error message "Fatal: service(stats) Group doesn't exist: dovecot …". On macOS the primary group for the "dovecot" user is "mail" so you need to set "default_internal_group = mail" in your "local.conf" file.)
+(*Update 2018-03-29*: When you update a existing setup to Dovecot 2.3.1 or later it will break with the error message "Fatal: service(stats) Group doesn't exist: dovecot …". On macOS the primary group for the "dovecot" user is "mail" so you need to set "default_internal_group = mail" in your "local.conf" file.)
 
 I run dovecot on my mail server so that's what I want to run locally as well. Easiest way to install dovecot is via Homebrew. ([Homebrew is a package manager for macOS](https://brew.sh/).)
 
