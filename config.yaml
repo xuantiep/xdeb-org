@@ -1,7 +1,9 @@
 ---
 title: "xdeb.org"
 baseURL: "https://xdeb.org/"
-theme: "zen"
+theme:
+  - "xdeb"
+  - "zen"
 languageCode: "en-GB"
 defaultContentLanguage: "en"
 metaDataFormat: "yaml"
