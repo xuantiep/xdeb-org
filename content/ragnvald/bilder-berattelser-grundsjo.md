@@ -8,7 +8,7 @@ submitted: false
 
 **[Information om boken och om författaren Ragnvald Jonsson](/ragnvald)**
 
-{{< figure src="/site/bilder_berattelser_grundsjo_omslag_1.jpg" width="200" height="210" class="right" alt="Omslagsbild Bilder och berättelser från Grundsjö" >}}
+{{< figure src="/site/bilder_berattelser_grundsjo_omslag_1.jpg" width="200" class="right" alt="Omslagsbild för boken Bilder och berättelser från Grundsjö" >}}
 
 ## Förord
 
