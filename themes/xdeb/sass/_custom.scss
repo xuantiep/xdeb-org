@@ -164,6 +164,42 @@ figure {
 }
  */
 
+th,
+label,
+legend,
+figcaption {
+  @include type-layout(s, .8);
+
+  @include respond-to(xxl) {
+    @include type-layout(s-2, .9);
+  }
+}
+
+figure {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  figcaption {
+    @include padding-top(.5);
+  }
+
+  @include respond-to(s) {
+    img {
+      margin: 0;
+    }
+  }
+}
+
+figcaption {
+  text-align: center;
+
+  @include respond-to(s) {
+    text-align: inherit;
+  }
+}
+
 blockquote {
   @include margin(1 $indent-amount/2);
   @include padding(0 $indent-amount/2);
