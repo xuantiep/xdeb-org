@@ -16,7 +16,7 @@ This could be considered a part two of [Mail relay, MX backup and spam filtering
 
 ## Why
 
-Anyone can set up their own mail server and start exchanging e-mail with every other Internet user in the world. This is quite amazing I think.
+Anyone can set up their own mail server and start exchanging e-mail with every other Internet user in the world. I think this is amazing.
 
 So many things on the Internet today is controlled by a handful of tech giants. E-mail is something you can and should control yourself. It's a bit complex to setup but done right it's stable and low maintenance.
 
@@ -146,7 +146,7 @@ $ ansible-playbook mail-server-playbook.yml
 
 Make sure the servers IP address [is not blacklisted](https://mxtoolbox.com/blacklists.aspx). It need to be a static address in good standing or your mail will get marked as junk.
 
-The DNS record should look something like this. Please do not forget to set a valid PTF (pointer) record. In best case it should be the reverse of the A record but it must exist and be a valid address for the server.
+The DNS record should look something like this. Please do not forget to set a valid PTR (pointer) record. In best case it should be the reverse of the A record but it must exist and be a valid address for the server.
 
 ~~~~
 mail.example.com.	3600	IN	A	123.4.5.6
