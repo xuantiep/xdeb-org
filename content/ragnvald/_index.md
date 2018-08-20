@@ -18,13 +18,13 @@ Skriv till Ragnvald Jonsson på adressen <ragnvald@mac.com>.
 
 ## Bilder och berättelser från Krokom - ett personligt perspektiv
 
-Boken "Bilder och berättelser från Krokom" ges ut på Krokomsdagen, lördagen den 25 augusti 2018 kl 11-15. Kom till Krokoms Kyrka för fotoutställning med bokförsäljning och signering. Boken kostar 300 kr och betalning kan göras med kontanter eller med Swish.
+Boken "Bilder och berättelser från Krokom" ges ut på Krokomsdagen, lördagen den 25 augusti 2018 kl 11-15. Kom till Krokoms Kyrka för fotoutställning med bokförsäljning och signering. Boken kostar 250 kr och betalning kan göras med kontanter eller med Swish.
 
 [Affisch för boksläppet på Krokomsdagen](/site/bilder_berattelser_krokomsdagen_2018.pdf) (PDF)
 
 Trådbunden bok om 192 sidor 20x24 cm. med ca. 190 bilder.
 
-Boken kan beställas av Ragnvald Jonsson till ett pris av 370 kr inkl frakt.
+Boken kan beställas av Ragnvald Jonsson till ett pris av 320 kr inkl frakt.
 
 (alla priser är inklusive moms)
 
