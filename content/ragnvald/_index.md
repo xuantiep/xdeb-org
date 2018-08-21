@@ -34,7 +34,7 @@ Boken kan beställas av Ragnvald Jonsson till ett pris av 330 kr inkl frakt.
 
 En stor del av Sveriges befolkning är uppvuxen i små samhällen runt om i vårt land. Denna bok handlar om ett av alla dessa samhällen, Krokom i Jämtland. Den handlar om oss som växte upp där och hur ett samhälle växer upp. I det lilla finns också en berättelse om hela Sveriges utveckling. Hur mycket livet har förändrats från 50-talet och framåt. Tvättmaskiner, bilprovning och lediga lördagar. Självklart idag, nytt på 60-talet.
 
-Boken handlar till stor del om författaren Ragnvald Jonssons och hans familjs liv i Krokom. Han har fotograferat Krokom under alla de 65 år som han bott där. Det unika bildmaterialet gör även boken intressant för alla som vill få en inblick i hur livet tedde sig för de människor som levde i ett mindre samhället på 1950- talet och framåt.
+Boken handlar till stor del om författaren Ragnvald Jonssons och hans familjs liv i Krokom. Han har fotograferat Krokom under alla de 65 år som han bott där. Det unika bildmaterialet gör även boken intressant för alla som vill få en inblick i hur livet tedde sig för de människor som levde i ett mindre samhälle på 1950- talet och framåt.
 
 ISBN: 978-91-631-9021-6
 
