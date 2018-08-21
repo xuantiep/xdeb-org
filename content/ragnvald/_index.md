@@ -24,7 +24,7 @@ Boken "Bilder och berättelser från Krokom" ges ut på Krokomsdagen, lördagen 
 
 Trådbunden bok om 192 sidor 20x24 cm. med ca. 190 bilder.
 
-Boken kan beställas av Ragnvald Jonsson till ett pris av 320 kr inkl frakt.
+Boken kan beställas av Ragnvald Jonsson till ett pris av 330 kr inkl frakt.
 
 (alla priser är inklusive moms)
 
@@ -46,7 +46,7 @@ Boken "Bilder och berättelser från Grundsjö" gavs ut den 6 juli 2006. Trådbu
 
 Besökare i Grundsjö kan köpa boken av Bertil Jonsson för 250 kr.
 
-Boken kan beställas av Ragnvald Jonsson till ett pris av 320 kr inkl frakt.
+Boken kan beställas av Ragnvald Jonsson till ett pris av 330 kr inkl frakt.
 
 (alla priser är inklusive moms)
 
