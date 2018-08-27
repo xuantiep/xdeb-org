@@ -18,9 +18,14 @@ Skriv till Ragnvald Jonsson på adressen <ragnvald@mac.com>.
 
 ## Bilder och berättelser från Krokom - ett personligt perspektiv
 
-Boken "Bilder och berättelser från Krokom" ges ut på Krokomsdagen, lördagen den 25 augusti 2018 kl 11-15. Kom till Krokoms Kyrka för fotoutställning med bokförsäljning och signering. Boken kostar 250 kr och betalning kan göras med kontanter eller med Swish.
+Boken "Bilder och berättelser från Krokom" Kommer att finnas till försäljning på Magneten / Biblioteket i Krokom följande datum:
 
-[Affisch för boksläppet på Krokomsdagen](/site/bilder_berattelser_krokomsdagen_2018.pdf) (PDF)
+* Lördag 1 september 2018 kl 13-15
+* Lördag 8 september 2018 kl 12-15
+
+Den kommer också att finnas till försäljning på Gamla Lanthandeln i Krokom från och med den 1 september.
+
+Boken kostar 250 kr och betalning kan göras med kontanter eller med Swish.
 
 Trådbunden bok om 192 sidor 20x24 cm. med ca. 190 bilder.
 
@@ -29,6 +34,10 @@ Boken kan beställas av Ragnvald Jonsson till ett pris av 330 kr inkl frakt.
 (alla priser är inklusive moms)
 
 * [Komplett text från boken](/ragnvald/bilder-berattelser-krokom)
+
+**Artiklar om boken:**
+
+* [I 65 år har Ragnvald dokumenterat sin ort – nu kommer hans bok om Krokom](https://www.op.se/artikel/jamtland/krokom/nolervik-i-65-ar-har-ragnvald-dokumenterat-sin-ort-nu-kommer-hans-bok-om-krokom) Östersunds-Posten 2018-08-24
 
 **Text baksida:**
 
@@ -53,7 +62,7 @@ Boken kan beställas av Ragnvald Jonsson till ett pris av 330 kr inkl frakt.
 * [Komplett text från boken](/ragnvald/bilder-berattelser-grundsjo)
 * [Ladda hem boken i PDF-format](/files/bilder-och-berattelser-fran-grundsjo.pdf) (62 MB)
 
-**Recensioner:**
+**Artiklar om boken:**
 
 * [Ett guldkorn i Jämtlandshyllan](/files/ostersunds-posten-ett-guldkorn-i-jamtlandshyllan.pdf) Östersunds-Posten 2006-09-22 (PDF)
 * [Minnen från en liten by](/files/allehanda-minnen-fran-en-liten-by.pdf) Allehanda.se 2007-05-31 (PDF)
