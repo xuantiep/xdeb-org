@@ -290,6 +290,8 @@ blockquote {
 }
 
 .mobile-nav-toggle {
+  background-color: $mobile-menu;
+
   &:link,
   &:visited {
     color: $text-bg;
