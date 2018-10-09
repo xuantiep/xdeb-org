@@ -11,8 +11,10 @@
 
 {{ define "main" -}}
 <main class="main layout__main" role="main">
+{{ .Content }}
+
 {{ range first .Site.Params.frontposts (where .Data.Pages "Type" "post") -}}
-{{ .Render "full" }}
+{{ .Render "summary" }}
 {{ end -}}
 
 <section class="blog-archive">
