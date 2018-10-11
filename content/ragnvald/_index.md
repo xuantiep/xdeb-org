@@ -18,14 +18,14 @@ Skriv till Ragnvald Jonsson på adressen <ragnvald@mac.com>.
 
 ## Bilder och berättelser från Krokom - ett personligt perspektiv
 
-Boken "Bilder och berättelser från Krokom" Kommer att finnas till försäljning på Magneten / Biblioteket i Krokom följande datum:
+Boken "Bilder och berättelser från Krokom" finns till försäljning på följande ställen:
 
-* Lördag 1 september 2018 kl 13-15
-* Lördag 8 september 2018 kl 12-15
+* Hemma hos Ragnvald Jonsson
+* Gamla Lanthandeln i Krokom
+* Jamtli butik
+* Hübenettes bokhandel
 
-Den kommer också att finnas till försäljning på Gamla Lanthandeln i Krokom från och med den 1 september.
-
-Boken kostar 250 kr och betalning kan göras med kontanter eller med Swish.
+Direkt från författaren kostar boken 250 kr och betalning kan göras med kontanter eller med Swish.
 
 Trådbunden bok om 192 sidor 20x24 cm. med ca. 190 bilder.
 
