@@ -9,18 +9,18 @@ tags: ["wi-fi","technology"]
 
 {{< figure src="/images/unifi-ap-ac-lite-features-sleek-compact.jpg" width="250" class="right" alt="UniFi AC" >}}
 
-Apple discontinued its AirPort products this year, and last updated them in 2013. This prompted me to seriously investigate my options. I first looked at some of the popular mesh systems but decided to test the more professional UniFi system from [Ubiquiti Networks](https://www.ubnt.com/). UniFi is a professional system that demands more work but, from what I read, the end result is really good.
+Apples AirPort have given my household good and stable Wi-Fi for many years. But the signal strength could have been better in places and to make my computers always use the 5 GHz band a separate 5 GHz SSID was necessary. Apple discontinued its AirPort products this year, and last updated them in 2013. This has prompted me to seriously investigate my options. Let's see if another system can improve on that.
 
-Apples AirPort have given my household decent Wi-Fi for many years. But the signal strength could have been better in places. And to make my computers always use the 5 GHz band a separate 5 GHz SSID was necessary. Let's see if UniFi can improve on that.
+I first looked at some of the popular mesh systems but decided to test the more professional UniFi system from [Ubiquiti Networks](https://www.ubnt.com/). UniFi is a professional system that demands more work but, from what I read, the end result is really good.
 
 
 ## Hardware
 
 I bought two [UniFi AP-AC-Lite](https://www.ubnt.com/unifi/unifi-ap-ac-lite/), one for each floor. I considered going with the higher performance [UniFi AP-AC-Pro](https://www.ubnt.com/unifi/unifi-ap-ac-pro/) but the lite model included PoE adapters in the price and seamed like a good start. I will let the existing Airport act as a router, DHCP-server and firewall with Wi-Fi turned off.
 
-UniFi AP-AC-Lite is very mush the low end of UniFi. Their UAP‑HD support e.g. 500+ users per access point, that is a bit more than I need at my house. That said, I have eight wireless clients connected at the moment. In a few years time it will not be less.
+UniFi AP-AC-Lite is very mush the low end of UniFi. Their UAP‑HD e.g. support 500+ users per access point, that is a bit more than I need at my house. That said, I have eight wireless clients connected at the moment. In a few years time it will not be less.
 
-Since the PoE adapters was included I did not need any other hardware to get it working. To get a "complete" UniFi system you could get a UniFi PoE switch and a UniFi Security Gateway.
+Since the PoE adapters was included I did not need any other hardware to get it working. To build a "complete" UniFi system you could get a UniFi PoE switch and a UniFi Security Gateway as well.
 
 If the AirPort one day gives up I will most likely replace it with a UniFi Security Gateway. Sooner or later I will also get a UniFi PoE switch to make the installation more neat and have it integrate with the UniFi controller for features like VLAN.
 
