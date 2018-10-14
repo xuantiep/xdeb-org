@@ -9,9 +9,9 @@ tags: ["wi-fi","technology"]
 
 {{< figure src="/images/unifi-ap-ac-lite-features-sleek-compact.jpg" width="250" class="right" alt="UniFi AC" >}}
 
-Apples AirPort have given my household good and stable Wi-Fi for many years. But the signal strength could have been better in places and to make my computers always use the 5 GHz band a separate 5 GHz SSID was necessary. Apple discontinued its AirPort products this year, and last updated them in 2013. This has prompted me to seriously investigate my options. Let's see if another system can improve on that.
+Apples AirPort have given my household good and stable Wi-Fi for many years. But the signal strength could have been better in places and to make my computers always use the 5 GHz band a separate 5 GHz SSID was necessary. Apple discontinued its AirPort products this year, and last updated them in 2013. This has prompted me to seriously investigate my options.
 
-I first looked at some of the popular mesh systems but decided to test the more professional UniFi system from [Ubiquiti Networks](https://www.ubnt.com/). UniFi is a professional system that demands more work but, from what I read, the end result is really good.
+I first looked at some of the popular mesh systems but decided to test the more professional UniFi system from [Ubiquiti Networks](https://www.ubnt.com/). UniFi is a professional system that demands more work but, from what I read, the end result is really good. Let's see how it works out for me.
 
 
 ## Hardware
