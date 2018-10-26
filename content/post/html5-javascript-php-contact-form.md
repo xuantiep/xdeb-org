@@ -122,6 +122,13 @@ The JavaScript (jQuery):
       $contact_button.attr('disabled', false);
     });
 
+    // Wait for a touch move event, indicating that they are human.
+    $('body').on('touchmove', function () {
+      // Unlock the form.
+      $contact_form.attr('action', contact_action);
+      $contact_button.attr('disabled', false);
+    });
+
     // A tab or enter key pressed can also indicate they are human.
     $('body').keydown(function (e) {
       if ((e.keyCode === 9) || (e.keyCode === 13)) {
