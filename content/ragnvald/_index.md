@@ -18,12 +18,17 @@ Skriv till Ragnvald Jonsson på adressen <ragnvald@mac.com>.
 
 ## Bilder och berättelser från Krokom - ett personligt perspektiv
 
+**Krokoms bibliotek lördagen den 1 december kl. 12-15**
+
+Ragnvald kommer att ha bokförsäljning och signering på Krokoms bibliotek lördagen den 1 december kl. 12-15.
+
 Boken "Bilder och berättelser från Krokom" finns till försäljning på följande ställen:
 
 * Hemma hos Ragnvald Jonsson
 * Gamla Lanthandeln i Krokom
 * Jamtli butik
 * Hübenettes bokhandel
+
 
 Direkt från författaren kostar boken 250 kr och betalning kan göras med kontanter eller med Swish.
 
