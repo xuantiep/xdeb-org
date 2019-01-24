@@ -7,9 +7,9 @@ tags: ["security","vpn","wireguard","ansible","technology"]
 
 ---
 
-I have been watching the [WireGuard project](https://www.wireguard.com/) with interest for a couple of years. I like how WireGuard is constructed. A small code base that focus on the core functionality. The use of standard Linux networking tools. The use of simple public/private keys like SSH.
+I have been watching the [WireGuard project](https://www.wireguard.com/) with interest for a couple of years. I like how WireGuard is constructed. A small code base that focus on the core functionality. The use of standard Linux networking tools and simple public/private keys like SSH.
 
-They recently released an iOS client and there are a go version that works on macOS as well. As I recently setup a small home server it was a good time to try it out.
+They recently released an iOS client and there is a go version that works on macOS as well. As I recently setup a small home server it was a good time to try it out.
 
 The WireGuard project clearly states that it is under development and should be considered experimental. That said it seems to work well and several VPN providers have added support for it. There is also plans to include it directly in to the Linux kernel.
 
@@ -20,9 +20,9 @@ You find my WireGuard Ansible role at [frjo/ansible-roles](https://github.com/fr
 
 The iOS client support configuration via QR codes so I added that to my setup. The last step in the role will download the client configurations files and QR codes as PNG images to your local machine.
 
-What took the longest was creating the needed iptables rules. Many of the guides assumed that the install was happening on a brand new system without and firewall setup. I was installing on server that does a few other things and has my standard firewall setup, see the "common" role in the repo above.
+What took the longest was creating the needed iptables rules. Many of the guides assumed that the install was happening on a brand new system without and firewall setup. I was installing on a server that does a few other things and has my standard firewall setup, see the "common" role in the repo above.
 
-While I have years of experience setting up firewalls for servers I have never dealt with nat or forwarding before. But I think I have found a good set of rules, it at least works. The goal is to allow VPN clients full access to the internet but no local access on the server. Would be happy to get some feedback if they can be improved.
+While I have experience setting up firewalls for servers I have never dealt with nat or forwarding before. But I think I have found a good set of rules, it at least works. The goal is to allow VPN clients full access to the internet but no local access on the server. Would be happy to get some feedback if they can be improved.
 
 Below are the rules. The WireGuard interface is "wg0" and "en0" is the WAN connected to the internet.
 
