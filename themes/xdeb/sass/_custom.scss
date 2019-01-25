@@ -1,14 +1,6 @@
 // sass-lint:disable no-css-comments, no-color-hex, no-color-literals
 
 // Site custom styles
-
-body {
-  background-color: $header-bg;
-  @include respond-to(s) {
-    background-color: $backdrop;
-  }
-}
-
 .page {
   @include respond-to(xxl) {
     box-shadow: 2px 0 10px #aaa, -2px 0 10px #aaa;
