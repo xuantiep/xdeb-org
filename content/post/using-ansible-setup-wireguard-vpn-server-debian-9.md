@@ -22,12 +22,12 @@ The iOS client support configuration via QR codes so I added that to my setup. T
 
 Most of the time was spent on creating the needed iptables rules. Many of the guides assumed that the install was happening on a brand new system without any firewall setup. I was installing on a server that does a few other things and has my standard firewall setup, see the "common" role in the repo above.
 
-I have experience setting up firewalls for servers but have never dealt with nat or forwarding before. I think I have found a good set of rules. The goal is to allow VPN clients full access to the internet but no local access on the server. Would be happy to get some feedback if they can be improved.
+I have experience setting up firewalls for servers but have never dealt with nat or forwarding before. I think I have found a working set of rules. The goal is to allow VPN clients full access to the internet. Would be happy to get some feedback if they can be improved. I would like to make the rules disallow local access on the server, except for DNS.
 
 Below are the rules. The WireGuard interface is "wg0" and "en0" is the WAN connected to the internet.
 
 ~~~~
-iptables -A INPUT -i wg0 -m conntrack --ctstate NEW -j ACCEPT
+iptables -A INPUT -i wg0 -m conntrack --ctstate NEW,ESTABLISHED,RELATED -j ACCEPT
 iptables -A OUTPUT -o wg0 -m conntrack --ctstate NEW,ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -i wg0 -o en0 -j ACCEPT
 iptables -A FORWARD -i en0 -o wg0 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
