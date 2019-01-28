@@ -15,5 +15,4 @@
 
 User-agent: *
 Crawl-delay: 10
-Disallow: /tags/
 Disallow: /reunion/
