@@ -2,22 +2,6 @@
 # Apache settings:
 #
 
-# Use SetEnvIfNoCase if possible over mod_rewrite to spare the CPU
-
-# Prevent remote image linking but allow some good sites
-SetEnvIfNoCase Referer "^$" img_link
-SetEnvIfNoCase Referer "^https?://([a-z]+\.)?xdeb\.org.*$" img_link
-SetEnvIfNoCase Referer "^https?://([a-z]+\.)?xdeb\.net.*$" img_link
-SetEnvIfNoCase Referer "^http://www\.google\..*$" img_link
-SetEnvIfNoCase Referer "^http://([a-z0-9]+\.)?archive\.org.*$" img_link
-SetEnvIfNoCase Referer "^http://translate\.google\..*$" img_link
-
-<FilesMatch "\.(mp4|swf|mp3|MP3|gif|GIF|jpe?g|JPE?G|png|PNG)$">
-  <IfModule mod_authz_core.c>
-    Require env img_link
-  </IfModule>
-</FilesMatch>
-
 # Various rewrite rules.
 <IfModule mod_rewrite.c>
   RewriteEngine on
