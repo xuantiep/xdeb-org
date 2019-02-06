@@ -46,7 +46,7 @@ params:
   dateformat: "2 January, 2006"
   favicon: "icon-64.png"
   feedlinks: true
-  footer: "Powered by [Hugo](https://gohugo.io/) and the [Zen theme](https://github.com/frjo/hugo-theme-zen). A [xdeb.net](https://xdeb.net/) production."
+  footer: "Powered by [Hugo](https://gohugo.io/) and the [Zen theme](https://github.com/frjo/hugo-theme-zen). [xdeb.net hosting](https://xdeb.net/)"
   frontposts: 3
   icon: "apple-touch-icon-180.png"
   image: "xdeb-org.jpg"
