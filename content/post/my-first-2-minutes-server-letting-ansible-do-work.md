@@ -1,7 +1,7 @@
 ---
 title: "My first 2 minutes on a server - letting Ansible do the work"
 date: 2016-06-23T08:15:07+02:00
-lastmod: 2018-02-08T11:53:31+01:00
+lastmod: 2019-02-19T09:01:31+01:00
 author: "Fredrik Jonsson"
 tags: ["debian","server","ansible","security","technology"]
 aliases: ["node/1615"]
@@ -98,7 +98,7 @@ $ ansible-playbook first_setup.yml --ask-pass --extra-vars "ssh_key=/path/to/ssh
 With "ask-pass" Ansible will ask for the ssh password. This is the only time I use the root password for a server.
 
 
-## Step 3 - Pick a playbook for the server
+## Step 2 - Pick a playbook for the server
 
 With the first setup done I run the appropriate playbook for the server. All my playbooks include the "common" role. Available at [github/frjo/ansible-roles](https://github.com/frjo/ansible-roles).
 
@@ -197,7 +197,7 @@ COMMIT
 
 #### mosh
 
-Mosh is a drop in replacement for SSH. It's more robust and responsive, especially over Wi-Fi, cellular, and long-distance links. It's really good! Read more at [Mosh: the mobile shell](https://mosh.mit.edu/).
+Mosh is a drop in replacement for SSH. It's more robust and responsive, especially over Wi-Fi, cellular, and long-distance links. It's really good! Read more at [Mosh: the mobile shell](https://mosh.org/).
 
 #### needrestart
 
@@ -206,7 +206,7 @@ Needrestart checks which daemons need to be restarted after library upgrades.
 
 ### The letsencrypt role
 
-Letsencrypt has made using TLS everywhere a lot easier. Read more at [Let's Encrypt my servers with acme tiny](/node/1614).
+Letsencrypt has made using TLS everywhere a lot easier. Read more at [Let's Encrypt my servers with acme tiny](/post/2016/02/09/lets-encrypt-my-servers-with-acme-tiny/).
 
 Take a look at the role I use here [github/frjo/ansible-roles](https://github.com/frjo/ansible-roles).
 
@@ -237,5 +237,3 @@ This is the role I run when apticron reports that there are packages that needs 
       command: needrestart -r a
       when: upgrade.changed
 ~~~~
-
-
