@@ -1,9 +1,7 @@
 ---
 title: "xdeb.org"
 baseURL: "https://xdeb.org/"
-theme:
-  - "xdeb"
-  - "zen"
+theme: "zen"
 languageCode: "en-GB"
 defaultContentLanguage: "en"
 metaDataFormat: "yaml"
@@ -34,21 +32,19 @@ outputFormats:
     notAlternative: true
 
 outputs:
-  home: ["HTML","RSS", "JSON", "SearchIndex"]
+  home: ["HTML","RSS", "JSON"]
   section: ["HTML","RSS", "JSON"]
 
 params:
-  cacheBustCSS: false
-  cacheBustJS: false
   contact: "info@xdeb.org"
   copyright: "<!--Creative Commons License-->This site is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).<!--/Creative Commons License-->"
   description: "The blog of Fredrik Jonsson, web developer and Linux sysadmin."
   dateformat: "2 January, 2006"
-  favicon: "icon-64.png"
+  favicon: "apple-touch-icon.png"
   feedlinks: true
   footer: "Powered by [Hugo](https://gohugo.io/) and the [Zen theme](https://github.com/frjo/hugo-theme-zen). [xdeb.net hosting](https://xdeb.net/)"
   frontposts: 3
-  icon: "apple-touch-icon-180.png"
+  icon: "apple-touch-icon-512x512.png"
   image: "xdeb-org.jpg"
   imageMaxWidth: 400
   jquery: true
