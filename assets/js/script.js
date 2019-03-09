@@ -41,8 +41,8 @@
 
   // Add button to pre > code to copy the code to the clipboard.
   if (window.matchMedia && document.queryCommandSupported && document.queryCommandSupported('copy')) {
-    var mq = window.matchMedia('(min-device-width: 1111px)');
-    if (mq.matches) {
+    var mq2 = window.matchMedia('(min-device-width: 1111px)');
+    if (mq2.matches) {
       $('.content').find('pre').each(function (i) {
         var codeitem = 'js-code-item-' + i;
         var $button = $('<button data-codeitem="' + codeitem + '"/>').text('Copy code').addClass('js-clipboard-button');
