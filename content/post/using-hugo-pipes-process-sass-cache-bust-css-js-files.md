@@ -1,5 +1,5 @@
 ---
-title: "Using hugo pipes to process sass and cache-bust css and js files"
+title: "Using Hugo pipes to process sass and cache-bust css and js files"
 date: 2019-03-10T03:42:06+01:00
 lastmod: 2019-03-10T03:42:06+01:00
 author: "Fredrik Jonsson"
