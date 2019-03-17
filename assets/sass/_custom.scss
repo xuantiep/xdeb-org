@@ -285,16 +285,18 @@ blockquote {
   }
 }
 
-.mobile-nav-toggle {
-  background-color: $mobile-menu;
+.mobile-nav {
+  &__toggle {
+    background-color: $mobile-menu;
 
-  &:link,
-  &:visited {
-    color: $text-bg;
-  }
+    &:link,
+    &:visited {
+      color: $text-bg;
+    }
 
-  &::after {
-    border-color: $text-bg;
+    &::after {
+      border-color: $text-bg;
+    }
   }
 }
 
