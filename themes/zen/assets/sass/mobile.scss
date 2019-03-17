@@ -92,6 +92,11 @@
     a {
       color: $text-bg;
       text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $text-bg;
+      }
     }
 
     .js-nav-open & {
