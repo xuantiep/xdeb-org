@@ -15,13 +15,12 @@
     var mq = window.matchMedia('(max-width: 999px)');
     if (mq.matches) {
       // Toggle the mobile nav sheet.
-      $('.mobile-nav__cover, .mobile-nav__toggle').click(function (e) {
-        e.preventDefault();
-        $('body').scrollTop(0).toggleClass('js-nav-open');
+      $('.mobile-nav__cover, .mobile-nav__toggle').handle('click', function () {
+        $('body').scroll().toggleClass('js-nav-open');
       });
 
       // Close the nav sheet after click (needed for anchor links).
-      $('.mobile-nav__sheet').find('a').click(function () {
+      $('.mobile-nav__sheet').find('a').on('click', function () {
         $('body').removeClass('js-nav-open');
       });
     }
@@ -31,21 +30,21 @@
   if (window.matchMedia && document.queryCommandSupported && document.queryCommandSupported('copy')) {
     var mq2 = window.matchMedia('(min-device-width: 1111px)');
     if (mq2.matches) {
-      $('.content').find('pre').each(function (i) {
+      $('.content').find('pre').each(function (e, i) {
         var codeitem = 'js-code-item-' + i;
-        var $button = $('<button data-codeitem="' + codeitem + '"/>').text('Copy code').addClass('js-clipboard-button');
-        $(this).addClass(codeitem).after($button);
+        var button = $('<button data-codeitem="' + codeitem + '"/>').text('Copy code').addClass('js-clipboard-button');
+        $(e).addClass(codeitem).after(button);
       });
 
-      $('.js-clipboard-button').click(function (e) {
-        e.preventDefault();
+      $('.js-clipboard-button').handle('click', function () {
         var codeitem = '.' + $(this).data('codeitem');
         var codesnippet = $(codeitem).find('code').html();
-        var $textarea = $('<textarea>').html(codesnippet).addClass('visually-hidden');
-        $textarea.appendTo('body');
-        $textarea.select();
+        var textarea = $('<textarea id="codesnippet">').html(codesnippet).addClass('visually-hidden');
+        $('body').append(textarea);
+        document.getElementById('codesnippet').focus();
+        document.getElementById('codesnippet').select();
         document.execCommand('copy');
-        $textarea.remove();
+        textarea.remove();
       });
     }
   }
@@ -57,4 +56,5 @@
     });
   }
 
-})(jQuery);
+})(u);
+
