@@ -47,7 +47,6 @@ params:
   icon: "apple-touch-icon-512x512.png"
   image: "xdeb-org.jpg"
   imageMaxWidth: 400
-  jquery: false
   logo: false
   microUsername: "frjo"
   mobileMenu: true
