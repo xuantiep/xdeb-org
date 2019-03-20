@@ -10,7 +10,7 @@
 {{ end }}
 
 {{ define "main" -}}
-<main class="main layout__main" role="main">
+<main class="main layout__main">
 {{ .Content }}
 
 {{ range first .Site.Params.frontposts (where .Data.Pages "Type" "post") -}}
@@ -18,7 +18,7 @@
 {{ end -}}
 
 <section class="blog-archive">
-<h1 id="blog-archive">Blog archive</h1>
+<h2 id="blog-archive">Blog archive</h2>
 <ul>
 {{ range after .Site.Params.frontposts (where .Data.Pages "Type" "post") -}}
 {{ .Render "li" }}
