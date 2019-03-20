@@ -9,9 +9,11 @@ tags: ["javascript","jquery","umbrella"]
 
 In an attempt to make this site even faster loading I have switched from jQuery to [Umbrella JS](https://umbrellajs.com/). Umbrella is really tiny, 2.5kB when gzipped, and strongly influenced by jQuery so the switch is easy for simple scripts. Good information in [Porting from jQuery](https://github.com/franciscop/umbrella/blob/master/jquery.md).
 
-jQuery is 30 kB when gzipped and jQuery slim only 24kB so it's not a huge saving but one needs a hobby. I still use jQuery on most of the sites I build and maintain, far prefer using it than vanilla JavaScript.
+The front page of this site is now down to 64 kB from 85 kB with jQuery. It's not a huge saving but one needs a hobby. The site loads in 250 ms, add to that any ping time you have from your location to my server.
 
-Umbrella includes an impressive amount of jQuery methods for it's tiny size. One advantage of Umbrella over jQuery is how easy it's to use native methods. When Umbrella lacks a method you simple use the native one instead. Just remember to precede it with `.first()`, `.last()` or `.nodes`. [Umbrella has good documentation](https://umbrellajs.com/documentation) as well.
+I have my self hosted [Matomo analytics](https://matomo.org/) active on this site. Fun to see what the users are up to. That script is 22 kB when gzipped, does is really need to be that large? Seems a bit silly that it's a third of the site size.
+
+Umbrella includes an impressive amount of jQuery compatible methods for it's tiny size. One advantage of Umbrella over jQuery is how easy it's to use native methods. When Umbrella lacks a method you simple use the native one instead. Just remember to precede it with `.first()`, `.last()` or `.nodes`. Read more in the [Umbrella documentation](https://umbrellajs.com/documentation).
 
 As an exempel I have added both the jQuery and the Umbrella version of my script that adds a "Copy code" button to all code snippets.
 
@@ -94,7 +96,4 @@ As you can see they are very similar. I go through the code line by line.
 21. –
 22. By replacing `jQuery` with `u` the script switches from jQuery to Umbrella.
 
-
-
 I have added Umbrella to my [frjo/hugo-theme-zen](https://github.com/frjo/hugo-theme-zen) and converted the included scripts.
-
