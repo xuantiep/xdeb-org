@@ -7,7 +7,7 @@ tags: ["javascript","jquery","umbrella"]
 
 ---
 
-In an attempt to make this site even faster loading I have switched from jQuery to [Umbrella JS](https://umbrellajs.com/). Umbrella is really tiny, 2.5kB when gzipped, and strongly influenced by jQuery so the switch is easy for simple scripts. Good information in [Porting from jQuery](https://github.com/franciscop/umbrella/blob/master/jquery.md).
+In an attempt to make this site load even faster I have switched from jQuery to [Umbrella JS](https://umbrellajs.com/). Umbrella is really tiny, 2.5kB when gzipped, and strongly influenced by jQuery so the switch is easy for simple scripts. Good information in [Porting from jQuery](https://github.com/franciscop/umbrella/blob/master/jquery.md).
 
 The front page of this site is now down to 64 kB from 85 kB with jQuery. It's not a huge saving but one needs a hobby. The site loads in 250 ms, add to that any ping time you have from your location to my server.
 
