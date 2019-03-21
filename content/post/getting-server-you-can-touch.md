@@ -12,7 +12,7 @@ I decided one day that it would be nice to have a server I could touch again. Ha
 
 The Intel NUC computers gets good reviews and seem perfect for what I need. Small, quiet and very reasonable priced. I picked up a [Intel NUC Kit NUC6CAYH](https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc6cayh.html) for 120€ plus 8 GB of RAM for 70€. This model takes 2,5" drives and I have a 180 GB Intel SSD laying around so the total price for my server is 190€.
 
-Assembling the server together took about five minutes. Intel has done a good job here, especially considering the price. 
+Assembling the server took about five minutes. Intel has done a good job here, especially considering the price.
 
 
 ## Setup
@@ -33,13 +33,9 @@ The first task for the server is to host a number of web sites. Most are simple 
 All the sites are low traffic so the server will hardly notice it. This site is now hosted on it.
 
 
-## Minecraft server
+## Wireguard VPN
 
-This turned out to be a lot more complicated than I could have guessed. There are two very different version of Minecraft. The Java version for computers and the Minecraft Pocket Edition for iOS etc.
-
-The official Java version of the server only work for Java clients playing on computers. There also exist a "Bedrock" server, in Alpha version, that only runs on Windows and Ubuntu and its future seems uncertain. On this version everyone can play. Could not get it to run on Debian, to old version of libc6 (to start with).
-
-Then there are unofficial servers that work with the Pocket Edition. A great number of them, some abandon, all with quirks and limitations. It's a bit of a mess and I spent to many hours testing different possibilities. In the end I have no working Minecraft server.
+I wrote about Wireguard in [Using Ansible to setup a WireGuard VPN server on Debian 9 – xdeb.org](https://xdeb.org/post/2019/01/24/using-ansible-to-setup-a-wireguard-vpn-server-on-debian-9/). That setup is running on the server.
 
 
 ## Future
