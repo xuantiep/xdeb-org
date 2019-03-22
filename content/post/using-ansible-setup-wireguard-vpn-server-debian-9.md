@@ -34,7 +34,7 @@ iptables -A FORWARD -i en0 -o wg0 -m conntrack --ctstate ESTABLISHED,RELATED -j 
 iptables -t nat -A POSTROUTING -o en0 -s 10.100.100.0/24 -j MASQUERADE
 ~~~~
 
-If you set up your clients to use the local DNS server remember to make sure it allows request from the WireGuard interface. Took me some time to figure out that.
+If you set up your clients to use the local DNS server remember to make sure it allows request from the WireGuard interface. Took me some time to figure that out.
 
 
 ## Setting WireGuard up on iOS as a VPN client
