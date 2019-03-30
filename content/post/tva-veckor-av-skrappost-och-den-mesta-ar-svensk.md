@@ -11,7 +11,7 @@ language: sv
 
 {{< figure src="/images/14_days_of_spam.png" width="400" class="right" alt="Två veckor av skräppost." >}}
 
-På två veckor har det ansamlats 26 stycken skräppost in min skräppostmapp. Av dessa är 17 på svenska, de flesta skickade från Sverige av svenska företag! I Sverige är det obegripligt nog lagligt för företag att spamma andra företag.
+På två veckor har det ansamlats 26 stycken skräppost i min skräppostmapp. Av dessa är 17 stycken på svenska, de flesta skickade från Sverige av svenska företag! I Sverige är det obegripligt nog lagligt för företag att spamma andra företag.
 
 Att det är så pass få spam totalt beror på att all post går via min egen [Mail relay och MX backup tjänst](https://xdeb.net/mailrelay). Den tar bort minst 95 procent eller mer av all skräppost med hjälp av spärrlistor, DNS och SPF kollar m. m. Kör du egen e-postserver så kolla gärna in tjänsten.
 
