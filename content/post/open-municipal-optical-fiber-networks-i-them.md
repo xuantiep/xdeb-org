@@ -10,9 +10,9 @@ aliases: ["node/1406"]
 
 {{< figure src="/images/jamtkraft_stadsnat.jpg" width="400" class="right" alt="Jämtkraft Stadsnät" >}}
 
-In Sweden many municipal owned power companies have been very active in building open optical fiber networks a long side their [district heating](http://en.wikipedia.org/wiki/District_heating) systems, power lines etc.
+In Sweden many municipal owned power companies have been very active in building open optical fiber networks along side their [district heating](http://en.wikipedia.org/wiki/District_heating) systems, power lines etc.
 
-Our local power company [Jämtkraft](http://www.jamtkraft.se/) is one of them. I  worked for Jämtkraft before I went to universitet, it's a good company. They have hydro power plants, district heating system, a really good optical fiber network and are now building a infrastructure for electric cars. To top it of they have one of the lowest prices on electricity in Sweden, and make a nice profit.
+Our local power company [Jämtkraft](http://www.jamtkraft.se/) is one of them. I  worked for Jämtkraft before I went to university, it's a good company. They have hydro power plants, district heating system, a really good optical fiber network and are now building a infrastructure for electric cars. To top it of they have one of the lowest prices on electricity in Sweden, and make a nice profit.
 
 I recently moved to a house that is connected to [Jämtkraft Stadsnät](http://www.jamtkraftstadsnat.se/) (Jamtkraft City-net). Since it's a open network customers can choose from a number of Internet, VOIP and IPTV providers. The public sector build the road and the private sector can then compete on equal terms on it.
 
