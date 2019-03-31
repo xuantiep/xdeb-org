@@ -1,7 +1,7 @@
 ---
 title: "Using Ansible to setup a WireGuard VPN server on Debian 9"
 date: 2019-01-24T13:19:21+01:00
-lastmod: 2019-01-24T13:19:21+01:00
+lastmod: 2019-03-31T20:52:10+02:00
 author: "Fredrik Jonsson"
 tags: ["security","vpn","wireguard","ansible","technology"]
 
@@ -43,6 +43,8 @@ This is as simple as it gets. Download the client from the App store. Add a tunn
 
 
 ## Setting WireGuard up on macOS as a VPN client
+
+Update 2019-03-31: There is now a Wireguard client in the [macOS App store](https://itunes.apple.com/se/app/wireguard/id1451685025?mt=12). This makes the macOS setup even easier. Install the client, import the configuration file and you are up and running.
 
 Install via Homebrew.
 
