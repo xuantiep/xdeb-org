@@ -3,7 +3,7 @@ title: "Drush 4, more awesome than ever - DrupalCamp Stockholm 2011"
 date: 2011-05-07T14:52:14+02:00
 lastmod: 2011-05-07T18:52:46+02:00
 author: "Fredrik Jonsson"
-tags: ["drupal","drupalcamp","drupalcampstockholm2011","planetdrupal","development"]
+tags: ["drupal","drupalcamp","development"]
 aliases: ["node/1503"]
 
 ---

@@ -3,7 +3,7 @@ title: "Building complex web sites the Drupal way - Session at BarCamp Kerala 7"
 date: 2009-12-21T03:14:08+01:00
 lastmod: 2010-09-21T09:31:10+02:00
 author: "Fredrik Jonsson"
-tags: ["barcamp","drupal","india","planetdrupal","development"]
+tags: ["barcamp","drupal","india","development"]
 aliases: ["node/1303"]
 
 ---

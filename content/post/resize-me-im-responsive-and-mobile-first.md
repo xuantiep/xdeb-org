@@ -3,7 +3,7 @@ title: "Resize me - I\'m responsive and mobile first"
 date: 2012-01-12T07:54:21+01:00
 lastmod: 2012-04-11T07:43:55+02:00
 author: "Fredrik Jonsson"
-tags: ["css","drupal","mobil","ipad","iphone","android","planetdrupal","themes","development"]
+tags: ["css","drupal","mobil","ipad","iphone","android","themes","development"]
 aliases: ["node/1554"]
 
 ---

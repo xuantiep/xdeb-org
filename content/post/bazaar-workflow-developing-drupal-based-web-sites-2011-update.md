@@ -3,7 +3,7 @@ title: "Bazaar workflow for developing Drupal based web sites (2011 update)"
 date: 2011-03-21T15:41:30+01:00
 lastmod: 2011-05-22T21:34:35+02:00
 author: "Fredrik Jonsson"
-tags: ["bazaar","drupal","drush","git","planetdrupal","vcs","development"]
+tags: ["bazaar","drupal","drush","git","vcs","development"]
 aliases: ["node/1487"]
 
 ---

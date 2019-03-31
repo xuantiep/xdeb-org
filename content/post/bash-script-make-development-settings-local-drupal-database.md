@@ -3,7 +3,7 @@ title: "Bash script to make development settings on local Drupal database"
 date: 2010-05-19T17:00:07+02:00
 lastmod: 2011-04-20T11:36:05+02:00
 author: "Fredrik Jonsson"
-tags: ["drupal","drush","planetdrupal","development"]
+tags: ["drupal","drush","development"]
 aliases: ["node/1353"]
 
 ---

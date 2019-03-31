@@ -3,7 +3,7 @@ title: "Make images into a background-image so Firefox -moz-border-radius will w
 date: 2010-12-14T16:28:54+01:00
 lastmod: 2010-12-14T16:28:54+01:00
 author: "Fredrik Jonsson"
-tags: ["css","drupal","firefox","jquery","planetdrupal","development"]
+tags: ["css","drupal","firefox","jquery","development"]
 aliases: ["node/1441"]
 
 ---

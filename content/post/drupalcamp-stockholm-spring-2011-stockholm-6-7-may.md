@@ -3,7 +3,7 @@ title: "DrupalCamp Stockholm Spring 2011 - Stockholm 6-7 of May"
 date: 2011-04-15T15:55:10+02:00
 lastmod: 2011-04-15T15:55:24+02:00
 author: "Fredrik Jonsson"
-tags: ["drupal","drupalcamp","drupalcampstockholm2011","development"]
+tags: ["drupal","drupalcamp","development"]
 aliases: ["node/1497"]
 
 ---

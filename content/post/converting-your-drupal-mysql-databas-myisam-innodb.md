@@ -3,7 +3,7 @@ title: "Converting your Drupal MySQL databas from MyISAM to InnoDB "
 date: 2009-10-31T17:32:22+01:00
 lastmod: 2012-08-16T06:35:00+02:00
 author: "Fredrik Jonsson"
-tags: ["convert","drupal","innodb","myisam","mysql","planetdrupal","development"]
+tags: ["convert","drupal","innodb","myisam","mysql","development"]
 aliases: ["node/1268"]
 
 ---

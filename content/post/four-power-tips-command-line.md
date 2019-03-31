@@ -3,7 +3,7 @@ title: "Four power tips for the command line"
 date: 2010-09-07T23:18:16+02:00
 lastmod: 2010-11-25T10:46:29+01:00
 author: "Fredrik Jonsson"
-tags: ["bash","bazaar","cli","planetdrupal","ssh","terminal","development"]
+tags: ["bash","bazaar","cli","ssh","terminal","development"]
 aliases: ["node/1390"]
 
 ---

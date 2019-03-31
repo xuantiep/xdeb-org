@@ -3,7 +3,7 @@ title: "Spice up your Drupal 6 site search field with a bit of jQuery and CSS"
 date: 2010-06-02T19:27:33+02:00
 lastmod: 2013-04-22T09:37:39+02:00
 author: "Fredrik Jonsson"
-tags: ["css","drupal","firefox","javascript","jquery","planetdrupal","safari","search","development"]
+tags: ["css","drupal","firefox","javascript","jquery","safari","search","development"]
 aliases: ["node/1359"]
 
 ---

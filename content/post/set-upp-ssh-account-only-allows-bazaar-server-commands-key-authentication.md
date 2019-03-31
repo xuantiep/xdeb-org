@@ -3,7 +3,7 @@ title: "Set upp SSH account that only allows Bazaar server commands via key auth
 date: 2010-11-25T10:35:17+01:00
 lastmod: 2010-11-29T14:35:28+01:00
 author: "Fredrik Jonsson"
-tags: ["bash","bazaar","cli","planetdrupal","security","ssh","terminal","development"]
+tags: ["bash","bazaar","cli","security","ssh","terminal","development"]
 aliases: ["node/1429"]
 
 ---
