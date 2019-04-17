@@ -15,7 +15,7 @@ Vetenskapsnytts blog [ "Alla gör det ju": oordning och regelbrott smittar](http
 
 Den Hollänska forskargruppen ville ta reda på ifall oordning och regelbrott verkligen smittar, "the Broken Windows theory". De gjorde sex omfattande fältexperiment och här är några exempel på resultaten:
 
-{{% clear %}}
+{{< clear >}}
 
 * 33% slängde cykelstyres-flyern på marken vid en oklottrad vägg; men hela 69% skräpade ner på samma sätt om väggen hade synligt klotter
 * 27% tog en genväg till sin bil genom avspärrat område; men om staketet hade fastkedjade cyklar (trots förbudsskylt) ökade andelen till 82%
