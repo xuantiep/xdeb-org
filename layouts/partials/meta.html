@@ -1,6 +1,7 @@
-{{ hugo.Generator }}
+{{ .Hugo.Generator }}
 {{ with $.Param "contact" }}<meta name="contact" content="{{ . }}">{{ end }}
 <meta name="theme-color" content="#706a58">
+{{ with .Site.Params.piwikTrackerUrl }}<link rel="dns-prefetch" href="//{{ . }}">{{ end }}
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
