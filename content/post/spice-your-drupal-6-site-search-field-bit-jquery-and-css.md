@@ -8,20 +8,17 @@ aliases: ["node/1359"]
 
 ---
 
-{{< figure src="/images/safari_search_field_2.png" width="184" class="right" alt="safari search field 2" >}}
-{{< figure src="/images/firefox_search_field_2.png" width="184" class="right" alt="firefox search field 2" >}}
-
 The search field is an important part of almost any web site today and it deserve some attention. Especially if you have implemented some really good search like Apache Solr (see [How to set up Apache Solr search for Drupal 6 on a Debian GNU/Linux server](/node/1213)).
 
-This is an update to [an older post](/node/908) on the same subject but for Drupal 5. This new version is for Drupal 6 and adds jQuery 1.3+ compatibility plus some nice CSS for Firefox.
+This is an update to an older post on the same subject but for Drupal 5. This new version is for Drupal 6 and adds jQuery 1.3+ compatibility plus some nice CSS for Firefox.
 
 If you use Safari, or any other Webkit browser, the spiced up search field looks like a standard Mac OS X search field:
 
-![Safari search field example](/sites/default/files/upload/safari_search_field_2.png "Safari search field example")
+{{< figure src="/images/safari_search_field_2.png" alt="Safari search field example." >}}
 
 With the help of some CSS I made the spiced up Firefox search field look somewhat similar:
 
-![Firefox search field example](/sites/default/files/upload/firefox_search_field_2.png "Firefox search field example")
+{{< figure src="/images/firefox_search_field_2.png" alt="Firefox search field example." >}}
 
 All this is done with JavaScript and CSS on the original Drupal search form ensuring graceful degradation. If you turn of JavaScript all that happens is that you get the standard search field and button.
 

@@ -5,6 +5,7 @@ lastmod: 2014-05-06T11:15:03+02:00
 author: "Fredrik Jonsson"
 tags: ["drupal","drupal5","development"]
 aliases: ["node/802"]
+draft: true
 
 ---
 

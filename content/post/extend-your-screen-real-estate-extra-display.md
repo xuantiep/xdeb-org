@@ -5,6 +5,7 @@ lastmod: 2014-05-06T11:15:03+02:00
 author: "Fredrik Jonsson"
 tags: ["display","macbook","technology"]
 aliases: ["node/795"]
+draft: true
 
 ---
 

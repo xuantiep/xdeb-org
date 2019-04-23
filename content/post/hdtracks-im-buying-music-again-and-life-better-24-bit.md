@@ -5,6 +5,7 @@ lastmod: 2012-07-23T13:15:26+02:00
 author: "Fredrik Jonsson"
 tags: ["audio hi-fi music","life"]
 aliases: ["node/1573"]
+draft: true
 
 ---
 

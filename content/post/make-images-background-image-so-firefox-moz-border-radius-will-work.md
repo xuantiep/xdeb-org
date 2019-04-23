@@ -5,6 +5,7 @@ lastmod: 2010-12-14T16:28:54+01:00
 author: "Fredrik Jonsson"
 tags: ["css","drupal","firefox","jquery","development"]
 aliases: ["node/1441"]
+draft: true
 
 ---
 
