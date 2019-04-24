@@ -17,6 +17,15 @@
 {{ .Render "summary" }}
 {{ end -}}
 
+<section class="blog-popular">
+<h2 id="blog-archive">Most popular posts</h2>
+<ul>
+{{ range .Site.Taxonomies.tags.popular }}
+{{ .Render "li" }}
+{{ end }}
+</ul>
+</section>
+
 <section class="blog-archive">
 <h2 id="blog-archive">Blog archive</h2>
 <ul>

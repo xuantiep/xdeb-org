@@ -225,6 +225,7 @@ blockquote {
   }
 }
 
+.blog-popular,
 .blog-archive {
   @include respond-to(xxl) {
     position: relative;
