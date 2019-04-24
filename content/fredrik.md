@@ -28,10 +28,10 @@ I have a degree in political science but my interest in technology turned my car
 ### Me on the Internet
 
 * [My blog](/) here on xdeb.org.
-* [GitHub](https://github.com/frjo) 
-* [Combonetwork development](http://combonet.se/) the service company I work via.
+* [GitHub](https://github.com/frjo)
+* [Combonetwork development](https://combonet.se/) the service company I work via.
 * [xdeb.net services](https://xdeb.net/) with my hosting, development and consulting services.
-* [xdeb.net showcases](https://xdeb.net/case) web sites I have developed with Drupal.
+* [xdeb.net showcases](https://xdeb.net/case) web sites I have developed.
 * [Account page at drupal.org](https://www.drupal.org/user/5546)
 * [Marketplace at drupal.org](https://www.drupal.org/marketplace/fredrik-jonsson)
 * [Keybase](https://keybase.io/frjo)
