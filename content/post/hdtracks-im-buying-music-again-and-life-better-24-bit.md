@@ -3,7 +3,7 @@ title: "HDtracks – I\'m buying music again, and life is better at 24 bit"
 date: 2012-07-20T16:40:02+02:00
 lastmod: 2012-07-23T13:15:26+02:00
 author: "Fredrik Jonsson"
-tags: ["audio hi-fi music","life"]
+tags: ["audio", "hi-fi", music"]
 aliases: ["node/1573"]
 draft: true
 

@@ -3,7 +3,7 @@ title: "The Loudness War kills my music interest"
 date: 2009-06-20T20:06:15+02:00
 lastmod: 2012-07-20T13:54:39+02:00
 author: "Fredrik Jonsson"
-tags: ["audio","hi-fi","loudness war","music","life"]
+tags: ["audio","hi-fi","music"]
 aliases: ["node/1218"]
 
 ---

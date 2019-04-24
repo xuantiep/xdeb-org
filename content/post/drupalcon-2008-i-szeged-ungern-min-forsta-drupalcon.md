@@ -3,7 +3,7 @@ title: "Drupalcon 2008 i Szeged, Ungern - min första Drupalcon"
 date: 2008-06-25T23:16:54+02:00
 lastmod: 2008-07-21T08:59:32+02:00
 author: "Fredrik Jonsson"
-tags: ["drupal","drupalcon","drupalconszeged2008","teknologi"]
+tags: ["drupal","drupalcon","teknologi"]
 aliases: ["node/1048"]
 
 ---

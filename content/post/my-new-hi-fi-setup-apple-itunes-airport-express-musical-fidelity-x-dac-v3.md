@@ -3,7 +3,7 @@ title: "My new Hi-Fi setup, Apple iTunes - AirPort Express - Musical Fidelity X-
 date: 2007-08-17T15:57:35+02:00
 lastmod: 2012-06-26T10:55:13+02:00
 author: "Fredrik Jonsson"
-tags: ["hi-fi","itunes","music","wi-fi","hardware","recommend","technology"]
+tags: ["hi-fi","music","wi-fi","hardware","technology"]
 aliases: ["node/800"]
 
 ---

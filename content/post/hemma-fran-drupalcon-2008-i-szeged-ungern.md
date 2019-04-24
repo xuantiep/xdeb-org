@@ -3,7 +3,7 @@ title: "Hemma från Drupalcon 2008 i Szeged, Ungern"
 date: 2008-09-25T11:00:18+02:00
 lastmod: 2008-10-02T15:48:58+02:00
 author: "Fredrik Jonsson"
-tags: ["drupal","drupalcon","drupalconszeged2008","teknologi"]
+tags: ["drupal","drupalcon","teknologi"]
 aliases: ["node/1100"]
 
 ---

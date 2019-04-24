@@ -3,7 +3,7 @@ title: "Why does mobile phones still have such bad voice quality?"
 date: 2009-05-22T08:47:52+02:00
 lastmod: 2009-06-10T14:26:24+02:00
 author: "Fredrik Jonsson"
-tags: ["audio","ichat","mobile","phone","skype","voice","technology"]
+tags: ["audio","mobile","technology"]
 aliases: ["node/1210"]
 
 ---

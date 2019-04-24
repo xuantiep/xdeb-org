@@ -3,7 +3,7 @@ title: "Markdown editor for BUEditor on Drupal"
 date: 2012-11-12T13:36:46+01:00
 lastmod: 2012-11-12T13:39:01+01:00
 author: "Fredrik Jonsson"
-tags: ["drupal","screencast","markdown","development"]
+tags: ["drupal","markdown","development"]
 aliases: ["node/1580"]
 
 ---

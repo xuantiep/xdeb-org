@@ -3,7 +3,7 @@ title: "Open municipal optical fiber networks, I like them"
 date: 2010-10-24T20:58:39+02:00
 lastmod: 2010-10-29T20:57:01+02:00
 author: "Fredrik Jonsson"
-tags: ["internet","municipality","network","optical fiber","technology"]
+tags: ["internet","municipality","network","technology"]
 aliases: ["node/1406"]
 
 ---
