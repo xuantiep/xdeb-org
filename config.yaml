@@ -57,6 +57,19 @@ params:
   searchSize: 20
   sidebar: false
   submitted: true
+  podcast:
+    title: "Samtal med pappa"
+    summary: "Samtal med min pappa som föddes 1930, i ett helt annat Sverige. Vi pratar om mat, lekar, politik, landsbygd, familj och annat viktigt."
+    image: "podcast/images/samtal-med-pappa.jpg"
+    category:
+      name: "Society & Culture"
+      subcategories: ["History", "Personal Journals"]
+    author: "Samtal – xdeb.org"
+    owner:
+      name: "Fredrik Jonsson"
+      email: "samtal@xdeb.org"
+    lang: "sv-SE"
+
 
 menu:
   main:
@@ -71,8 +84,12 @@ menu:
       weight: -8
       URL: "/#blog-archive"
       identifier: "archive"
+#     - Name: "Samtal"
+#       weight: 10
+#       URL: "/samtal/"
+#       identifier: "samtal"
     - Name: "Ragnvald"
-      weight: 10
+      weight: 11
       URL: "/ragnvald/"
       identifier: "ragnvald"
     - Name: "Services"
