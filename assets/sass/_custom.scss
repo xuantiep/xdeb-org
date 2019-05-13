@@ -167,28 +167,23 @@ figcaption {
   }
 }
 
-figure {
+figure.image {
   img {
     display: block;
     margin: 0 auto;
+
+    @include respond-to(s) {
+      margin: 0;
+    }
   }
 
   figcaption {
     @include padding-top(.5);
-  }
+    text-align: center;
 
-  @include respond-to(s) {
-    img {
-      margin: 0;
+    @include respond-to(s) {
+      text-align: inherit;
     }
-  }
-}
-
-figcaption {
-  text-align: center;
-
-  @include respond-to(s) {
-    text-align: inherit;
   }
 }
 
@@ -313,3 +308,4 @@ blockquote {
   }
 
 }
+
