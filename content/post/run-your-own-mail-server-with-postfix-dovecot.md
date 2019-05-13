@@ -33,7 +33,6 @@ Don't be [a cargo cult sysadmin](http://blog.lastinfirstout.net/2009/11/cargo-cu
 * [Dovecot Wiki](https://wiki2.dovecot.org/)
 * [Postfixadmin install](https://github.com/postfixadmin/postfixadmin/blob/master/INSTALL.TXT)
 * [Postfixadmin 3 manual](https://blog.cboltz.de/uploads/postfixadmin-30-english.pdf) (PDF)
-* [SPF: Project Overview](http://www.openspf.org/)
 * [Getting Started with Ansible](https://www.ansible.com/resources/get-started)
 
 
