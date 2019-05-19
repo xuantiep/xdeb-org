@@ -1,7 +1,7 @@
 ---
 title: "Go multilingual with Hugo"
 date: 2018-04-05T11:31:23+02:00
-lastmod: 2018-04-05T11:31:23+02:00
+lastmod: 2019-05-19T10:31:22+02:00
 author: "Fredrik Jonsson"
 tags: ["hugo","multilingual","web","development"]
 
@@ -13,9 +13,11 @@ I have made my small [company site](https://combonet.se/) multilingual, in Swedi
 
 Hugo has good [multilingual support](https://gohugo.io/content-management/multilingual/#readout). What took the most time was building a language selector that works both when content is translated and when it is not.
 
+Update 2019-05-19: languageName does not need to be a custom parameter, it is a supported language setting.
+
 ## Configure the languages
 
-In the "config.yml" file I have Swedish set as the default language and configure the two languages I want, "sv" and "en". The "LanguageName" parameter is used in the language selector.
+In the "config.yml" file I have Swedish set as the default language and configure the two languages I want, "sv" and "en". The "LanguageName" setting is used in the language selector.
 
 ~~~~
 defaultContentLanguage: "sv"
@@ -23,12 +25,10 @@ defaultContentLanguage: "sv"
 languages:
   sv:
     weight: 1
-    params:
-      LanguageName: "Svenska"
+    languageName: "Svenska"
   en:
     weight: 2
-    params:
-      LanguageName: "English"
+    languageName: "English"
 ~~~~
 
 
@@ -51,16 +51,16 @@ I solve this by checking if ".IsTranslated" is set. If it is, the code iterate o
 
 ~~~~
 <h2 class="visually-hidden">{{ i18n "lang_select_title" }}</h2>
-<nav class="language-selector layout__language-selector" role="navigation">
+<nav class="language-selector layout__language-selector">
 <ul class="navbar">
 {{ if .IsTranslated -}}
 {{ range .Translations }}
-<li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Site.Language.Params.LanguageName }}</a></li>
+<li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a></li>
 {{ end -}}
 {{ else -}}
 {{ range .Site.Languages -}}
 {{ if ne $.Site.Language.Lang .Lang }}
-<li><a rel="alternate" href="/{{ .Lang }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Params.LanguageName }}</a></li>
+<li><a rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
 {{ end -}}
 {{ end -}}
 {{ end -}}
