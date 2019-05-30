@@ -53,10 +53,13 @@ params:
   piwikSiteId: 1
   piwikTrackerUrl: "admin.combonet.se/matomo"
   poweredby: false
+  realfavicongenerator: true
+  safari-pinned-color: "#706a58"
   search: false
   searchSize: 20
   sidebar: false
   submitted: true
+  themeColor: "#706a58"
   podcast:
     title: "Samtal med pappa"
     summary: "Samtal med min pappa som föddes 1930, i ett helt annat Sverige. Vi pratar om mat, lekar, politik, landsbygd, familj och annat viktigt."
