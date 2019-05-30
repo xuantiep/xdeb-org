@@ -3,7 +3,7 @@ title: "Using Ansible to setup a WireGuard VPN server on Debian 9"
 date: 2019-01-24T13:19:21+01:00
 lastmod: 2019-04-22T15:42:19+02:00
 author: "Fredrik Jonsson"
-tags: ["security","vpn","wireguard","ansible","technology","popular"]
+tags: ["security","vpn","wireguard","ansible","technology"]
 
 ---
 
