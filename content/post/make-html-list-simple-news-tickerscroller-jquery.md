@@ -62,7 +62,7 @@ Specifying the height of the list and setting overflow to hidden is necessary to
 
 Demo video of the news ticker/scroller:
 
-<video id="html5-video" width="596" height="112" preload="none" controls>
+<video id="html5-video" width="596" height="112" preload="meta" controls>
 <source src="/files/jquery_news_ticker.mp4" />
 <source src="/files/jquery_news_ticker.ogv" />
 <a href="/files/jquery_news_ticker.mp4">Download movie</a>
