@@ -1,7 +1,7 @@
 ---
 title: "Using Hugo pipes to process sass and cache-bust css and js files"
 date: 2019-03-10T03:42:06+01:00
-lastmod: 2019-04-22T15:45:26+02:00
+lastmod: 2019-06-28T23:39:34+02:00
 author: "Fredrik Jonsson"
 tags: ["hugo","sass","web","development"]
 
@@ -15,7 +15,9 @@ With Hugo Pipes you can move only the theme sass files you want to edit/override
 
 Gulp now only handles linting of sass and js. This makes installing npm optional when developing with the zen theme.
 
-Below is how I have implemented Hugo Pipes in the partial for styles and scripts in my Zen theme. It might look overly complex but it has a some neat features. By default the sass files are built for production, compressed with fingerprint. By setting the Hugo enviroment variable to "dev" they will instead be nested with sourcemaps.
+Below is how I have implemented Hugo Pipes in the partial for styles and scripts in my Zen theme. It might look overly complex but it has a some neat features.
+
+By default the sass files are built for production, compressed with fingerprint. By setting the Hugo enviroment variable to "development" (default when running `hugo server`) they will instead be nested with sourcemaps.
 
 I set targetPath so the css files gets added to "public/css/" and not "public/sass/". By default Hugo reuse the directory structure inside the "assets" directory. I want sass files inside a "sass" directory and css files inside a "css" directory.
 
@@ -25,6 +27,10 @@ The fingerprint is a sha256 hash (options for md5 and sha512) that gets inserted
 
 I only use minify on script files, for sass the "compressed" styles is more efficient. Hugo Pipes can concat files as well but with HTTP/2 there is much less need for that.
 
+The styles partial looks like this.
+
+(This makes use of variable overwrite, introduced in Hugo 0.48/Go 1.11.)
+
 ~~~~
 {{ $main_options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "includePaths" (slice "assets/lib/typey/stylesheets")) -}}
 {{ $mobile_options := (dict "targetPath" "css/mobile.css" "outputStyle" "compressed" "includePaths" (slice "assets/lib/typey/stylesheets")) -}}
@@ -32,7 +38,7 @@ I only use minify on script files, for sass the "compressed" styles is more effi
 {{ $main_style := resources.Get "sass/styles.scss" | toCSS $main_options | fingerprint -}}
 {{ $mobile_style := resources.Get "sass/mobile.scss" | toCSS $mobile_options | fingerprint -}}
 {{ $print_style := resources.Get "sass/print.scss" | toCSS $print_options | fingerprint -}}
-{{ if eq .Hugo.Environment "dev" -}}
+{{ if eq hugo.Environment "development" -}}
 {{ $main_options = (dict "targetPath" "css/styles.css" "outputStyle" "nested" "enableSourceMap" true "includePaths" (slice "assets/lib/typey/stylesheets")) -}}
 {{ $mobile_options = (dict "targetPath" "css/mobile.css" "outputStyle" "nested" "enableSourceMap" true "includePaths" (slice "assets/lib/typey/stylesheets")) -}}
 {{ $print_options = (dict "targetPath" "css/print.css" "outputStyle" "nested" "enableSourceMap" true "includePaths" (slice "assets/lib/typey/stylesheets")) -}}
@@ -46,8 +52,6 @@ I only use minify on script files, for sass the "compressed" styles is more effi
 <link rel="stylesheet" href="{{ $main_style.RelPermalink }}">
 <link rel="stylesheet" href="{{ $print_style.RelPermalink }}" media="print">
 ~~~~
-
-(This makes use of variable overwrite, introduced in Hugo 0.48/Go 1.11.)
 
 The scripts partial looks like this.
 
