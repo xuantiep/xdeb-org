@@ -19,6 +19,10 @@ Skriv till Ragnvald Jonsson på adressen <ragnvald@mac.com>.
 
 ## Bilder och berättelser från Krokom - ett personligt perspektiv
 
+Fotoutställning och bokförsäljning i Kyrkan på Krokomsdagen, lördagen den 31 augusti 2019 kl 11-15.
+
+[Affisch för Krokomsdagen 2019](/files/bilder_berattelser_krokomsdagen_2019.pdf.pdf) (PDF)
+
 Boken "Bilder och berättelser från Krokom" finns till försäljning på följande ställen:
 
 * Hemma hos Ragnvald Jonsson
@@ -39,7 +43,7 @@ Boken kan beställas av Ragnvald Jonsson till ett pris av 330 kr inkl frakt.
 
 **Artiklar om boken:**
 
-* [I 65 år har Ragnvald dokumenterat sin ort – nu kommer hans bok om Krokom](https://www.op.se/artikel/jamtland/krokom/nolervik-i-65-ar-har-ragnvald-dokumenterat-sin-ort-nu-kommer-hans-bok-om-krokom) Östersunds-Posten 2018-08-24
+* [I 65 år har Ragnvald dokumenterat sin ort – nu kommer hans bok om Krokom](https://www.op.se/artikel/jamtland/krokom/nolervik-i-65-ar-har-ragnvald-dokumenterat-sin-ort-nu-kommer-hans-bok-om-krokom) Östersunds-Posten 2018-08-24 ([PDF](/files/i-65-ar-har-ragnvald-dokumenterat-sin-ort-nu-kommer-hans-bok-om-krokom.pdf))
 
 **Text baksida:**
 
