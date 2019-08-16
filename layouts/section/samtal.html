@@ -4,14 +4,14 @@
 
 {{ .Content }}
 
-{{ range first .Site.Params.frontposts (where .Data.Pages "Type" "samtal") -}}
+{{ range first .Site.Params.frontposts (where .Pages "Type" "samtal") -}}
 {{ .Render "full" }}
 {{ end -}}
 
 <section class="podcast-archive">
 <h2 id="podcast-archive">Samtal arkiv</h2>
 <ul>
-{{ range after .Site.Params.frontposts (where .Data.Pages "Type" "samtal") -}}
+{{ range after .Site.Params.frontposts (where .Pages "Type" "samtal") -}}
 {{ .Render "li" }}
 {{ end -}}
 </ul>

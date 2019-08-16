@@ -67,7 +67,7 @@ Then a template to generate the feed according to the [JSON Feed specifications]
 File: `layouts/_default/list.json.json`
 
 ~~~~
-{{ $list := .Data.Pages -}}
+{{ $list := .Pages -}}
 {{ $length := (len $list) -}}
 {
     "version" : "https://jsonfeed.org/version/1",

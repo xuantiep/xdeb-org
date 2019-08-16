@@ -4,7 +4,7 @@
 <main class="main layout__main">
 {{ .Content }}
 
-{{ range first .Site.Params.frontposts (where .Data.Pages "Type" "post") -}}
+{{ range first .Site.Params.frontposts (where .Pages "Type" "post") -}}
 {{ .Render "summary" }}
 {{ end -}}
 
@@ -20,7 +20,7 @@
 <section class="blog-archive">
 <h2 id="blog-archive">Blog archive</h2>
 <ul>
-{{ range after .Site.Params.frontposts (where .Data.Pages "Type" "post") -}}
+{{ range after .Site.Params.frontposts (where .Pages "Type" "post") -}}
 {{ .Render "li" }}
 {{ end -}}
 </ul>
