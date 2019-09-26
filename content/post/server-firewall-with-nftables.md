@@ -20,6 +20,8 @@ After understanding how nftables works I like it better than iptables. Cleaner r
 
 This is the rules I run on my servers, the ports will vary depending on services. The WireGuard VPN part I only run on my VPN server.
 
+I have added comments in the script below explaining most parts.
+
 On Debian the nftables configuration file is: `/etc/nftables.conf`
 
 ~~~~
@@ -140,7 +142,9 @@ table ip router {
 }
 ~~~~
 
-I generate the above from [an Ansible template](https://github.com/frjo/ansible-roles/blob/master/common/templates/etc/nftables.conf.j2) in my "common" role that I deploy to all my server. See [frjo/ansible-roles](https://github.com/frjo/ansible-roles) for more information.
+My suggestion is to copy the above to a proper editor and set the type to bash/shell. Then you can easily read the rules and the comments.
+
+I generate the above from [an Ansible template](https://github.com/frjo/ansible-roles/blob/master/common/templates/etc/nftables.conf.j2) in my "common" role that I deploy to all my servers. See [frjo/ansible-roles](https://github.com/frjo/ansible-roles) for more information.
 
 
 ## Monitor nftables
