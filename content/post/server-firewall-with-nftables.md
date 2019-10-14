@@ -78,6 +78,7 @@ table inet firewall {
     ip6 nexthdr icmpv6 icmpv6 type echo-request limit rate over 1/second burst 5 packets drop
 
     # OBS! Rules with "limit" need to be put before rules accepting "established" connections.
+    # Allow all incmming established and related traffic. Drop invalid traffic.
     ct state established,related accept
     ct state invalid drop
 
@@ -92,16 +93,16 @@ table inet firewall {
     # rules I'm unsure how useful/accurate they are.
     ip saddr @blacklist_v4 counter drop
 
-    # Drop all fragments
+    # Drop all fragments.
     ip frag-off & 0x1fff != 0 counter drop
 
-    # Force SYN checks
+    # Force SYN checks.
     tcp flags & (fin|syn|rst|ack) != syn ct state new counter drop
 
-    # Drop XMAS packets
+    # Drop XMAS packets.
     tcp flags & (fin|syn|rst|psh|ack|urg) == fin|syn|rst|psh|ack|urg counter drop
 
-    # Drop NULL packets
+    # Drop NULL packets.
     tcp flags & (fin|syn|rst|psh|ack|urg) == 0x0 counter drop
 
     # Allow certain inbound ICMP types (ping, traceroute).
@@ -123,22 +124,27 @@ table inet firewall {
   chain forwarding {
     type filter hook forward priority 0; policy drop;
 
+    # Forward all established and related traffic. Drop invalid traffic.
     ct state established,related accept
     ct state invalid drop
 
     # Forward WireGuard traffic.
+    # Allow WireGuard traffic to access the internet via wan.
     iifname wg0 oifname $wan ct state new accept
   }
 
   chain outgoing {
     type filter hook output priority 0; policy drop;
 
+    # Allow all outgoing traffic. Drop invalid traffic.
+    # I believe settings "policy accept" would be the same but I prefer explicit rules.
     ct state new,established,related accept
     ct state invalid drop
   }
 }
 
 table ip router {
+    # Both need to be set even when one is empty.
     chain prerouting {
         type nat hook prerouting priority 0;
     }
@@ -146,6 +152,7 @@ table ip router {
         type nat hook postrouting priority 100;
 
         # Masquerade WireGuard traffic.
+        # All WireGuard traffic will look like it comes from the servers IP address.
         oifname $wan ip saddr 10.10.10.0/24 masquerade
     }
 }
