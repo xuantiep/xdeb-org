@@ -19,7 +19,7 @@ As an exempel I have added both the jQuery and the Umbrella version of my script
 
 First comes the jQuery version:
 
-~~~~
+~~~~ js
  1 (function ($) {
  2 
  3   'use strict';
@@ -46,7 +46,7 @@ First comes the jQuery version:
 
 And here we have the new Umbrella version.
 
-~~~~
+~~~~ js
  1 (function ($) {
  2 
  3   'use strict';
