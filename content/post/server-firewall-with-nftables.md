@@ -1,7 +1,7 @@
 ---
 title: "Setting up a server firewall with nftables that support WireGuard VPN"
 date: 2019-09-26T14:24:30+02:00
-lastmod: 2019-10-14T10:50:27+02:00
+lastmod: 2019-10-20T10:52:31+02:00
 author: "Fredrik Jonsson"
 tags: ["nftables","server","ansible","security","wireguard"]
 
@@ -16,6 +16,13 @@ At the bottom you find links to the resources I found most useful. With this pos
 After understanding how nftables works I like it better than iptables. Cleaner rules, support for ipv6 natively and the performance is reported to be improved as well. The last bit I will likely not notice much since my servers all have relative low traffic.
 
 (See my iptables set up in [My first 2 minutes on a server - letting Ansible do the work](/post/2016/06/23/my-first-2-minutes-on-a-server-letting-ansible-do-the-work/))
+
+
+## Important things I learnt
+
+1. You can name tables, chains etc whatever you like and you can have multiple sets of them. Specific settings on them control what they do and in what order they are run.
+2. Whenever you have a need to specify a group of IP addresses, ports, interfaces and what not, use sets. They make rules non repetitive, easy to read and write and allow the system to optimise performance.
+3. Rules with "limit" need to be put before rules accepting "established" connections.
 
 
 ## My nftable config script
@@ -34,6 +41,8 @@ flush ruleset
 
 # Defining variables is easy in nftables scripts.
 define wan = enp3s0
+define vpn = wg0
+define $vpn_net = 10.10.10.0/24
 
 # Setting up a table, simple firewalls will only need one table but there can be multiple.
 # The "init" say that this table will handle both ipv4 (ip) and ipv6 (ip6).
@@ -116,9 +125,9 @@ table inet firewall {
     iifname $wan udp dport @udp_accepted ct state new accept
 
     # Allow WireGuard clients to access DNS and services.
-    iifname wg0 udp dport 53 ct state new accept
-    iifname wg0 tcp dport @tcp_accepted ct state new accept
-    iifname wg0 udp dport @udp_accepted ct state new accept
+    iifname $vpn udp dport 53 ct state new accept
+    iifname $vpn tcp dport @tcp_accepted ct state new accept
+    iifname $vpn udp dport @udp_accepted ct state new accept
   }
 
   chain forwarding {
@@ -130,7 +139,7 @@ table inet firewall {
 
     # Forward WireGuard traffic.
     # Allow WireGuard traffic to access the internet via wan.
-    iifname wg0 oifname $wan ct state new accept
+    iifname $vpn oifname $wan ct state new accept
   }
 
   chain outgoing {
@@ -153,7 +162,7 @@ table ip router {
 
         # Masquerade WireGuard traffic.
         # All WireGuard traffic will look like it comes from the servers IP address.
-        oifname $wan ip saddr 10.10.10.0/24 masquerade
+        oifname $wan ip saddr $vpn_net masquerade
     }
 }
 ~~~~
