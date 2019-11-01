@@ -1,7 +1,7 @@
 ---
 title: "Running dovecot as a local only IMAP server on OS X"
 date: 2014-03-07T10:30:22+01:00
-lastmod: 2019-05-03T09:53:59+02:00
+lastmod: 2019-11-01T10:38:55+01:00
 author: "Fredrik Jonsson"
 tags: ["email","dovecot","macOS","technology","popular"]
 aliases: ["node/1607"]
@@ -21,7 +21,7 @@ brew install dovecot
 Homebrew will give you instruction for the LaunchDaemons script needed to start and stop dovecot. Next step is to copy over some default configuration files.
 
 ~~~~
-cp -pr /usr/local/Cellar/dovecot/2.3.7.1/share/doc/dovecot/example-config/ /usr/local/etc/dovecot/
+cp -pr /usr/local/Cellar/dovecot/2.3.8/share/doc/dovecot/example-config/ /usr/local/etc/dovecot/
 ~~~~
 
 I opted for adding a "local.conf" file with all my own settings, "dovecot.conf" will include that file if it exist.
@@ -32,8 +32,8 @@ File: `/usr/local/etc/dovecot/local.conf`
 
 Make sure to replace all instances of CHANGE_THIS with your own information.
 
-~~~~
-# A comma separated list of IPs or hosts where to listen in for connections. 
+~~~~ shell
+# A comma separated list of IPs or hosts where to listen in for connections.
 # "*" listens in all IPv4 interfaces, "::" listens in all IPv6 interfaces.
 # If you want to specify non-default ports or anything more complex,
 # edit conf.d/master.conf.
@@ -126,13 +126,13 @@ Comment out the lines that tries to read the non existent SSL cert and key:
 Now the server should start without any errors:
 
 ~~~~
-sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.dovecot.plist
+sudo brew services start dovecot
 ~~~~
 
 If you need to stop it run:
 
 ~~~~
-sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.dovecot.plist
+sudo brew services stop dovecot
 ~~~~
 
 By default dovecot logs will show up in `/var/log/mail.log`.
