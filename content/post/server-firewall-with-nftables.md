@@ -3,7 +3,7 @@ title: "Setting up a server firewall with nftables that support WireGuard VPN"
 date: 2019-09-26T14:24:30+02:00
 lastmod: 2019-10-20T10:52:31+02:00
 author: "Fredrik Jonsson"
-tags: ["nftables","server","ansible","security","wireguard"]
+tags: ["nftables","server","ansible","security","wireguard","popular"]
 
 ---
 

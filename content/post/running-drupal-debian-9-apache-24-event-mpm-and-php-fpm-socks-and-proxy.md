@@ -3,7 +3,7 @@ title: "Running Drupal on Debian 9 with Apache 2.4, HTTP/2, event MPM and PHP-FP
 date: 2017-11-09T11:51:16+01:00
 lastmod: 2018-03-15T09:17:46+01:00
 author: "Fredrik Jonsson"
-tags: ["apache","php","server","drupal","debian","development","popular"]
+tags: ["apache","php","server","drupal","debian","development"]
 slug: "running-drupal-on-debian-9-with-apache-2-4-http2-event-mpm-and-php-fpm-via-socks-and-proxy"
 
 ---
