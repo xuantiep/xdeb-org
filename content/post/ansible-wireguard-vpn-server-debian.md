@@ -23,7 +23,7 @@ The WireGuard project clearly states that it is under development and should be 
 
 You find my WireGuard Ansible role at [frjo/ansible-roles](https://github.com/frjo/ansible-roles). This will set up WireGuard as a VPN server allowing clients to connect and access the internet. I got a lot of help from [iamckn/wireguard_ansible](https://github.com/iamckn/wireguard_ansible) when I created my role.
 
-The iOS client support configuration via QR codes so I added that to my setup. The last step in the role will download the client configurations files and QR codes as PNG images to your local machine.
+The iOS client support configuration via QR codes so I added that to my setup. The last step in the role will download the client configurations files and QR codes as PNG images to your local machine. By default 20 client configurations are created.
 
 The Debian 10 version of the WireGuard role do not include any PostUp/PostDown iptables rules to set up the firewall. If you want them look at this [old version](https://github.com/frjo/ansible-roles/blob/f9ff3fc4c6b5bbe422a12e76e9d071b2865af10b/wireguard/templates/etc/wireguard/wg0.conf.j2) of the wg0 conf file.
 
@@ -85,14 +85,23 @@ table ip router {
 }
 ~~~~
 
-## Setting WireGuard up on iOS as a VPN client
+## Setting WireGuard clients
 
-This is as simple as it gets. Download the client from the App store. Add a tunnel and pick the "Create from QR code" option. Hold the camera up to the downloaded QR code and you are done.
+After running the WireGuard role you will be default have 20 client configurations. This is controlled by the "vpn_clients" variable.
+
+Each computer/device will needs its own configuration. I recommend you rename each configuration as you use them.
+
+There are WireGuard clients for most platforms, I have added the ones I have tested below.
 
 
-## Setting WireGuard up on macOS as a VPN client
+### Setting WireGuard up on iOS as a VPN client
 
-Update 2019-03-31: There is now a Wireguard client in the [macOS App store](https://itunes.apple.com/se/app/wireguard/id1451685025?mt=12). This makes the macOS setup even easier. Install the client, import the configuration file and you are up and running.
+This is as simple as it gets. Download the client from the App store. Add a tunnel and pick the "Create from QR code" option. Hold the camera up to one of the downloaded QR codes and you are done.
+
+
+### Setting WireGuard up on macOS as a VPN client
+
+*Update 2019-03-31*: There is now a Wireguard client in the [macOS App store](https://itunes.apple.com/se/app/wireguard/id1451685025?mt=12). This makes the macOS setup even easier. Install the client, import one of the configuration files and you are up and running.
 
 The go command line version is also available and works equally well.
 
