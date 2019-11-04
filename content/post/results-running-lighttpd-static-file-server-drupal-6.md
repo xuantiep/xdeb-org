@@ -4,7 +4,8 @@ date: 2009-10-14T11:29:08+02:00
 lastmod: 2009-10-14T11:29:08+02:00
 author: "Fredrik Jonsson"
 tags: ["drupal","google","lighttpd","server","development"]
-aliases: ["node/1259"]
+aliases:
+  - /node/1259/
 
 ---
 

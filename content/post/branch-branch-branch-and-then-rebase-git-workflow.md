@@ -4,7 +4,8 @@ date: 2013-03-08T11:58:11+01:00
 lastmod: 2013-04-08T23:48:19+02:00
 author: "Fredrik Jonsson"
 tags: ["drupal","git","drupalcamp","technology"]
-aliases: ["node/1586"]
+aliases:
+  - /node/1586/
 
 ---
 

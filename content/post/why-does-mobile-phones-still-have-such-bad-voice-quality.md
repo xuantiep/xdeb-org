@@ -4,7 +4,8 @@ date: 2009-05-22T08:47:52+02:00
 lastmod: 2009-06-10T14:26:24+02:00
 author: "Fredrik Jonsson"
 tags: ["audio","mobile","technology"]
-aliases: ["node/1210"]
+aliases:
+  - /node/1210/
 
 ---
 

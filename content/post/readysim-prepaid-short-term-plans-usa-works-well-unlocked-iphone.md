@@ -4,7 +4,8 @@ date: 2015-10-15T14:00:48+02:00
 lastmod: 2015-10-19T14:14:23+02:00
 author: "Fredrik Jonsson"
 tags: ["usa","internet","iphone","mobile","technology"]
-aliases: ["node/1610"]
+aliases:
+  - /node/1610/
 
 ---
 

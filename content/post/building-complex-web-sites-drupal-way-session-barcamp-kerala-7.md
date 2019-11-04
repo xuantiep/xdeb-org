@@ -4,7 +4,8 @@ date: 2009-12-21T03:14:08+01:00
 lastmod: 2010-09-21T09:31:10+02:00
 author: "Fredrik Jonsson"
 tags: ["barcamp","drupal","india","development"]
-aliases: ["node/1303"]
+aliases:
+  - /node/1303/
 
 ---
 

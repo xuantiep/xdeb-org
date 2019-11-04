@@ -4,7 +4,8 @@ date: 2011-07-07T01:46:46+02:00
 lastmod: 2011-07-11T08:22:37+02:00
 author: "Fredrik Jonsson"
 tags: ["apple","google","technology"]
-aliases: ["node/1515"]
+aliases:
+  - /node/1515/
 
 ---
 

@@ -4,7 +4,8 @@ date: 2009-05-04T15:31:34+02:00
 lastmod: 2016-02-05T06:10:36+01:00
 author: "Fredrik Jonsson"
 tags: ["music"]
-aliases: ["node/1200"]
+aliases:
+  - /node/1200/
 
 ---
 

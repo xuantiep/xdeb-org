@@ -4,7 +4,8 @@ date: 2016-01-20T13:50:56+01:00
 lastmod: 2016-01-29T01:44:48+01:00
 author: "Fredrik Jonsson"
 tags: ["security","passwords","technology"]
-aliases: ["node/1612"]
+aliases:
+  - /node/1612/
 
 ---
 

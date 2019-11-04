@@ -4,7 +4,8 @@ date: 2007-01-10T10:46:47+01:00
 lastmod: 2008-08-01T18:02:59+02:00
 author: "Fredrik Jonsson"
 tags: ["iphone","macOS","mobile","teknologi"]
-aliases: ["node/699"]
+aliases:
+  - /node/699/
 
 ---
 

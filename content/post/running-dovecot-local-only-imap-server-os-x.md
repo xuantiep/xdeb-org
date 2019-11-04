@@ -4,7 +4,8 @@ date: 2014-03-07T10:30:22+01:00
 lastmod: 2019-11-01T10:38:55+01:00
 author: "Fredrik Jonsson"
 tags: ["email","dovecot","macOS","technology","popular"]
-aliases: ["node/1607"]
+aliases:
+  - /node/1607/
 
 ---
 

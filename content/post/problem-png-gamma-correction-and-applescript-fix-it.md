@@ -4,7 +4,8 @@ date: 2006-09-29T14:52:15+02:00
 lastmod: 2011-09-16T09:24:44+02:00
 author: "Fredrik Jonsson"
 tags: ["applescript","css","macOS","web","technology"]
-aliases: ["node/678"]
+aliases:
+  - /node/678/
 
 ---
 

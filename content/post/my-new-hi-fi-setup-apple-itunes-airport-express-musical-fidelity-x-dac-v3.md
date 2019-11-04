@@ -4,7 +4,8 @@ date: 2007-08-17T15:57:35+02:00
 lastmod: 2012-06-26T10:55:13+02:00
 author: "Fredrik Jonsson"
 tags: ["hi-fi","music","wi-fi","hardware","technology"]
-aliases: ["node/800"]
+aliases:
+  - /node/800/
 
 ---
 

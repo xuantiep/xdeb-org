@@ -4,7 +4,8 @@ date: 2012-11-12T13:36:46+01:00
 lastmod: 2012-11-12T13:39:01+01:00
 author: "Fredrik Jonsson"
 tags: ["drupal","markdown","development"]
-aliases: ["node/1580"]
+aliases:
+  - /node/1580/
 
 ---
 

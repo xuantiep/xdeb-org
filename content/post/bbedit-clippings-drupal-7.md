@@ -4,7 +4,8 @@ date: 2011-07-22T03:02:22+02:00
 lastmod: 2011-07-22T04:20:31+02:00
 author: "Fredrik Jonsson"
 tags: ["bbedit","drupal","drupal7","editor","macOS","development"]
-aliases: ["node/1521"]
+aliases:
+  - /node/1521/
 
 ---
 

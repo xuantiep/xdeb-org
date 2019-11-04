@@ -4,7 +4,8 @@ date: 2009-04-05T20:08:53+02:00
 lastmod: 2011-01-15T09:29:04+01:00
 author: "Fredrik Jonsson"
 tags: ["css","drupal","iphone","development"]
-aliases: ["node/1185"]
+aliases:
+  - /node/1185/
 
 ---
 

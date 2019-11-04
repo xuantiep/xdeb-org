@@ -4,7 +4,8 @@ date: 2012-12-12T15:57:23+01:00
 lastmod: 2013-06-05T10:38:46+02:00
 author: "Fredrik Jonsson"
 tags: ["podcast","drupal","teknologi"]
-aliases: ["node/1582"]
+aliases:
+  - /node/1582/
 
 ---
 

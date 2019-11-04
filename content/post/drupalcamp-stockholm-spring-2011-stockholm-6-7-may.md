@@ -4,7 +4,8 @@ date: 2011-04-15T15:55:10+02:00
 lastmod: 2011-04-15T15:55:24+02:00
 author: "Fredrik Jonsson"
 tags: ["drupal","drupalcamp","development"]
-aliases: ["node/1497"]
+aliases:
+  - /node/1497/
 
 ---
 

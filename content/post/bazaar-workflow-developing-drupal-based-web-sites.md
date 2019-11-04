@@ -4,7 +4,8 @@ date: 2009-09-04T16:56:37+02:00
 lastmod: 2011-03-21T16:14:22+01:00
 author: "Fredrik Jonsson"
 tags: ["bazaar","drupal","drush","vcs","development"]
-aliases: ["node/1249"]
+aliases:
+  - /node/1249/
 
 ---
 

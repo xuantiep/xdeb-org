@@ -4,7 +4,8 @@ date: 2005-03-18T18:43:17+01:00
 lastmod: 2005-08-25T10:36:03+02:00
 author: "Fredrik Jonsson"
 tags: ["teknologi", "japan"]
-aliases: ["node/490"]
+aliases:
+  - /node/490/
 
 ---
 

@@ -4,7 +4,8 @@ date: 2008-09-25T11:00:18+02:00
 lastmod: 2008-10-02T15:48:58+02:00
 author: "Fredrik Jonsson"
 tags: ["drupal","drupalcon","teknologi"]
-aliases: ["node/1100"]
+aliases:
+  - /node/1100/
 
 ---
 

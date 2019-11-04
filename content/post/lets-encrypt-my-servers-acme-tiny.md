@@ -4,7 +4,8 @@ date: 2016-02-09T07:52:04+01:00
 lastmod: 2018-01-07T09:06:29+01:00
 author: "Fredrik Jonsson"
 tags: ["apache","security","ssl","letsencrypt","ansible","technology"]
-aliases: ["node/1614"]
+aliases:
+  - /node/1614/
 
 ---
 

@@ -4,7 +4,8 @@ date: 2008-05-05T08:16:43+02:00
 lastmod: 2008-07-20T15:11:04+02:00
 author: "Fredrik Jonsson"
 tags: ["drupal","images","development"]
-aliases: ["node/998"]
+aliases:
+  - /node/998/
 
 ---
 

@@ -2,7 +2,8 @@
 title: "Fredrik Jonsson"
 date: 2017-05-12T01:46:33+02:00
 author: "Fredrik Jonsson"
-aliases: ["about"]
+aliases:
+  - /about/
 submitted: false
 description: "Fredrik Jonsson is a web developer and Linux sysadmin located in Sweden."
 menu:

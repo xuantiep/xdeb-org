@@ -4,7 +4,8 @@ date: 2006-10-17T19:25:31+02:00
 lastmod: 2017-05-22T16:15:32+02:00
 author: "Fredrik Jonsson"
 tags: ["markdown","märkspråk","wysiwyg","teknologi"]
-aliases: ["node/686"]
+aliases:
+  - /node/686/
 
 ---
 

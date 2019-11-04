@@ -4,7 +4,8 @@ date: 2009-12-05T12:38:41+01:00
 lastmod: 2014-05-06T11:00:12+02:00
 author: "Fredrik Jonsson"
 tags: ["india","internet","iphone","mobile","technology"]
-aliases: ["node/1288"]
+aliases:
+  - /node/1288/
 
 ---
 

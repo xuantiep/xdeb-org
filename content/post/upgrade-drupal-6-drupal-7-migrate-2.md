@@ -4,7 +4,8 @@ date: 2011-11-08T14:55:04+01:00
 lastmod: 2012-07-30T14:05:10+02:00
 author: "Fredrik Jonsson"
 tags: ["drupal","migrate","drupal7","drupal6","development"]
-aliases: ["node/1539"]
+aliases:
+  - /node/1539/
 
 ---
 

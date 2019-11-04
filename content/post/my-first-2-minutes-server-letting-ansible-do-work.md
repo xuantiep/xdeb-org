@@ -4,7 +4,8 @@ date: 2016-06-23T08:15:07+02:00
 lastmod: 2019-02-19T09:01:31+01:00
 author: "Fredrik Jonsson"
 tags: ["debian","server","ansible","security","technology"]
-aliases: ["node/1615"]
+aliases:
+  - /node/1615/
 
 ---
 

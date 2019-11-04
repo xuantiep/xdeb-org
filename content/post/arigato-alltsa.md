@@ -4,7 +4,8 @@ date: 2007-10-12T16:41:51+02:00
 lastmod: 2007-10-12T17:29:08+02:00
 author: "Fredrik Jonsson"
 tags: ["culture","india","japan"]
-aliases: ["node/815"]
+aliases:
+  - /node/815/
 
 ---
 

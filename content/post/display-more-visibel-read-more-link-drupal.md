@@ -4,7 +4,8 @@ date: 2007-08-18T11:25:57+02:00
 lastmod: 2008-10-01T21:36:14+02:00
 author: "Fredrik Jonsson"
 tags: ["drupal","drupal5","development"]
-aliases: ["node/801"]
+aliases:
+  - /node/801/
 draft: true
 
 ---

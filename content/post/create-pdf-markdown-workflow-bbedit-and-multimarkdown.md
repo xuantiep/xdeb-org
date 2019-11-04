@@ -4,7 +4,8 @@ date: 2012-12-03T14:25:02+01:00
 lastmod: 2013-07-11T09:34:49+02:00
 author: "Fredrik Jonsson"
 tags: ["markdown","bbedit","pdf","safari","technology"]
-aliases: ["node/1581"]
+aliases:
+  - /node/1581/
 
 ---
 

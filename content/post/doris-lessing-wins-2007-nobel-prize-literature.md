@@ -4,7 +4,8 @@ date: 2007-10-11T15:30:44+02:00
 lastmod: 2014-05-06T11:15:03+02:00
 author: "Fredrik Jonsson"
 tags: ["literature"]
-aliases: ["node/814"]
+aliases:
+  - /node/814/
 
 ---
 

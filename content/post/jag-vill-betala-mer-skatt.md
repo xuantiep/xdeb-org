@@ -4,7 +4,8 @@ date: 2011-02-10T13:42:30+01:00
 lastmod: 2011-05-22T22:16:43+02:00
 author: "Fredrik Jonsson"
 tags: ["skatt","politik"]
-aliases: ["node/1480"]
+aliases:
+  - /node/1480/
 
 ---
 

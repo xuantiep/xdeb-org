@@ -4,7 +4,8 @@ date: 2009-11-12T08:07:01+01:00
 lastmod: 2010-05-07T21:35:35+02:00
 author: "Fredrik Jonsson"
 tags: ["bazaar","drupal","drupalcamp","teknologi"]
-aliases: ["node/1273"]
+aliases:
+  - /node/1273/
 
 ---
 

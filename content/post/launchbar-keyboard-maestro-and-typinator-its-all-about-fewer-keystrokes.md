@@ -4,7 +4,8 @@ date: 2009-02-08T21:30:20+01:00
 lastmod: 2013-02-05T21:14:30+01:00
 author: "Fredrik Jonsson"
 tags: ["macOS","productivity","software","technology"]
-aliases: ["node/1164"]
+aliases:
+  - /node/1164/
 
 ---
 

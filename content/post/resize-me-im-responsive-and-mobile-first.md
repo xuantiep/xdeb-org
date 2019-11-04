@@ -4,7 +4,8 @@ date: 2012-01-12T07:54:21+01:00
 lastmod: 2012-04-11T07:43:55+02:00
 author: "Fredrik Jonsson"
 tags: ["css","drupal","mobile","ipad","iphone","android","development"]
-aliases: ["node/1554"]
+aliases:
+  - /node/1554/
 
 ---
 

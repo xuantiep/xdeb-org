@@ -4,7 +4,8 @@ date: 2009-02-05T13:09:42+01:00
 lastmod: 2011-07-22T02:44:44+02:00
 author: "Fredrik Jonsson"
 tags: ["bbedit","editor","macOS","software","development"]
-aliases: ["node/1160"]
+aliases:
+  - /node/1160/
 
 ---
 

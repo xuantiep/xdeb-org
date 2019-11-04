@@ -4,7 +4,8 @@ date: 2009-07-17T07:54:25+02:00
 lastmod: 2009-08-02T22:47:09+02:00
 author: "Fredrik Jonsson"
 tags: ["election","eu","europe","iraq","president","politics"]
-aliases: ["node/1227"]
+aliases:
+  - /node/1227/
 
 ---
 

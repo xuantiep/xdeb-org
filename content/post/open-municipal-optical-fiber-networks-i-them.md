@@ -4,7 +4,8 @@ date: 2010-10-24T20:58:39+02:00
 lastmod: 2010-10-29T20:57:01+02:00
 author: "Fredrik Jonsson"
 tags: ["internet","municipality","network","technology"]
-aliases: ["node/1406"]
+aliases:
+  - /node/1406/
 
 ---
 

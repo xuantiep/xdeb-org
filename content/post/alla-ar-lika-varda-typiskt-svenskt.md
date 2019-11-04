@@ -4,7 +4,8 @@ date: 2010-09-14T16:19:03+02:00
 lastmod: 2010-09-14T16:19:42+02:00
 author: "Fredrik Jonsson"
 tags: ["val","politik"]
-aliases: ["node/1394"]
+aliases:
+  - /node/1394/
 
 ---
 

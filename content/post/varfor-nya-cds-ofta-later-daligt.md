@@ -4,7 +4,8 @@ date: 2003-04-04T17:26:22+02:00
 lastmod: 2016-02-17T05:45:03+01:00
 author: "Fredrik Jonsson"
 tags: ["audio","hi-fi","loudness war","music","teknologi"]
-aliases: ["node/180"]
+aliases:
+  - /node/180/
 
 ---
 
