@@ -28,13 +28,13 @@ HDtracks mostly offer sampling rates of either 96 or 192 kHz but some music come
 
 Albums on HDtracks cost only a little more than on iTunes. The selection is of course far greater on iTunes but there is quantity and then there is quality.
 
-### DAC - digital-to-analog converter
+## DAC - digital-to-analog converter
 
 To be able to enjoy the quality of the music from HDtracks you need a decent DAC that supports at least 96khz and 24bit. Most, if not all, newer Macs have a optical digital output making it easy to connect a DAC. There are a number of DAC with USB also and they should work on more or less any computer.
 
 If I was looking to buy something today I would take a good look at [Music Streamer](http://highresolutiontechnologies.com/) from HRT. You find reviews of many more options in Stereophiles [Computer Audio Reviews](http://www.stereophile.com/category/computer-audio-reviews/).
 
-### How to play HDtracks flac files on a Mac OS X
+## How to play HDtracks flac files on a Mac OS X
 
 The files from HDTracs are in flac format, a common lossless compressions format. There are a number of ways to play flac on a Mac but I prefer to convert them to Apple Lossless format and play them in iTunes. Since we are converting from one lossless format to another there is zero degradation in quality.
 

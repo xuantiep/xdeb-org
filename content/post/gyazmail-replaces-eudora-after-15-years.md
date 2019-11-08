@@ -55,7 +55,7 @@ GyazMail can only send plain text mail, so no pink text on yellow background. So
 
 Chuck Goolsbee, another long time Eudora user, mentioned on the Eudora-Mac list that he had switch to Gyazmail and that made me look at it more closely. He has written on his blog about it, [Gyazmail from Eudora « chuck.goolsbee.org](http://chuck.goolsbee.org/archives/category/technology/gyazmail-from-eudora).
 
-### How I made the switch from Eudora to GyazMail
+## How I made the switch from Eudora to GyazMail
 
 First step is to use the excellent [Eudora Mailbox Cleaner](http://homepage.mac.com/aamann/Eudora_Mailbox_Cleaner.html) to export all mail to Apple Mail and all addresses to the Address Book.
 

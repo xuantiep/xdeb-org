@@ -25,7 +25,7 @@ My BBEdit Clippings for Drupal 7 includes:
 
 Download/clone/fork from [github.com/frjo/BBEdit-Clippings-for-Drupal](https://github.com/frjo/BBEdit-Clippings-for-Drupal)
 
-### Tips about ctags
+## Tips about ctags
 
 With ctags files you get autocompletion of functions, classes etc.
 

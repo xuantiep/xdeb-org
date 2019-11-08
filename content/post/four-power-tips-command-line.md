@@ -18,7 +18,7 @@ I have something of a passion/obsession with removing annoying obstacles in my e
 I'm using Debian GNU/Linux 5 Lenny and Mac OS X 10.6 Snow Leopard. If there are any differences between them I will mark it out. Ubuntu users, and most other Linux distributions, should have no problems using the tips. Windows users could try with [Cygwin](http://www.cygwin.com/) but it's a lot easier to just get with the time and switch OS.
 
 
-### 1. The Bash command line history at your service
+## 1. The Bash command line history at your service
 
 Nothing saves me time and frustration like a properly configured Bash command line history.
 
@@ -47,7 +47,7 @@ bind '"\e[B":history-search-forward'
 ~~~~
 
 
-### 2. Let Keychain handle your SSH keys - easy and secure
+## 2. Let Keychain handle your SSH keys - easy and secure
 
 SSH keys is a convenient and secure way to log in to a remote server. I routinely disable password authentication and only allow SSH keys on my own server. Many instructions for SSH keys recommend giving the private key an empty password, as this one from an O'Reilly book [Quick Logins with ssh Client Keys](http://oreilly.com/pub/h/66).
 
@@ -66,7 +66,7 @@ open ~/Applications/Sequel\ Pro.app
 I wrap that up as a "Sequel Pro Start.app" that I can launch as any other app.
 
 
-### 3. A bunch of useful Bash aliases
+## 3. A bunch of useful Bash aliases
 
 Fewer keystrokes makes for a happy developer and with Bash aliases you can save many keystrokes.
 
@@ -151,7 +151,7 @@ alias realias='bbedit --wait ~/.bash_aliases; source ~/.bash_aliases'
 
 
 
-### 4. Send remote commands via SSH
+## 4. Send remote commands via SSH
 
 Via site aliases Drush can send remote commends to other servers. Here is how you can do it yourself with any command.
 

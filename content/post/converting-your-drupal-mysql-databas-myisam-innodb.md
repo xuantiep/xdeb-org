@@ -17,7 +17,7 @@ InnoDB is generally a better choice for Drupal so why wait for Drupal 7. Lets go
 
 As always, make sure you have backups of everything before you do this on a production site!
 
-### Convert a database to InnoDB
+## Convert a database to InnoDB
 
 Here follows some commands to run on the command line that will make the conversion a breeze.
 
@@ -46,7 +46,7 @@ cat alter_table.sql | `drush sql-connect`
 
 If you have a big database it can take some minutes to convert all the tables to InnoDB.
 
-### InnoDB parameters
+## InnoDB parameters
 
 Here are the current InnoDB settings I use for the server xdeb.org runs on, a small VPS. The values you most likely need to adjust for your server is "innodb_buffer_pool_size" and "innodb_log_file_size".
 
@@ -81,7 +81,7 @@ default-storage-engine = innodb
 ~~~~
 
 
-### MyISAM only parameters
+## MyISAM only parameters
 
 These are MyISAM only parameters that you most likely can set to lower values to save RAM now that most tables are converted to InnoDB.
 
@@ -94,7 +94,7 @@ These are MyISAM only parameters that you most likely can set to lower values to
 * read_rnd_buffer_size
 
 
-### Some good links for more reading
+## Some good links for more reading
 
 * [MySQL Engines: MyISAM vs. InnoDB | Tag1 Consulting, Inc.](http://tag1consulting.com/MySQL_Engines_MyISAM_vs_InnoDB)
 * [InnoDB Performance Tuning | Tag1 Consulting, Inc.](http://tag1consulting.com/InnoDB_Performance_Tuning)

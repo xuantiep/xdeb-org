@@ -19,7 +19,7 @@ I have some spare Apple USB chargers so no need to buy new ones. The 2A iPad cha
 
 Getting the Pi:s up and running was straight forward. Write the raspian image to the SD, add a empty file named "ssh" and a wifi conf file "wpa_supplicant.conf" to the boot volume to activate ssh and make the Pi connect to the WiFi directly on first boot.
 
-File: boot/wpa_supplicant.conf
+File: `boot/wpa_supplicant.conf`
 
 ~~~~
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev

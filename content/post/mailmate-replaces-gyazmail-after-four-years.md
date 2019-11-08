@@ -48,7 +48,7 @@ Besides som nitpicks there are one feature I currently miss in MailMate and that
 So if you are looking for a better e-mail client do check out [MailMate](https://freron.com/). If you are any kind of power users I think you will like it and it only cost 50 USD.
 
 
-File: ~/Library/Application Support/MailMate/Resources/KeyBindings/Mycustom.plist
+File: `~/Library/Application Support/MailMate/Resources/KeyBindings/Mycustom.plist`
 
 ~~~~
 {

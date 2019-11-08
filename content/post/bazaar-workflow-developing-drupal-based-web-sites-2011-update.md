@@ -25,7 +25,7 @@ I will assumes that you are familiar with version control systems and at home on
 
 Make sure you are using Bazaar version 2.x locally as well as on the server. There are many improvements including better performance and a more efficient repository format. If you are using Debian 5 Lenny you can find Bazaar 2.x in [Debian Backports](http://backports.debian.org/).
 
-### Bazaar repository structure for Drupal
+## Bazaar repository structure for Drupal
 
 Start by setting up your [shared repositories](http://wiki.bazaar.canonical.com/SharedRepositoryTutorial). With shared repositories Bazaar can be smarter when storing many copies of identical files, like with multiple Drupal installs. It also makes branching very fast.
 
@@ -57,7 +57,7 @@ Here follows the structure I use:
     - project 3
     - …
 
-#### drupal-7-core
+### drupal-7-core
 
 The "drupal-7-core" is a git clone from drupal.org. Here is how you get Drupal 7.0.
 
@@ -103,7 +103,7 @@ It is always a good practice to run "bzr status" to see what files has been modi
 
 If there are new files add them with "bzr add"
 
-#### drupal-7-all
+### drupal-7-all
 
 The "drupal-7-all" is a branch of "drupal-7-core" and set up as a working web site with the installed contrib modules activated. This way update status can keep tabs on updates for them and I can use Drush to keep all modules updated.
 
@@ -113,7 +113,7 @@ $ bzr branch drupal-7-core drupal-7-all
 
 Here I install all the modules and base themes that, more or less, all web sites will need. Modules like context, ctools, devel, features, pathauto, token and views are prime candidates.
 
-#### drupal-7-custom
+### drupal-7-custom
 
 The "drupal-7-custom" is a branch of "drupal-7-all". Here I add in libraries and frameworks that need to go in to module folders (more and more fortunately use sites/all/libraries instead), minor hacks and other custom stuff.
 
@@ -131,7 +131,7 @@ I have to keep in mind to update Drupal core in one place, common contrib module
 
 Currently I maintain a dozen web sites with this workflow and it saves me a lot of time and hassle.
 
-### Starting development of a new site example
+## Starting development of a new site example
 
 ~~~~
 $ cd /path/to/local/web
@@ -174,7 +174,7 @@ $ bzr bind
 
 The push/pull/bind commands will remember the adress so the next time there is no need to declare it. To change the remembered adress you add the --remember flag and declare the new address.
 
-### Updating an existing site example
+## Updating an existing site example
 
 After updating and merging drupal-7-core, drupal-7-all, drupal-7-custom this is how I update a project site.
 
@@ -195,7 +195,7 @@ $ drush @example updatedb (if necessery)
 
 One site updated and ready to move on to the next.
 
-### Tell Bazaar to ignore some files
+## Tell Bazaar to ignore some files
 
 An important part of setting up your Bazaar repository is to tell it what files to ignore. Typically you want to ignore things like the "settings.php" file and the "files" directory. On Mac OS X you want to ignore all the .DS_Store files etc.
 
@@ -236,7 +236,7 @@ backup.bzr
 ~~~~
 
 
-### Protect the .bzr directory on the web server
+## Protect the .bzr directory on the web server
 
 When you deploy a site with Bazaar checkout there will be an .bzr directory in the web root. I prefer to make this not public accessible. With Apache you can use the following settings.
 
@@ -250,7 +250,7 @@ When you deploy a site with Bazaar checkout there will be an .bzr directory in t
 ~~~~
 
 
-### Use Bash alias for less typing
+## Use Bash alias for less typing
 
 This is a general tips that I assume most of you already make heavy use of.
 

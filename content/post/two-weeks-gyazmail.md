@@ -13,7 +13,7 @@ aliases:
 
 This is a followup to [GyazMail replaces Eudora after 15 years](/node/1341). I have now used [GyazMail](http://www.gyazsquare.com/gyazmail/) for two weeks and it's working well but has room for improvement.
 
-### What I really like with GyazMail
+## What I really like with GyazMail
 
 GyazMail is rock solid and fast, it feels like software I can depend upon. It uses only 50-60 MB RAM in everyday use! The developer Goichi Hirakawa must be an excellent coder to pull this off!
 
@@ -21,7 +21,7 @@ The Mac OS X integration with Address Book, Spelling, Services and AppleScript i
 
 Additional things to like in GyazMail is filtering, settings options and the ability to change/add shortcuts to commands.
 
-### Where I find GyazMail lacking
+## Where I find GyazMail lacking
 
 The search is slow, not incremental and to search multiple folders you must select them manually first. Spotlight support would fix all this.
 
@@ -29,7 +29,7 @@ Users need to use the mouse to much. I have four mail accounts and I filter my m
 
 Then there are a lot of small things that I miss from Eudora. Format Flow support when replying to mail. Option clicking to sort on any content. The way you can easily differentiate incoming and outgoing mail in the same folder. That each folder opened in its own window. Holding down Shift when opening the filters window shows what filters the selected mail matches.
 
-### My updated wish list for GyazMail
+## My updated wish list for GyazMail
 
 1. Spotlight support
 2. Smart folders or at least some special folders like "Flagged" and "Unread"
@@ -44,11 +44,11 @@ Then there are a lot of small things that I miss from Eudora. Format Flow suppor
 
 Goichi Hirakawa has shown interest in the feedback I have sent him so I'm hopeful. I also know that GyazMail is a hobby project and that he is the single developer.
 
-### Fixing some GyazMail shortcomings
+## Fixing some GyazMail shortcomings
 
 I have used [Keyboard Maestro](http://www.keyboardmaestro.com/) to map Commando + R to a makro that reply to a mail and then places the cursor after the quoted text with an empty line in between. Read about what I use Keyboard Maestro and other automation software for in [It's all about fewer keystrokes](/node/1164).
 
-While poking around inside the GyazMail package I found this file "GyazMail.app/Contents/Resources/userStyleSheet.css". It turns out that this CSS file is loaded on viewing mails. By putting the following code there I have made all HTML mails a lot more readable.
+While poking around inside the GyazMail package I found this file `GyazMail.app/Contents/Resources/userStyleSheet.css`. It turns out that this CSS file is loaded on viewing mails. By putting the following code there I have made all HTML mails a lot more readable.
 
 ~~~~
 body {

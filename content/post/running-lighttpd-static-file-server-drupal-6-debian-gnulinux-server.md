@@ -18,12 +18,12 @@ There are two main reasons for using a separate server for static files. The fir
 
 After I implemented the static file server [Yslow](http://developer.yahoo.com/yslow/) gives xdeb.org Grade A with a score of 94.
 
-### New sub domain
+## New sub domain
 
 Begin with setting up a new subdomain for the static file server. Something like static.exampl.com.
 
 
-### Installing Lighttpd on Debian GNU/Linux
+## Installing Lighttpd on Debian GNU/Linux
 
 The installation is quickly done with aptitude. By default on Debian 4 etch lighttpd autoinstalls php4-cgi. If php5-cgi is installed lighttpd will use that instead.
 
@@ -45,7 +45,7 @@ chmod -R g+w /var/tmp/lighttpd/cache
 The installaion is done.
 
 
-### Setting up Lighttpd as a static file server with Drupal 6
+## Setting up Lighttpd as a static file server with Drupal 6
 
 Here follows the settings in lighttpd.conf that I  have made some changes to.
 
@@ -110,7 +110,7 @@ invoke-rc.d lighttpd restart
 ~~~~
 
 
-### Setting up Drupal 6 to use a static file server
+## Setting up Drupal 6 to use a static file server
 
 The final part is to make Drupal serve static files via our new static file server.
 
@@ -214,7 +214,7 @@ Not something you should do lightly but here I believe it's worth it.
 ~~~~
 
 
-### Conclusion
+## Conclusion
 
 I should do some benchmarking on the improvements but xdeb.org certainly feels snappier with the static file server. It's mainly due to parallel downloads of images I belive. As I mentioned Yslow now gives the site Grade A.
 

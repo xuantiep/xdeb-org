@@ -21,7 +21,7 @@ This workflow is for when you have a number of small/medium sites that you need 
 
 I will assumes that you are familiar with version control systems and at home on the command line.
 
-### Things to like with Bazaar
+## Things to like with Bazaar
 
 * Python
 * Sponsor Canonical (Ubuntu)
@@ -36,7 +36,7 @@ Bazaar has some really good functionality and I have found it straight forward t
 
 The Bazaar upload plugin makes it possible  to upload files via SFTP to a server that doesn't have Bazaar installed and it only uploads new and changed files.
 
-### Other version control systems
+## Other version control systems
 
 I have used both CVS and Subversion before. CVS mainly with cvs.drupal.org and Subversion for customers who had it as a requirement. I never moved my own site development to either system. Renaming and moving files and directories is a hassel in them. They litter every directory with CVS/.svn directories. If you are reading this you are most likely well aware of all the shortcomings.
 
@@ -45,7 +45,7 @@ Nowadays we have at least three new version control systems that tries to solve 
 I believe that they are all good systems. Which one you choose comes down to taste and what your project/friends use. I started to look at Git but I ended up choosing Bazaar for the reasons above.
 
 
-### Bazaar repository structure for Drupal
+## Bazaar repository structure for Drupal
 
 I gave a lot of thought to what structure to use before I settled on the setup I describe below. It is a bit complicated but has a number of benefits for the way I like to work.
 
@@ -79,7 +79,7 @@ I have to keep in mind to update Drupal core in one place, common contrib module
 It would probably be a good idea to use one shared repository for all Drupal 6 sites. I need to learn more about Bazaars shared repositories before I set that up.
 
 
-### Starting development of a new site example
+## Starting development of a new site example
 
 If the server don't have Bazaar installed and for small sites.
 
@@ -137,7 +137,7 @@ $ ssh user@host 'bzr update /path/to/http'
 ~~~~
 
 
-### Tell Bazaar to ignore some files
+## Tell Bazaar to ignore some files
 
 An important part of setting up your Bazaar repository is to tell it what files to ignore. Typically you want to ignore things like the settings.php file and the files directory. On Mac OS X you want to ignore all the .DS_Store files etc.
 
@@ -173,7 +173,7 @@ File ~/.bazaar/ignore:
 ~~~~
 
 
-### Protect the .bzr directory on the web server
+## Protect the .bzr directory on the web server
 
 When you deploy a site with Bazaar checkout there will be an .bzr directory in the web root. I prefer to make this not public accessible. With Apache you can use the following settings.
 
@@ -189,7 +189,7 @@ When you deploy a site with Bazaar checkout there will be an .bzr directory in t
 ~~~~
 
 
-### Use shell alias for less typing
+## Use shell alias for less typing
 
 This is a general tips that I assume most of you already make heavy use of.
 
@@ -198,7 +198,7 @@ The command "bzr" is not long but you will type it a lot, and I often mistype th
 Long commands like "ssh user@host 'bzr update /path/to/http'" is also perfect for aliasing. I use bru[xx] with different [xx] for each site I'm working on for this command.
 
 
-### Some good links for more reading
+## Some good links for more reading
 
 * [Documentation - Bazaar Version Control](http://bazaar-vcs.org/Documentation)
 * [BazaarForWebDevs - Bazaar Version Control](http://bazaar-vcs.org/BazaarForWebDevs)
