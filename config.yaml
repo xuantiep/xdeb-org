@@ -10,16 +10,17 @@ paginate: 10
 paginatePath: "page"
 summaryLength: 40
 newContentEditor: "/usr/local/bin/bbedit"
-pygmentsCodeFences: true
-pygmentsUseClasses: true
-#pygmentsOptions: "linenos=inline"
 author:
   name: "Fredrik Jonsson"
   url: "https://xdeb.org/fredrik"
   avatar: "site/fredrik.jpg"
 
-blackfriday:
-  fractions: false
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
 
 permalinks:
   post: "/post/:year/:month/:day/:slug"
