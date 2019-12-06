@@ -85,7 +85,7 @@ table ip router {
 }
 ~~~~
 
-## Setting WireGuard clients
+## Setting up WireGuard clients
 
 After running the WireGuard role you will be default have 20 client configurations. This is controlled by the "vpn_clients" variable.
 
@@ -94,12 +94,12 @@ Each computer/device will needs its own configuration. I recommend you rename ea
 There are WireGuard clients for most platforms, I have added the ones I have tested below.
 
 
-### Setting WireGuard up on iOS as a VPN client
+### Setting up WireGuard on iOS as a VPN client
 
 This is as simple as it gets. Download the client from the App store. Add a tunnel and pick the "Create from QR code" option. Hold the camera up to one of the downloaded QR codes and you are done.
 
 
-### Setting WireGuard up on macOS as a VPN client
+### Setting up WireGuard on macOS as a VPN client
 
 *Update 2019-03-31*: There is now a Wireguard client in the [macOS App store](https://itunes.apple.com/se/app/wireguard/id1451685025?mt=12). This makes the macOS setup even easier. Install the client, import one of the configuration files and you are up and running.
 
