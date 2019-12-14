@@ -42,7 +42,7 @@ flush ruleset
 # Defining variables is easy in nftables scripts.
 define wan = enp3s0
 define vpn = wg0
-define $vpn_net = 10.10.10.0/24
+define vpn_net = 10.10.10.0/24
 
 # Setting up a table, simple firewalls will only need one table but there can be multiple.
 # The "init" say that this table will handle both ipv4 (ip) and ipv6 (ip6).
