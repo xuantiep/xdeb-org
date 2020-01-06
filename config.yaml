@@ -99,7 +99,7 @@ menu:
       identifier: "ragnvald"
     - Name: "Services"
       weight: 15
-      URL: "https://xdeb.net/"
+      URL: "https://xdeb.net/services/"
 #     - Name: "Micro"
 #       weight: -8
 #       URL: "/micro/"
