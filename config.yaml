@@ -39,7 +39,7 @@ outputs:
 
 params:
   contact: "info@xdeb.org"
-  copyright: '<!--Creative Commons License-->This site is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<!--/Creative Commons License-->'
+  copyright: '<!--Creative Commons License-->This site is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a> licence.<!--/Creative Commons License-->'
   description: "The blog of Fredrik Jonsson, web developer and Linux sysadmin."
   dateformat: "2 January, 2006"
   favicon: "apple-touch-icon.png"
