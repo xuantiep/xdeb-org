@@ -122,7 +122,7 @@ In the partial that pull in the `tracking.js` I use "ExecuteAsTemplate" so Hugo 
 
 No code changes was needed for this, only finding the correct Content Security Policy settings.
 
-All that is needed for embedding videos is to add the host to the "frame-src" directive. Same for Google maps but there I also needed to add "unsafe-inline" to the "style-src" directive. Styles is luckily less of a security problem than scripts so I can live with this.
+All that is needed for embedding videos is to add the host to the "frame-src" directive. Same for Google maps but there I also needed to add "unsafe-inline" to the "style-src" directive. Styles is luckily less of a security problem than scripts.
 
 ## The Content Security Policy I now use
 
