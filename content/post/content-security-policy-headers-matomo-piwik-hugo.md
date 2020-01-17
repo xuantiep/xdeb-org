@@ -1,20 +1,20 @@
 ---
 title: "Content security policy headers when using Matomo or Google analytics"
 date: 2020-01-14T09:41:58+01:00
-lastmod: 2020-01-14T09:41:58+01:00
+lastmod: 2020-01-17T08:09:32+01:00
 author: "Fredrik Jonsson"
 tags: ["security","apache","server","hugo"]
 
 ---
 
-When adding a Content-Security-Policy header to my own web servers I found a number of issues around getting analytics and embedded videos and maps working. Other sites will have more issues but these are among the most common I suspects.
+I recently added a Content Security Policy header to my web servers. I found a number of issues around getting analytics and embedded videos and maps working. Other sites will have more issues but I suspects these are among the most common.
 
-In this post I explain how I solved the issues and now has a reasonable strict Content-Security-Policy in place.
+In this post I explain how I solved the issues and now have a reasonable strict Content Security Policy in place.
 
-Adding [Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) to your web server helps with Cross Site Scripting (XSS) and data injection attacks. They tell the server from where it's ok to load things like scripts, images and iframe content.
+Adding [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) to your web server helps with Cross Site Scripting (XSS) and data injection attacks. They tell the server from where it's ok to load things like scripts, images and iframe content.
 
 
-## Testing Content-Security-Policy on your web server
+## Testing Content Security Policy on your web server
 
 When testing this out I recommend using "Content-Security-Policy-Report-Only" header in place of "Content-Security-Policy". That way the browser will report in the console but not actually block anything.
 
@@ -32,13 +32,13 @@ add_header Content-Security-Policy-Report-Only "default-src 'self'";
 
 This will report any resources that are not loaded from 'self', i.e. your own server. Inline and eval code is considered unsafe and will also be blocked unless specifically allowed.
 
-When testing a few sites I found a number of things that would stop working with the above Content-Security-Policy.
+When testing a few sites I found a number of things that would stop working with the above Content Security Policy.
 
 * Matomo analytics (formerly Piwik)
 * Google analytics
 * Google embedded maps
 * Youtube and other embedded videos
-* My own Matomo installation
+* My self hosted Matomo installation
 
 
 ## Moving analytics code from inline to files
@@ -47,7 +47,7 @@ For me the only inline code was from analytics code.
 
 ### Matomo analytics
 
-All my own sites use Matomo and they have a [Content-Security-Policy FAQ](https://matomo.org/faq/general/faq_20904/).
+All my own sites use Matomo and they have a [Content Security Policy FAQ](https://matomo.org/faq/general/faq_20904/).
 
 Create a `tracking.js` file and place this content it to it. 
 
@@ -120,13 +120,13 @@ In the partial that pull in the `tracking.js` I use "ExecuteAsTemplate" so Hugo 
 
 ## Getting video and maps working
 
-No code changes was needed for this, only finding the correct Content-Security-Policy settings.
+No code changes was needed for this, only finding the correct Content Security Policy settings.
 
 All that is needed for embedding videos is to add the host to the "frame-src" directive. Same for Google maps but there I also needed to add "unsafe-inline" to the "style-src" directive. Styles is luckily less of a security problem than scripts so I can live with this.
 
-## The Content-Security-Policy I now use
+## The Content Security Policy I now use
 
-### Global Content-Security-Policy
+### Global Content Security Policy
 
 ~~~~ shell
 Header set Content-Security-Policy "default-src 'self'; \
@@ -149,9 +149,9 @@ Header set Content-Security-Policy "default-src 'self'; \
 Allowing loading images and media from everywhere is convenient but you may make another choice. The unsafe-inline option for styles could be limited to only the sites that use Google maps and other services that need it.
 
 
-### Self hosted Matomo site Content-Security-Policy
+### Content Security Policy for self hosted Matomo
 
-For my self hosted Matomo site I needed a custom Content-Security-Policy. It e.g. needs both inline and eval for scripts. But better to have that on one site then on all of them as before.
+For my self hosted Matomo site I needed a custom Content Security Policy. It needs both inline and eval for scripts, inline for styles and load images from an external site. But better to have that on one site then on all of them as before.
 
 ~~~~ shell
 Header set Content-Security-Policy "default-src 'self'; img-src 'self' https://plugins.matomo.org; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'"
@@ -161,7 +161,7 @@ Header set Content-Security-Policy "default-src 'self'; img-src 'self' https://p
 
 ## Good resources
 
-[Analyse your HTTP response headers](https://securityheaders.com/) and find out which one is implemented on your server. Beside Content-Security-Policy the recommended headers are  X-Frame-Options, Feature-Policy, Strict-Transport-Security,  X-Content-Type-Options and Referrer-Policy.
+[Analyse your HTTP response headers](https://securityheaders.com/) and find out which one is implemented on your server. Beside Content Security Policy the recommended headers are  X-Frame-Options, Feature-Policy, Strict-Transport-Security,  X-Content-Type-Options and Referrer-Policy.
 
-[CSP Evaluator](https://csp-evaluator.withgoogle.com/) is a tool from Google for testing your Content-Security-Policy headers.
+[CSP Evaluator](https://csp-evaluator.withgoogle.com/) is a tool from Google for testing your Content Security Policy headers.
 
