@@ -167,7 +167,7 @@ example.com.		3600	IN	MX	20 mx2.example.com.
 
 The SPF record tells other mail servers what servers are allowed to send mail for your domain.
 
-The following is what I often use. It says that servers with a A or MX record for the domain is valid but none other. If you are using other external services to send e.g. news letters you need to add them as well.
+The following is what I often use. It says that servers with a A or MX record for the domain is valid but none other. If you are using other external services to send mail from your domain you need to add them as well.
 
 ~~~~
 example.com.		3600	IN	TXT	"v=spf1 mx a -all"

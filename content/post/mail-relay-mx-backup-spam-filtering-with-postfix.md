@@ -112,7 +112,7 @@ postscreen_dnsbl_sites = zen.spamhaus.org, b.barracudacentral.org
 postscreen_cache_map = proxy:btree:$data_directory/postscreen_cache
 ~~~~
 
-The client_access.cidr file can be used to whitelist (or blacklist) IP addresses. On my mail server I e.g. whitelist the IP addresses of the mail relay servers.
+The client_access.cidr file can be used to whitelist (or blacklist) IP addresses. On my mail server I use it to whitelist the IP addresses of the mail relay servers.
 
 
 ### Filter bad attachments
