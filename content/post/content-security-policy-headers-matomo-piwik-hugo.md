@@ -146,7 +146,7 @@ Header set Content-Security-Policy "default-src 'self'; \
 6. Allow scripts from self, our own Matomo site and from the Google analytic site.
 7. Allow styles from self and inline. The last is needed for Google maps.
 
-Allowing loading images and media from everywhere is convenient but you may make another choice. The unsafe-inline option for styles could be limited to only the sites that use Google maps and other services that need it.
+Allowing loading images and media from everywhere is convenient but others will make another choice. The unsafe-inline option for styles could be limited to only the sites that use Google maps and other services that need it.
 
 
 ### Content Security Policy for self hosted Matomo
