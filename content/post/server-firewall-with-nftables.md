@@ -7,7 +7,7 @@ tags: ["nftables","server","ansible","security","wireguard","popular"]
 
 ---
 
-With Debian 10 (buster) the default firewall is nftables so it's time to convert ny iptables rules.
+With Debian 10 (buster) the default firewall is nftables so it's time to convert my iptables rules.
 
 Since Debian stable is never first with anything I was surprised to see how relative few articles and blogs there are about nftables compered to iptables. The official documentation is dense and hard to interpret when you not are a network protocol expert.
 

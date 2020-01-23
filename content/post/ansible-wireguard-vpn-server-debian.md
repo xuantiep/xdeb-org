@@ -87,7 +87,7 @@ table ip router {
 
 ## Setting up WireGuard clients
 
-After running the WireGuard role you will be default have 20 client configurations. This is controlled by the "vpn_clients" variable.
+After running the WireGuard role you will by default have 20 client configurations. This is controlled by the "vpn_clients" variable.
 
 Each computer/device will needs its own configuration. I recommend you rename each configuration as you use them.
 
