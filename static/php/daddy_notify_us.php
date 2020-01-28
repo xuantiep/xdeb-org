@@ -31,7 +31,7 @@ switch ($query['button']) {
     $button = 'Okänd';
 }
 
-$to = 'frjo@mac.com, karjo@mac.com, annikasfamilj@me.com';
+$to = 'frjo@mac.com, karjo@mac.com, annikasfamilj@me.com, ragnvald@mac.com';
 $from = $sender = 'ragnvald@xdeb.org';
 $name = 'Ragnvald Jonsson';
 
