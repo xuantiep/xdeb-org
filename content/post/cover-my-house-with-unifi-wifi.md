@@ -3,7 +3,7 @@ title: "Cover my house with UniFi Wi-Fi"
 date: 2018-10-12T08:17:52+02:00
 lastmod: 2018-10-12T08:17:52+02:00
 author: "Fredrik Jonsson"
-tags: ["wi-fi","technology"]
+tags: ["wi-fi","network"]
 
 ---
 
