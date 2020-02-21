@@ -1,12 +1,12 @@
 ---
 title: "How to set up Apache Solr search for Drupal 6 on a Debian GNU/Linux server"
+slug: "how-to-set-up-apache-solr-search-for-drupal-6-on-a-debian-gnu-linux-server"
 date: 2009-06-01T20:39:44+02:00
 lastmod: 2010-06-04T13:29:39+02:00
 author: "Fredrik Jonsson"
 tags: ["apache","debian","drupal","drupalcamp","search","solr","development"]
 aliases:
   - /node/1213/
-slug: "how-to-set-up-apache-solr-search-for-drupal-6-on-a-debian-gnu-linux-server"
 
 ---
 

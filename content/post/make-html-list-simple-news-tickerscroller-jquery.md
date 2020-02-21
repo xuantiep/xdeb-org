@@ -1,12 +1,12 @@
 ---
 title: "Make a HTML list in to a simple news ticker/scroller with jQuery"
+slug: "make-a-html-list-in-to-a-simple-news-ticker-scroller-with-jquery"
 date: 2011-01-14T16:32:49+01:00
 lastmod: 2011-12-27T12:38:34+01:00
 author: "Fredrik Jonsson"
 tags: ["css","drupal","javascript","jquery","development"]
 aliases:
   - /node/1459/
-slug: "make-a-html-list-in-to-a-simple-news-ticker-scroller-with-jquery"
 
 ---
 

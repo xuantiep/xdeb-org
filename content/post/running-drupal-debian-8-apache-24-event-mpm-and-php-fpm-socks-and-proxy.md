@@ -1,12 +1,12 @@
 ---
 title: "Running Drupal on Debian 8 with Apache 2.4, event MPM and PHP-FPM (via socks and proxy)"
+slug: "running-drupal-on-debian-8-with-apache-2-4-event-mpm-and-php-fpm-via-socks-and-proxy"
 date: 2016-01-21T02:02:48+01:00
 lastmod: 2017-11-10T10:10:57+01:00
 author: "Fredrik Jonsson"
 tags: ["apache","php","server","drupal","debian","development"]
 aliases:
   - /node/1613/
-slug: "running-drupal-on-debian-8-with-apache-2-4-event-mpm-and-php-fpm-via-socks-and-proxy"
 
 ---
 

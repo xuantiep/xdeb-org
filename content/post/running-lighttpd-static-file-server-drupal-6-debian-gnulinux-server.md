@@ -1,12 +1,12 @@
 ---
 title: "Running Lighttpd as a static file server for Drupal 6 on a Debian GNU/Linux server"
+slug: "running-lighttpd-as-a-static-file-server-for-drupal-6-on-a-debian-gnu-linux-server"
 date: 2009-06-27T18:17:33+02:00
 lastmod: 2010-08-10T20:44:33+02:00
 author: "Fredrik Jonsson"
 tags: ["drupal","lighttpd","server","development"]
 aliases:
   - /node/1221/
-slug: "running-lighttpd-as-a-static-file-server-for-drupal-6-on-a-debian-gnu-linux-server"
 
 ---
 

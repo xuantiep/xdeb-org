@@ -1,12 +1,12 @@
 ---
 title: "Alla gör det ju – oordning och regelbrott smittar"
+slug: "alla-gor-det-ju-oordning-och-regelbrott-smittar"
 date: 2008-12-13T06:51:46+01:00
 lastmod: 2014-05-06T11:16:45+02:00
 author: "Fredrik Jonsson"
 tags: ["science","social","society"]
 aliases:
   - /node/1142/
-slug: "alla-gor-det-ju-oordning-och-regelbrott-smittar"
 
 ---
 

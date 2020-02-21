@@ -1,12 +1,12 @@
 ---
 title: "Idea NetSetter GPRS/EDGE USB modem connection in India"
+slug: "idea-netsetter-gprs-edge-usb-modem-connection-in-india"
 date: 2010-01-06T10:27:43+01:00
 lastmod: 2011-09-29T21:10:00+02:00
 author: "Fredrik Jonsson"
 tags: ["india","internet","macbook","mobile","technology"]
 aliases:
   - /node/1314/
-slug: "idea-netsetter-gprs-edge-usb-modem-connection-in-india"
 
 ---
 
