@@ -1,5 +1,6 @@
 ---
 title: "Setup guest and IOT VLAN with UniFi and a Edgerouter"
+slug: "unifi-edgerouter-guest-iot-vlan"
 date: 2020-02-12T12:59:53+01:00
 lastmod: 2020-02-12T12:59:53+01:00
 author: "Fredrik Jonsson"
@@ -19,7 +20,7 @@ Getting the UniFi Security Gateway is an option but it's less flexible, more exp
 
 ## Initial setup of Edgerouter
 
-I recommend to use the wizard to get a good start, I picked the "Basic setup". For WAN I used eth4 and then checked "Only use on LAN" so eth0, eth1, eth2 and eth3 becomes a LAN switch. The group of ports is named "switch0" by the system.
+I recommend to use the wizard to get a good start, I picked the "Basic setup". For WAN I used eth4 and then checked "Only use one LAN" so eth0, eth1, eth2 and eth3 becomes a LAN switch. The group of ports is named "switch0" by the system.
 
 In the "LAN ports" section I entered the IP address space I wanted to use on the LAN and  made sure the DHCP server was activated.
 
@@ -30,7 +31,7 @@ After clicking "Apply" I then had a working router and could connect to the Inte
 For basic usages you are done by this point.
 
 
-## Getting the Edgerouter X to route 1 Gbit/s
+## Make the Edgerouter X route 1 Gbit/s
 
 The Edgerouter X can by default only route around 300 Mbit/s. If you don't need QoS you can enable [hardware offloading](https://help.ubnt.com/hc/en-us/articles/115006567467-EdgeRouter-Hardware-Offloading) and get it to route 1 Gbit/s.
 
@@ -65,6 +66,6 @@ aaa
 
 
 
-### Set up separate guest and IOT wireless networks
+### Set up separate guest and IOT wireless networks in UniFi
 
 aaa
