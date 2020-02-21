@@ -1,5 +1,6 @@
 ---
 title: "Extend your screen real estate with an extra display"
+slug: "extend-your-screen-real-estate-with-an-extra-display"
 date: 2007-07-30T18:37:33+02:00
 lastmod: 2014-05-06T11:15:03+02:00
 author: "Fredrik Jonsson"

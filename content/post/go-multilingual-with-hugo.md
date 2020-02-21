@@ -1,5 +1,6 @@
 ---
 title: "Go multilingual with Hugo"
+slug: "go-multilingual-with-hugo"
 date: 2018-04-05T11:31:23+02:00
 lastmod: 2019-05-19T10:31:22+02:00
 author: "Fredrik Jonsson"

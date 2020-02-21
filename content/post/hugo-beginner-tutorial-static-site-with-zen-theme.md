@@ -1,5 +1,6 @@
 ---
 title: "Hugo beginner tutorial static site with zen theme"
+slug: "hugo-beginner-tutorial-static-site-with-zen-theme"
 date: 2019-05-25T20:21:18+02:00
 lastmod: 2019-05-25T20:21:18+02:00
 author: "Fredrik Jonsson"

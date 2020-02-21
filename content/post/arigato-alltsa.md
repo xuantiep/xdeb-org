@@ -1,5 +1,6 @@
 ---
 title: "Arigatō alltså!"
+slug: "arigato-alltsa"
 date: 2007-10-12T16:41:51+02:00
 lastmod: 2007-10-12T17:29:08+02:00
 author: "Fredrik Jonsson"

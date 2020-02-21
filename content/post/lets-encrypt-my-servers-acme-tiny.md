@@ -1,5 +1,6 @@
 ---
 title: "Let\'s Encrypt my servers with acme tiny"
+slug: "lets-encrypt-my-servers-with-acme-tiny"
 date: 2016-02-09T07:52:04+01:00
 lastmod: 2018-01-07T09:06:29+01:00
 author: "Fredrik Jonsson"

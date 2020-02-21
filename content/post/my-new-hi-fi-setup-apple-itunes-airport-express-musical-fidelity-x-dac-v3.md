@@ -1,5 +1,6 @@
 ---
 title: "My new Hi-Fi setup, Apple iTunes - AirPort Express - Musical Fidelity X-DAC V3"
+slug: "my-new-hi-fi-setup-apple-itunes-airport-express-musical-fidelity-x-dac-v3"
 date: 2007-08-17T15:57:35+02:00
 lastmod: 2012-06-26T10:55:13+02:00
 author: "Fredrik Jonsson"

@@ -1,5 +1,6 @@
 ---
 title: "Create a PDF from Markdown workflow with BBEdit and MultiMarkdown"
+slug: "create-a-pdf-from-markdown-workflow-with-bbedit-and-multimarkdown"
 date: 2012-12-03T14:25:02+01:00
 lastmod: 2013-07-11T09:34:49+02:00
 author: "Fredrik Jonsson"

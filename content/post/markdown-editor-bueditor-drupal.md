@@ -1,5 +1,6 @@
 ---
 title: "Markdown editor for BUEditor on Drupal"
+slug: "markdown-editor-for-bueditor-on-drupal"
 date: 2012-11-12T13:36:46+01:00
 lastmod: 2012-11-12T13:39:01+01:00
 author: "Fredrik Jonsson"

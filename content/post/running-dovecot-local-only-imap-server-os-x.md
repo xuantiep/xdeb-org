@@ -1,5 +1,6 @@
 ---
 title: "Running dovecot as a local only IMAP server on OS X"
+slug: "running-dovecot-as-a-local-only-imap-server-on-os-x"
 date: 2014-03-07T10:30:22+01:00
 lastmod: 2019-11-01T10:38:55+01:00
 author: "Fredrik Jonsson"

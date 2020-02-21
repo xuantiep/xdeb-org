@@ -1,5 +1,6 @@
 ---
 title: "Airtel GPRS in India with unlocked iPhone 3G works well"
+slug: "airtel-gprs-in-india-with-unlocked-iphone-3g-works-well"
 date: 2009-12-05T12:38:41+01:00
 lastmod: 2014-05-06T11:00:12+02:00
 author: "Fredrik Jonsson"

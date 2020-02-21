@@ -1,5 +1,6 @@
 ---
 title: "Set upp SSH account that only allows Bazaar server commands via key authentication"
+slug: "set-upp-ssh-account-that-only-allows-bazaar-server-commands-via-key-authentication"
 date: 2010-11-25T10:35:17+01:00
 lastmod: 2010-11-29T14:35:28+01:00
 author: "Fredrik Jonsson"

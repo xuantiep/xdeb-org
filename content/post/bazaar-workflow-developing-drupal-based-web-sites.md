@@ -1,5 +1,6 @@
 ---
 title: "Bazaar workflow for developing Drupal based web sites"
+slug: "bazaar-workflow-for-developing-drupal-based-web-sites"
 date: 2009-09-04T16:56:37+02:00
 lastmod: 2011-03-21T16:14:22+01:00
 author: "Fredrik Jonsson"

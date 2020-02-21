@@ -1,5 +1,6 @@
 ---
 title: "Varför märkspråk är bättre än wysiwyg-editor"
+slug: "varfor-marksprak-ar-battre-an-wysiwyg-editor"
 date: 2006-10-17T19:25:31+02:00
 lastmod: 2017-05-22T16:15:32+02:00
 author: "Fredrik Jonsson"

@@ -1,5 +1,6 @@
 ---
 title: "Building complex web sites the Drupal way - Session at BarCamp Kerala 7"
+slug: "building-complex-web-sites-the-drupal-way-session-at-barcamp-kerala-7"
 date: 2009-12-21T03:14:08+01:00
 lastmod: 2010-09-21T09:31:10+02:00
 author: "Fredrik Jonsson"

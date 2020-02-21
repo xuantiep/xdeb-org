@@ -1,5 +1,6 @@
 ---
 title: "Make Hugo generate a JSON search index and JSON Feed"
+slug: "make-hugo-generate-a-json-search-index-and-json-feed"
 date: 2017-06-11T10:12:44+02:00
 lastmod: 2017-06-11T10:12:44+02:00
 author: "Fredrik Jonsson"

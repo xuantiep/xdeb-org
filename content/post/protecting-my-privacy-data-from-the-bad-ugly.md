@@ -1,5 +1,6 @@
 ---
 title: "Protecting my privacy and data from the bad and the ugly"
+slug: "protecting-my-privacy-and-data-from-the-bad-and-the-ugly"
 date: 2018-05-03T14:44:53+02:00
 lastmod: 2018-05-03T14:44:56+02:00
 author: "Fredrik Jonsson"

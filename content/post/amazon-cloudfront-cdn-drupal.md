@@ -1,5 +1,6 @@
 ---
 title: "Amazon CloudFront as a CDN for Drupal "
+slug: "amazon-cloudfront-as-a-cdn-for-drupal"
 date: 2011-08-10T09:30:21+02:00
 lastmod: 2011-10-16T11:35:06+02:00
 author: "Fredrik Jonsson"

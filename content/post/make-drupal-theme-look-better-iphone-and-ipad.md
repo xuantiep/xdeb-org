@@ -1,5 +1,6 @@
 ---
 title: "Make a Drupal theme look better on the iPhone and the iPad"
+slug: "make-a-drupal-theme-look-better-on-the-iphone-and-the-ipad"
 date: 2011-01-15T09:26:38+01:00
 lastmod: 2011-01-15T09:26:38+01:00
 author: "Fredrik Jonsson"

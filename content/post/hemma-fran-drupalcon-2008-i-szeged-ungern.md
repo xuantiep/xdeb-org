@@ -1,5 +1,6 @@
 ---
 title: "Hemma från Drupalcon 2008 i Szeged, Ungern"
+slug: "hemma-fran-drupalcon-2008-i-szeged-ungern"
 date: 2008-09-25T11:00:18+02:00
 lastmod: 2008-10-02T15:48:58+02:00
 author: "Fredrik Jonsson"

@@ -1,5 +1,6 @@
 ---
 title: "Results of running Lighttpd as a static file server for Drupal 6"
+slug: "results-of-running-lighttpd-as-a-static-file-server-for-drupal-6"
 date: 2009-10-14T11:29:08+02:00
 lastmod: 2009-10-14T11:29:08+02:00
 author: "Fredrik Jonsson"

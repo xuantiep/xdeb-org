@@ -1,5 +1,6 @@
 ---
 title: "I have switched to pwSafe password manager and liking it so far"
+slug: "i-have-switched-to-pwsafe-password-manager-and-liking-it-so-far"
 date: 2016-01-20T13:50:56+01:00
 lastmod: 2016-01-29T01:44:48+01:00
 author: "Fredrik Jonsson"

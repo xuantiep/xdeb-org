@@ -1,5 +1,6 @@
 ---
 title: "Hur man skriver Japanska på en dator"
+slug: "hur-man-skriver-japanska-pa-en-dator"
 date: 2005-03-18T18:43:17+01:00
 lastmod: 2005-08-25T10:36:03+02:00
 author: "Fredrik Jonsson"

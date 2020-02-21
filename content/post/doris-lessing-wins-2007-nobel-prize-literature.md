@@ -1,5 +1,6 @@
 ---
 title: "Doris Lessing wins the 2007 Nobel Prize for Literature"
+slug: "doris-lessing-wins-the-2007-nobel-prize-for-literature"
 date: 2007-10-11T15:30:44+02:00
 lastmod: 2014-05-06T11:15:03+02:00
 author: "Fredrik Jonsson"

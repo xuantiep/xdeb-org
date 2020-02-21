@@ -1,5 +1,6 @@
 ---
 title: "Te, grönt och svart, en civiliserad dryck"
+slug: "te-gront-och-svart-en-civiliserad-dryck"
 date: 2002-05-06T19:59:00+02:00
 lastmod: 2017-05-22T16:28:16+02:00
 author: "Fredrik Jonsson"

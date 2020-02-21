@@ -1,5 +1,6 @@
 ---
 title: "GyazMail replaces Eudora after 15 years"
+slug: "gyazmail-replaces-eudora-after-15-years"
 date: 2010-03-11T21:32:08+01:00
 lastmod: 2010-04-19T17:03:06+02:00
 author: "Fredrik Jonsson"

@@ -1,5 +1,6 @@
 ---
 title: "BBEdit - My text editor of choice"
+slug: "bbedit-my-text-editor-of-choice"
 date: 2009-02-05T13:09:42+01:00
 lastmod: 2011-07-22T02:44:44+02:00
 author: "Fredrik Jonsson"

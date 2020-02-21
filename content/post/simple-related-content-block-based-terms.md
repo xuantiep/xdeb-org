@@ -1,5 +1,6 @@
 ---
 title: "A simple related content block based on terms"
+slug: "a-simple-related-content-block-based-on-terms"
 date: 2007-08-22T09:49:43+02:00
 lastmod: 2014-05-06T11:15:03+02:00
 author: "Fredrik Jonsson"

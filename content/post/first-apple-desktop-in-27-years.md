@@ -1,5 +1,6 @@
 ---
 title: "I bought my first desktop computer from Apple in 27 years"
+slug: "i-bought-my-first-desktop-computer-from-apple-in-27-years"
 date: 2019-11-06T09:13:23+01:00
 lastmod: 2019-11-06T09:13:23+01:00
 author: "Fredrik Jonsson"

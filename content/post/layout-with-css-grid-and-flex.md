@@ -1,5 +1,6 @@
 ---
 title: "Layout with CSS grid and flex, it's really nice"
+slug: "layout-with-css-grid-and-flex-its-really-nice"
 date: 2017-08-29T09:56:06+02:00
 lastmod: 2017-08-29T09:56:06+02:00
 author: "Fredrik Jonsson"

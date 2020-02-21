@@ -1,5 +1,6 @@
 ---
 title: "Take control of my own attention"
+slug: "take-control-of-my-own-attention"
 date: 2017-10-18T13:09:05+02:00
 lastmod: 2017-10-18T13:09:05+02:00
 author: "Fredrik Jonsson"

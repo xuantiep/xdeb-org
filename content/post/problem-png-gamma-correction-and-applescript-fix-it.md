@@ -1,5 +1,6 @@
 ---
 title: "The problem with PNG gamma correction, and a AppleScript to fix it"
+slug: "the-problem-with-png-gamma-correction-and-a-applescript-to-fix-it"
 date: 2006-09-29T14:52:15+02:00
 lastmod: 2011-09-16T09:24:44+02:00
 author: "Fredrik Jonsson"

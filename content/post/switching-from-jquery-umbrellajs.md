@@ -1,5 +1,6 @@
 ---
 title: "Switching from jQuery to Umbrella JS"
+slug: "switching-from-jquery-to-umbrella-js"
 date: 2019-03-20T08:12:45+01:00
 lastmod: 2019-03-20T08:12:48+01:00
 author: "Fredrik Jonsson"

@@ -1,5 +1,6 @@
 ---
 title: "DrupalCamp Stockholm Spring 2011 - Stockholm 6-7 of May"
+slug: "drupalcamp-stockholm-spring-2011-stockholm-6-7-of-may"
 date: 2011-04-15T15:55:10+02:00
 lastmod: 2011-04-15T15:55:24+02:00
 author: "Fredrik Jonsson"

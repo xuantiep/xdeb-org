@@ -1,5 +1,6 @@
 ---
 title: "Using Hugo for a simple web site and porting the Drupal Zen theme"
+slug: "using-hugo-for-a-simple-web-site-and-porting-the-drupal-zen-theme"
 date: 2017-03-13T10:21:21+01:00
 lastmod: 2017-05-19T14:50:44+02:00
 author: "Fredrik Jonsson"

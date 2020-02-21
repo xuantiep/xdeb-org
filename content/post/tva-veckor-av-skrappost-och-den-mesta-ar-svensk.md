@@ -1,5 +1,6 @@
 ---
 title: "Två veckor av skräppost och den mesta är Svensk"
+slug: "tva-veckor-av-skrappost-och-den-mesta-ar-svensk"
 date: 2015-11-13T01:42:25+01:00
 lastmod: 2018-03-28T14:31:15+02:00
 author: "Fredrik Jonsson"

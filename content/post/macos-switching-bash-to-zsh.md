@@ -1,5 +1,6 @@
 ---
 title: "macOS Catalina 10.15 is switching to Zsh, make the most of it"
+slug: "macos-catalina-1015-is-switching-to-zsh-make-the-most-of-it"
 date: 2019-10-14T15:51:42+02:00
 lastmod: 2019-10-14T15:51:42+02:00
 author: "Fredrik Jonsson"

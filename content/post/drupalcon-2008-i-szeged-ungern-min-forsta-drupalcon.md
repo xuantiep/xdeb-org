@@ -1,5 +1,6 @@
 ---
 title: "Drupalcon 2008 i Szeged, Ungern - min första Drupalcon"
+slug: "drupalcon-2008-i-szeged-ungern-min-forsta-drupalcon"
 date: 2008-06-25T23:16:54+02:00
 lastmod: 2008-07-21T08:59:32+02:00
 author: "Fredrik Jonsson"

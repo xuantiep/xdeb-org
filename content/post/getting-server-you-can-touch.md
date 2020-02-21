@@ -1,5 +1,6 @@
 ---
 title: "Getting a server you can touch"
+slug: "getting-a-server-you-can-touch"
 date: 2019-01-17T13:44:55+01:00
 lastmod: 2019-01-17T13:44:55+01:00
 author: "Fredrik Jonsson"

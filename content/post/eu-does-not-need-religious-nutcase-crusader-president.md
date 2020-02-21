@@ -1,5 +1,6 @@
 ---
 title: "EU does not need a religious nutcase crusader for President"
+slug: "eu-does-not-need-a-religious-nutcase-crusader-for-president"
 date: 2009-07-17T07:54:25+02:00
 lastmod: 2009-08-02T22:47:09+02:00
 author: "Fredrik Jonsson"

@@ -1,5 +1,6 @@
 ---
 title: "Content security policy headers when using Matomo or Google analytics"
+slug: "content-security-policy-headers-when-using-matomo-or-google-analytics"
 date: 2020-01-14T09:41:58+01:00
 lastmod: 2020-01-17T08:09:32+01:00
 author: "Fredrik Jonsson"

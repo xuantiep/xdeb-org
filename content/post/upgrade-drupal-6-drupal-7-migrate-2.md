@@ -1,5 +1,6 @@
 ---
 title: "Upgrade from Drupal 6 to Drupal 7 with Migrate 2"
+slug: "upgrade-from-drupal-6-to-drupal-7-with-migrate-2"
 date: 2011-11-08T14:55:04+01:00
 lastmod: 2012-07-30T14:05:10+02:00
 author: "Fredrik Jonsson"

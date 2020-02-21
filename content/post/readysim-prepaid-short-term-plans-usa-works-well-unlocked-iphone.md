@@ -1,5 +1,6 @@
 ---
 title: "ReadySIM prepaid short-term plans in the USA works well with unlocked iPhone"
+slug: "readysim-prepaid-short-term-plans-in-the-usa-works-well-with-unlocked-iphone"
 date: 2015-10-15T14:00:48+02:00
 lastmod: 2015-10-19T14:14:23+02:00
 author: "Fredrik Jonsson"

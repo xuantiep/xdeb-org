@@ -1,5 +1,6 @@
 ---
 title: "The Loudness War kills my music interest"
+slug: "the-loudness-war-kills-my-music-interest"
 date: 2009-06-20T20:06:15+02:00
 lastmod: 2012-07-20T13:54:39+02:00
 author: "Fredrik Jonsson"

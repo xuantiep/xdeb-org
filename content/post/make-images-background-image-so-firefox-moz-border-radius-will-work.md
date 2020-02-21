@@ -1,5 +1,6 @@
 ---
 title: "Make images into a background-image so Firefox -moz-border-radius will work"
+slug: "make-images-into-a-background-image-so-firefox-moz-border-radius-will-work"
 date: 2010-12-14T16:28:54+01:00
 lastmod: 2010-12-14T16:28:54+01:00
 author: "Fredrik Jonsson"

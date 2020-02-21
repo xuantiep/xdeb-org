@@ -1,5 +1,6 @@
 ---
 title: "Alla är lika värda - Typiskt svenskt!"
+slug: "alla-ar-lika-varda-typiskt-svenskt"
 date: 2010-09-14T16:19:03+02:00
 lastmod: 2010-09-14T16:19:42+02:00
 author: "Fredrik Jonsson"

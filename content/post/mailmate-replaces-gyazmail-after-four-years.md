@@ -1,5 +1,6 @@
 ---
 title: "MailMate replaces GyazMail after four years"
+slug: "mailmate-replaces-gyazmail-after-four-years"
 date: 2014-05-16T09:15:05+02:00
 lastmod: 2016-05-18T09:15:11+02:00
 author: "Fredrik Jonsson"

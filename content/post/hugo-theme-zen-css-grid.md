@@ -1,5 +1,6 @@
 ---
 title: "My Zen Hugo theme now uses css grid"
+slug: "my-zen-hugo-theme-now-uses-css-grid"
 date: 2017-10-18T15:32:20+02:00
 lastmod: 2017-10-18T15:32:20+02:00
 author: "Fredrik Jonsson"

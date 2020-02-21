@@ -1,5 +1,6 @@
 ---
 title: "Sociala medier är ett hot mot vår demokrati"
+slug: "sociala-medier-ar-ett-hot-mot-var-demokrati"
 date: 2019-04-23T12:20:01+02:00
 lastmod: 2019-04-23T12:20:01+02:00
 author: "Fredrik Jonsson"

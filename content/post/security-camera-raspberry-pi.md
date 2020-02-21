@@ -1,5 +1,6 @@
 ---
 title: "Security camera with Raspberry Pi"
+slug: "security-camera-with-raspberry-pi"
 date: 2017-05-28T10:33:14+02:00
 lastmod: 2017-05-28T10:33:14+02:00
 author: "Fredrik Jonsson"

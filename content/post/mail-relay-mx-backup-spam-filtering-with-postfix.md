@@ -1,5 +1,6 @@
 ---
 title: "Mail relay, MX backup and spam filtering with Postfix"
+slug: "mail-relay-mx-backup-and-spam-filtering-with-postfix"
 date: 2017-12-20T13:55:52+01:00
 lastmod: 2017-12-20T13:55:57+01:00
 author: "Fredrik Jonsson"

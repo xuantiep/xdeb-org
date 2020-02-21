@@ -1,5 +1,6 @@
 ---
 title: "Display a more visibel \"Read more\" link with Drupal"
+slug: "display-a-more-visibel-read-more-link-with-drupal"
 date: 2007-08-18T11:25:57+02:00
 lastmod: 2008-10-01T21:36:14+02:00
 author: "Fredrik Jonsson"

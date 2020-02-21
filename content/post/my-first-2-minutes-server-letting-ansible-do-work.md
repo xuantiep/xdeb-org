@@ -1,5 +1,6 @@
 ---
 title: "My first 2 minutes on a server - letting Ansible do the work"
+slug: "my-first-2-minutes-on-a-server-letting-ansible-do-the-work"
 date: 2016-06-23T08:15:07+02:00
 lastmod: 2019-02-19T09:01:31+01:00
 author: "Fredrik Jonsson"

@@ -1,5 +1,6 @@
 ---
 title: "Run your own mail server with Postfix and Dovecot"
+slug: "run-your-own-mail-server-with-postfix-and-dovecot"
 date: 2018-02-07T14:58:54+01:00
 lastmod: 2018-05-18T14:46:11+02:00
 author: "Fredrik Jonsson"

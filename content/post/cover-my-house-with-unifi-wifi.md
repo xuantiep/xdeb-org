@@ -1,5 +1,6 @@
 ---
 title: "Cover my house with UniFi Wi-Fi"
+slug: "cover-my-house-with-unifi-wi-fi"
 date: 2018-10-12T08:17:52+02:00
 lastmod: 2018-10-12T08:17:52+02:00
 author: "Fredrik Jonsson"
