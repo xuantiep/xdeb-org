@@ -49,10 +49,31 @@ $ exit
 
 With virtual LAN (VLAN) you can have multiple separate networks over one set of cables. Perfect for separating guests and IOT stuff from you personal devices (computers, phones etc.)
 
+The two VLAN will need to be set up on both the Edgerouter and in UniFi, make sure you use the same VLAN ID in both places.
+
 
 ### Set up your VLAN on the Edgerouter
 
-aaa
+On the main dashboard there is a "Add interface" button. Use this to create the needed VLAN.
+
+1. Pick VLAN ID, anything from 2-4094 (I believe "1" is the main LAN).
+2. For interface select "switch0".
+3. For address select "Manually define IP address". Enter the IP address you want for the interface, something like "10.10.10.1/24" or "192.168.20.1/24". The router are always assigned the "1" address by custom.
+4. Click "Save"
+
+I like to use easily distinguishable addresses for each LAN/VLAN, then it's quick and easy to confirm where a device is connected.
+
+### Create a DHCP server for each VLAN on the Edgerouter
+
+Each VLAN now needs a DHCP server so devices on it can get IP addresses.
+
+Go to the "Services" tab. Click the "Add DHCP Server" button.
+
+1. A sensible name
+2. Make sure the subnet matches the IP addresses you picked for each VLAN when you created them. Something like "10.10.10.0/24" or "192.168.20.0/24"
+3. Rang start can be set to "2" and range stop to "254".
+4. Set DNS 1 to the IP of the interface, e.g. "10.10.10.1" or "192.168.20.1" from above.
+5. Click "Save"
 
 
 ### VLAN firewall rules on the Edgerouter
@@ -66,6 +87,6 @@ aaa
 
 
 
-### Set up separate guest and IOT wireless networks in UniFi
+### Create separate guest and IOT wireless networks in UniFi
 
 aaa
