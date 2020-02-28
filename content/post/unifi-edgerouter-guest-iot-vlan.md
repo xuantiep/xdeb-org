@@ -268,3 +268,9 @@ name GUEST_IN {
     }
 }
 ~~~~
+
+
+## Useful resources
+
+* [Crosstalk Solutions - Secure IoT Network Configuration - YouTube](https://www.youtube.com/watch?v=6ElI8QeYbZQ)
+* [Crosstalk Solutions - DNS Server Lockdown - YouTube](https://www.youtube.com/watch?v=j6IzYGAI7IE)
