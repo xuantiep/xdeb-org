@@ -1,24 +1,23 @@
 ---
-title: "Setup guest and IOT VLAN with UniFi and a Edgerouter"
+title: "Setup guest and IOT VLAN with UniFi and a EdgeRouter"
 slug: "unifi-edgerouter-guest-iot-vlan"
 date: 2020-02-12T12:59:53+01:00
 lastmod: 2020-02-12T12:59:53+01:00
 author: "Fredrik Jonsson"
 tags: ["wi-fi","network"]
-draft: true
 
 ---
 
-Setting up VLAN with an Edge router and UniFi switch and access points takes a few extra step. My goal is to have separate wireless networks for guest and IOT, each on there own VLAN. In this post I describe how I got it working.
+My goal is to have separate wireless networks for guest and IOT devices, each on there own VLAN. Setting up VLAN with an EdgeRouter, UniFi switch and UniFI access points takes a few extra steps. In this post I describe how I got it working.
 
-A year and a half ago I posted [Cover my house with UniFi Wi-Fi]({{< relref "post/cover-my-house-with-unifi-wifi.md" >}}). The system has been running well since then. Recently I replaced the old AirPort router with an Edgerouter X.
+A year and a half ago I posted [Cover my house with UniFi Wi-Fi]({{< relref "post/cover-my-house-with-unifi-wifi.md" >}}). The system has been running well since then. Recently I replaced the old AirPort router with an EdgeRouter X.
 
 The [EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) is small, cheep and surprisingly capable. I'm not to fond of the EdgeOS admin interface, but it gets the job done.
 
 Getting the UniFi Security Gateway is an option but it's less flexible, more expensive and can not route 1 Gbit/s. It's easier to set up since everything can be done in the UniFi interface.
 
 
-## Initial setup of Edgerouter
+## Initial setup of EdgeRouter
 
 I recommend to use the wizard to get a good start, I picked the "Basic setup". For WAN I used eth4 and then checked "Only use one LAN" so eth0, eth1, eth2 and eth3 becomes a LAN switch. The group of ports is named "switch0" by the system.
 
@@ -28,12 +27,14 @@ If you have not already created a new user, make sure to do so at the bottom of 
 
 After clicking "Apply" I then had a working router and could connect to the Internet.
 
+The wizard sets up a Local network, a LAN DHCP server, sensible WAN firewall rules etc.
+
 For basic usages you are done by this point.
 
 
-## Make the Edgerouter X route 1 Gbit/s
+## Make the EdgeRouter X route 1 Gbit/s
 
-The Edgerouter X can by default only route around 300 Mbit/s. If you don't need QoS you can enable [hardware offloading](https://help.ubnt.com/hc/en-us/articles/115006567467-EdgeRouter-Hardware-Offloading) and get it to route 1 Gbit/s.
+The EdgeRouter X can by default only route around 300 Mbit/s. If you don't need QoS you can enable [hardware offloading](https://help.ubnt.com/hc/en-us/articles/115006567467-EdgeRouter-Hardware-Offloading) and get it to route 1 Gbit/s.
 
 This need to be done on the command line. You can use the "CLI" button in the top right on the EdgeOS admin interface or login to the router via SSH.
 
@@ -49,44 +50,221 @@ $ exit
 
 With virtual LAN (VLAN) you can have multiple separate networks over one set of cables. Perfect for separating guests and IOT stuff from you personal devices (computers, phones etc.)
 
-The two VLAN will need to be set up on both the Edgerouter and in UniFi, make sure you use the same VLAN ID in both places.
+The two VLAN will need to be set up on both the EdgeRouter and in UniFi, make sure you use the same VLAN ID in both places.
 
+Here are the values I picked for my VLAN.
 
-### Set up your VLAN on the Edgerouter
+Name |VLAN ID|Network
+:----|:----|:----
+Guest|10|10.10.10.1/24
+IOT|20|10.10.20.1/24
 
-On the main dashboard there is a "Add interface" button. Use this to create the needed VLAN.
-
-1. Pick VLAN ID, anything from 2-4094 (I believe "1" is the main LAN).
-2. For interface select "switch0".
-3. For address select "Manually define IP address". Enter the IP address you want for the interface, something like "10.10.10.1/24" or "192.168.20.1/24". The router are always assigned the "1" address by custom.
-4. Click "Save"
+VLAN ID can be 2-4094 (I believe "1" is the main LAN).
 
 I like to use easily distinguishable addresses for each LAN/VLAN, then it's quick and easy to confirm where a device is connected.
 
-### Create a DHCP server for each VLAN on the Edgerouter
+
+### Set up your VLAN on the EdgeRouter
+
+On the main dashboard there is a "Add interface" button. Use this to create the needed VLAN.
+
+1. Enter 10 for VLAN ID.
+2. For interface select "switch0".
+3. Add "Guest" for description.
+3. For address select "Manually define IP address". Enter the IP address "10.10.10.1/24". The router are always assigned the "1" address by custom.
+4. Click "Save".
+
+Redo all the steps for the IOT VLAN, using the IOT values for VLAN etc.
+
+You will now have two new interfaces named "switch0.10" and "switch0.20".
+
+
+### Create a DHCP server for each VLAN on the EdgeRouter
 
 Each VLAN now needs a DHCP server so devices on it can get IP addresses.
 
 Go to the "Services" tab. Click the "Add DHCP Server" button.
 
-1. A sensible name
-2. Make sure the subnet matches the IP addresses you picked for each VLAN when you created them. Something like "10.10.10.0/24" or "192.168.20.0/24"
+1. For name enter "Guest"
+2. Set subnet to "10.10.10.0/24". Yes, a zero before the "/24". Above we entered an address, here we specify an subnet (range of addresses).
 3. Rang start can be set to "2" and range stop to "254".
-4. Set DNS 1 to the IP of the interface, e.g. "10.10.10.1" or "192.168.20.1" from above.
-5. Click "Save"
+4. Set DNS 1 to the IP of the interface "10.10.10.1".
+5. Click "Save".
+
+Again, redo all the steps for the IOT DHCP server, using the IOT values for subnet etc.
 
 
-### VLAN firewall rules on the Edgerouter
+### VLAN firewall rules on the EdgeRouter
 
-aaa
+These are only needed if you like me want to limit what Guest and IOT connected devices can do.
+
+I decided to block all access from Guest and IOT to the EdgeRouter itself (local) except for DNS and DHCP services.
+
+Guest and IOT devices should not be able to connect to each other. Devices on LAN should be able to access guest and IOT devices, but not the other way around.
+
+For this I created a network group, "RFC1918 ranges", with all the private IP ranges.
+
+Here is a quick summary of the rules:
+
+GUEST_IN:
+
+* default accepts
+* interfaces switch0.10/in, switch0.20/in
+* rules Allow established/related, Drop invalid, Block local access (RFC1918)
+
+GUEST_LOCAL:
+
+* default drop
+* interfaces switch0.10/local, switch0.20/local
+* rules Allow established/related, Drop invalid, Allow DNS (port 53), Allow DHCP (port 67)
+
+See detailed firewall rules and groups configuration at the end of this post.
 
 
-### Set up your VLAN in UniFI
+### Set up your VLAN in UniFi
 
-aaa
+Now we need to set up the same VLAN in UniFi as we did above in the EdgeRouter.
 
+Go to "Settings -> Networks -> Local Networks". You most likely only have one network setup named "LAN" listed here.
+
+
+1. In the bottom right there is a big blue button "Create New Local Network".
+2. You get an option of standard or advanced. Pick advanced, it will be easier, go figure.
+3. Enter the name "Guest"
+4. Go to "Network Purpose" and pick "VLAN only", most of the options will now disappear. 5. Enter VLAN ID 10
+4. Click "Done".
+
+And as before, redo all the steps for the IOT VLAN, using the IOT values for VLAN etc.
 
 
 ### Create separate guest and IOT wireless networks in UniFi
 
-aaa
+Go to "Settings -> WI-FI -> Wi-Fi Networks". You most likely only have one network setup named "LAN" listed here.
+
+1. In the bottom right there is a big blue button "Create New Wi-Fi Network".
+2. You get an option of standard or advanced, pick advanced.
+3. Enter the name "Guest"
+4. Enter good password for the new wireless network.
+5. Check "Use VLAN" and enter VLAN ID 10
+4. Click "Done".
+
+Again, redo all the steps for the IOT network, using the IOT values for VLAN etc.
+
+There are a lot of possible option for wireless networks in UniFi but they are out of scope for this guide.
+
+
+## Conclusion
+
+Test to connect to the three different wireless networks in turn. Confirm that you get an IP address is the correct range for each network and that you can reach the internet.
+
+If you like me added firewall rules, test that they are working.
+
+With this in place I feel less worried about giving out guest access and adding IOT devices to my network.
+
+
+## Detailed firewall rules and groups
+
+These are copied from the json config file directly so all the details are there. But please do the configuration via the GUI, editing json files it not a task for humans.
+
+~~~~ json
+group {
+    network-group RFC1918 {
+        description "RFC1918 ranges"
+        network 10.0.0.0/8
+        network 172.16.0.0/12
+        network 192.168.0.0/16
+    }
+}
+~~~~
+
+
+~~~~ json
+name GUEST_LOCAL {
+    default-action drop
+    description ""
+    rule 1 {
+        action accept
+        description "Allow established/related"
+        log disable
+        protocol all
+        state {
+            established enable
+            invalid disable
+            new disable
+            related enable
+        }
+    }
+    rule 2 {
+        action drop
+        description "Drop invalid state"
+        log disable
+        protocol all
+        state {
+            established disable
+            invalid enable
+            new disable
+            related disable
+        }
+    }
+    rule 3 {
+        action accept
+        description "Allow DNS"
+        destination {
+            port 53
+        }
+        log disable
+        protocol tcp_udp
+    }
+    rule 4 {
+        action accept
+        description "Allow DHCP"
+        destination {
+            port 67
+        }
+        log disable
+        protocol udp
+    }
+}
+~~~~
+
+~~~~ json
+name GUEST_IN {
+    default-action accept
+    description ""
+    rule 10 {
+        action accept
+        description "Allow established/related"
+        log disable
+        protocol all
+        state {
+            established enable
+            invalid disable
+            new disable
+            related enable
+        }
+    }
+    rule 20 {
+        action drop
+        description "Drop invalid state"
+        log disable
+        protocol all
+        state {
+            established disable
+            invalid enable
+            new disable
+            related disable
+        }
+    }
+    rule 30 {
+        action drop
+        description "Block local access"
+        destination {
+            group {
+                network-group RFC1918
+            }
+        }
+        log disable
+        protocol all
+    }
+}
+~~~~
