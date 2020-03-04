@@ -10,7 +10,7 @@ tags: ["security","passwords"]
 
 Använd minst 12 tecken långa lösenord. Ha olika lösenord för varje tjänst. Låt en lösenordshanterare komma ihåg dem så du slipper.
 
-Tre råd som löser de flesta lösenordsproblem för användare. Läs vidare för mer information.
+Tre råd som löser de flesta lösenordsproblem för användare. Läs vidare för mer information om lösenord för både användare och utvecklare.
 
 
 ## Lösenord, den korta versionen
