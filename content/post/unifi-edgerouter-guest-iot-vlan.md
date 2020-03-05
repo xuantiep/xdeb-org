@@ -36,7 +36,7 @@ For basic usages you are done by this point.
 
 The EdgeRouter X can by default only route around 300 Mbit/s. If you don't need QoS you can enable [hardware offloading](https://help.ubnt.com/hc/en-us/articles/115006567467-EdgeRouter-Hardware-Offloading) and get it to route 1 Gbit/s.
 
-This need to be done on the command line. You can use the "CLI" button in the top right on the EdgeOS admin interface or login to the router via SSH.
+This needs to be done on the command line. You can use the "CLI" button in the top right on the EdgeOS admin interface or login to the router via SSH.
 
 ~~~~
 $ configure
@@ -87,7 +87,7 @@ Go to the "Services" tab. Click the "Add DHCP Server" button.
 
 1. For name enter "Guest"
 2. Set subnet to "10.10.10.0/24". Yes, a zero before the "/24". Above we entered an address, here we specify an subnet (range of addresses).
-3. Rang start can be set to "2" and range stop to "254".
+3. Range start can be set to "2" and range stop to "254".
 4. Set DNS 1 to the IP of the interface "10.10.10.1".
 5. Click "Save".
 
@@ -125,14 +125,15 @@ See detailed firewall rules and groups configuration at the end of this post.
 
 Now we need to set up the same VLAN in UniFi as we did above in the EdgeRouter.
 
-Go to "Settings -> Networks -> Local Networks". You most likely only have one network setup named "LAN" listed here.
+Go to "Settings -> Networks -> Local Networks". You most likely only have one network named "LAN" listed here.
 
 
 1. In the bottom right there is a big blue button "Create New Local Network".
 2. You get an option of standard or advanced. Pick advanced, it will be easier, go figure.
 3. Enter the name "Guest"
-4. Go to "Network Purpose" and pick "VLAN only", most of the options will now disappear. 5. Enter VLAN ID 10
-4. Click "Done".
+4. Go to "Network Purpose" and pick "VLAN only", most of the options will now disappear. 
+5. Enter VLAN ID 10
+6. Click "Done".
 
 And as before, redo all the steps for the IOT VLAN, using the IOT values for VLAN etc.
 
@@ -144,7 +145,7 @@ Go to "Settings -> WI-FI -> Wi-Fi Networks". You most likely only have one netwo
 1. In the bottom right there is a big blue button "Create New Wi-Fi Network".
 2. You get an option of standard or advanced, pick advanced.
 3. Enter the name "Guest"
-4. Enter good password for the new wireless network.
+4. Enter a good password for the new wireless network.
 5. Check "Use VLAN" and enter VLAN ID 10
 4. Click "Done".
 
