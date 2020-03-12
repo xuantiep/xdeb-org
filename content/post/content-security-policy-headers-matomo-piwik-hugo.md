@@ -2,7 +2,7 @@
 title: "Content security policy headers when using Matomo or Google analytics"
 slug: "content-security-policy-headers-when-using-matomo-or-google-analytics"
 date: 2020-01-14T09:41:58+01:00
-lastmod: 2020-01-17T08:09:32+01:00
+lastmod: 2020-03-12T13:11:06+01:00
 author: "Fredrik Jonsson"
 tags: ["security","apache","server","hugo"]
 
@@ -129,14 +129,17 @@ All that is needed for embedding videos is to add the host to the "frame-src" di
 
 ### Global Content Security Policy
 
+**Update 2020-03-12**: Discovered that Google analytic needed "connect-src" as well to function.
+
 ~~~~ shell
 Header set Content-Security-Policy "default-src 'self'; \
+  connect-src 'self' https://ssl.google-analytics.com; \
   frame-src 'self' https://www.google.com https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com https://embed.ted.com; \
   img-src 'self' https: data:; \
   media-src 'self' https:; \
   object-src 'none'; \
   script-src 'self' https://matomo.example.org https://ssl.google-analytics.com; \
-  style-src 'self' 'unsafe-inline'"
+  style-src 'self' 'unsafe-inline' https:"
 ~~~~
 
 1. Default policy is to only allow resources from self.
