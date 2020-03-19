@@ -64,7 +64,7 @@ https://themes.gohugo.io/theme/hugo-theme-zen/
 
 ## Minimum Hugo version
 
-Hugo version 0.55.0 or higher is required.
+Hugo version 0.67.1 or higher is required. This version has the new "languageDirection" attribute.
 
 
 ## Installation
@@ -289,8 +289,7 @@ languages:
   ar:
     weight: 3
     languageName: "العربية"
-    params:
-      dir: "rtl"
+    languageDirection: "rtl"
 ```
 
 
