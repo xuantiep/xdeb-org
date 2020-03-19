@@ -10,15 +10,16 @@
   // Add a js class to the html-tag when JavsScript is active.
   $('html').removeClass('nojs').addClass('js');
 
+  // Strip html tags from text.
+  function strip(html) {
+    var doc = new DOMParser().parseFromString(html, 'text/html');
+    return doc.body.textContent || '';
+  }
+
   // Add button to pre > code to copy the code to the clipboard.
   if (window.matchMedia && document.queryCommandSupported && document.queryCommandSupported('copy')) {
     var mq2 = window.matchMedia('(min-device-width: 1111px)');
     if (mq2.matches) {
-      // Strip html tags from text.
-      function strip(html){
-        var doc = new DOMParser().parseFromString(html, 'text/html');
-        return doc.body.textContent || "";
-      }
 
       $('.content').find('pre').each(function (e, i) {
         var codeitem = 'js-code-item-' + i;
