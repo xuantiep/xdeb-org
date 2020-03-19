@@ -62,6 +62,6 @@ Bra resurser:
 
 * [Diceware Secure Passphrase and Password Generator (Swedish)](https://www.rempe.us/diceware/#swedish)
 * [How to Safely Store Your Users' Passwords in 2016 - Paragon Initiative Enterprises Blog](https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016)
-* Läs NIST rekommendationer här <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf>.
-* NIST: <https://sv.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology>
+* [Läs NIST rekommendationer här](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf>) (PDF)
+* [National Institute of Standards and Technology - NIST](https://sv.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology)
 
