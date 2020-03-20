@@ -4,7 +4,7 @@ slug: "unifi-edgerouter-guest-iot-vlan"
 date: 2020-02-28T21:13:56+01:00
 lastmod: 2020-02-28T21:13:56+01:00
 author: "Fredrik Jonsson"
-tags: ["wi-fi","network"]
+tags: ["wi-fi","network","popular"]
 
 ---
 
