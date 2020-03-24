@@ -57,66 +57,6 @@
   }
 }
 
-.search-text {
-  @include margin(.5 0);
-}
-
-.search-results-wrapper {
-  @include type-layout(s, 1);
-
-  @include respond-to(xxl) {
-    @include type-layout(s-2, 1);
-  }
-
-  @include padding(.5);
-  position: absolute;
-  background: $white;
-  z-index: 99;
-  border: 1px solid $border;
-  margin-top: .5rem;
-  left: 0;
-  text-align: left;
-  width: 100%;
-  max-height: 70vh;
-  overflow-y: auto;
-  box-shadow: 0 10px 10px -10px $nearblack;
-
-  @include respond-to(m) {
-    max-width: $max-content-width;
-    left: 50%;
-    margin-left: -($max-content-width / 2);
-  }
-
-  h4 {
-    margin: 0;
-  }
-}
-
-.search-results {
-  @extend %ol-straight-left;
-
-  & > li {
-    &::before {
-      @include type-layout(xs, 1);
-      color: $text-meta;
-
-      @include respond-to(xxl) {
-        @include type-layout(xs-2, 1);
-      }
-    }
-  }
-
-  :link,
-  :visited {
-    text-decoration: none;
-  }
-
-  a:hover,
-  a:focus {
-    text-decoration: underline;
-  }
-}
-
 article {
   & > header {
 
