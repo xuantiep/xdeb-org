@@ -140,7 +140,7 @@ And as before, redo all the steps for the IOT VLAN, using the IOT values for VLA
 
 ### Create separate guest and IOT wireless networks in UniFi
 
-Go to "Settings -> WI-FI -> Wi-Fi Networks". You most likely only have one network setup named "LAN" listed here.
+Go to "Settings -> WI-FI -> Wi-Fi Networks". You most likely only have one network setup here.
 
 1. In the bottom right there is a big blue button "Create New Wi-Fi Network".
 2. You get an option of standard or advanced, pick advanced.
