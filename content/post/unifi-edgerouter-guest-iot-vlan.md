@@ -2,7 +2,7 @@
 title: "Setup guest and IOT VLAN with UniFi and a EdgeRouter"
 slug: "unifi-edgerouter-guest-iot-vlan"
 date: 2020-02-28T21:13:56+01:00
-lastmod: 2020-02-28T21:13:56+01:00
+lastmod: 2020-04-06T14:58:18+02:00
 author: "Fredrik Jonsson"
 tags: ["wi-fi","network","popular"]
 
@@ -15,6 +15,8 @@ A year and a half ago I posted [Cover my house with UniFi Wi-Fi]({{< relref "pos
 The [EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) is small, cheep and surprisingly capable. I'm not to fond of the EdgeOS admin interface, but it gets the job done.
 
 Getting the UniFi Security Gateway is an option but it's less flexible, more expensive and can not route 1 Gbit/s. It's easier to set up since everything can be done in the UniFi interface.
+
+*Update 2020-04-06*: Added a section about setting up needed DNS forwarding to VLANs on the EdgeRouter. A reader was kind enough to alert me that this was a missing step. I had it configured myself but missed to add it to the blog post.
 
 
 ## Initial setup of EdgeRouter
@@ -93,6 +95,14 @@ Go to the "Services" tab. Click the "Add DHCP Server" button.
 
 Again, redo all the steps for the IOT DHCP server, using the IOT values for subnet etc.
 
+
+### DNS forwarding to VLANs on the EdgeRouter
+
+The DNS server on the EdgeRouter need to know that it should listen on the new VLAN interfaces.
+
+Go to the "Services" tab and then the "DNS" sub tab. In the "DNS Forwarding" section add two listen interfaces for "switch0.10" and "switch0.20".
+
+While here I suggest you up the cache size so more queries are cached. I opted to set it to "500".
 
 ### VLAN firewall rules on the EdgeRouter
 
