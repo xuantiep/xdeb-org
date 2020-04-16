@@ -2,7 +2,7 @@
 title: "Setup guest and IOT VLAN with UniFi and a EdgeRouter"
 slug: "unifi-edgerouter-guest-iot-vlan"
 date: 2020-02-28T21:13:56+01:00
-lastmod: 2020-04-06T14:58:18+02:00
+lastmod: 2020-04-16T09:01:52+02:00
 author: "Fredrik Jonsson"
 tags: ["wi-fi","network","popular"]
 
@@ -17,6 +17,8 @@ The [EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) is small, cheep and
 Getting the UniFi Security Gateway is an option but it's less flexible, more expensive and can not route 1 Gbit/s. It's easier to set up since everything can be done in the UniFi interface.
 
 *Update 2020-04-06*: Added a section about setting up needed DNS forwarding to VLANs on the EdgeRouter. A reader was kind enough to alert me that this was a missing step. I had it configured myself but missed to add it to the blog post.
+
+*Update 2020-04-16*: Another kind reader pointed out the need to set "Router" in the EdgeRouter DHCP configuration. As above I had this configured myself but it was not in the blog post, fixed now.
 
 
 ## Initial setup of EdgeRouter
@@ -90,8 +92,9 @@ Go to the "Services" tab. Click the "Add DHCP Server" button.
 1. For name enter "Guest"
 2. Set subnet to "10.10.10.0/24". Yes, a zero before the "/24". Above we entered an address, here we specify an subnet (range of addresses).
 3. Range start can be set to "2" and range stop to "254".
-4. Set DNS 1 to the IP of the interface "10.10.10.1".
-5. Click "Save".
+4. Set Router to the IP of the interface "10.10.10.1".
+5. Set DNS 1 to the IP of the interface "10.10.10.1".
+6. Click "Save".
 
 Again, redo all the steps for the IOT DHCP server, using the IOT values for subnet etc.
 
