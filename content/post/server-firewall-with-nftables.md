@@ -46,7 +46,7 @@ define vpn = wg0
 define vpn_net = 10.10.10.0/24
 
 # Setting up a table, simple firewalls will only need one table but there can be multiple.
-# The "init" say that this table will handle both ipv4 (ip) and ipv6 (ip6).
+# The "inet" say that this table will handle both ipv4 (ip) and ipv6 (ip6).
 # The name is "firewall" you can name it anything you like.
 table inet firewall {
   # Sets are dictionaries and maps of ports, addresses etc.
