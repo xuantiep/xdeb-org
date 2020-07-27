@@ -2,7 +2,7 @@
 title: "Setting up a server firewall with nftables that support WireGuard VPN"
 slug: "setting-up-a-server-firewall-with-nftables-that-support-wireguard-vpn"
 date: 2019-09-26T14:24:30+02:00
-lastmod: 2019-10-20T10:52:31+02:00
+lastmod: 2020-07-27T11:34:58+02:00
 author: "Fredrik Jonsson"
 tags: ["nftables","server","ansible","security","wireguard","popular"]
 
@@ -18,13 +18,15 @@ After understanding how nftables works I like it better than iptables. Cleaner r
 
 (See my iptables set up in [My first 2 minutes on a server - letting Ansible do the work](/post/2016/06/23/my-first-2-minutes-on-a-server-letting-ansible-do-the-work/))
 
+*Update 2020-07-27*: A kind reader noticed that IPv6 ping was not working correctly. Needed to explicitly allow it in the outgoing rules. Setting "policy accept" on the outgoing chain also fixed the issue.
+
 
 ## Important things I learnt
 
 1. You can name tables, chains etc whatever you like and you can have multiple sets of them. Specific settings on them control what they do and in what order they are run.
 2. Whenever you have a need to specify a group of IP addresses, ports, interfaces and what not, use sets. They make rules non repetitive, easy to read and write and allow the system to optimise performance.
 3. Rules with "limit" need to be put before rules accepting "established" connections.
-
+4. If you do not have "policy accept" on your outgoing chain you need to explicitly allow IPv6 ICMP.
 
 ## My nftable config script
 
@@ -148,6 +150,8 @@ table inet firewall {
 
     # Allow all outgoing traffic. Drop invalid traffic.
     # I believe settings "policy accept" would be the same but I prefer explicit rules.
+    # For some reason ipv6 ICMP needs to be explicitly allowed here.
+    ip6 nexthdr ipv6-icmp accept
     ct state new,established,related accept
     ct state invalid drop
   }
