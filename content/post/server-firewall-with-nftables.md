@@ -69,8 +69,8 @@ table inet firewall {
       58172, 60000-60100
     }
   }
-  # List of ipv4 addresses to blacklist.
-  set blacklist_v4 {
+  # List of ipv4 addresses to block.
+  set blocklist_v4 {
     # The "ipv4_addr" are for ipv4 addresses and "flags interval" allows to set intervals.
     type ipv4_addr; flags interval;
     elements = {
@@ -98,12 +98,12 @@ table inet firewall {
     # Interfaces can by set with "iif" or "iifname" (oif/oifname). If the interface can come and go use "iifname", otherwise use "iif" since it performs better.
     iif lo accept
 
-    # Blacklist bad addresses.
+    # Block bad addresses.
     # This is how sets are used in rules, a "@" and the name of the set.
     # In nftable you need to add a counter statement to have the rule count matches.
     # Only add counter if you need it, it has a small performance hit. I add it to
     # rules I'm unsure how useful/accurate they are.
-    ip saddr @blacklist_v4 counter drop
+    ip saddr @blocklist_v4 counter drop
 
     # Drop all fragments.
     ip frag-off & 0x1fff != 0 counter drop
