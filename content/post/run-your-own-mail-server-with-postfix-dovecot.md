@@ -144,7 +144,7 @@ $ ansible-playbook mail-server-playbook.yml
 
 ## DNS - get this right and good things will follow
 
-Make sure the servers IP address [is not blacklisted](https://mxtoolbox.com/blacklists.aspx). It need to be a static address in good standing or your mail will get marked as junk.
+Make sure the servers IP address [is not blocklisted](https://mxtoolbox.com/blacklists.aspx). It need to be a static address in good standing or your mail will get marked as junk.
 
 The DNS record should look something like this. Please do not forget to set a valid PTR (pointer) record. In best case it should be the reverse of the A record but it must exist and be a valid address for the server.
 

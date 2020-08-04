@@ -141,13 +141,13 @@ By default everything is dropped. Then some common rules to allow loopback, drop
 -P FORWARD DROP
 -P OUTPUT DROP
 
-{% if blacklist_ip_list is defined %}
-# Blacklist
--N BLACKLIST
-{% for blacklist_ip in blacklist_ip_list %}
--A BLACKLIST -s {{ blacklist_ip }} -j DROP
+{% if blocklist_ip_list is defined %}
+# Blocklist
+-N BLOCKLIST
+{% for blocklist_ip in blocklist_ip_list %}
+-A BLOCKLIST -s {{ blocklist_ip }} -j DROP
 {% endfor %}
--A INPUT -j BLACKLIST
+-A INPUT -j BLOCKLIST
 {% endif %}
 
 # Allow loopback
