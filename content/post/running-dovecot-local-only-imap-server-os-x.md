@@ -2,7 +2,7 @@
 title: "Running dovecot as a local only IMAP server on OS X"
 slug: "running-dovecot-as-a-local-only-imap-server-on-os-x"
 date: 2014-03-07T10:30:22+01:00
-lastmod: 2019-11-01T10:38:55+01:00
+lastmod: 2020-08-27T08:29:28+02:00
 author: "Fredrik Jonsson"
 tags: ["email","dovecot","macOS","technology","popular"]
 aliases:
@@ -23,7 +23,7 @@ brew install dovecot
 Homebrew will give you instruction for the LaunchDaemons script needed to start and stop dovecot. Next step is to copy over some default configuration files.
 
 ~~~~
-cp -pr /usr/local/Cellar/dovecot/2.3.8/share/doc/dovecot/example-config/ /usr/local/etc/dovecot/
+cp -pr /usr/local/Cellar/dovecot/2.3.10.1/share/doc/dovecot/example-config/ /usr/local/etc/dovecot/
 ~~~~
 
 I opted for adding a "local.conf" file with all my own settings, "dovecot.conf" will include that file if it exist.
