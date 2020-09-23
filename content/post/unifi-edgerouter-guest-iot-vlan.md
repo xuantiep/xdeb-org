@@ -2,7 +2,7 @@
 title: "Setup guest and IOT VLAN with UniFi and a EdgeRouter"
 slug: "unifi-edgerouter-guest-iot-vlan"
 date: 2020-02-28T21:13:56+01:00
-lastmod: 2020-04-16T09:01:52+02:00
+lastmod: 2020-09-23T22:21:01+02:00
 author: "Fredrik Jonsson"
 tags: ["wi-fi","network","popular"]
 
@@ -19,6 +19,8 @@ Getting the UniFi Security Gateway is an option but it's less flexible, more exp
 *Update 2020-04-06*: Added a section about setting up needed DNS forwarding to VLANs on the EdgeRouter. A reader was kind enough to alert me that this was a missing step. I had it configured myself but missed to add it to the blog post.
 
 *Update 2020-04-16*: Another kind reader pointed out the need to set "Router" in the EdgeRouter DHCP configuration. As above I had this configured myself but it was not in the blog post, fixed now.
+
+*Update 2020-09-23*: Added instructions for UniFi Controller version 6.x.
 
 
 ## Initial setup of EdgeRouter
@@ -136,7 +138,22 @@ See detailed firewall rules and groups configuration at the end of this post.
 
 ### Set up your VLAN in UniFi
 
-Now we need to set up the same VLAN in UniFi as we did above in the EdgeRouter.
+Now we need to set up the same VLAN in UniFi as we did above in the EdgeRouter. Instructions below for both version 5.x and 6.x of the UniFi Controller.
+
+
+#### Controller version 6.x
+
+Go to "Settings -> Advanced Features".
+
+1. In the "Network Isolation" section click the "Add Network Isolation" button.
+2. Enter the name "Guest"
+3. Enter VLAN ID 10
+4. Click "Apply Changes".
+
+And as before, redo all the steps for the IOT VLAN, using the IOT values for VLAN etc.
+
+
+#### Controller version 5.x
 
 Go to "Settings -> Networks -> Local Networks". You most likely only have one network named "LAN" listed here.
 
@@ -152,6 +169,26 @@ And as before, redo all the steps for the IOT VLAN, using the IOT values for VLA
 
 
 ### Create separate guest and IOT wireless networks in UniFi
+
+At last, time to set up the actual wireless networks for Guest and IOT. Instructions below for both version 5.x and 6.x of the UniFi Controller.
+
+
+#### Controller version 6.x
+
+Go to "Settings -> WiFi".
+
+1. In the "WiFi" section click the "Add New WiFi Network" button.
+2. Enter the name "Guest"
+3. Enter a good password for the new wireless network.
+4. For network select "Guest".
+5. Click "Apply Changes".
+
+Again, redo all the steps for the IOT network, using the IOT values for VLAN etc.
+
+There are a lot of possible option for wireless networks in UniFi but they are out of scope for this guide.
+
+
+#### Controller version 5.x
 
 Go to "Settings -> WI-FI -> Wi-Fi Networks". You most likely only have one network setup here.
 
