@@ -2,7 +2,7 @@
 title: "Setup guest and IOT VLAN with UniFi and a EdgeRouter"
 slug: "unifi-edgerouter-guest-iot-vlan"
 date: 2020-02-28T21:13:56+01:00
-lastmod: 2020-09-23T22:21:01+02:00
+lastmod: 2020-10-10T14:20:19+02:00
 author: "Fredrik Jonsson"
 tags: ["wi-fi","network","popular"]
 
@@ -12,7 +12,7 @@ My goal is to have separate wireless networks for guest and IOT devices, each on
 
 A year and a half ago I posted [Cover my house with UniFi Wi-Fi]({{< relref "post/cover-my-house-with-unifi-wifi.md" >}}). The system has been running well since then. Recently I replaced the old AirPort router with an EdgeRouter X.
 
-The [EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) is small, cheep and surprisingly capable. I'm not to fond of the EdgeOS admin interface, but it gets the job done.
+The [EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) is small, cheep and surprisingly capable. I'm not too fond of the EdgeOS admin interface, but it gets the job done.
 
 Getting the UniFi Security Gateway is an option but it's less flexible, more expensive and can not route 1 Gbit/s. It's easier to set up since everything can be done in the UniFi interface.
 
@@ -21,6 +21,8 @@ Getting the UniFi Security Gateway is an option but it's less flexible, more exp
 *Update 2020-04-16*: Another kind reader pointed out the need to set "Router" in the EdgeRouter DHCP configuration. As above I had this configured myself but it was not in the blog post, fixed now.
 
 *Update 2020-09-23*: Added instructions for UniFi Controller version 6.x.
+
+*Update 2020-10-10*: Added instructions to enable mDNS reflector on the EdgeRouter. Needed so devices using Bonjour/multicast DNS can be discovered.
 
 
 ## Initial setup of EdgeRouter
@@ -202,6 +204,21 @@ Go to "Settings -> WI-FI -> Wi-Fi Networks". You most likely only have one netwo
 Again, redo all the steps for the IOT network, using the IOT values for VLAN etc.
 
 There are a lot of possible option for wireless networks in UniFi but they are out of scope for this guide.
+
+
+## Enable mDNS reflector on the EdgeRouter
+
+A lot of devices uses Bonjour/multicast DNS to be easily discoverable on the network. By default this traffic can not pass between different networks/VLAN on the EdgeRouter. For it to work we need to enable the mDNS reflector.
+
+Go to the "Config Tree" tab. In the left column there is a long list of configurations options.
+
+Open up "Services" and below that "mdns" by clicking the small triangle in front of the options.
+
+Below "mdns" you have two entries, click the "+" after "repeater". It will turn red to indicate the selection. Now click the "Preview" button at the bottom, and in the dialog that opens up click "Apply".
+
+Not the most logical path but you have now enabled the mDNS reflector.
+
+I do not know if this raises any security concerns. But the option would be to have the devices on the main network and that is defiantly worse. IOT devices have notoriously bad security.
 
 
 ## Conclusion
