@@ -12,7 +12,7 @@ xdeb.org is now generated with Hugo, the static site generator that I wrote abou
 
 One less Drupal site to keep updated. Now it's "only" the content I need to add and update here.
 
-I'm using the Zen theme [frjo/hugo-theme-zen](https://github.com/frjo/hugo-theme-zen) that I ported from Drupal to Hugo. I have also moved over the custom css I used for xdeb.org so the site look a lot like before. All importen urls should be the same or have redirects.
+I'm using the Zen theme [frjo/hugo-theme-zen](https://github.com/frjo/hugo-theme-zen) that I ported from Drupal to Hugo. I have also moved over the custom css I used for xdeb.org so the site look a lot like before. All important urls should be the same or have redirects.
 
 The site now has a [JSON Feed](https://jsonfeed.org/), would be nice if that got some traction. The JSON feed is part of the Zen theme.
 
