@@ -2,7 +2,7 @@
 title: "Content security policy headers when using Matomo or Google analytics"
 slug: "content-security-policy-headers-when-using-matomo-or-google-analytics"
 date: 2020-01-14T09:41:58+01:00
-lastmod: 2020-03-12T13:11:06+01:00
+lastmod: 2020-12-11T10:25:39+01:00
 author: "Fredrik Jonsson"
 tags: ["security","apache","server","hugo"]
 
@@ -54,7 +54,7 @@ Create a `tracking.js` file and place this content it to it.
 
 ~~~~ js
 var idSite = 1;  // Use your own value!
-var matomoTrackingApiUrl = 'https://matomo.example.org/matomo//matomo.php';  // Use your own value!
+var matomoTrackingApiUrl = 'https://matomo.example.org/matomo/matomo.php';  // Use your own value!
 
 var _paq = window._paq || [];
 _paq.push(['setTrackerUrl', matomoTrackingApiUrl]);
@@ -131,9 +131,11 @@ All that is needed for embedding videos is to add the host to the "frame-src" di
 
 **Update 2020-03-12**: Discovered that Google analytic needed "connect-src" as well to function.
 
+**Update 2020-12-11**: With Matomo 4 you need "connect-src" for it to function.
+
 ~~~~ shell
 Header set Content-Security-Policy "default-src 'self'; \
-  connect-src 'self' https://ssl.google-analytics.com; \
+  connect-src 'self' https://matomo.example.org https://ssl.google-analytics.com; \
   frame-src 'self' https://www.google.com https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com https://embed.ted.com; \
   img-src 'self' https: data:; \
   media-src 'self' https:; \
@@ -143,12 +145,13 @@ Header set Content-Security-Policy "default-src 'self'; \
 ~~~~
 
 1. Default policy is to only allow resources from self.
-2. Allow loading iframes from Google, Youtube, Vimeo and Ted. This allows for videos and maps from these sites.
-3. Allow images from self, any https source and data schema.
-4. Allow media from self and any https source.
-5. Do not allow any objects, highly advisable.
-6. Allow scripts from self, our own Matomo site and from the Google analytic site.
-7. Allow styles from self and inline. The last is needed for Google maps.
+2. Allow connects from self, our own Matomo site and from the Google analytic site.
+3. Allow loading iframes from Google, Youtube, Vimeo and Ted. This allows for videos and maps from these sites.
+4. Allow images from self, any https source and data schema.
+5. Allow media from self and any https source.
+6. Do not allow any objects, highly advisable.
+7. Allow scripts from self, our own Matomo site and from the Google analytic site.
+8. Allow styles from self and inline. The last is needed for Google maps.
 
 Allowing loading images and media from everywhere is convenient but others will make another choice. The unsafe-inline option for styles could be limited to only the sites that use Google maps and other services that need it.
 
