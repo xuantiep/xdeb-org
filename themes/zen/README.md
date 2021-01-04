@@ -183,6 +183,7 @@ params:
   piwikTrackerUrl: ""       # Matamo url, schemaless and no slash on end (example.org/matamo).
   poweredby: true           # Show powered by hugo in footer
   realfavicongenerator:     # If full set of favicons, site manifest etc. exists, default false.
+  related: false            # Show related post under a "See also" section, default false.
   safariPinnedColor:        # Hex color value, used in meta tags, default "#000000".
   searchLimit: 20           # Max number of search hits, default 20.
   sidebar: true             # Show a sidebar to the right
@@ -283,7 +284,7 @@ Needed styles are in the `_zen.scss` file.
 
 ## Multilingual
 
-English, French, German, Norwegian, Portugis and Swedish translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users.
+Arabic, English, French, German, Norwegian, Portugis and Swedish translations are included and you can easily add more to the `i18n` site directory. All but English and Swedish are contributed by users, thanks!
 
 A language selector will be included on sites with more than one language. Add `languageName` to your language configuration, this is what will be displayed in the selector.
 
