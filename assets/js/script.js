@@ -7,9 +7,6 @@
 
   'use strict';
 
-  // Add a js class to the html-tag when JavsScript is active.
-  $('html').removeClass('nojs').addClass('js');
-
   // Strip html tags from text.
   function strip(html) {
     var doc = new DOMParser().parseFromString(html, 'text/html');
