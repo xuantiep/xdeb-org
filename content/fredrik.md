@@ -38,5 +38,6 @@ I have a degree in political science but my interest in technology turned my car
 ### Sponsor my work on open-source and blogging
 
 * [Buy Fredrik Jonsson a pot of tea at ko-fi.com/frjo01](https://ko-fi.com/frjo01)
+* [Sponsor @frjo on GitHub Sponsors](https://github.com/sponsors/frjo)
 
 (The "parachute" quote and the Himalaya image I have had on my homepage since a long time. Keeping them here for nostalgic reasons and to guide old returning visitors.)
