@@ -190,7 +190,7 @@ params:
   privacyPolicyUrl: ""      # If set will add link to cookie consent form.
 
   realfavicongenerator:     # If full set of favicons, site manifest etc. exists, default false.
-  related: true             # Show related post under a "See also" section, default false.
+  relatedposts: true        # Show related posts under a "See also" section, default false.
   searchLimit: 20           # Max number of search hits, default 20.
   sidebar: true             # Show a sidebar to the right
   submitted: true           # Show author and date information for a post.
@@ -214,6 +214,7 @@ params:
     type: episodic/serial   # Podcast type, defaults to episodic (iTunes).
     newfeed:                # Are you moving? Set the new feed url here (iTunes).
     cdn:                    # CDN url, no slash on end (https://cdn.example.org).
+    local: false            # Are the audio files local (true) or remote (false), default to true.
     preload: none/metadata/auto # Set on the HTML5 audio tag, defaults to "metadata".
 ```
 

@@ -56,7 +56,7 @@ params:
   piwikTrackerUrl: "admin.combonet.se/matomo"
   poweredby: false
   realfavicongenerator: true
-  related: true
+  relatedposts: true
   safariPinnedColor: "#706a58"
   search: false
   searchLimit: 1000
