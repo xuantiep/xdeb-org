@@ -214,7 +214,7 @@ Go to the "Config Tree" tab. In the left column there is a long list of configur
 
 Open up "Services" and below that "mdns" by clicking the small triangle in front of the options.
 
-Below "mdns" you have two entries, click the "+" after "repeater". It will turn red to indicate the selection. Now click the "Preview" button at the bottom, and in the dialog that opens up click "Apply".
+Below "mdns" you have two entries, click the "+" after "reflector". It will turn red to indicate the selection. Now click the "Preview" button at the bottom, and in the dialog that opens up click "Apply".
 
 Not the most logical path but you have now enabled the mDNS reflector.
 
