@@ -8,11 +8,11 @@ tags: ["dns","network","server"]
 
 ---
 
-Got a notice from my ISP that I in a few weeks time no longer will have a static IP address. Not the ISP fault however, they would be happy to provide the service. It is the company that manages the city fiber network that blames a system upgrade for the coming inability to provide static IP addresses.
+Got a notice from my ISP that in a few weeks time I will no longer have a static IP address. Not the ISP fault however, they would be happy to provide the service. It is the company that manages the city fiber network that blames a system upgrade for the coming inability to provide static IP addresses.
 
 The municipality should never have sold off the optic fiber network to a private company. Important things like roads, hospitals, schools, the police and city fiber networks should be public and nothing else.
 
-Unwilling to give up my home servers I started looking for a solution.
+Unwilling to give up my home server I started looking for a solution.
 
 
 ## Dynamic DNS
@@ -34,6 +34,7 @@ Luckily my favourite hosting company here in Sweden, [GleSYS](https://glesys.com
 They allow a minimum TTL of 60s, perfekt for a dynamic DNS setup. After some questions on their [community Slack](https://glesys.se/community) I was ready to start experimenting.
 
 Other hosting companies that has API for this includes [Linode](https://www.linode.com/docs/api/domains) and [DigitalOcean](https://developers.digitalocean.com/documentation/) as well as all the big cloud providers I assume.
+
 
 ### For a server with private IP address behind a router
 
@@ -67,6 +68,7 @@ I leave it up to the reader to combine `dynamicdns.sh` and `dynamicdns.py` in to
 ### For a server with a public IP address
 
 This is my own use case.
+
 
 #### Use DHCP client script hooks to detect when there is a new IP address
 
@@ -192,4 +194,6 @@ if __name__ == '__main__':
 
 ## Conclusion
 
-With this in place the DNS entries for my home servers should update within 60s of an IP address change. This is ok for the services I run. Not as good as a real static IP address but it will do for now.
+With this in place the DNS entries for my home server should update within 60s of an IP address change. This is ok for the services I run. Not as good as a real static IP address but it will do for now.
+
+The most useful function for my home server is as a VPN with Wireguard. Later this year, when we hopefully can start traveling again, it will see some traffic after many month of rest.
