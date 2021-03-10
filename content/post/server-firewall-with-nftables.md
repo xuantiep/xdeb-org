@@ -224,6 +224,8 @@ Flush all the rules. This will leave the server completely open.
 $ nft flush ruleset
 ~~~~
 
+{{< sponsor >}}
+
 
 ## Useful resources
 

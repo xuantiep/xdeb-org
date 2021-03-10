@@ -178,8 +178,4 @@ Incoming mail ->                        mail.example.com
 ~~~~
 
 
-## Paid mail relay services
-
-If you are in Sweden and do not want to run your own mail relay and mx backup servers please have a look at my service [Mail relay, MX backup och skräppostfilter](https://xdeb.net/mailrelay). All the servers are in Sweden, one of the reasons I set them up to begin with.
-
-A big commercial service that seems to have good reputation is [Mail route](https://www.mailroute.net/). I have not used them myself. They have more advanced filtering and a web interface to handle settings, false positives etc.
+{{< sponsor >}}

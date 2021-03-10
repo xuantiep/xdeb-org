@@ -265,3 +265,5 @@ function _contact_clean_str($str, $quotes, $strip = false, $encode = false) {
   return $str;
 }
 ~~~~
+
+{{< sponsor >}}

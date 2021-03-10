@@ -232,6 +232,11 @@ blockquote {
   }
 }
 
+.sponsor {
+  @include margin(2 0 1 0);
+  text-align: center;
+}
+
 .js-clipboard-button {
   @include font-size(xs);
   @include margin(-.65 0 0 0);

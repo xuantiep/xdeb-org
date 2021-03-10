@@ -419,6 +419,7 @@ I remove X-Originating-IP, information about the mail client and the received he
 /^X-Originating-IP:/         IGNORE
 ~~~~
 
+{{< sponsor >}}
 
 ## Further reading
 

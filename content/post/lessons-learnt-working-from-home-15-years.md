@@ -1,8 +1,8 @@
 ---
 title: "Lessons learnt working from home for 15 years"
 slug: "lessons-learnt-working-from-home-15-years"
-date: 2021-03-08T19:43:09+01:00
-lastmod: 2021-03-08T19:43:13+01:00
+date: 2021-03-10T21:59:00+01:00
+lastmod: 2021-03-10T21:59:04+01:00
 author: "Fredrik Jonsson"
 tags: ["technology","work"]
 draft: true
@@ -20,3 +20,6 @@ draft: true
 
 
  A desk that can be raised to a standing desk is highly recommended.
+ 
+ 
+ {{< sponsor >}}
