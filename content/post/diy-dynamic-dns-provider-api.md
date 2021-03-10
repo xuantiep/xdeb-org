@@ -117,13 +117,13 @@ from logging.handlers import RotatingFileHandler
 
 # Set variables.
 apikey = 'CHANGE_THIS_to_your_api_key'
-apiurl = 'https://CHANGE_THIS_to_your_api_url/'
+apiurl = 'https://api.glesys.com/domain/updaterecord/'
 apiuser = 'CHANGE_THIS_to_your_api_user'
 current_ip_file = '/var/spool/dynamicdns/current_ip.txt'
 dns_records = {
     '12345': 'example.org',
     '23456': 'vpn.example.org',
-    '34567': 'server.xdeb.net',
+    '34567': 'server.example.org',
 }
 
 
