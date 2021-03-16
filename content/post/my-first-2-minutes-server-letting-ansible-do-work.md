@@ -7,6 +7,7 @@ author: "Fredrik Jonsson"
 tags: ["debian","server","ansible","security","technology"]
 aliases:
   - /node/1615/
+  - /post/2016/06/23/my-first-2-minutes-on-a-server---letting-ansible-do-the-work/
 
 ---
 
