@@ -4,7 +4,7 @@ slug: "my-new-hi-fi-setup-apple-itunes-airport-express-musical-fidelity-x-dac-v3
 date: 2007-08-17T15:57:35+02:00
 lastmod: 2012-06-26T10:55:13+02:00
 author: "Fredrik Jonsson"
-tags: ["hi-fi","music","wi-fi","hardware","technology"]
+tags: ["hi-fi","music","wi-fi"]
 aliases:
   - /node/800/
 
@@ -15,7 +15,7 @@ aliases:
 
 Bye bye CD player. I enjoyed listening to my [Thule](http://www.thule-audio.dk/) CD player a lot and I'm sure the new owner will enjoy it also. My new setup however sounds even better and I have all my music at a touch of a button. Lets call it progress.
 
-I have had a [Apple AirPort Express](http://www.apple.com/airportexpress/) for [some time](/node/658). The interesting function is that it can stream music from iTunes to the stereo, something Apple calls [AirTunes](http://www.apple.com/airportexpress/airtunes.html).
+I have had a [Apple AirPort Express](http://www.apple.com/airportexpress/) for some time. The interesting function is that it can stream music from iTunes to the stereo, something Apple calls [AirTunes](http://www.apple.com/airportexpress/airtunes.html).
 
 Connecting it to my amplifier via the analog line out works well but the sound is not [Hi-Fi](http://en.wikipedia.org/wiki/High_fidelity "High Fidelity") quality. To get that you need to use the optical digital out to a [DAC](http://en.wikipedia.org/wiki/Digital-to-analog_converter "Digital to analog converter").
 
@@ -40,8 +40,6 @@ Interesting altarnatives to Apples AirPort Express is [Slim Devices](http://www.
 Can music streamed from a computer ever sounds as good as that from a top end CD transporter? Personally I believe the answer is yes. The only weak link I can think of is the ripping of the CD to the harddrive. I'm interested to here readers opinions on this.
 
 For people interested in solutions like this I recommend [Stereophile Computer Audio](http://stereophile.com/computeraudio/) section. Other reviewers of the AirPort Express only briefly mentions the function to stream audio to your stereo. Stereophile briefly mentions that it can be used to set up a wireless network and then spend the rest of a long article to talk about sound quality.
-
-Now lets listen to some [music](/wiki/fredrik/musicrecommendations).
 
 **Update 2010-11-08**:  With iTunes 8 and later Apple has unfortunately broken the optical out on the AirPort Express, see link to discussion below. I now have a Mac Mini connected directly to my DAC instead. A separate network drive contains all my music in Apple Lossless format as well as my DVD collection ripped with [HandBrake](http://handbrake.fr/).
 
