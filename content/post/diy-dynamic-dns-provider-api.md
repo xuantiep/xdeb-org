@@ -2,7 +2,7 @@
 title: "DIY dynamic DNS with your providers DNS API"
 slug: "diy-dynamic-dns-provider-api"
 date: 2021-03-08T19:53:05+01:00
-lastmod: 2021-03-08T19:53:09+01:00
+lastmod: 2021-03-08T19:53:05+01:00
 author: "Fredrik Jonsson"
 tags: ["dns","network","server"]
 
