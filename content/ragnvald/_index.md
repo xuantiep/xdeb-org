@@ -9,33 +9,25 @@ description: "Ragnvald Jonssons böcker och släktforskning."
 
 {{< figure src="/site/ragnvald.jpg" width="200" class="right" alt="Författare Ragnvald Jonsson" >}}
 
-Här finns information om de två böcker som Ragnvald Jonsson gett ut på Combonetwork development förlag.
+Här finns information om de två böcker som Ragnvald Jonsson gav ut på Combonetwork development förlag.
 
-Skriv till Ragnvald Jonsson på adressen <ragnvald@mac.com>.
+Ragnvald Jonsson gick bort den 11 april år 2021.
 
-**Se också:** [Släktforskning](/reunion/) (Be Ragnvald om lösenord ifall ni vill titta på släktforskningen.)
+
+**Se också:** [Släktforskning](/reunion/) (Be Fredrik om lösenord ifall ni vill titta på släktforskningen.)
 
 {{< figure src="/site/bilder_berattelser_krokom_omslag_1.jpg" width="200" class="right" alt="Omslagsbild för boken Bilder och berättelser från Krokom" >}}
 
+
 ## Bilder och berättelser från Krokom - ett personligt perspektiv
-
-Fotoutställning och bokförsäljning i Kyrkan på Krokomsdagen, lördagen den 31 augusti 2019 kl 11-15.
-
-[Affisch för Krokomsdagen 2019](/files/bilder_berattelser_krokomsdagen_2019.pdf.pdf) (PDF)
 
 Boken "Bilder och berättelser från Krokom" finns till försäljning på följande ställen:
 
-* Hemma hos Ragnvald Jonsson
 * Gamla Lanthandeln i Krokom
 * Jamtli butik
 * Hübenettes bokhandel
 
-
-Direkt från författaren kostar boken 250 kr och betalning kan göras med kontanter eller med Swish.
-
 Trådbunden bok om 192 sidor 20x24 cm. med ca. 190 bilder.
-
-Boken kan beställas av Ragnvald Jonsson till ett pris av 330 kr inkl frakt.
 
 (alla priser är inklusive moms)
 
@@ -51,17 +43,17 @@ En stor del av Sveriges befolkning är uppvuxen i små samhällen runt om i vår
 
 Boken handlar till stor del om författaren Ragnvald Jonssons och hans familjs liv i Krokom. Han har fotograferat Krokom under alla de 65 år som han bott där. Det unika bildmaterialet gör även boken intressant för alla som vill få en inblick i hur livet tedde sig för de människor som levde i ett mindre samhälle på 1950- talet och framåt.
 
-ISBN: 978-91-631-9021-6
+ISBN: 978-91-631-9021-6  
+Se uppgifter om boken hos [LIBRIS](https://libris.kb.se/bib/3cv7prpn1z4flldd).
 
 {{< figure src="/site/bilder_berattelser_grundsjo_omslag_1.jpg" width="200" class="right" alt="Omslagsbild för boken Bilder och berättelser från Grundsjö" >}}
+
 
 ## Bilder och berättelser från Grundsjö - en by i nordligaste Ångermanland
 
 Boken "Bilder och berättelser från Grundsjö" gavs ut den 6 juli 2006. Trådbunden bok om 140 sidor 20x20 cm. med ca. 100 bilder. Bokens pris är 250 Kr.
 
 Besökare i Grundsjö kan köpa boken av Bertil Jonsson för 250 kr.
-
-Boken kan beställas av Ragnvald Jonsson till ett pris av 330 kr inkl frakt.
 
 (alla priser är inklusive moms)
 
@@ -81,4 +73,4 @@ Boken handlar till stor del om författaren Ragnvald Jonssons uppväxt och om ha
 
 ISBN 13: 978-91-631-9020-9  
 ISBN 10: 91-631-9020-6  
-Se uppgifter om boken hos [LIBRIS](http://libris.kb.se/bib/10579041).
+Se uppgifter om boken hos [LIBRIS](https://libris.kb.se/bib/10579041).
