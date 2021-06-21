@@ -102,7 +102,7 @@ $typefaces: (
     // We could also specify the following property:
     // letter-spacing: .5px,
   ),
-);
+); // stylelint-disable indentation
 
 // Output a horizontal grid to help with debugging typography.
 $typey-debug: false;
@@ -148,8 +148,6 @@ $zen-gutters: 20px;
 // `$indent-amount` controls the amount lists, blockquotes and comments are indented.
 //
 // `$include-rtl` controls whether RTL styles are output.
-//
-// weight: 10
 
 $indent-amount: 2 * $base-font-size;
 

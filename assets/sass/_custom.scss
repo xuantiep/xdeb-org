@@ -1,4 +1,4 @@
-// sass-lint:disable no-css-comments, no-color-hex, no-color-literals
+// stylelint-disable color-no-hex, color-named
 
 // Site custom styles
 .page {
@@ -59,7 +59,6 @@
 
 article {
   & > header {
-
     h1 {
       @include padding-bottom(.2);
       margin-bottom: 0;
@@ -251,6 +250,7 @@ blockquote {
 }
 
 
+// stylelint-disable all
 
 /* LineHighlight */ .chroma .hl { display: block; width: 100%;background-color: #ffffcc }
 /* LineNumbers */ .chroma .ln { margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
