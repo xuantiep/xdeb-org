@@ -21,7 +21,7 @@ There are nowadays a multitude of services that offer S3-compatible storage serv
 
 Last year Backblaze B2 Cloud storage was made S3-compatible. In the beginning of this year I switch all my AWS S3 usages to B2 Cloud. It was a quick and painless switch.
 
-In my Backblaze account I set up the needed buckets and keys for them. The interface is clean and nice to work with. This alone is worth the switch in my opinion.
+In my Backblaze account I created the needed buckets and access keys. The interface is clean and nice to work with. This alone is worth the switch in my opinion.
 
 In Arq I created a new location for B2 Cloud and started to backup the same files I was already backing up to AWS S3.
 
@@ -29,10 +29,10 @@ In my Ansible playbooks I changed the cron script to backup to B2 Cloud using th
 
 I paused all backups to AWS S3 but did not delete them. It has now gone almost 6 month since the switched and I plan to start deleting all my S3 backup buckets.
 
-For my use case AWS S3 was never a cost I thought about but B2 Cloud is silly cheap. Backblaze have been around for many years so they most be making enough money somehow.
+For my use case AWS S3 was never a cost I thought about but B2 Cloud is silly cheap. Backblaze have been around for many years so they must be making enough money somehow.
 
 Amazon has many more datacenters than Backblaze so performance may be an issue depending on your location. For me the performance difference between AWS "eu-north-1" and B2 "eu-central" was barely noticeable.
 
-Less money to Amazon, a nicer interface, solid service and even lower cost for me.
+Less money to Amazon, a nicer interface, solid service and a even lower cost for me.
 
 Let's see if I can convince some of my customers to switch as well.
