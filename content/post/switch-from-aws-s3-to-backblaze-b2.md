@@ -27,7 +27,7 @@ In Arq I created a new location for B2 Cloud and started to backup the same file
 
 In my Ansible playbooks I changed the cron script to backup to B2 Cloud using the same aws cli as I used for AWS S3. I needed to set "--endpoint-url" instead of specifying "region" but otherwise the commands are unchanged.
 
-I paused all backups to AWS S3 but did not delete them. It has now gone almost 6 month since the switched and I plan to start deleting all my S3 backup buckets.
+I paused all backups to AWS S3 but did not delete them. It has now gone almost 6 month since the switch and I plan to start deleting all my S3 backup buckets.
 
 For my use case AWS S3 was never a cost I thought about but B2 Cloud is silly cheap. Backblaze have been around for many years so they must be making enough money somehow.
 
