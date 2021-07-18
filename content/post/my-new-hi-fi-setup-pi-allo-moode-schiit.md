@@ -46,7 +46,7 @@ It is a pleasure to use and cost only €4 per year.
 
 I have also set up a couple of [Flic buttons](https://flic.io/) for quick play/pause etc.
 
-Configure a button to do an "Internet Request" and paste this is for a play/pause button.
+Configure a button to do an "Internet Request" and paste this in for a play/pause button.
 
 ~~~~
 http://moode.local/command/?cmd=pause
