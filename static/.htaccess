@@ -2,6 +2,16 @@
 # Apache settings:
 #
 
+<IfModule mod_setenvif.c>
+  SetEnvIfNoCase Referer www.remotasks.com spam
+  SetEnvIfNoCase Referer canary.remotasks.com spam
+
+  <RequireAll>
+    Require all granted
+    Require not env spam
+  </RequireAll>
+</IfModule>
+
 # Various rewrite rules.
 <IfModule mod_rewrite.c>
   RewriteEngine on
