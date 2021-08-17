@@ -58,9 +58,7 @@ params:
   realfavicongenerator: true
   relatedposts: true
   safariPinnedColor: "#706a58"
-  search: false
   searchLimit: 1000
-  searchSize: 20
   sidebar: false
   submitted: true
   themeColor: "#706a58"
