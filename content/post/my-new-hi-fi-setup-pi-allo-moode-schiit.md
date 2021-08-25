@@ -28,7 +28,7 @@ To my surprise I preferred the sounds of the Moode audio player. My assumption w
 
 ### Audio quality
 
-The Raspberry Pi/Allo DigiOne/Moode audio streamer sounds excellent! A definite step up from the Apple TV, and the TV no longer needs to be on. I happen to have more time to listen to music and I'm rediscovering pearls in my collection. So much fun!
+The Raspberry Pi/Allo DigiOne/Moode audio streamer sounds excellent. A definite step up from the Apple TV, and the TV no longer needs to be on. I happen to have more time to listen to music and I'm rediscovering pearls in my collection. So much fun!
 
 If one want to go a step up, the [DigiOne Signature](https://allo.com/sparky/digione-signature.html) looks interesting. Getting new low noice power supplies can improve things as well.
 
@@ -73,4 +73,4 @@ I really like the Schiit sound and for the price I think the Modi 3 is hard to b
 
 A significant improvement in audio quality for only around $250 (Modi 3 + DigiOne + case etc.) plus the Raspberry Pi I had laying around.
 
-A fun project to do!
+A fun project to do.
