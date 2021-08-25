@@ -8,7 +8,7 @@ tags: ["hi-fi","music"]
 
 ---
 
-When at my desk I am now listing to music via a pair of Sennheiser HD6XX from Drop. They are connected to my iMac via a FiiO K5PRO headphone apm/DAC. It just works and a pleasure to listen to.
+When at my desk I am now listing to music via a pair of Sennheiser HD6XX from Drop. They are connected to my iMac via a FiiO K5PRO headphone apm/DAC. It just works and are a pleasure to listen to.
 
 The first track I almost always play to test new equipment is Norah Jones "Sunrise" from the album "Feels like home". It is a good example of music I like. Sennheiser 500 and 600 series are know for neutral sound with very good midrange. Perfect fit for acoustic and vocal music that I like.
 
