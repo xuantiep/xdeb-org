@@ -14,7 +14,7 @@ The first track I almost always play to test new equipment is Norah Jones "Sunri
 
 Including shipping I paid 225 USD (1971 SEK) for the HD6XX on Drop. Add to that 66 USD (574 SEK) in Swedish custom and VAT fees for a total of 291 USD (2545 SEK). A pair of Sennheiser HD650 cost around 405 USD (3500 SEK) Including VAT in Sweden. So you save a bit but will need to wait a bit as well, three+ weeks in my case.
 
-Sennheiser 600 series of headphones are notoriously hard to drive. You need a good amp for them to sound as good as they can.
+Sennheiser 600 series of headphones are notoriously hard to drive. You need a good amp for them to sound as good as they can. And they can sound really good!
 
 I first tried the iFi Zen DAC v2 that has a built in headphone amp. Really liked it. Solid build quality and it sounded excellent. The one issue I had (might have been my unit only) was that it sometimes did not "come alive" after the iMac was waken from sleep. Worked most of the time but now and then I needed to unplug/plugin the USB cable for it to wake up.
 
@@ -26,7 +26,7 @@ The HD6XX is replacing my Sennheiser HD598 that I have used for the last seven y
 
 Before I got the FiiO K5PRO I used the Fulla 3 with the HD6XX. That did not work well, they sounded no better that the HD598, maybe even worse.
 
-You need the power of something like the FiiO K5PRO for the HD6XX to sound good. And they can sound really good!
+You need the power of something like the FiiO K5PRO for the HD6XX to sound good.
 
 The HD6XX clamped my head far to tight out of the box. But there are plenty of information on the net how to fix this. Now they are comfortable for hours, nearly as nice in this regard as my old HD598.
 
