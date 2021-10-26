@@ -70,7 +70,6 @@ File: `~/Library/Application Support/MailMate/Resources/KeyBindings/Mycustom.pli
 
   "k" = "toggleReadState:";
   "f" = "toggleFlag:";
-  "h" = "toggleMuteState:";
 
   "j" = ( "markAsJunk:", "moveToJunk:" );
   "J" = ( "markAsNotJunk:", "archive:" );
@@ -78,11 +77,15 @@ File: `~/Library/Application Support/MailMate/Resources/KeyBindings/Mycustom.pli
   "c" = "showCorrespondence:";
   "e" = "showThread:";
 
+  // Text or HTML view.
+  "H" = "previousAlternative:";
+  "h" = "nextAlternative:";
+
   // Set focus.
   "v" = ( "makeFirstResponder:", "mailboxesOutline" );
   "b" = ( "makeFirstResponder:", "mainOutline" );
 
-  "i" = ( "goToMailbox:", "INBOX", "makeFirstResponder:", "mainOutline" );
+  "i" = ( "goToMailbox:", "INBOX", "makeFirstResponder:", "mainOutline", "selectFirstMessageRow:" );
   "g" = {
     "g" = "goToMailbox:";
     "a" = ( "goToMailbox:", "ARCHIVE", "makeFirstResponder:", "mainOutline" );
@@ -104,6 +107,7 @@ File: `~/Library/Application Support/MailMate/Resources/KeyBindings/Mycustom.pli
   // In composer.
   "^i" = "showIdentities:";
   "^s" = "showSignatures:";
+  "^h" = "switchView:";
 
 }
 ~~~~
