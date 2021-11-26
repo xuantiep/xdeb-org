@@ -246,9 +246,15 @@ blockquote {
   @include respond-to(xxl) {
     @include font-size(xs-2);
   }
-
 }
 
+.flash-item {
+  animation: flash 500ms ease 1;
+}
+
+@keyframes flash {
+  50% { background-color: $mark-bg; }
+}
 
 // stylelint-disable all
 
