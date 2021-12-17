@@ -119,7 +119,7 @@ default_process_limit = 10
 default_client_limit = 50
 
 # Workaround for an issue introduced by macOS 12 Monterey
-# Hopefully a proper fix will be incorporated by the dovecot team,remove
+# Hopefully a proper fix will be incorporated by the dovecot team, remove
 # this when it is. See https://markmail.org/message/fsrvolewgdbrtzsg
 default_vsz_limit = 0
 ~~~~
