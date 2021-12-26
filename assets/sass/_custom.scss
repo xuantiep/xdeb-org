@@ -76,20 +76,7 @@ article {
       text-decoration: none;
     }
   }
-
 }
-
-/*
-figure {
-  margin-left: -($zen-gutters / 2);
-  margin-right: -($zen-gutters / 2);
-
-  @include respond-to(s) {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
- */
 
 th,
 label,
@@ -104,7 +91,6 @@ figcaption {
 
 figure.image {
   img {
-    display: block;
     margin: 0 auto;
 
     @include respond-to(s) {
@@ -164,17 +150,6 @@ blockquote {
   h2 {
     @include padding-bottom(.4);
     border-bottom: 2px solid var(--color-border-dark);
-
-    /*
-    @include respond-to(xxl) {
-      &::before {
-        content: '\21E8';
-        color: var(--color-brand);
-        position: absolute;
-        left: -4rem;
-      }
-    }
-    */
   }
 
   a {
