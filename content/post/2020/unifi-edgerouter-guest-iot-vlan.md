@@ -10,7 +10,7 @@ tags: ["wi-fi","network","popular"]
 
 My goal is to have separate wireless networks for guest and IOT devices, each on there own VLAN. Setting up VLAN with an EdgeRouter, UniFi switch and UniFI access points takes a few extra steps. In this post I describe how I got it working.
 
-A year and a half ago I posted [Cover my house with UniFi Wi-Fi]({{< relref "post/cover-my-house-with-unifi-wifi.md" >}}). The system has been running well since then. Recently I replaced the old AirPort router with an EdgeRouter X.
+A year and a half ago I posted [Cover my house with UniFi Wi-Fi]({{< relref "cover-my-house-with-unifi-wifi.md" >}}). The system has been running well since then. Recently I replaced the old AirPort router with an EdgeRouter X.
 
 The [EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) is small, cheep and surprisingly capable. I'm not too fond of the EdgeOS admin interface, but it gets the job done.
 
