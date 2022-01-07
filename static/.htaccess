@@ -39,4 +39,7 @@
 
   RewriteCond %{REQUEST_URI} ^/fj_items/reunion/(.*) [NC]
   RewriteRule ^ /reunion/%1 [R=permanent,L]
+
+  RewriteCond %{REQUEST_URI} ^/post/(\d{4})/\d{2}/\d{2}/(.*) [NC]
+  RewriteRule ^ /post/%1/%2 [R=permanent,L]
 </IfModule>

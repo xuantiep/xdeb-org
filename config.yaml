@@ -23,8 +23,8 @@ markup:
     noClasses: false
 
 permalinks:
-  post: "/post/:year/:month/:day/:slug"
-  micro: "/micro/:year/:month/:day/:slug"
+  post: "/post/:year/:slug"
+  micro: "/micro/:year/:slug"
 
 outputFormats:
   SearchIndex:
