@@ -212,15 +212,9 @@ blockquote {
 }
 
 .js-clipboard-button {
-  @include font-size(xs);
-  @include margin(-.65 0 0 0);
+  @include margin(-.6 0 0 0);
   @include typeface(monospace);
-  color: var(--color-grey);
   line-height: 1;
-
-  @include respond-to(xxl) {
-    @include font-size(xs-2);
-  }
 }
 
 .flash-item {

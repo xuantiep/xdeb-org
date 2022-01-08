@@ -21,7 +21,7 @@
       setTimeout(function() {
         $('.content').find('pre').each(function (e, i) {
           var codeitem = 'js-code-item-' + i;
-          var $button = $('<button data-codeitem="' + codeitem + '"/>').text('Copy code').addClass('js-clipboard-button');
+          var $button = $('<button data-codeitem="' + codeitem + '"/>').text('Copy code').addClass('button--small js-clipboard-button');
           $(e).addClass('js-code-item').addClass(codeitem).after($button);
         });
 
