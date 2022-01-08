@@ -9,7 +9,7 @@ removePathAccents: true
 paginate: 10
 paginatePath: "page"
 summaryLength: 40
-newContentEditor: "/usr/local/bin/bbedit"
+newContentEditor: "bbedit"
 author:
   name: "Fredrik Jonsson"
   url: "https://xdeb.org/fredrik"
@@ -21,6 +21,15 @@ markup:
       unsafe: true
   highlight:
     noClasses: false
+
+security:
+  exec:
+    allow:
+    - ^bbedit$
+    - ^dart-sass-embedded$
+    - ^go$
+    - ^npx$
+    - ^postcss$
 
 permalinks:
   post: "/post/:year/:slug"
