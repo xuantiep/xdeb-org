@@ -95,7 +95,7 @@ other = "Skip if you are a human"
 other = "Language selector"
 
 [cookieconsent_message]
-other = "We use cookies. Some are necessary for the web site to function. Cookies for tracking and analytics are optional."
+other = "This website uses cookies. Some are necessary for the website to function. Tracking and analytics cookies are optional."
 
 [cookieconsent_accept]
 other = "Accept all"
