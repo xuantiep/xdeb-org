@@ -83,10 +83,6 @@ label,
 legend,
 figcaption {
   @include type-layout(s, .8);
-
-  @include respond-to(xxl) {
-    @include type-layout(s-2, .9);
-  }
 }
 
 figure.image {
@@ -172,10 +168,6 @@ blockquote {
     @include typeface(headings);
     @include type-layout(xs, 1);
     color: var(--color-text-meta);
-
-    @include respond-to(xxl) {
-      @include type-layout(xs-2, 1);
-    }
   }
 
 }

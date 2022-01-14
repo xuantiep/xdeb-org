@@ -36,10 +36,6 @@ label,
 legend,
 figcaption {
   @include type-layout(s, 1);
-
-  @include respond-to(xxl) {
-    @include type-layout(s-2, 1);
-  }
 }
 
 .language-selector,
@@ -47,10 +43,6 @@ article > header,
 .content-dates,
 .footer {
   @include type-layout(xs, 1);
-
-  @include respond-to(xxl) {
-    @include type-layout(xs-2, 1);
-  }
 }
 
 // Apply heading font stack to heading, labels etc.
@@ -121,10 +113,6 @@ article {
   code {
     @include type-layout(xs, 1);
     overflow-wrap: break-word;
-
-    @include respond-to(xxl) {
-      @include type-layout(xs-2, 1);
-    }
   }
 
   pre {
