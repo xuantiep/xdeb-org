@@ -82,7 +82,7 @@ th,
 label,
 legend,
 figcaption {
-  @include type-layout(s, .8);
+  @include font-size(s);
 }
 
 figure.image {
@@ -166,7 +166,7 @@ blockquote {
 
   time {
     @include typeface(headings);
-    @include type-layout(xs, 1);
+    @include font-size(xs);
     color: var(--color-text-meta);
   }
 
