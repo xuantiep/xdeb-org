@@ -53,7 +53,9 @@ $colors: (
   mobile-menu-cover:      rgba($black, .2),
 
   button:                 $brand,
+  button-hover:           $brand-dark,
   button-text:            $white,
+  button-text-hover:      $white,
   button-disabled:        $grey,
 
   form-error:             $red,
