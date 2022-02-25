@@ -17,7 +17,7 @@ I have used AWS S3 for:
 
 There are nowadays a multitude of services that offer S3-compatible storage services. Both Arq and the aws cli will support any of them. Arq also support a [number of other options](https://www.arqbackup.com/#arqbackup-benefit-list-2).
 
-[Backblaze](https://www.backblaze.com/) is a service I have recommended to family and frieds for years. For 6 USD you get unlimited personal cloud backup and a nice Windows/macOS app that mostly is install and forget.
+[Backblaze](https://www.backblaze.com/) is a service I have recommended to family and friends for years. For 6 USD you get unlimited personal cloud backup and a nice Windows/macOS app that mostly is install and forget.
 
 Last year Backblaze B2 Cloud storage was made S3-compatible. In the beginning of this year I switch all my AWS S3 usages to B2 Cloud. It was a quick and painless switch.
 
