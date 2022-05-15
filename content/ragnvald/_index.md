@@ -11,7 +11,7 @@ description: "Ragnvald Jonssons böcker och släktforskning."
 
 Här finns information om de två böcker som Ragnvald Jonsson gav ut på Combonetwork development förlag.
 
-Ragnvald Jonsson gick bort den 11 april år 2021.
+Ragnvald Jonsson gick bort den 11 april år 2021, han blev 91 år.
 
 
 **Se också:** [Släktforskning](/reunion/) (Be Fredrik om lösenord ifall ni vill titta på släktforskningen.)
