@@ -1,17 +1,17 @@
-{{ define "title" }}{{ .Site.Title }}{{ end }}
+{{ define "title" }}{{ site.Title }}{{ end }}
 
 {{ define "main" -}}
 <main class="main layout__main">
 {{ .Content }}
 
-{{ range first .Site.Params.frontposts (where .Site.RegularPages "Type" "post") -}}
+{{ range first site.Params.frontposts (where site.RegularPages "Type" "post") -}}
 {{ .Render "summary" }}
 {{ end -}}
 
 <section class="blog-popular">
 <h2 id="blog-popular">Most popular posts</h2>
 <ul>
-{{ range .Site.Taxonomies.tags.popular }}
+{{ range site.Taxonomies.tags.popular }}
 {{ .Render "li" }}
 {{ end }}
 </ul>
@@ -20,7 +20,7 @@
 <section class="blog-archive">
 <h2 id="blog-archive">Blog archive</h2>
 <ul>
-{{ range after .Site.Params.frontposts (where .Site.RegularPages "Type" "post") -}}
+{{ range after site.Params.frontposts (where site.RegularPages "Type" "post") -}}
 {{ .Render "li" }}
 {{ end -}}
 </ul>
