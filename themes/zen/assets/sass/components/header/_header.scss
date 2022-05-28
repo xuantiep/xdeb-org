@@ -8,10 +8,12 @@
 
   // Wrapping link for logo.
   &__logo {
-    margin: 0 $zen-gutters 0 0;
+    @include respond-to(s) {
+      margin: 0 $zen-gutters 0 0;
 
-    @include rtl() {
-      margin: 0 0 0 $zen-gutters;
+      @include rtl() {
+        margin: 0 0 0 $zen-gutters;
+      }
     }
   }
 
@@ -22,9 +24,8 @@
 
   // The name of the website.
   &__site-name {
-    @extend %h1;
     margin: 0;
-    display: inline-block;
+    line-height: 1.5;
   }
 
   // The link around the name of the website.
