@@ -9,10 +9,9 @@
 
 .header {
   background-color: var(--color-header-bg);
-  min-height: 3rem;
+  min-height: calc(3rem + 2vw);;
 
   @include respond-to(s) {
-    min-height: 5rem;
     background-color: var(--color-header-bg);
     background-image: url('../site/topbg.png');
     background-repeat: no-repeat;
