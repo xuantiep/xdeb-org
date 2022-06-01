@@ -9,7 +9,7 @@
 
 .header {
   background-color: var(--color-header-bg);
-  min-height: calc(3rem + 2vw);;
+  min-height: calc(3rem + 2.5vw);
 
   @include respond-to(s) {
     background-color: var(--color-header-bg);
