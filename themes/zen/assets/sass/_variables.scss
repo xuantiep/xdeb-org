@@ -123,11 +123,12 @@ $breakpoints: (
 // The max content width.
 $max-content-width: 1000px;
 
-// The max line width for redability.
+// The max line width for readability.
 $max-line-width: 70ch;
 
 // The default left/right gutter/padding.
 $zen-gutters: calc(5px + 1.5625vw);
+$zen-gutters-reverse: calc(0px - (5px + 1.5625vw));
 
 // Border radius.
 $s-radius: 3px;
