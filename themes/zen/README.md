@@ -90,16 +90,16 @@ First of all, you need to turn your new or existing site into a hugo module.
 
 From the root of your site:
 
-```
-$ hugo mod init github.com/me/my-site
+```shell
+hugo mod init github.com/me/my-site
 ```
 
 Afterwards, declare the `zen` theme module as a dependency of your site:
 
 From the root of your site:
 
-```
-$ hugo mod get github.com/frjo/hugo-theme-zen
+```shell
+hugo mod get github.com/frjo/hugo-theme-zen
 ```
 
 ### Git submodule
@@ -108,15 +108,15 @@ You can download and unpack the theme manually from Github but it's easier to us
 
 From the root of your site:
 
-```
-$ git clone https://github.com/frjo/hugo-theme-zen.git themes/zen
+```shell
+git clone https://github.com/frjo/hugo-theme-zen.git themes/zen
 ```
 
 If you use git to version control your site, highly recommended, it's best to add the zen theme as a submodule.
 
 From the root of your site:
 
-```
+```shell
 git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
 ```
 
@@ -127,7 +127,7 @@ git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
 
 From the root of your site:
 
-```
+```shell
 hugo mod get -u github.com/frjo/hugo-theme-zen
 ```
 
@@ -135,7 +135,7 @@ hugo mod get -u github.com/frjo/hugo-theme-zen
 
 From the root of your site:
 
-```
+```shell
 git submodule update --remote --merge
 ```
 
@@ -144,7 +144,7 @@ git submodule update --remote --merge
 
 From the root of `themes/zen/exampleSite`:
 
-```
+```shell
 hugo server --themesDir ../..
 ```
 
@@ -194,7 +194,7 @@ Some performance tools will complain about to many files (js and css files are n
 
 Configurations parameters for the sites config file, in yaml format. All the "params" are optional.
 
-```
+```yaml
 baseurl: "https://example.org/"
 title: "SiteTitle"
 theme: "zen"
@@ -358,7 +358,7 @@ For "rtl" languages add a `languageDirection` parameter to the language configur
 
 Add a `languageCode` parameter to each language as well, that is used to set the correct language attribute in the `html` tag and in feeds. The root `languageCode` is then not needed. If not set the language key (e.g. "en") will be used.
 
-```
+```yaml
 languages:
   sv:
     weight: 1
@@ -383,7 +383,7 @@ Set `defaultContentLanguage` to your language code, otherwise it will default to
 
 Here how it looks for a site in Swedish.
 
-```
+```yaml
 languageCode: "sv-SE"
 defaultContentLanguage: "sv"
 ```
@@ -396,7 +396,7 @@ Built in integration with the excellent [FlexSearch.js](https://github.com/nexta
 Here is the three steps needed to create a search page.
 
 1. Add a new output format in your configuration file.
-    ```
+    ```yaml
     outputFormats:
       SearchIndex:
         mediaType: "application/json"
@@ -405,7 +405,7 @@ Here is the three steps needed to create a search page.
         notAlternative: true
     ```
 2. Add the new output format to output setting for "home".
-    ```
+    ```yaml
     outputs:
       home: ["HTML", "SearchIndex", "[other formats you need]"]
     ```
@@ -460,7 +460,7 @@ The Zen theme supports podcasting.
 
 Here follow all the possible podcast frontmatter parameters. Only the first two is mandatory and are in the podcast archetype.
 
-```
+```yaml
 podcast:
     mp3:                    # * The path to the mp3 file, 
     duration:               # * Episode duration, e.g 1:04:02 (iTunes).
@@ -608,7 +608,7 @@ Creates a link to an internal page.
 
 This will output:
 
-```
+```html
 <a href="/path/to/page/">The title of the page</a>
 ```
 
@@ -657,7 +657,7 @@ Some more content.
 
 This will produce:
 
-```
+```html
 <div class="class-name-you-want">
 <p>The <strong>content</strong> that should be wrapped.</p>
 
@@ -677,7 +677,7 @@ Some more content.
 
 This will produce:
 
-```
+```html
 <div class="class-name-you-want">
 The **content** that should be wrapped. Some more content.
 </div>
@@ -696,7 +696,7 @@ This is the way I construct my JavaScript files.
 
 **Umbrella JS:**
 
-```
+```js
 (function ($) {
 
   'use strict';
@@ -709,7 +709,7 @@ This is the way I construct my JavaScript files.
 
 **jQuery:**
 
-```
+```js
 (function ($) {
 
   'use strict';
