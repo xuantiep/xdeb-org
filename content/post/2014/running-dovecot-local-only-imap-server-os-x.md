@@ -2,7 +2,7 @@
 title: "Running dovecot as a local only IMAP server on OS X"
 slug: "running-dovecot-as-a-local-only-imap-server-on-os-x"
 date: 2014-03-07T10:30:22+01:00
-lastmod: 2022-02-07T07:45:47+01:00
+lastmod: 2022-08-03T20:16:19+02:00
 author: "Fredrik Jonsson"
 tags: ["email","dovecot","macOS","technology","popular"]
 aliases:
@@ -16,8 +16,6 @@ I prefer to store (archive) my mail locally. After moving my mail between mail c
 
 *Update 2021-11-25*: A reader alerted me to an issue with macOS 12 Monterey. You need to set `default_vsz_limit = 0` to get dovecot to start. See the end of the `local.conf` file below for more.
 
-*Update 2021-11-26*: A reader alerted me to an issue with macOS 12 Monterey. You need to set `default_vsz_limit = 0` to get dovecot to start. See the end of the `local.conf` file below for more.
-
 I run dovecot on my mail server so that's what I want to run locally as well. Easiest way to install dovecot is via Homebrew. ([Homebrew is a package manager for macOS](https://brew.sh/).)
 
 ~~~~
@@ -29,13 +27,13 @@ Homebrew will give you instruction for the LaunchDaemons script needed to start 
 On Intel Macs:
 
 ~~~~
-cp -pr /usr/local/Cellar/dovecot/2.3.17_1/share/doc/dovecot/example-config/ /usr/local/etc/dovecot/
+cp -pr /usr/local/Cellar/dovecot/2.3.19_1/share/doc/dovecot/example-config/ /usr/local/etc/dovecot/
 ~~~~
 
 On Apple Silicon Macs:
 
 ~~~~
-cp -pr /opt/homebrew/Cellar/dovecot/2.3.17_1/share/doc/dovecot/example-config/ /opt/homebrew/etc/dovecot/
+cp -pr /opt/homebrew/Cellar/dovecot/2.3.19_1/share/doc/dovecot/example-config/ /opt/homebrew/etc/dovecot/
 ~~~~
 
 I opted for adding a "local.conf" file with all my own settings, "dovecot.conf" will include that file if it exist.
