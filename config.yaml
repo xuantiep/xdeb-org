@@ -89,28 +89,23 @@ menu:
   main:
     - Name: "Home"
       weight: -10
-      URL: "/"
+      pageRef: "/"
     - Name: "Posts"
       weight: -9
-      URL: "/post/"
-      identifier: "post"
+      pageRef: "/post/"
     - Name: "Archive"
       weight: -8
       URL: "/#blog-archive"
-      identifier: "archive"
 #     - Name: "Samtal"
 #       weight: 10
-#       URL: "/samtal/"
-#       identifier: "samtal"
+#       pageRef: "/samtal/"
     - Name: "Ragnvald"
       weight: 11
-      URL: "/ragnvald/"
-      identifier: "ragnvald"
+      pageRef: "/ragnvald/"
     - Name: "Services"
       weight: 15
       URL: "https://xdeb.net/services/"
 #     - Name: "Micro"
 #       weight: -8
-#       URL: "/micro/"
-#       identifier: "micro"
+#       pageRef: "/micro/"
 
