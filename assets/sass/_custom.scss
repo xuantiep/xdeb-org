@@ -104,8 +104,8 @@ figure.image {
 }
 
 blockquote {
-  @include margin(1 $indent-amount/2);
-  @include padding(0 $indent-amount/2);
+  @include margin(1 $indent-amount / 2);
+  @include padding(0 $indent-amount / 2);
   border-left: 2px solid var(--color-brand);
 }
 
@@ -168,7 +168,6 @@ blockquote {
     @include font-size(xs);
     color: var(--color-text-meta);
   }
-
 }
 
 .footer {
