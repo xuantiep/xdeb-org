@@ -13,7 +13,7 @@ newContentEditor: "bbedit"
 author:
   name: "Fredrik Jonsson"
   url: "https://xdeb.org/fredrik"
-  avatar: "site/fredrik.jpg"
+  avatar: "site/fredrik_22_512.jpeg"
 
 markup:
   goldmark:

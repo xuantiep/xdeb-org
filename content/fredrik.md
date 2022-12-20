@@ -14,7 +14,7 @@ menu:
 
 ---
 
-{{< figure src="/site/fredrik.jpg" width="175" height="242" class="right" alt="Fredrik Jonsson" title="Fredrik Jonsson" caption="Web developer & Linux sysadmin">}}
+{{< figure src="/images/fredrik_22.jpeg" size="200x" class="right" alt="Fredrik Jonsson" title="Fredrik Jonsson" caption="Web developer & Linux sysadmin">}}
 {{< figure src="/site/introfj.jpeg" width="419" height="123" alt="Hi and welcome to my homepage." >}}
 
 *A mind is like a parachute. It doesn't work if it's not open.*
