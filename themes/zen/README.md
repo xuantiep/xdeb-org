@@ -29,7 +29,6 @@ Take a look at the [Zen demo site](https://zen-demo.xdeb.org/) ([GitHub](https:/
 ### Todo
 
 * Implement more use of css4 variables.
-* Make css4 variables change based on breakpoints. The zen-gutters e.g. can be set to 10px for mobile and increase to 20px for larger displays.
 * Remove all use of "typey". (low priority)
 
 ## Table of contents
@@ -227,6 +226,7 @@ params:
   mainSections:             # The sections you want to have listed on the front page.
     - "section1"            # Default to the section with most content if not set.
     - "section2"            # Set to empty if no section should be listed.
+  menuInHeader: true        # Move the main menu to the header, default false.
   microUsername: ""         # Your micro.blog username.
   mobileMenu: true          # Turn on a mobile menu on small screens, default false.
   piwikSiteId:              # Matamo site id
