@@ -1,4 +1,5 @@
 // stylelint-disable color-no-hex, color-named
+// stylelint-disable selector-max-compound-selectors,  max-nesting-depth
 
 // Site custom styles
 .page {
@@ -109,6 +110,16 @@ blockquote {
   border-left: 2px solid var(--color-brand);
 }
 
+.mobile-nav {
+  &__toggle {
+    color: var(--color-text-bg);
+  }
+
+  &__hamburger {
+    fill: var(--color-text-bg);
+  }
+}
+
 .section-post {
   &.full-view {
     margin-bottom: 2rem;
@@ -178,21 +189,6 @@ blockquote {
   :link,
   :visited {
     color: var(--color-text-bg);
-  }
-}
-
-.mobile-nav {
-  &__toggle {
-    background-color: var(--color-mobile-menu);
-
-    &:link,
-    &:visited {
-      color: var(--color-text-bg);
-    }
-
-    &::after {
-      border-color: var(--color-text-bg);
-    }
   }
 }
 

@@ -55,7 +55,7 @@ params:
   feedlinks: true
   footer: "Powered by [Hugo](https://gohugo.io/) and the [Zen theme](https://github.com/frjo/hugo-theme-zen). [xdeb.net hosting](https://xdeb.net/)"
   frontposts: 3
-  icon: "apple-touch-icon-512x512.png"
+  icon: "apple-touch-icon.png"
   image: "xdeb-org.jpg"
   imageMaxWidth: 400
   logo: false
