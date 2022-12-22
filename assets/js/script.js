@@ -3,7 +3,7 @@
  * A JavaScript file for the theme.
  */
 
-(function ($) {
+(function () {
 
   'use strict';
 
@@ -19,28 +19,35 @@
     if (mq2.matches) {
 
       setTimeout(function() {
-        $('.content').find('pre').each(function (e, i) {
-          var codeitem = 'js-code-item-' + i;
-          var $button = $('<button data-codeitem="' + codeitem + '"/>').text('Copy code').addClass('button--small js-clipboard-button');
-          $(e).addClass('js-code-item').addClass(codeitem).after($button);
+        const codeitems = document.querySelectorAll('.content pre');
+        codeitems.forEach(function (codeitem) {
+          const button = document.createElement('button');
+          button.classList.add('button--small', 'js-clipboard-button');
+          button.innerHTML = 'Copy code';
+          codeitem.after(button);
         });
 
-        $('.js-clipboard-button').handle('click', function () {
-          var codeitem = '.' + $(this).data('codeitem');
-          var codesnippet = $(codeitem).find('code').html();
-          var $textarea = $('<textarea>').html(strip(codesnippet)).addClass('visually-hidden');
-          $('body').append($textarea);
-          $textarea.first().focus();
-          $textarea.first().select();
-          $(codeitem).addClass('flash-item');
-          document.execCommand('copy');
-          $textarea.remove();
-          setTimeout(function() {
-            $(codeitem).removeClass('flash-item');
-          }, 700);
+        const buttons = document.querySelectorAll('.js-clipboard-button');
+        buttons.forEach(function (button) {
+          button.addEventListener('click', function (e) {
+            e.preventDefault();
+            const codeitem = e.target.previousElementSibling;
+            const codesnippet = strip(codeitem.querySelector('code').innerHTML);
+            const textarea = document.createElement('textarea');
+            codeitem.classList.add('flash-item');
+            document.querySelector('body').appendChild(textarea);
+            textarea.value = codesnippet;
+            textarea.focus();
+            textarea.select();
+            document.execCommand('copy');
+            textarea.remove();
+            setTimeout(function() {
+              codeitem.classList.remove('flash-item');
+            }, 700);
+          });
         });
       }, 10);
     }
   }
 
-})(u);
+})();
