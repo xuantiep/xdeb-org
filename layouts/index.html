@@ -2,7 +2,9 @@
 
 {{ define "main" -}}
 <main class="main layout__main">
+<div class="content">
 {{ .Content }}
+</div>
 
 {{ range first site.Params.frontposts (where site.RegularPages "Type" "post") -}}
 {{ .Render "summary" }}
