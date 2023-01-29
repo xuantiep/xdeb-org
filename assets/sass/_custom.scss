@@ -3,7 +3,7 @@
 
 // Site custom styles
 .page {
-  @include respond-to(xxl) {
+  @include respond-to(m) {
     box-shadow: 2px 0 10px #aaa, -2px 0 10px #aaa;
   }
 }
@@ -29,20 +29,20 @@
 }
 
 .main-menu {
-  @include respond-to(xxl) {
+  @include respond-to(m) {
     @include padding-top(.5);
     margin: 0;
     border-bottom: 4px solid var(--color-brand);
   }
 
   li {
-    @include respond-to(xxl) {
+    @include respond-to(m) {
       margin-bottom: 0;
     }
   }
 
   a {
-    @include respond-to(xxl) {
+    @include respond-to(m) {
       border-bottom: 6px solid var(--color-brand-alt);
     }
 
@@ -50,7 +50,7 @@
     &.active {
       text-decoration: none;
 
-      @include respond-to(xxl) {
+      @include respond-to(m) {
         border-bottom-color: var(--color-brand);
       }
     }
@@ -82,7 +82,7 @@ th,
 label,
 legend,
 figcaption {
-  @include font-size(s);
+  font-size: var(--fs-s);
 }
 
 figure.image {
@@ -105,14 +105,15 @@ figure.image {
 }
 
 blockquote {
-  @include margin(1 $indent-amount / 2);
-  @include padding(0 $indent-amount / 2);
+  margin-inline: calc(var(--indent-amount) / 2);
+  padding-inline: calc(var(--indent-amount) / 2);
   border-left: 2px solid var(--color-brand);
 }
 
 .mobile-nav {
   &__toggle {
     color: var(--color-text-bg);
+    border-color: var(--color-text-bg);
   }
 
   &__hamburger {
@@ -120,50 +121,26 @@ blockquote {
   }
 }
 
-.section-post {
-  &.full-view {
-    margin-bottom: 2rem;
+.footer {
+  @extend %link-inverted;
+  background: var(--color-header-bg);
+  color: var(--color-text-bg);
+  text-align: center;
+}
 
-    @include respond-to(s) {
-      margin-bottom: 4rem;
-    }
-
-    @include respond-to(xxl) {
-      header {
-        position: relative;
-      }
-
-      /*
-      .title {
-        &::before {
-          content: '\21E8';
-          color: var(--color-brand);
-          position: absolute;
-          left: -4rem;
-        }
-      }
-      */
-    }
+.full-view--post {
+  @include respond-to(s) {
+    @include margin-bottom(3);
   }
 }
 
 .blog-popular,
 .blog-archive {
-  @include respond-to(xxl) {
-    position: relative;
-  }
+  @extend %link-nav;
 
   h2 {
     @include padding-bottom(.4);
     border-bottom: 2px solid var(--color-border-dark);
-  }
-
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   ul {
@@ -175,31 +152,21 @@ blockquote {
   }
 
   time {
-    @include typeface(headings);
-    @include font-size(xs);
+    font-family: var(--ff-headings);
+    font-size: var(--fs-xs);
     color: var(--color-text-meta);
   }
 }
 
-.footer {
-  background: var(--color-header-bg);
-  color: var(--color-text-bg);
-  text-align: center;
-
-  :link,
-  :visited {
-    color: var(--color-text-bg);
-  }
-}
-
 .sponsor {
-  @include margin(2 0 1 0);
+  @include margin-block(2 1);
   text-align: center;
 }
 
 .js-clipboard-button {
   @include margin(-.6 0 0 0);
-  @include typeface(monospace);
+  display: block;
+  font-family: var(--ff-monospace);
   line-height: 1;
 }
 
@@ -296,3 +263,4 @@ blockquote {
 /* GenericTraceback */ .chroma .gt { color: #d33682 }
 /* GenericUnderline */ .chroma .gl { color: #d33682 }
 /* TextWhitespace */ .chroma .w {  }
+
