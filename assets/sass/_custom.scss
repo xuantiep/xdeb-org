@@ -183,6 +183,7 @@ blockquote {
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err {  }
 /* CodeLine */ .chroma .cl {  }
+/* LineLink */ .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
 /* LineHighlight */ .chroma .hl { background-color: #ffffcc }
@@ -263,4 +264,3 @@ blockquote {
 /* GenericTraceback */ .chroma .gt { color: #d33682 }
 /* GenericUnderline */ .chroma .gl { color: #d33682 }
 /* TextWhitespace */ .chroma .w {  }
-
