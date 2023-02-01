@@ -2,6 +2,14 @@
 // stylelint-disable selector-max-compound-selectors,  max-nesting-depth
 
 // Site custom styles
+html {
+  scroll-padding-top: 1rem;
+}
+
+section:target {
+  animation: flash 500ms ease 1;
+}
+
 .page {
   @include respond-to(m) {
     box-shadow: 2px 0 10px #aaa, -2px 0 10px #aaa;
