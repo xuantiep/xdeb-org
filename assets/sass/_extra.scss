@@ -3,3 +3,20 @@
 // The max content width.
 $max-content-width: 777px;
 $max-page-width: 999px;
+
+$font-family: (
+  body:       $garamond,
+  headings:   $futura,
+  alt:        $system-ui,
+  monospace:  $ui-monospace,
+);
+
+$font-weight: (
+  headings:   400,
+  bolder:     900,
+  bold:       700,
+  medium:     500,
+  normal:     400,
+  light:      300,
+  lighter:    200,
+);
