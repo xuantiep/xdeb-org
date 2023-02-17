@@ -105,7 +105,7 @@ menu:
       pageRef: "/ragnvald/"
     - Name: "Services"
       weight: 15
-      URL: "https://xdeb.net/services/"
+      URL: "https://kage.im/review/"
 #     - Name: "Micro"
 #       weight: -8
 #       pageRef: "/micro/"
